@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0065)http://condor.depaul.edu/~ichu/csc416/notes/notes3/stack_app.html -->
+<!-- saved from url=(0070)http://condor.depaul.edu/~ichu/csc416/notes/notes3/InfixToPostfix.html --><HTML><HEAD><TITLE>Week 3</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="MSHTML 6.00.6001.18183" name=GENERATOR></HEAD>
+<BODY bgColor=#cffeec>
+<CENTER>
+<H2>Application of Stack </H2></CENTER>
+<UL>
+  <LI>
+  <H3>Converting expressions from infix to postfix </H3>
+  <P>
+  <UL>
+    <LI>In the process of creating machine code from source code, compilers 
+    translate <EM>infix</EM> expressions to <EM>postfix</EM> expressions. 
+    Example: <PRE>2*3+4 --&gt; 23*4+</PRE>The rule is that each operator <EM>follows</EM> 
+    its two operands. The algorithm to make this transition uses a stack. 
+    <P></P>
+    <LI>In the process of evaluating a postfix expression, another stack is 
+    used. 
+    <P></P>
+    <LI><B>Heuristic method</B><BR>
+    <OL>
+      <LI><EM>Fully</EM> parenthesize the expression - to represent your desired 
+      priorities or the default precedence of the operators 
+      <LI>move each operator to its nearest right parenthesis 
+      <LI>remove parentheses </LI></OL>Example: <PRE>2*3+4 --&gt; ((2*3)+4) --&gt; 23*4+</PRE>
+    <LI><B>Algorithm</B><BR>
+    <UL>
+      <LI>Takes input expression <TT>infix</TT> and produces output expression 
+      <TT>postfix</TT>. 
+      <LI>Uses the 2 notions of precedence: 
+      <OL>
+        <LI>in-stack precedence <TT>isp()</TT> 
+        <LI>incoming precedence <TT>icp()</TT>. </LI></OL>
+      <P>For Java/C++ operators, <TT>isp() = icp()</TT> = Java/C++ precedence. 
+      </P>
+      <LI>Uses a stack for operators, but passes operands through to output 
+    </LI></UL>Steps in the algorithm: 
+    <OL>
+      <LI>push <TT>@</TT> onto stack 
+      <LI>Loop through <TT>infix</TT> from left to right, getting tokens 
+      <TT>x</TT> one at a time 
+      <OL>
+        <LI>if <TT>x</TT> is an operand, output to <TT>postfix</TT> 
+        <LI>else if <TT>x</TT> is a right parenthesis, pop stack until left 
+        parenthesis 
+        <LI>else 
+        <OL>
+          <LI>do: pop <TT>y</TT> from stack while <TT>isp(y) &lt;= icp(x)</TT> 
+          <LI>push last <TT>y</TT> back onto stack 
+          <LI>push <TT>x</TT> onto stack </LI></OL></LI></OL></LI></OL></LI></UL><PRE>Symbol   In-Stack Priority  In-Coming Priority
+======   =================  ==================
+
+@              -2                  -      // stack bottom marker
+=              -1                 -1
+^               3                  4
+-               3                  4      // unary minus
+*, /            2                  2
++, -            1                  1
+(               0                  5      // &lt;= note new ICP=5
+
+
+
+Pseudo-code Algorithm:
+
+void InfixToPostfix (StringTokenizer E) {
+
+   // assume that E is the infix arithmetic expression and that
+   // stack will hold operators and is initially empty
+ 
+   stack.push("@");               // initialize stack with bottom marker
+
+   while (true) {
+      String token = E.nextToken();
+
+      if ( token == ";" ) {            // end of expression
+         while (stack.top() != "@")  // flush stack
+            System.out.println(stack.pop() + " ");
+         stack.pop();                // empty stack
+         return;
+      } // token == ";"
+
+      else if (token is an operand)   // the sequence of operands is indentical 
+         System.out.println(token);   // in both infix and postfix
+
+      else if (token == ")") {        // look for matching "("
+         while (stack.top() != "(")   
+            System.out.println(stack.pop() + " ");
+         stack.pop();
+      } // token == ")"
+
+      else {                     // token is an operator
+
+         while(ISP(stack.top()) &gt;= ICP(token))
+            System.out.println(stack.pop() + " ");
+         stack.push(token);
+
+      } // token is an operator
+
+   } // while
+      
+      
+} // InfixToPostfix
+
+
+</PRE>
+  <P></P>
+  <LI>
+  <H3>Postfix expression evaluation </H3>
+  <P><PRE>/**
+ * This class can take a variable number of parameters on the command
+ * line. Program execution begins with the main() method. The class
+ * constructor is not invoked unless an object of type 'Class1'
+ * created in the main() method.
+ */
+public class PostFix
+{
+	/**
+	 * The main entry point for the application. 
+	 *
+	 * @param args Array of parameters passed to the application
+	 * via the command line.
+	 */
+	public static void main (String[] args)
+	{
+		Stack s = new LinkedStack();
+		
+		try {
+			for (int i = 0; i &lt; args.length; i++) {
+				if (args[i].equals("+")) {
+					int a = ((Integer) s.pop()).intValue();
+					int b = ((Integer) s.pop()).intValue();
+					s.push(new Integer(a + b));
+				}
+				else if (args[i].equals("-")) {
+					int a = ((Integer) s.pop()).intValue();
+					int b = ((Integer) s.pop()).intValue();
+					s.push(new Integer(b - a));
+				}
+				else if (args[i].equals("*")) {
+					int a = ((Integer) s.pop()).intValue();
+					int b = ((Integer) s.pop()).intValue();
+					s.push(new Integer(b * a));
+				}
+				else if (args[i].equals("/")) {
+					int a = ((Integer) s.pop()).intValue();
+					int b = ((Integer) s.pop()).intValue();
+					s.push(new Integer(b / a));
+				}
+				else {
+					s.push(new Integer(args[i]));
+				}
+			}
+		
+			System.out.println(((Integer) s.pop()).toString());
+		}
+		catch (StackException se) {
+			se.printStackTrace();
+		}
+	}
+}
+</PRE>
+  <P></P>
+ 
+  <HR>
+  </LI></UL></BODY></HTML>

@@ -1,0 +1,140 @@
+
+<HTML><HEAD><TITLE>Hw2-CSC383</TITLE></HEAD>
+<BODY>
+<CENTER>CSC383-Homework Assignment #2 </CENTER>
+<P>
+<OL>
+<li>R-3.13 p.156<br>
+Describe and implement a recursive algorithm for finding the maximum element in an array A of n elements.<br>
+
+What is your running time and space usage? Implement your algorithm in Java. 
+<p>
+
+<li>C-3.8 p.157 Decribe a recursive algorithm for reversing a singly linked list
+L, so that the ordering of the nodes becomes opposite of what it was before.<p> 
+<P>
+<li>C-3.12 p.157 Describe in detail an algorithm for reversing a singly linked list L using 
+only a constant amount of additional space and not using any recursion. Implement your algorithm in Java.
+<P>
+<li>C-3.14 p.158<br>Describe and implement a recursive method for converting a string of digits into the integer
+it represents. For example, "13531" represents the integer 13,531.
+<p>
+
+<li>C-3.15  p. 158<br>
+Describe a recursive algorithm that counts the number of nodes in singly linked list.
+What is the time complexity of your algorithm?
+ Implement your algorithm in Java.
+<p>
+
+
+<li>C-3.17 p.158 <br>
+Write a short recursive Java method that finds the minimum and maximum values in an array of 
+<b>int</b>
+ values without using any loops. What is the time complexity of your algorithm ?
+<p>
+
+
+
+ 
+ 
+
+<p><li>C-3.20 p. 158<br>
+Write a short recursive Java method that takes a character string <i>s</i> and output its
+reverse. 
+So for example, the reverse of "pots&pans" would be "snap&stop".
+<p>
+
+
+<li>C-4.12 p.198 Describe a method for finding  both the minimum and maximum of n nunbers using  fewer  than  3n/2 comparisons.
+(Hints: First construct a group of candidate minimums and a group of candidate maximums.)
+
+<p>
+
+<li>C-4.16 p.198<br>
+Let <i>p(x)</i> be a polynomial of degree n, that is, <i>p(x) </i> = <EM>
+<FONT 
+      face=Symbol size=4>S</FONT></EM><sub>i=0</sub><sup>n</sup><i> a<sub>i</sub>x<sup>i</sup></i>.<p>
+
+<ol type=a>
+<li>Describr a simple O(n<sup>2</sup>) time method for computing <i>p(x)</i>.
+<li>Now consider a rewriting of <i>p(x)</i> as
+ <p>
+<center><i>p(x) = a<sub>0</sub> + x(a<sub>1</sub> + x(a<sub>2</sub> + x(a<sub>3</sub>+ ... +
+x(a<sub>n-1</sub> + x a<sub>n</sub>) ...))) ,</i> </center>
+
+<p> which is known as <b><i>Horner's method</i></b>.<br> Using the big-Oh notation, 
+characterize the number of arithmetic operations 
+(additions , multiplications) this method executes.
+
+</ol><p>
+   <HR>
+    
+  <LI>What is the running time complexity of the given function ? 
+  <P><PRE>        
+       long func(long x, int n) {
+                   if ( n == 0 ) return 1 ;
+                   if ( n == 1 ) return x ;
+                   if ( n %2 == 0 ) return func(x*x , n/2) ;
+                   else return x*func(x*x, n/2) ;
+       }
+</PRE>
+  <LI>What is the running time complexity of the given function?
+  <P><PRE>
+           int mystry(int n) {
+                if ( n == 0 || n ==  1)  return 1 ;
+                return mystry(n-1)*mystry(n-2) ;
+           }
+</PRE>
+  <LI>What is the running time complexity of the given function?
+  <P><PRE>
+          int mystry(int n) {
+                if  ( n == 0 ) return 0 ;
+                return 1+ mystry(n/2) ;
+          }
+</PRE>
+
+
+
+
+</LI>
+
+<hr>
+<p>
+ <LI>For each of the following infix expressions, what is corresponding postfix 
+  expression?
+  <P>
+  <OL type=a start=value>
+    <LI>a*(b/c+d) 
+    <LI>a-(b/(c-d)*e+f)^g 
+    <LI>(a-b*c)/(d*e^f*g+h) 
+    <LI>( a + b ) * c ^ (a - b) / (a + b * c) 
+    <LI>a ^ b / c ^ d * (a - b ) ^ c 
+    <LI>( a * b - c / d + e ) + ( a - b - c - d * d ) / ( a + b * c ) 
+    <LI>( a + b ) * c ^ (a - b) ^ (a + b * c) </LI></OL>
+  <P></P>
+  <LI>Evaluate the following postfix expressions with a = 2.0 , b = 3.0, c = 4.0 
+  , d = 5.0, e = 6.0 
+  <OL type=a start=value>
+    <LI>ebca^*+d- 
+    <LI>abc*d*- 
+    <LI>abc-/d* </LI></OL>
+  <P></P>
+  <LI>For each of the following expression , first determine whether it is a 
+  valid postfix expression or not, if is valid, then evaluate it with the aid of 
+  a stack, for each case,what is the maximum depth of the stack involved? (Each 
+  number is seperated by space, and <B><I>integer</I></B> arithematic operations 
+  are assumed, ^ represents the exponentiation.)
+  <P>
+  <OL type=a start=value>
+    <LI><PRE> 1 3 + 4 / 5 2 3 ^ * + 2 3 2 ^ * - </PRE>
+    <LI><PRE> 2 3 2 ^ ^ 4 2 ^ / 3 5  * 2 * - </PRE>
+    <LI><PRE> 2 6 3 * 4 / 5 6 * 8 / - </PRE></LI></OL>
+
+
+
+
+
+
+
+
+</OL></BODY></HTML>

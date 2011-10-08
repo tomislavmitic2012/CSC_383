@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;BubbleSortNoExchanges.java&apos; to &apos;Sorting/src/bubble_sort&apos;&#x0A;- Original project: &apos;Sorting&apos;&#x0A;- Destination element: &apos;Sorting/src/bubble_sort&apos;&#x0A;- Original element: &apos;bubble_sort.BubbleSortNoExchanges.java&apos;" description="Copy compilation unit" destination="/src&lt;bubble_sort" element1="/src&lt;bubble_sort{BubbleSortNoExchanges.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1316576088941" units="1" version="1.0"/>
+</session>

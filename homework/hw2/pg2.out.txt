@@ -1,0 +1,49 @@
+	Done -> poly1 :  X^3  - X^2 +  X  - 1
+
+	Done -> poly2 :  - X^3 +  X^2  - X +  1
+
+	Done -> poly3 :  X^2  - 1
+
+
+	Done -> poly1 + poly2 =  0 
+
+	Done -> poly5 =  poly1 + poly3 =  X^3 +  X  - 2
+
+	Done -> - poly5 =  - X^3  - X +  2
+
+
+	Done -> poly6 = subtract(poly1,poly5) =  - X^2 +  1
+
+
+	Done -> derivative of poly6 =  - 2X
+
+
+	Done -> multiply(poly3, poly3) =  X^4  - 2X^2 +  1
+
+
+	Done -> poly9 = multiply(poly1, poly2) =  - X^6 +  2X^5  - 3X^4 +  4X^3  - 3X^2 +  2X  - 1
+
+
+	Done -> multiply(poly1, poly3) =  X^5  - X^4  - X +  1
+
+
+	Done -> multiply(poly3, poly1) =  X^5  - X^4  - X +  1
+
+
+	Done -> Quotient of divide(poly9, poly3) =  - X^4 +  2X^3  - 4X^2 +  6X  - 7
+
+
+	Done -> Remainder  (poly9/ poly3) =  8X  - 8
+
+
+	Done -> Polynomial.divide(poly9, poly1) =  - X^3 +  X^2  - X +  1
+
+
+	Done -> X^3  - X^2 +  X  - 1 and 
+	Done -> - X^4 +  2X^3  - 4X^2 +  6X  - 7  are not the same !!
+
+
+	Done -> evaluate poly9(1) = 0
+
+
+	Done -> evaluate poly9(2) = -25

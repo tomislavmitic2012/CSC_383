@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;recursive_ruler.DrawRuller&apos; to &apos;DrawRuler&apos;&#x0A;- Original project: &apos;RecursiveRuler&apos;&#x0A;- Original element: &apos;recursive_ruler.DrawRuller&apos;&#x0A;- Renamed element: &apos;recursive_ruler.DrawRuler&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;DrawRuller&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;recursive_ruler{DrawRuller.java[DrawRuller" matchStrategy="1" name="DrawRuler" qualified="false" references="true" similarDeclarations="false" stamp="1316032220546" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="Fragment1_1.Counter"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.io.Console"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.math.BigInteger"/>
+<fullyQualifiedTypeName name="game_entry.GameEntry"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="singly_linked_list.SinglyLinkedList"/>
+<fullyQualifiedTypeName name="singly_linked_list_node.SinglyLinkedListNode"/>
+<fullyQualifiedTypeName name="node.DNode"/>
+<fullyQualifiedTypeName name="circularly_linked_list.CircleList"/>
+<fullyQualifiedTypeName name="node.Node"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="ArrayListDemo"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
+<fullyQualifiedTypeName name="singly_linked_list_node.Node"/>
+<fullyQualifiedTypeName name="stack.Stack"/>
+<fullyQualifiedTypeName name="pair.Pair"/>
+<fullyQualifiedTypeName name="queue.Queue"/>
+<fullyQualifiedTypeName name="java.util.StringTokenizer"/>
+<fullyQualifiedTypeName name="java.util.Stack"/>
+<fullyQualifiedTypeName name="java.io.PrintStream"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="term.Term"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="compare.Compare"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.ListIterator"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="poly_list.Polynomial"/>
+<fullyQualifiedTypeName name="TestPoly"/>
+</qualifiedTypeNameHistroy>

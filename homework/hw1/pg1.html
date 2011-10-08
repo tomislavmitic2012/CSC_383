@@ -1,0 +1,204 @@
+<html><head><title>CSC383 Programmming Assignment #1</title></head>
+<body>
+<center>CSC383 Programmming Assignment #1</center>
+<p>
+<ul>
+<li>Download jdk 6  or jdk 7 from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html"> here</a>
+ and install to your PC.<p>
+<li>Given   Progression class  and  other derived classes as follows<P>
+<hr>
+<pre>
+/**
+ * A class for numeric progressions.
+ */
+public class Progression {
+
+  /** First value of the progression.  */
+  protected long first;
+
+  /** Current value of the progression.  */
+  protected long cur;
+
+  /** Default constructor.  */
+  Progression() {
+    cur = first = 0;
+  }
+
+  /** Resets the progression to the first value.
+   * 
+   * @return first value
+   */
+  protected long firstValue() {
+    cur = first;
+    return cur;
+  }
+
+  /** Advances the progression to the next value.
+   *
+   * @return next value of the progression
+   */
+  protected long nextValue() {
+    return ++cur; // default next value
+  }
+
+  /** Prints the first n values of the progression.
+   * 
+   * @param n number of values to print
+   */
+  public void printProgression(int n) {
+    System.out.print(firstValue());
+    for (int i = 2; i <= n; i++) 
+      System.out.print(" " + nextValue());
+    System.out.println(); // ends the line
+  }
+
+   
+}
+
+/**
+ * Arithmetic progression.
+ */
+class ArithProgression extends Progression {
+
+  /** Increment. */
+  protected long inc;
+
+  // Inherits variables first and cur.
+
+  /** Default constructor setting a unit increment. */
+  ArithProgression() {
+    this(1);
+  }
+
+  /** Parametric constructor providing the increment. */
+  ArithProgression(long increment) {
+    inc = increment; 
+  }
+
+  /** Advances the progression by adding the increment to the current value.
+   * 
+   * @return next value of the progression
+   */
+  protected long nextValue() {
+    cur += inc;
+    return cur;
+  }
+
+  //  Inherits methods firstValue() and printProgression(int).
+}
+
+
+/**
+ * Geometric Progression
+ */
+class GeomProgression extends Progression {
+
+  /** Base. */
+  protected long base;
+
+  // Inherits variables first and cur.
+
+  /** Default constructor setting base 2. */
+  GeomProgression() {
+    this(2);
+  }
+
+  /** Parametric constructor providing the base.
+   *
+   * @param b base of the progression.
+   */
+  GeomProgression(long b) {
+    base = b;
+    first = 1;
+    cur = first;
+  }
+
+  /** Advances the progression by multiplying the base with the current value.
+   * 
+   * @return next value of the progression
+   */
+  protected long nextValue() {
+    cur *= base;
+    return cur;
+  }
+
+  //  Inherits methods firstValue() and printProgression(int).
+}
+
+
+
+/**
+ * Fibonacci progression.
+ */
+class FibonacciProgression extends Progression {
+  /** Previous value. */
+  long prev;   
+  // Inherits variables first and cur.
+
+  /** Default constructor setting 0 and 1 as the first two values. */
+  FibonacciProgression() {
+    this(0, 1);
+  }
+  /** Parametric constructor providing the first and second values.
+   *
+   * @param value1 first value.
+   * @param value2 second value.
+   */
+  FibonacciProgression(long value1, long value2) {
+      first = value1;
+      prev = value2 - value1; // fictitious value preceding the first
+  }
+
+  /** Advances the progression by adding the previous value to the current value.
+   * 
+   * @return next value of the progression
+   */
+  protected long nextValue() {
+    long temp = prev;
+    prev = cur;
+    cur += temp;
+    return cur;
+  }
+  // Inherits methods firstValue() and printProgression(int).
+}
+
+
+
+</pre><P><hr><P>
+<ol>
+<li>Rewrite all the classes  in the Progression hierarchy so that all values are from  the
+ <a href="http://download.oracle.com/javase/6/docs/api/java/math/BigInteger.html">BigInteger</a> class, in order
+to avoid overflows all together. (page 96 #C-2.7)
+<li>Implement a Java class (C2_5Progression) that extends the Progress class (the one using BigInteger classs)  so that each value 
+in the progression
+ is the absolute value of the difference between the previous  two values. You should include a 
+ default constructor that starts with 2 and 200 as the first two values and a parameteric 
+constructor that starts with a specified pair of numbers as the first two values. 
+You must name your class C2_5Progression . (page 95 C-2.5)<p>
+<li>Write a Java class (C2_6Progression.java) that extends the Progression class so that each value in the progression
+is the <b><i>floor</i></b> of the square root  of the previous value. You are not allowed to use the
+Math.sqrt() method from the Java Math library. You should include a default constructor that 
+has 65,536 as the first vlue and a parametric constructor that starts with a specified non-negative
+integer as the first value. You must name your class C2_6Progression . (page 96 C-2.6)
+<p>
+<li>Implement a Java class (PrimeProgression) that extends the Progression class so that each value in the progression is the smallest
+prime number that is greater than the previous one. The default constructor PrimeProgression()  use 2 as the initial value.
+The constructor PrimeProgression(BigInteger start)   sets the cur value to the smallest prime number that is equal to or greater than start.<p>
+<li>Implement a driver class that tests all the  classes you have implemented.
+
+</ol>
+</ul><p>
+Notes :
+<ul><hr>
+<li>Remember to document your code. Always put your name, assignment number and due date at the beginning of the code<p>
+<li>You must name those three classes as: C2_5Progression, C2_6Progression and PrimeProgression.
+I would test your classes using my test driver.
+<li> Submission instruction :  put all the java source code files in one single folder <b><i> pg1 </i></b>  and submit the zipped folder through
+  COL.
+<hr>
+</ul>
+<p>
+</body>|</html>
+
+
+

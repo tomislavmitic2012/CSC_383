@@ -1,0 +1,2714 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="Java%20Overview%20II_files/filelist.xml">
+<link rel=Edit-Time-Data href="Java%20Overview%20II_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>5</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>cti</o:Author>
+  <o:LastAuthor>cti</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>18</o:TotalTime>
+  <o:Created>2009-01-07T02:37:00Z</o:Created>
+  <o:LastSaved>2009-01-07T02:37:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>3921</o:Words>
+  <o:Characters>22356</o:Characters>
+  <o:Company>DePaul</o:Company>
+  <o:Lines>186</o:Lines>
+  <o:Paragraphs>52</o:Paragraphs>
+  <o:CharactersWithSpaces>26225</o:CharactersWithSpaces>
+  <o:Version>11.8028</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"\FF2D\FF33 \660E\671D";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 134676480 16 0 131072 0;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 134676480 16 0 131072 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"MS Mincho";
+	mso-fareast-language:JA;}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-font-kerning:16.0pt;
+	mso-fareast-language:EN-US;
+	font-weight:bold;}
+h2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:11.5pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:#6D7288;
+	mso-fareast-language:EN-US;
+	font-weight:bold;}
+h3
+	{margin-top:11.25pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:9.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;
+	mso-fareast-language:EN-US;
+	font-weight:bold;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	font-weight:bold;}
+h5
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:13.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	font-weight:bold;
+	font-style:italic;}
+a:link, span.MsoHyperlink
+	{color:#00217B;
+	mso-text-animation:none;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;}
+tt
+	{font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+p.doctext, li.doctext, div.doctext
+	{mso-style-name:doctext;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;}
+span.doctexthighlight2
+	{mso-style-name:doctexthighlight2;}
+span.docemphasis
+	{mso-style-name:docemphasis;}
+p.doclist, li.doclist, div.doclist
+	{mso-style-name:doclist;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;}
+span.docmonofont
+	{mso-style-name:docmonofont;}
+span.docemphstrong
+	{mso-style-name:docemphstrong;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1153444461;
+	mso-list-template-ids:-1571645290;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:1216621131;
+	mso-list-template-ids:-2071025496;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:1494183424;
+	mso-list-template-ids:-2140090232;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link="#00217B" vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h2 align=center style='text-align:center'><span style='font-size:18.0pt'>Java
+Overview<o:p></o:p></span></h2>
+
+<h2 align=center style='text-align:center'><span style='font-size:18.0pt'>Part
+II<o:p></o:p></span></h2>
+
+<h2><span style='font-size:18.0pt'><o:p>&nbsp;</o:p></span></h2>
+
+<h2><span style='font-size:18.0pt'>5. Object-Oriented Programming<o:p></o:p></span></h2>
+
+<p class=doctext><a name="Basic_elements"></a><span style='color:black'>Basic
+elements of object-oriented programming (<a name=idx-CHP-5-0172></a>OOP) in <span
+class=doctexthighlight2>Java</span> include classes, objects, and interfaces.<o:p></o:p></span></p>
+
+<h3><a name="classes_and_objects"></a><span style='font-size:14.0pt'>5.1.
+Classes and Objects<o:p></o:p></span></h3>
+
+<p class=doctext><span class=docemphasis><span style='color:black'>Classes</span></span><a
+name="that_usually"></a><span style='color:black'> define entities that usually
+represent something in the real world. They consist of a set of values that
+holds data and a set of methods that operates on the data.<a
+name=idx-CHP-5-0173></a><o:p></o:p></span></p>
+
+<p class=doctext><span style='color:black'>An instance of a class is called an <span
+class=docemphasis>object</span><a name="allocated_memory"></a>, and it is
+allocated memory. There can be multiple instances of a class.<o:p></o:p></span></p>
+
+<p class=doctext><a name="methods_from"></a><span style='color:black'>Classes
+can inherit data members and methods from other classes. A class can directly
+inherit from only one <span class=GramE>class—</span>the <span class=SpellE><span
+class=docemphasis>superclass</span></span><a name="one_direct"></a>. A class
+can have only one direct <span class=SpellE>superclass</span>. This is called <span
+class=docemphasis>inheritance</span>.<o:p></o:p></span></p>
+
+<p class=doctext><a name="details_of"></a><span style='color:black'>When
+implementing a class, the inner details of the class should be </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>private</span></tt><span
+style='color:black'> and accessible only through public interfaces. This is
+called <span class=docemphasis>encapsulation</span><a name="to_use"></a>.
+Although not part of the Java language, the convention is to use <span
+class=SpellE>accessor</span> methods (i.e., </span><span class=GramE><tt><b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>get(</span></i></b></tt></span><tt><b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'> )</span></i></b></tt><span
+style='color:black'> and </span><tt><b style='mso-bidi-font-weight:normal'><i
+style='mso-bidi-font-style:normal'><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>set( )</span></i></b></tt><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>)</span></tt><a
+name="a_class"></a><span style='color:black'> to indirectly access the private
+members of a class and to ensure that another class cannot unexpectedly modify
+private members. Returning immutable values (i.e., strings, primitive values,
+and objects intentionally made immutable) is another way to protect the data
+members from being altered by other objects.<o:p></o:p></span></p>
+
+<h4><a name="class_syntax"></a>5.1.1. Class Syntax<span style='font-size:9.0pt;
+color:white'><o:p></o:p></span></h4>
+
+<p class=doctext><a name="has_a"></a><span style='color:black'>A class has a class
+signature, optional constructors, <a name="data_members"></a><a
+name=idx-CHP-5-0174></a>data members, <a name=idx-CHP-5-0175></a>and <a
+name=idx-CHP-5-0176></a>methods.<a name=idx-CHP-5-0177></a><o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span>[<span
+class=SpellE><span class=GramE><tt><i>javaModifiers</i></tt></span></span>] class <span
+class=SpellE><tt><i>className</i></tt></span><o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>[<span
+class=GramE>extends</span> <span class=SpellE><tt><i>someSuperClass</i></tt></span>]<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>[<span
+class=GramE>implements</span> <span class=SpellE><tt><i>someInterfaces</i></tt></span><tt><i> separated by commas</i></tt>] {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>// Data member(s)<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>// Constructor(s)<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>// Method(s)<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><a name="instantiating_a_class_creating_an_object"></a><o:p></o:p></span></p>
+
+<h4>5.1.2. Instantiating a Class (Creating an Object)<span style='font-size:
+9.0pt;color:white'><o:p></o:p></span></h4>
+
+<p class=doctext><a name="is_an"></a><span style='color:black'>An object is an
+instance of a class. Once instantiated, objects have their own set of <a
+name="members_and"></a><a name=idx-CHP-5-0178></a>data members and <a
+name=idx-CHP-5-0179></a>methods.<a name=idx-CHP-5-0180></a><o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span>// Sample class definitions<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> class Candidate {...}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>class</span> Stats extends <span class=SpellE>ToolSet</span> {...}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> class Report extends <span class=SpellE>ToolSet</span><o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>implements</span> <span class=SpellE>Runnable</span> {...}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name=class></a><span style='color:black'>Separate objects
+of class </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>Candidate</span></tt><span style='color:black'> are created
+(instantiated) using the keyword </span><tt><span style='mso-ansi-font-size:
+12.0pt;mso-bidi-font-size:12.0pt;color:black'>new</span></tt><span
+style='color:black'>.<a name=idx-CHP-5-0181></a><o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span>Candidate can1 = new <span
+class=GramE>Candidate(</span> );<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>Candidate can2 = new <span
+class=GramE>Candidate(</span> );<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><a name="data_members_and_methods"></a><o:p></o:p></span></p>
+
+<h4>5.1.3. Data Members and Methods<span style='font-size:9.0pt;color:white'><o:p></o:p></span></h4>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>Data members, also
+known as <a name=idx-CHP-5-0182></a>fields, hold data about a class.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span>[<span
+class=SpellE><span class=GramE><tt><i>javaModifier</i></tt></span></span><tt><i>] type <span
+class=SpellE>dataMemberName</span></i></tt><o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>Methods operate on
+class data.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span>[<span
+class=SpellE><span class=GramE><tt><i>javaModifiers</i></tt></span></span><tt><i>] type <span
+class=SpellE>methodName</span> (<span class=SpellE>parameterList</span></i></tt>)<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>[<span
+class=GramE>throws</span> <span class=SpellE><tt><i>listOfExceptionsSeparatedByCommas</i></tt></span>]<span style='mso-spacerun:yes'>  </span>{<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>// Method body<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>The following is an
+example of </span><tt><span style='font-size:10.0pt;color:black'>class
+Candidate</span></tt><span style='font-size:8.5pt;color:black'> and its data
+members and methods:<a name=idx-CHP-5-0183></a><o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> class Candidate {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>// Data members or fields<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span></span><span
+lang=NO-BOK style='color:black;mso-ansi-language:NO-BOK'>private String firstName;<o:p></o:p></span></pre><pre><span
+lang=NO-BOK style='color:black;mso-ansi-language:NO-BOK'><span
+style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>private String lastName;<o:p></o:p></span></pre><pre><span
+lang=NO-BOK style='color:black;mso-ansi-language:NO-BOK'><span
+style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span></span><span
+class=GramE><span style='color:black'>private</span></span><span
+style='color:black'> <span class=SpellE>int</span> year;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>// Methods<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> void <span class=SpellE>setYear</span><span style='mso-spacerun:yes'>  </span>(<span
+class=SpellE>int</span> y) { year = y; }<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> String <span class=SpellE>getLastName</span>( ) {return <span
+class=SpellE>lastName</span>;}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>} // End class Candidate<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><a name="accessing_data_members_and_methods_in_ob"></a><o:p></o:p></span></p>
+
+<h4>5.1.4. Accessing Data Members and Methods in Objects<span style='font-size:
+9.0pt;color:white'><o:p></o:p></span></h4>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>The <a
+name=idx-CHP-5-0184></a>dot operator (.) is used to access data members and
+methods in objects. It is not necessary to use the dot operator when accessing
+data members or methods from within an object.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>can1.setYear(</span>2008);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>String <span
+class=SpellE>fName</span> = <span class=SpellE><span class=GramE>getFirstName</span></span><span
+class=GramE>(</span> );<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><a name=overloading></a><o:p></o:p></span></p>
+
+<h4>5.1.5. Overloading<span style='font-size:9.0pt;color:white'><o:p></o:p></span></h4>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>Methods including
+constructors can be overloaded. <a name="more_methods"></a><a
+name=idx-CHP-5-0185></a>Overloading means that two or more methods have the
+same name but different signatures (parameters and return values). Note that
+overloaded methods must have different parameters, and they may have different
+return types; but having only different return types is not <a
+name="methods_can"></a><a name=idx-CHP-5-0186></a>overloading. The access
+modifiers of overloaded methods can be different.<a name=idx-CHP-5-0187></a><o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> class <span class=SpellE>VotingMachine</span> {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>   </span>...<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> void <span class=SpellE>startUp</span>( ) {...}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>private</span> void <span class=SpellE>startUp</span>(<span
+class=SpellE>int</span> g) {...}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="of_its"></a><span style='font-size:8.5pt;color:black'>When
+a method is overloaded, it is permissible for each of its signatures to throw
+different checked exceptions.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>private</span> void <span class=SpellE>startUp</span>(<span
+class=SpellE>int</span> g) throws new<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE>IOException</span> {...}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><a name=overriding></a><o:p></o:p></span></p>
+
+<h4>5.1.6. Overriding<span style='font-size:9.0pt;color:white'><o:p></o:p></span></h4>
+
+<p class=doctext><a name="When___________overridden"></a><span
+style='font-size:8.5pt;color:black'>A subclass can override the methods it
+inherits. When overridden, a method contains the same signature (name and
+parameters) as a method in its <span class=SpellE>superclass</span>, but it has
+different implementation details.<a name=idx-CHP-5-0188></a><o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>The method </span><span
+class=SpellE><span class=GramE><tt><span style='font-size:10.0pt;color:black'>startUp</span></tt></span></span><span
+class=GramE><tt><span style='font-size:10.0pt;color:black'>(</span></tt></span><tt><span
+style='font-size:10.0pt;color:black'> )</span></tt><span style='font-size:8.5pt;
+color:black'> in <span class=SpellE>superclass</span> </span><tt><span
+style='font-size:10.0pt;color:black'>Display</span></tt><a name="in_class"></a><span
+style='font-size:8.5pt;color:black'> is overridden in class </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>TouchScreenDisplay</span></tt></span><span
+style='font-size:8.5pt;color:black'>.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> class Display {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>void</span> <span class=SpellE>startUp</span>( ){<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>    </span><span
+class=SpellE><span class=GramE>System.out.println</span></span><span
+class=GramE>(</span>&quot;Using base display.&quot;);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> class <span class=SpellE>TouchScreenDisplay</span> extends Display {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>    </span><span
+class=GramE>void</span> <span class=SpellE>startUp</span>( ) {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>    </span><span
+class=SpellE><span class=GramE>System.out.println</span></span><span
+class=GramE>(</span>&quot;Using new display.&quot;);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="Rules_regarding"></a><span style='font-size:8.5pt;
+color:black'>Rules regarding <a name=idx-CHP-5-0189></a>overriding methods
+include:<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo3;
+tab-stops:list .5in'><a name="are_not"></a><![if !supportLists]><span
+style='font-size:10.0pt;mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:8.5pt;color:black'>Methods
+that are not </span><tt><span style='font-size:10.0pt;color:black'>final,
+private</span></tt><span style='font-size:8.5pt;color:black'>, or </span><tt><span
+style='font-size:10.0pt;color:black'>static</span></tt><a name="be_overridden"></a><span
+style='font-size:8.5pt;color:black'> can be overridden.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo3;
+tab-stops:list .5in'><a name="override_methods"></a><![if !supportLists]><span
+style='font-size:10.0pt;mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:8.5pt;color:black'>Protected
+methods can override methods that do not have access modifiers.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo3;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:8.5pt;color:black'>The <a
+name="restrictive_______________access"></a><a name=idx-CHP-5-0190></a>overriding
+method cannot have a more restrictive access modifier (i.e., </span><tt><span
+style='font-size:10.0pt;color:black'>package, public, <span class=GramE>private</span>,
+protected</span></tt><span style='font-size:8.5pt;color:black'>) than the
+original method.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo3;
+tab-stops:list .5in'><a name="new_checked"></a><![if !supportLists]><span
+style='font-size:10.0pt;mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:8.5pt;color:black'>The
+overriding method cannot <span class=SpellE>throwany</span> new checked
+exceptions.<o:p></o:p></span></p>
+
+<h4><a name=constructors></a>5.1.7. Constructors<span style='font-size:9.0pt;
+color:white'><o:p></o:p></span></h4>
+
+<p class=doctext><a name="creation_and"></a><a name=idx-CHP-5-0191></a><span
+style='font-size:8.5pt;color:black'>Constructors are called upon object creation
+and are used to initialize data in the newly created object. Constructors are
+optional, have exactly the same name as the class, and they do not have a </span><tt><span
+style='font-size:10.0pt;color:black'>return</span></tt><span style='font-size:
+8.5pt;color:black'> in the body (as methods do). <a name="is_present"></a><a
+name=idx-CHP-5-0192></a>Classes implicitly have a no-argument constructor if no
+explicit constructor is present.<a name=idx-CHP-5-0193></a><o:p></o:p></span></p>
+
+<p class=doctext><a name="that___________is"></a><span style='font-size:8.5pt;
+color:black'>A class can have multiple constructors. The constructor that is
+called when a new object is created is the one that has a matching signature.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> class C<a name=idx-CHP-5-0194></a>andidate {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>Candidate(</span><span class=SpellE>int</span> id) {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>    </span><span
+class=SpellE><span class=GramE>int</span></span> identification = id;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>// <span
+class=GramE>Create</span> a new Candidate and call its constructor<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>class</span> <span class=SpellE>ElectionManager</span><span style='mso-spacerun:yes'>   </span>{<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=SpellE><span class=GramE>int</span></span> <span class=SpellE>ss</span> = <span
+class=SpellE>getIdFromConsole</span>( );<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>Candidate <span
+class=SpellE>cand</span> = new <span class=GramE>Candidate(</span><span
+class=SpellE>ss</span>);<o:p></o:p></span></pre><pre><span style='color:black'><span
+style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><a name="superclasses_and_subclasses"></a><o:p></o:p></span></p>
+
+<h4>5.1.8. <span class=SpellE>Superclasses</span> and Subclasses<span
+style='font-size:9.0pt;color:white'><o:p></o:p></span></h4>
+
+<p class=doctext><a name="class_"></a><span style='color:black'>In Java, a
+class (known as the <span class=docemphasis>subclass</span><a name="can_inherit"></a>)
+can inherit directly from one class (known as the <span class=SpellE><span
+class=docemphasis>superclass</span></span><a name=keyword></a>). The Java
+keyword </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>extends</span></tt><a name="that_a"></a><span
+style='color:black'> indicates that a class inherits data members and methods
+from another class. Note that subclasses do not have direct access to </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>private</span></tt><a
+name="A_subclass"></a><span style='color:black'> members of its <span
+class=SpellE>superclass</span>. A subclass does have access to </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>public,
+protected</span></tt><span style='color:black'>, and </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>package</span></tt><a
+name="methods_"></a><span style='color:black'> members of the <span
+class=SpellE>superclass</span>. As previously mentioned, <span class=SpellE>accessor</span>
+methods (i.e., </span><span class=GramE><tt><span style='mso-ansi-font-size:
+12.0pt;mso-bidi-font-size:12.0pt;color:black'>get(</span></tt></span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'> )</span></tt><span
+style='color:black'> and </span><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>set( ))</span></tt><a name="access_the"></a><span
+style='color:black'> provide a mechanism to indirectly access the </span><span
+class=SpellE><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>private</span></tt><span style='color:black'>members</span></span><span
+style='color:black'> of a class, including a <span class=SpellE>superclass</span>.<a
+name=idx-CHP-5-0199></a><a name=idx-CHP-5-0198></a><a name=idx-CHP-5-0197></a><a
+name=idx-CHP-5-0196></a><a name=idx-CHP-5-0195></a><o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> class Machine {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=SpellE><span class=GramE>boolean</span></span> state;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>void</span> <span class=SpellE>setState</span>(<span class=SpellE>boolean</span> s) {state = s;}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=SpellE><span class=GramE>boolean</span></span> <span class=SpellE>getState</span>() {return state;}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> class <span class=SpellE>VotingMachine</span> extends Machine {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>...<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='color:black'>The keyword </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>super</span></tt><span
+style='color:black'> in the </span><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>Curtain</span></tt><a
+name="access_methods"></a><span style='color:black'> class's default
+constructor is used to access methods in the <span class=SpellE>superclass</span>
+overridden by methods in the subclass.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> class <span class=SpellE>PrivacyWall</span> {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> void <span class=SpellE>printSpecs</span>() {...}<o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span style='color:black'><span
+style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> class Curtain extends <span class=SpellE>PrivacyWall</span> {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> void <span class=SpellE>printSpecs</span>() {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>    </span>...<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>    </span><a
+name=idx-CHP-5-0200></a><span class=SpellE><span class=GramE>super.printSpecs</span></span><span
+class=GramE>(</span>);<o:p></o:p></span></pre><pre><span style='color:black'><span
+style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='color:black'>Another common use of the keyword </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>super</span></tt><span
+style='color:black'> is to call the constructor of a <span class=SpellE>superclass</span>
+<a name=idx-CHP-5-0201></a>and pass it <a name="in_the"></a><a
+name=idx-CHP-5-0202></a>parameters. Note that this call must be the first
+statement in the constructor calling </span><tt><span style='mso-ansi-font-size:
+12.0pt;mso-bidi-font-size:12.0pt;color:black'>super</span></tt><span
+style='color:black'>.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> <span class=SpellE>PrivacyWall</span>(<span
+class=SpellE>int</span> l, <span class=SpellE>int</span> w) {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=SpellE><span class=GramE>int</span></span> length = l;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=SpellE><span class=GramE>int</span></span> width = w;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span style='color:black'><span
+style='mso-tab-count:1'>        </span><span class=GramE>public</span> class Curtain extends <span
+class=SpellE>PrivacyWall</span> {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>// Set default length <a
+name=idx-CHP-5-0203></a>and width<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> Curtain()<span style='mso-spacerun:yes'>  </span>{super(15, 25);}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="to_the"></a><span style='color:black'>If there is not
+an explicit call to the constructor of the <span class=SpellE>superclass</span>,
+an automatic call to the no-argument constructor of the <span class=SpellE>superclass</span>
+is made.<o:p></o:p></span></p>
+
+<h4><a name="the_this_keyword"></a>5.1.9. The this Keyword<span
+style='font-size:9.0pt;color:white'><o:p></o:p></span></h4>
+
+<p class=doctext><a name="common_uses"></a><span style='color:black'>The three
+common uses of the keyword </span><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>this</span></tt><a name="are_to"></a><span
+style='color:black'> are to refer to the current object, call a constructor
+from within another constructor in the same class, and pass a reference of the
+current object to another object.<a name=idx-CHP-5-0204></a><o:p></o:p></span></p>
+
+<p class=doctext><span style='color:black'>To assign a parameter variable to an
+instance variable of the current object:<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> class Curtain extends <span class=SpellE>PrivacyWall</span> {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>String color;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> <span class=SpellE>setColor</span>(String color) {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>    </span><span
+class=SpellE>this.color</span> = color;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="call_a"></a><span style='color:black'>To call a
+constructor <a name=idx-CHP-5-0205></a>from another constructor in the same
+class:<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> class Curtain extends <span class=SpellE>PrivacyWall</span> {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> Curtain(<span class=SpellE>int</span> length, <span
+class=SpellE>int</span> width) {}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> Curtain() {this(10, 9);}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="to_another"></a><span style='color:black'>To pass
+reference of current object to another object:<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> class Curtain<span style='mso-spacerun:yes'>  </span>{<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>Builder <span
+class=SpellE>builder</span> = new <span class=GramE>Builder(</span> );<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=SpellE><span class=GramE>builder.setWallType</span></span><span
+class=GramE>(</span>this);<o:p></o:p></span></pre><pre><span style='color:black'><span
+style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span style='color:black'><span
+style='mso-tab-count:1'>        </span><span class=GramE>public</span> class Builder {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> void <span class=SpellE>setWallType</span>(Curtain c) {...}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>}&lt;</span>$<span class=SpellE>endrange</span>&gt;<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h2><span class=doctexthighlight2><o:p>&nbsp;</o:p></span></h2>
+
+<h2><span class=doctexthighlight2><o:p>&nbsp;</o:p></span></h2>
+
+<h2><span class=doctexthighlight2><o:p>&nbsp;</o:p></span></h2>
+
+<h2><span class=doctexthighlight2><o:p>&nbsp;</o:p></span></h2>
+
+<h3><a name="variable_length_argument_lists"></a><span style='font-size:14.0pt'>5.2.
+Variable Length Argument Lists<o:p></o:p></span></h3>
+
+<p class=doctext><a name="Since_Java"></a><span style='color:black'>Since Java
+5.0, methods can have a variable length argument list. Called <span
+class=SpellE><span class=docemphasis>varargs</span></span><a name="are_declared"></a>,
+these methods are declared such that the last (<a name="only_the"></a><a
+name=idx-CHP-5-0206></a>and only the last) argument can be repeated zero or
+more times when the method is called. The <a name="be_either"></a><a
+name=idx-CHP-5-0207></a><span class=SpellE>vararg</span> parameter can be
+either a primitive or an object. An ellipsis (…) is used in the argument list
+of the method signature to declare the method as a <span class=SpellE>vararg</span>.
+The syntax of the <span class=SpellE>vararg</span> parameter is:<a
+name=idx-CHP-5-0208></a><o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE><tt><i>type</i></tt></span><tt><i>... <span class=SpellE>objectOrPrimitiveName</span></i></tt><o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="a_signature"></a><span style='color:black'>The
+following is an example of a signature for a <span class=SpellE>vararg</span>
+method:<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> <span class=SpellE>setDisplayButtons</span>(<span
+class=SpellE>int</span> row,<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span> String... names) {...}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="methods_to"></a><span style='color:black'>The Java
+compiler modifies <span class=SpellE>vararg</span> methods to look like regular
+methods. The previous example would be modified at compile time to:<a
+name="I_indexterm5_d1e4975"></a><o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> <span class=SpellE>setDisplayButtons</span>(<span
+class=SpellE>int</span> row,<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span> String [] names) {...}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='color:black'>It is permissible for a <a
+name="vararg_parameter"></a><a name=idx-CHP-5-0209></a><span class=SpellE>vararg</span>
+method to have a <span class=SpellE>vararg</span> parameter as its only
+parameter.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span>// Zero or more rows<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> <span class=SpellE>setDisplayButtons</span>(String... names) {...}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="ordinary_method"></a><span style='color:black'>A <span
+class=SpellE>vararg</span> method is called the same way an ordinary method is
+called except that it can take a variable number of parameters, repeating only
+the last argument.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE><span class=GramE>setDisplayButtons</span></span><span
+class=GramE>(</span>&quot;Jim&quot;);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE><span class=GramE>setDisplayButtons</span></span><span
+class=GramE>(</span>&quot;John&quot;, &quot;Mary&quot;, &quot;Pete&quot;);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE><span class=GramE>setDisplayButtons</span></span><span
+class=GramE>(</span>&quot;Sue&quot;, &quot;Doug&quot;, &quot;Terry&quot;, &quot;John&quot;);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='color:black'>The </span><span class=SpellE><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>printf</span></tt></span><a
+name="variable_set"></a><span style='color:black'> method is often used when
+formatting a variable set of output, as </span><span class=SpellE><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>printf</span></tt></span><a
+name="vararg_method"></a><span style='color:black'> is a <span class=SpellE>vararg</span>
+method. From the Java API, type the following:<a name=idx-CHP-5-0210></a><o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> <span class=SpellE>PrintStream</span> <span
+class=SpellE>printf</span>(String format,<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>Object... <span
+class=SpellE>args</span>)<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='color:black'>The </span><span class=SpellE><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>printf</span></tt></span><a
+name="called_________with"></a><span style='color:black'> method is called with
+a format string and a variable set of objects.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE><span class=GramE>System.out.printf</span></span><span
+class=GramE>(</span>&quot;Hello voter %<span class=SpellE>s%n</span><o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>This is machine %<span
+class=SpellE>d%n</span>&quot;, &quot;Sally&quot;, 1);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="detailed_information"></a><span style='color:black'>For
+detailed information on formatting a string passed into the </span><span
+class=SpellE><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>printf</span></tt></span><span style='color:black'> method,
+see </span><span class=SpellE><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>java.util.Formatter</span></tt></span><span
+style='color:black'>.<o:p></o:p></span></p>
+
+<p class=doctext><span style='color:black'>The enhanced </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>for</span></tt><span
+style='color:black'> <a name="used_to"></a><a name=idx-CHP-5-0211></a>loop (<span
+class=SpellE>foreach</span>) is often used to iterate through the variable
+argument.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE><span class=GramE>printRows</span></span><span class=GramE>(</span>) {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>for</span> (<span class=SpellE>int</span> button: buttons)<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>    </span><span
+class=SpellE><span class=GramE>System.out.println</span></span><span
+class=GramE>(</span>names);<o:p></o:p></span></pre><pre><span style='color:
+black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h3><a name="abstract_classes_and_abstract_methods"></a><span style='font-size:
+14.0pt'>5.3. Abstract Classes and Abstract Methods<o:p></o:p></span></h3>
+
+<p class=doctext><a name="Abstract_classes"></a><span style='color:black'>Abstract
+classes and methods are declared with the keyword </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>abstract</span></tt><span
+style='color:black'>.<a name=idx-CHP-5-0212></a><o:p></o:p></span></p>
+
+<h4>5.3.1. Abstract Classes<span style='font-size:9.0pt;color:white'><o:p></o:p></span></h4>
+
+<p class=doctext><span style='color:black'>An <a name="is_typically"></a><a
+name=idx-CHP-5-0213></a>abstract class is typically used as a base class and
+cannot be instantiated. It can contain <a name="and_non"></a><a
+name=idx-CHP-5-0214></a>abstract and non-<a name="can_be"></a><a
+name=idx-CHP-5-0215></a>abstract methods, and it can be a subclass of an
+abstract or a non-abstract class. All of its <a name="the_classes"></a><a
+name=idx-CHP-5-0216></a>abstract methods must be defined by the classes that
+inherit (</span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>extend</span></tt><a name="also_abstract"></a><span
+style='color:black'>) it unless the subclass is also abstract.<a
+name=idx-CHP-5-0217></a><o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> abstract class Alarm {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> void reset() {...}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> abstract void <span class=SpellE>renderAlarm</span>();<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><a name="abstract_methods"></a><o:p></o:p></span></p>
+
+<h4>5.3.2. Abstract Methods<span style='font-size:9.0pt;color:white'><o:p></o:p></span></h4>
+
+<p class=doctext><span style='color:black'>An abstract method contains only the
+method declaration, which must be defined by any non-abstract class that
+inherits it.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> class <span class=SpellE>DisplayAlarm</span> extends Alarm {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> void <span class=SpellE>renderAlarm</span>() {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>    </span><span
+class=SpellE><span class=GramE>System.out.println</span></span><span
+class=GramE>(</span>&quot;Active alarm.&quot;);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h3><a name="static_data_members_static_methods_and_s"></a><span
+style='font-size:16.0pt'>5.4. Static Data Members, Static Methods, and Static
+Constants<o:p></o:p></span></h3>
+
+<p class=doctext><a name="Static_data"></a><a name=idx-CHP-5-0218></a><span
+style='color:black'>Static data members, methods, and constants reside with a
+class and not instances of classes. They can be accessed from within the class
+defined or another class using the dot operator.<a name=idx-CHP-5-0220></a><a
+name=idx-CHP-5-0219></a><o:p></o:p></span></p>
+
+<h4><a name="static_data_members"></a>5.4.1. Static Data Members<span
+style='font-size:9.0pt;color:white'><o:p></o:p></span></h4>
+
+<p class=doctext><a name="members_have"></a><span style='color:black'>Static
+data members have the same features as static methods, plus they are stored in
+a single location in memory.<o:p></o:p></span></p>
+
+<p class=doctext><a name="are_used"></a><span style='color:black'>They are used
+when only one copy of a data member is needed across all instances of a class
+(e.g., a counter).<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span>// <span
+class=GramE>Declaring</span> a <a name=idx-CHP-5-0221></a>static data member<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> class Voter<span style='mso-spacerun:yes'>  </span>{<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><a
+name=idx-CHP-5-0222></a><span class=GramE>static</span> <span class=SpellE>int</span> <span
+class=SpellE>voterCount</span> = 0;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> Voter() { <span class=SpellE>voterCount</span>++;}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> static <span class=SpellE>int</span> <span
+class=SpellE>getVoterCount</span>() {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>    </span><span
+class=GramE>return</span> <span class=SpellE>voterCount</span>;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>...<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE><span class=GramE>int</span></span> <span class=SpellE>numVoters</span> = <span
+class=SpellE>Voter.voterCount</span>;<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<h4>5.4.2. Static Methods<span style='font-size:9.0pt;color:white'><o:p></o:p></span></h4>
+
+<p class=doctext><a name="the_keyword"></a><a name=idx-CHP-5-0223></a><span
+style='color:black'>Static methods have the keyword </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>static</span></tt><span
+style='color:black'> in the method declaration.<a name=idx-CHP-5-0224></a><o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span>// <span
+class=GramE>Declaring</span> a static method<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>class</span> Analyzer {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> static <span class=SpellE>int</span> <span
+class=SpellE>getVotesByAge</span>( ) {...}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>// <span
+class=GramE>Using</span> the static method<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE><span class=GramE>Analyzer.getVotesByAge</span></span><span
+class=GramE>(</span>);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="variables___________because"></a><span
+style='color:black'>Static methods cannot access non-static methods or
+variables because static methods are associated with a class, not an object.<o:p></o:p></span></p>
+
+<h4><a name="static_constants"></a>5.4.3. Static Constants<span
+style='font-size:9.0pt;color:white'><o:p></o:p></span></h4>
+
+<p class=doctext><a name="declared_constant"></a><a name=idx-CHP-5-0225></a><span
+style='color:black'>Static constants are static members declared constant. They
+have the keywords </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>static</span></tt><span style='color:black'> and </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>final</span></tt><span
+style='color:black'>, and a program cannot change them</span><span
+style='font-size:8.5pt;color:black'>.<a name=idx-CHP-5-0227></a><a
+name=idx-CHP-5-0226></a><o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span>// <span
+class=GramE>Declaring</span> a static constant<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>static</span> final <span class=SpellE>int</span> AGE_LIMIT = 18;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>// <span
+class=GramE>Using</span> a static constant<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>if</span> (age == AGE_LIMIT)<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=SpellE><span class=GramE>newVoter</span></span> = &quot;yes&quot;;<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h3><span style='font-size:14.0pt'>5.5. Interfaces<o:p></o:p></span></h3>
+
+<p class=doctext><a name="Interfaces_provide"></a><a name=idx-CHP-5-0228></a><span
+style='color:black'>Interfaces provide a set of declared </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>public</span></tt><span
+style='color:black'> methods that do not have method bodies. A class that <a
+name="an_interface"></a><a name=idx-CHP-5-0229></a>implements an interface must
+provide concrete implementations of all the methods defined by the interface,
+or it must be declared abstract.<a name=idx-CHP-5-0230></a><o:p></o:p></span></p>
+
+<p class=doctext><a name="declared_using"></a><span style='color:black'>An
+interface is declared using the keyword </span><tt><span style='mso-ansi-font-size:
+12.0pt;mso-bidi-font-size:12.0pt;color:black'>interface</span></tt><a
+name="interface_and"></a><span style='color:black'>, followed by the name of
+the interface and a set of method declarations.<o:p></o:p></span></p>
+
+<p class=doctext><a name="and_end"></a><span style='color:black'>Interface
+names are usually adjectives and end with &quot;able&quot; or &quot;<span
+class=SpellE>ible</span>,&quot; as the interface provides a capability</span><span
+style='font-size:8.5pt;color:black'>.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>interface</span> Reportable<span style='mso-spacerun:yes'>  </span>{<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>void</span> <span class=SpellE>genReport</span>(String <span
+class=SpellE>repType</span>);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>void</span> <span class=SpellE>printReport</span>(String <span
+class=SpellE>repType</span>);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="interface_must"></a><span style='color:black'>A class
+that implements an interface must indicate so in its class signature with the
+keyword </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>implements</span></tt><span style='color:black'>.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>class</span> <span class=SpellE>VotingMachine</span> implements Reportable {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> void <span class=SpellE>genReport</span> (String <span
+class=SpellE>repType</span>) {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>    </span>Report <span
+class=SpellE>report</span> = new <span class=GramE>Report(</span><span
+class=SpellE>repType</span>);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> void <span class=SpellE>printReport</span>(String <span
+class=SpellE>repType</span>) {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>    </span><span
+class=SpellE><span class=GramE>System.out.println</span></span><span
+class=GramE>(</span><span class=SpellE>repType</span>);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre>
+
+<p class=doctext><span class=doctexthighlight2>***** </span><span
+style='color:black'>Classes can implement multiple <a name=idx-CHP-5-0231></a>interfaces,
+and interfaces can extend multiple interfaces.<o:p></o:p></span></p>
+
+<h3><span style='font-size:16.0pt'>5.6. Enumerations<o:p></o:p></span></h3>
+
+<p class=doctext><a name="In_simplest"></a><span style='color:black'>In
+simplest terms, <a name="a_set"></a><a name=idx-CHP-5-0232></a>enumerations are
+a set of objects that represent a related set of choices.<a
+name=idx-CHP-5-0233></a><o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE><span class=GramE>enum</span></span> <span class=SpellE>DisplayButton</span> {ROUND, SQUARE}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE>DisplayButton</span> round = <span class=SpellE>DisplayButton.ROUND</span>;<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="beyond_simplest"></a><span style='color:black'>Looking
+beyond simplest terms, an enumeration is a class of type </span><span
+class=SpellE><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>enum</span></tt></span><span style='color:black'>. <a
+name="have_methods"></a><a name=idx-CHP-5-0234></a><span class=SpellE>Enum</span>
+classes can have methods, constructors, and data members</span><span
+style='font-size:8.5pt;color:black'>.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>class</span> <span class=SpellE>enum</span> <span class=SpellE>DisplayButton</span> {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>   </span>// Size in inches<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>   </span>ROUND (.50),<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>   </span>SQUARE (.40);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>   </span><span
+class=GramE>private</span> final float size;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>   </span><span
+class=SpellE><span class=GramE>DisplayButton</span></span><span class=GramE>(</span>float size) {<span
+class=SpellE>this.size</span> = size;}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>   </span><span
+class=GramE>private</span> float size()<span style='mso-spacerun:yes'>  </span>{ return size; }<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='color:black'>The method </span><span class=GramE><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>values(</span></tt></span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'> )</span></tt><a
+name="list_of"></a><span style='color:black'> returns an array of the ordered
+list of objects defined for the <span class=SpellE>enum</span>.<a
+name=idx-CHP-5-0235></a><o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>for</span> (<span class=SpellE>DisplayButton</span> b : <span
+class=SpellE>DisplayButton.values</span>())<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=SpellE><span class=GramE>System.out.println</span></span><span
+class=GramE>(</span>&quot;Button: &quot; + <span class=SpellE>b.size</span>());<o:p></o:p></span></pre>
+
+<h2><span class=doctexthighlight2><o:p>&nbsp;</o:p></span></h2>
+
+<h2><span class=doctexthighlight2><o:p>&nbsp;</o:p></span></h2>
+
+<h2><a name="java_modifiers"></a><span style='font-size:18.0pt'>8. Java
+Modifiers<o:p></o:p></span></h2>
+
+<p class=doctext><a name="which_are"></a><span style='color:black'>Modifiers,
+which are Java keywords, may be applied to classes, interfaces, constructors,
+methods, and data members.<a name=idx-CHP-8-0334></a><a name=idx-CHP-8-0333></a><o:p></o:p></span></p>
+
+<p class=doctext><span style='color:black'><a
+href="javascript:moveTo('java_modifiers-id001');">Table 8-1</a> lists the Java
+modifiers and their applicability.<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;mso-cellspacing:0in'>
+ <thead>
+  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+   <td colspan=6 style='border:none;padding:.75pt .75pt .75pt .75pt'>
+   <h5 align=center style='text-align:center'><a name="java_modifiers-id001"></a><span
+   class=GramE>Table 8-1.</span> Java modifiers</h5>
+   </td>
+  </tr>
+  <tr style='mso-yfti-irow:1'>
+   <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+   <p class=MsoNormal><b><span style='color:black'>Modifier<o:p></o:p></span></b></p>
+   </td>
+   <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+   <p class=MsoNormal><b><span style='color:black'>Class<o:p></o:p></span></b></p>
+   </td>
+   <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+   <p class=MsoNormal><b><span style='color:black'>Interface<o:p></o:p></span></b></p>
+   </td>
+   <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+   <p class=MsoNormal><b><span style='color:black'>Constructor<o:p></o:p></span></b></p>
+   </td>
+   <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+   <p class=MsoNormal><b><span style='color:black'>Method<o:p></o:p></span></b></p>
+   </td>
+   <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+   <p class=MsoNormal><b><span style='color:black'>Data member<o:p></o:p></span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Access
+  modifiers</span></span><span style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>&nbsp;<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>&nbsp;<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>&nbsp;<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>&nbsp;<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>&nbsp;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphasis><span style='color:black'>package-private</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><a name=idx-CHP-8-0335></a><span style='color:black'>private<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><a name=idx-CHP-8-0336></a><span style='color:black'>protected<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><a name=idx-CHP-8-0337></a><span style='color:black'>public<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><b style='mso-bidi-font-weight:
+  normal'><span style='color:black'>Other modifiers</span></b></span><b
+  style='mso-bidi-font-weight:normal'><span style='color:black'><o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>&nbsp;<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>&nbsp;<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>&nbsp;<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>&nbsp;<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>&nbsp;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>abstract</span></tt><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>final</span></tt><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>native</span></tt><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE><tt><span style='mso-ansi-font-size:
+  12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:"MS Mincho";
+  color:black'>strictfp</span></tt></span><span style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>static</span></tt><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>synchronized</span></tt><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>No</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>transient</span></tt><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>No</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15;mso-yfti-lastrow:yes'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>volatile</span></tt><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>No<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>No</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphstrong><span style='color:black'>Yes</span></span><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><a name="access_modifiers"><o:p></o:p></a></span></p>
+
+<h3><span style='mso-bookmark:access_modifiers'><span style='font-size:14.0pt'>8.1.
+Access Modifiers<o:p></o:p></span></span></h3>
+
+<p class=doctext><span style='mso-bookmark:access_modifiers'><a
+name="the_access"></a><span style='color:black'>Access modifiers define the
+access privileges of classes, interfaces, constructors, methods, and data
+members. Access modifiers consist of </span></span><span style='mso-bookmark:
+access_modifiers'><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>public, private</span></tt><span style='color:black'>, and </span></span><span
+style='mso-bookmark:access_modifiers'><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>protected</span></tt><a name="access_of"></a><span
+style='color:black'>. If no modifier is present, the default access of <span
+class=docemphasis>package-private</span> is used.<a name=idx-CHP-8-0349></a><a
+name=idx-CHP-8-0348></a><a name=idx-CHP-8-0347></a><a name=idx-CHP-8-0346></a><a
+name=idx-CHP-8-0345></a><a name=idx-CHP-8-0344></a><a name=idx-CHP-8-0343></a><a
+name=idx-CHP-8-0342></a><a name=idx-CHP-8-0341></a><a name=idx-CHP-8-0340></a><a
+name=idx-CHP-8-0339></a><a name=idx-CHP-8-0338></a><o:p></o:p></span></span></p>
+
+<p class=doctext><span style='mso-bookmark:access_modifiers'></span><a
+href="javascript:moveTo('visibility_of_access_modifiers');"><span
+style='mso-bookmark:access_modifiers'>Figure 8-1</span><span style='mso-bookmark:
+access_modifiers'></span></a><span style='mso-bookmark:access_modifiers'></span><span
+style='color:black'> illustrates the visibility of the access modifiers,
+including the differences between classes that are </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>public</span></tt><span
+style='color:black'> and <span class=docemphasis>package-private</span><a
+name="modifiers_refer"></a>. Note that in the figure, the modifiers refer to
+both data members and methods.<a name=idx-CHP-8-0350></a><o:p></o:p></span></p>
+
+<h5 align=center style='text-align:center'><a
+name="visibility_of_access_modifiers"></a><span class=GramE>Figure 8-1.</span>
+Visibility of access modifiers<span style='font-size:8.5pt;color:#1F3247'><o:p></o:p></span></h5>
+
+<p class=doctext align=center style='text-align:center'><a
+name="I_mediaobject8_d1e7017"></a><span style='font-size:8.5pt;color:black'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" alt="" style='width:283.5pt;
+ height:268.5pt'>
+ <v:imagedata src="Java%20Overview%20II_files/image001.png" o:href="http://proquestcombo.safaribooksonline.com/getfile?item=bTVnc2RmMGdlMXQ4OTFwL2ljOS85NmEvNWlyNDc4Lm5zZ2cxbTkvcGk-"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=378 height=358
+src="Java%20Overview%20II_files/image002.jpg" v:shapes="_x0000_i1025"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><b style='mso-bidi-font-weight:normal'><span style='color:
+black'><a href="javascript:moveTo('access_modifiers_and_their_visibility');">Table
+8-2</a><a name="are_________used"></a> provides details on the visibility when
+these access modifiers are used.<o:p></o:p></span></b></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;mso-cellspacing:0in'>
+ <thead>
+  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+   <td colspan=2 style='border:none;padding:.75pt .75pt .75pt .75pt'>
+   <h5 align=center style='text-align:center'><a
+   name="access_modifiers_and_their_visibility"></a><span class=GramE>Table
+   8-2.</span> Access modifiers and their visibility</h5>
+   </td>
+  </tr>
+  <tr style='mso-yfti-irow:1'>
+   <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+   <p class=MsoNormal><b><span style='font-size:8.5pt;color:black'>Modifier<o:p></o:p></span></b></p>
+   </td>
+   <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+   <p class=MsoNormal><b><span style='font-size:8.5pt;color:black'>Visibility<o:p></o:p></span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphasis><b style='mso-bidi-font-weight:
+  normal'><i style='mso-bidi-font-style:normal'><span style='color:black'>package-private</span></i></b></span><b
+  style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+  style='color:black'><o:p></o:p></span></i></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>The default <span
+  class=docemphasis>package-private</span> limits access from within the
+  package.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><b style='mso-bidi-font-weight:normal'><i
+  style='mso-bidi-font-style:normal'><span style='mso-ansi-font-size:12.0pt;
+  mso-bidi-font-size:12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>private</span></i></b></tt><b
+  style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+  style='color:black'><o:p></o:p></span></i></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>The </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>private</span></tt><span style='color:black'> method
+  is accessible from within its class. <br>
+  <br>
+  The </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>private</span></tt><a
+  name="It_can"></a><span style='color:black'> data member is accessible from
+  within its class. It can be indirectly accessed through methods (i.e., </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>getter</span></tt><span style='color:black'> and </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>setter</span></tt><span style='color:black'> methods).<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><b style='mso-bidi-font-weight:normal'><i
+  style='mso-bidi-font-style:normal'><span style='mso-ansi-font-size:12.0pt;
+  mso-bidi-font-size:12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>protected</span></i></b></tt><b
+  style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+  style='color:black'><o:p></o:p></span></i></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>The </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>protected</span></tt><a name="accessible_from"></a><span
+  style='color:black'> method is accessible from within its package, and also
+  from outside its package by subclasses of the class containing the method.<a
+  name=idx-CHP-8-0352></a><a name=idx-CHP-8-0351></a> <br>
+  <br>
+  The </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>protected</span></tt><a
+  name="is_accessible"></a><span style='color:black'> data member is accessible
+  within its package, and also from outside its package by subclasses of the
+  class containing the data member.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><b style='mso-bidi-font-weight:normal'><i
+  style='mso-bidi-font-style:normal'><span style='mso-ansi-font-size:12.0pt;
+  mso-bidi-font-size:12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>public</span></i></b></tt><b
+  style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+  style='color:black'><o:p></o:p></span></i></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>The </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>public</span></tt><a name="allows_access"></a><span
+  style='color:black'> modifier allows access from anywhere, even outside of
+  the package in which it was declared. Note that interfaces are </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>public</span></tt><span style='color:black'> by
+  default.<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h3><a name="other_non-access_modifiers"></a><span style='font-size:14.0pt'>8.2.
+Other (Non-Access) Modifiers<o:p></o:p></span></h3>
+
+<p class=doctext><span style='color:black'><a
+href="javascript:moveTo('non-access_java_modifiers');">Table 8-3</a><a
+name="contains_the"></a> contains the <a name="and_their"></a><a
+name=idx-CHP-8-0353></a>non-access Java modifiers and their usage.<a
+name=idx-CHP-8-0356></a><a name=idx-CHP-8-0355></a><a name=idx-CHP-8-0354></a><o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;mso-cellspacing:0in'>
+ <thead>
+  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+   <td colspan=2 style='border:none;padding:.75pt .75pt .75pt .75pt'>
+   <h5 align=center style='text-align:center'><a
+   name="non-access_java_modifiers"></a><span lang=FR style='mso-ansi-language:
+   FR'>Table 8-3. Non-access Java modifiers<o:p></o:p></span></h5>
+   </td>
+  </tr>
+  <tr style='mso-yfti-irow:1'>
+   <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+   <p class=MsoNormal><b><span style='color:black'>Modifier<o:p></o:p></span></b></p>
+   </td>
+   <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+   <p class=MsoNormal><b><span style='color:black'>Usage<o:p></o:p></span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><b style='mso-bidi-font-weight:normal'><i
+  style='mso-bidi-font-style:normal'><span style='mso-ansi-font-size:12.0pt;
+  mso-bidi-font-size:12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>abstract</span></i></b></tt><b
+  style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+  style='color:black'><o:p></o:p></span></i></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>An </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>abstract</span></tt><a name="class_that"></a><span
+  style='color:black'> class is a class that is declared with the keyword </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>abstract</span></tt><span style='color:black'>. It
+  cannot be simultaneously declared with </span><tt><span style='mso-ansi-font-size:
+  12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:"MS Mincho";
+  color:black'>final</span></tt><span style='color:black'>. Interfaces are
+  abstract by default and do not have to be declared abstract.<a
+  name=idx-CHP-8-0357></a> <br>
+  <br>
+  An </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;
+  mso-fareast-font-family:"MS Mincho";color:black'>abstract</span></tt><a
+  name="contains_only"></a><span style='color:black'> method is a method that
+  contains only a signature and no body. If at least one method in a class is
+  abstract, then the enclosing class is abstract. It cannot be declared </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>final, native, private, static</span></tt><span
+  style='color:black'>, or </span><tt><span style='mso-ansi-font-size:12.0pt;
+  mso-bidi-font-size:12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>synchronized</span></tt><span
+  style='color:black'>.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><b style='mso-bidi-font-weight:normal'><i
+  style='mso-bidi-font-style:normal'><span style='mso-ansi-font-size:12.0pt;
+  mso-bidi-font-size:12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>final</span></i></b></tt><b
+  style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+  style='color:black'><o:p></o:p></span></i></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>A </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>final</span></tt><span style='color:black'> class
+  cannot be extended.<a name=idx-CHP-8-0360></a><a name=idx-CHP-8-0359></a><a
+  name=idx-CHP-8-0358></a> <br>
+  <br>
+  A </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;
+  mso-fareast-font-family:"MS Mincho";color:black'>final</span></tt><span
+  style='color:black'> method cannot be overridden. <br>
+  <br>
+  A </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;
+  mso-fareast-font-family:"MS Mincho";color:black'>final</span></tt><a
+  name="once_and"></a><span style='color:black'> data member is initialized
+  only once and cannot be changed. A data member that is declared </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>static final</span></tt><span style='color:black'>
+  is set at compile time and cannot be changed.<a name=idx-CHP-8-0361></a><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><b style='mso-bidi-font-weight:normal'><i
+  style='mso-bidi-font-style:normal'><span style='mso-ansi-font-size:12.0pt;
+  mso-bidi-font-size:12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>native</span></i></b></tt><b
+  style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+  style='color:black'><o:p></o:p></span></i></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>A </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>native</span></tt><a name="as_C"></a><span
+  style='color:black'> method is used to merge other programming languages such
+  as C and C++ code into a Java program. It contains only a signature and no
+  body. It cannot be used simultaneously with </span><span class=SpellE><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>strictfp</span></tt></span><span style='color:black'>.<a
+  name=idx-CHP-8-0362></a><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><b style='mso-bidi-font-weight:normal'><i
+  style='mso-bidi-font-style:normal'><span style='mso-ansi-font-size:12.0pt;
+  mso-bidi-font-size:12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>static</span></i></b></tt><b
+  style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+  style='color:black'><o:p></o:p></span></i></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>A </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>static</span></tt><a name="and_is"></a><span
+  style='color:black'> method is accessed through the class name and is usually
+  used to access a static variable. <br>
+  <br>
+  A </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;
+  mso-fareast-font-family:"MS Mincho";color:black'>static</span></tt><a
+  name="is_accessed"></a><span style='color:black'> data member is accessed
+  through the class name. Only one static data member exists no matter how many
+  instances of the class exist.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE><tt><b style='mso-bidi-font-weight:
+  normal'><i style='mso-bidi-font-style:normal'><span style='mso-ansi-font-size:
+  12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:"MS Mincho";
+  color:black'>strictfp</span></i></b></tt></span><b style='mso-bidi-font-weight:
+  normal'><i style='mso-bidi-font-style:normal'><span style='color:black'><o:p></o:p></span></i></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><a name=A></a><span style='color:black'>A </span><span
+  class=SpellE><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>strictfp</span></tt></span><a
+  name="follow_the"></a><span style='color:black'> class will follow the IEEE
+  754-1985 floating-point specification for all of its floating-point
+  operations. <br>
+  <br>
+  A </span><span class=SpellE><tt><span style='mso-ansi-font-size:12.0pt;
+  mso-bidi-font-size:12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>strictfp</span></tt></span><a
+  name="has_________________all"></a><span style='color:black'> method has all
+  expressions in the method as <span class=SpellE>FPstrict</span>. Methods
+  within interfaces cannot be declared </span><span class=SpellE><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>strictfp</span></tt></span><a
+  name="used_________________simultaneously"></a><span style='color:black'>. It
+  cannot be used simultaneously with the </span><tt><span style='mso-ansi-font-size:
+  12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:"MS Mincho";
+  color:black'>native</span></tt><span style='color:black'> modifier.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><b style='mso-bidi-font-weight:normal'><i
+  style='mso-bidi-font-style:normal'><span style='mso-ansi-font-size:12.0pt;
+  mso-bidi-font-size:12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>synchronized</span></i></b></tt><b
+  style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+  style='color:black'><o:p></o:p></span></i></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>A </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>synchronized</span></tt><a name="execute_the"></a><span
+  style='color:black'> method allows only one thread to execute the method
+  block at a time, making it thread safe. Statements can also be synchronized.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><b style='mso-bidi-font-weight:normal'><i
+  style='mso-bidi-font-style:normal'><span style='mso-ansi-font-size:12.0pt;
+  mso-bidi-font-size:12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>transient</span></i></b></tt><b
+  style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+  style='color:black'><o:p></o:p></span></i></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>A </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>transient</span></tt><a name="when_the"></a><span
+  style='color:black'> data member is not serialized when the class is
+  serialized. It is not part of the persistent state of an object.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;mso-yfti-lastrow:yes'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><b style='mso-bidi-font-weight:normal'><i
+  style='mso-bidi-font-style:normal'><span style='mso-ansi-font-size:12.0pt;
+  mso-bidi-font-size:12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>volatile</span></i></b></tt><b
+  style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+  style='color:black'><o:p></o:p></span></i></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>A </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>volatile</span></tt><a name="both_to"></a><span
+  style='color:black'> data member informs a thread both to get the latest
+  value for the variable, instead of using a cached copy, and to write all
+  updates to the variable as they occur.<a name="I_indexterm8_d1e7332"></a><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h2><span class=doctexthighlight2><o:p>&nbsp;</o:p></span></h2>
+
+<h2><span class=doctexthighlight2><o:p>&nbsp;</o:p></span></h2>
+
+<h2><span class=doctexthighlight2><o:p>&nbsp;</o:p></span></h2>
+
+<h2><span class=doctexthighlight2><o:p>&nbsp;</o:p></span></h2>
+
+<h2><span class=doctexthighlight2><span style='font-size:18.0pt'>13. Generics</span></span><span
+style='font-size:18.0pt'> Framework<o:p></o:p></span></h2>
+
+<h2><span style='font-size:18.0pt'><o:p>&nbsp;</o:p></span></h2>
+
+<p class=doctext><a name=The></a><span style='color:black'>The <a
+name=idx-CHP-13-0712></a><span class=doctexthighlight2>Generics</span>
+Framework, introduced in <span class=doctexthighlight2>Java</span><a
+name="support_that"></a> SE 5.0, provides support that allows for the
+parameterization of types.<a name=idx-CHP-13-0713></a><o:p></o:p></span></p>
+
+<p class=doctext><a name="benefit_of"></a><span style='color:black'>The benefit
+of <a name=idx-CHP-13-0714></a><span class=doctexthighlight2>generics</span><a
+name="reduction_in"></a> is the significant reduction in the amount of code
+that needs to be written when developing a library. Another benefit is the
+elimination <a name=snippet></a>of casting in many situations.<o:p></o:p></span></p>
+
+<p class=doctext><span style='color:black'>The classes of the <span
+class=doctexthighlight2>Collections</span> Framework, the class </span><span
+class=SpellE><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>Class</span></tt></span><span style='color:black'>, and
+other <span class=doctexthighlight2>Java</span> libraries have been updated to
+include <span class=doctexthighlight2>generics</span>.<o:p></o:p></span></p>
+
+<p class=doctext><span class=GramE><span style='color:black'>See <span
+class=doctexthighlight2>Java</span><span class=docemphasis> </span><span
+class=doctexthighlight2>Generics</span><span class=docemphasis> and </span><span
+class=doctexthighlight2>Collections</span><a name="Media_Inc"></a>, by Maurice <span
+class=SpellE>Naftalin</span> and Philip <span class=SpellE>Wadler</span>
+(O'Reilly Media Inc., October 2006), for comprehensive coverage of the <span
+class=doctexthighlight2>Generics</span> Framework.</span></span><span
+style='color:black'><o:p></o:p></span></p>
+
+<p class=doctext><span class=GramE><b style='mso-bidi-font-weight:normal'><span
+style='font-size:16.0pt;color:black'>Convention :</span></b></span><b
+style='mso-bidi-font-weight:normal'><span style='font-size:16.0pt;color:black'>
+<o:p></o:p></span></b></p>
+
+<h3><span class=doctexthighlight2><span style='font-size:12.0pt'>Generic</span></span><span
+style='font-size:12.0pt'> Type Parameter Names<o:p></o:p></span></h3>
+
+<p class=doctext><a name=idx-CHP-1-0011></a><span class=doctexthighlight2><span
+style='color:black'>Generic</span></span><a name="type_parameter"></a><span
+style='color:black'> type parameter names should be uppercase single letters.
+The letter </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>T</span></tt><a name="is_________typically"></a><span
+style='color:black'> for type is typically recommended.<a name=idx-CHP-1-0012></a><o:p></o:p></span></p>
+
+<p class=doctext><a name="Collections_Framework"></a><span style='color:black'>The
+Collections Framework makes extensive use of <span class=doctexthighlight2>generics</span>.
+</span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;
+color:black'>E</span></tt><span style='color:black'> is used for <span
+class=doctexthighlight2>collection</span> elements, </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>S</span></tt><a
+name="service_loaders"></a><span style='color:black'> is used for service
+loaders, and </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>K</span></tt><span style='color:black'> and </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>V</span></tt><span
+style='color:black'> are used for map keys and values.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> interface Map &lt;K,V&gt; {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>   </span>V <span
+class=GramE>put(</span>K key, V value);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h3><a name="generic_classes_and_interfaces"></a><span style='font-size:16.0pt'>13.1.
+<span class=doctexthighlight2>Generic</span> Classes and Interfaces<o:p></o:p></span></h3>
+
+<p class=doctext><span class=doctexthighlight2><span style='color:black'>Generic</span></span><a
+name="by_adding"></a><span style='color:black'> classes and interfaces
+parameterize types by adding a type parameter within angular brackets (i.e., </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>&lt;T&gt;</span></tt><a
+name="the_________place"></a><span style='color:black'>). The type is
+instantiated at the place of the brackets.<a name=idx-CHP-13-0715></a><o:p></o:p></span></p>
+
+<p class=doctext><span style='color:black'>Once instantiated, the <span
+class=doctexthighlight2>generic</span><a name="that_have"></a> parameter type
+is applied throughout the class for methods that have the same type specified.
+In the following example, the </span><span class=GramE><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>add(</span></tt></span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'> )</span></tt><span
+style='color:black'> and </span><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>get( )</span></tt><a
+name="parameter_argument"></a><span style='color:black'> methods use the
+parameterized type as their parameter argument and return types, respectively:<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> interface List &lt;E&gt; extends <span
+class=doctexthighlight2>Collection</span>&lt;E&gt;{<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> <span class=SpellE>boolean</span> add(E <span
+class=SpellE>e</span>);<o:p></o:p></span></pre><pre><span style='color:black'><span
+style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>E <span
+class=GramE>get(</span><span class=SpellE>int</span> index);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="variable_of"></a><span style='color:black'>When a
+variable of a parameterized type is declared, a concrete type (i.e., </span><tt><b
+style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>&lt;Integer&gt;</span></b></tt><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>)</span></tt><a
+name="is_________specified"></a><span style='color:black'> is specified to be
+used in place of the type parameter (i.e., </span><tt><b style='mso-bidi-font-weight:
+normal'><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;
+color:black'>&lt;E<span class=GramE>&gt;<span style='font-weight:normal'> </span><span
+style='font-family:"Times New Roman";font-weight:normal'>)</span></span></span></b></tt><span
+style='color:black'>.<o:p></o:p></span></p>
+
+<p class=doctext><a name="to_cast"></a><span style='color:black'>Subsequently,
+the need to cast when retrieving elements from things such as <span
+class=doctexthighlight2>collections</span><a name="be_eliminated"></a> would be
+eliminated.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span>// <span
+class=doctexthighlight2>Collection</span> List/<span class=SpellE>ArrayList</span> with <a
+name=idx-CHP-13-0716></a><span class=doctexthighlight2>Generics</span><o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>List&lt;Integer&gt; <span
+class=SpellE>iList</span> = new <span class=SpellE>ArrayList</span>&lt;Integer<span
+class=GramE>&gt;(</span>);<o:p></o:p></span></pre><pre><span style='color:black'><span
+style='mso-tab-count:1'>        </span><span class=SpellE><span class=GramE>iList.add</span></span><span
+class=GramE>(</span>1000);<o:p></o:p></span></pre><pre><span style='color:black'><span
+style='mso-tab-count:1'>        </span>// Explicit cast not necessary<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>Integer <span
+class=SpellE>i</span> = <span class=SpellE><span class=GramE>iList.get</span></span><span
+class=GramE>(</span>0);<o:p></o:p></span></pre><pre><span style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>// <span
+class=doctexthighlight2>Collection</span> List/<span class=SpellE>ArrayList</span> without <a
+name=idx-CHP-13-0717></a><span class=doctexthighlight2>Generics</span><o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>List <span
+class=SpellE>iList</span> = new <span class=SpellE><span class=GramE>ArrayList</span></span><span
+class=GramE>(</span>);<o:p></o:p></span></pre><pre><span style='color:black'><span
+style='mso-tab-count:1'>        </span><span class=SpellE><span class=GramE>iList.add</span></span><span
+class=GramE>(</span>1000);<o:p></o:p></span></pre><pre><span style='color:black'><span
+style='mso-tab-count:1'>        </span>// Explicit cast is necessary<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span></span><span
+lang=NO-BOK style='color:black;mso-ansi-language:NO-BOK'>Integer i = (Integer)iList.get(0);<o:p></o:p></span></pre>
+
+<h3><a name="constructors_with_generics"></a><span style='font-size:14.0pt'>13.2.
+Constructors with Generics<o:p></o:p></span></h3>
+
+<p class=doctext><a name="Constructors_of"></a><span style='color:black'>Constructors
+of <a name="do_not"></a><a name=idx-CHP-13-0718></a>generic classes do not
+require generic type parameters as arguments.<a name=idx-CHP-13-0719></a><o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span>// Generic Class<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> class <span class=SpellE>SpecialList</span> &lt;E&gt; {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span>// Constructor without arguments<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> <span class=SpellE>SpecialList</span>( ) {...}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="generic_object"></a><span style='color:black'>A
+generic object of this class could be instantiated as such:<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE>SpecialList</span>&lt;String&gt; b = new<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>     </span><span
+class=SpellE>SpecialList</span>&lt;String<span class=GramE>&gt;(</span>&quot;Joan Marie&quot;);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="substitution_principle"></a><span style='font-size:14.0pt'>13.3.
+Substitution Principle<o:p></o:p></span></h3>
+
+<p class=doctext><a name="As_specified"></a><span style='color:black'>As
+specified in <span class=doctexthighlight2>Java</span><span class=docemphasis>
+Generics and </span><span class=doctexthighlight2>Collections</span>, the <a
+name="allows_subtypes"></a><a name=idx-CHP-13-0720></a>Substitution Principle
+allows subtypes to be used where their <span class=SpellE>supertype</span> is
+parameterized:<a name=idx-CHP-13-0722></a><a name=idx-CHP-13-0721></a><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='color:black'>A variable of a given
+type may be assigned a value of any subtype of that type.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo1;
+tab-stops:list .5in'><a name="a_parameter"></a><![if !supportLists]><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='color:black'>A method with a
+parameter of a given type may be invoked with an argument of any subtype of
+that type.<o:p></o:p></span></p>
+
+<p class=doctext><tt><span style='font-size:10.0pt;color:black'>Byte, Short,
+Integer, Long, Float, Double, <span class=SpellE>BigInteger</span></span></tt><span
+style='font-size:8.5pt;color:black'>, and </span><span class=SpellE><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>BigDecimal</span></tt></span><span
+style='color:black'> are all subtypes of class </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>Number</span></tt><span
+style='color:black'>.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span>// List declared with <span
+class=doctexthighlight2>generic</span> Number type<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>List&lt;Number&gt; <span
+class=SpellE>nList</span> = new <span class=SpellE>ArrayList</span>&lt;Number<span
+class=GramE>&gt;(</span> );<o:p></o:p></span></pre><pre><span style='color:
+black'><span style='mso-tab-count:1'>        </span><span class=SpellE><span
+class=GramE>nList.add</span></span><span class=GramE>(</span>(byte)27);<span style='mso-spacerun:yes'>     </span>// Byte (<span
+class=SpellE>Autoboxing</span>)<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE><span class=GramE>nList.add</span></span><span class=GramE>(</span>(short)30000); // Short<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE><span class=GramE>nList.add</span></span><span class=GramE>(</span>1234567890);<span style='mso-spacerun:yes'>   </span>// Integer<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE><span class=GramE>nList.add</span></span><span class=GramE>(</span>(long)2e62);<span style='mso-spacerun:yes'>   </span>// Long<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE><span class=GramE>nList.add</span></span><span class=GramE>(</span>(float)3.4);<span style='mso-spacerun:yes'>   </span>// Float<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE><span class=GramE>nList.add</span></span><span class=GramE>(</span>4000.8);<span style='mso-spacerun:yes'>       </span>// Double<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE><span class=GramE>nList.add</span></span><span class=GramE>(</span>new <span
+class=SpellE>BigInteger</span>(&quot;9223372036854775810&quot;));<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE><span class=GramE>nList.add</span></span><span class=GramE>(</span>new <span
+class=SpellE>BigDecimal</span>(&quot;2.1e309&quot;));<o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span style='color:black'><span
+style='mso-tab-count:1'>        </span>// Print Number's subtype values from the list<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>for(</span> Number n : <span class=SpellE>nList</span><span style='mso-spacerun:yes'>  </span>)<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=SpellE><span class=GramE>System.out.println</span></span><span
+class=GramE>(</span>n);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h3><a name="type_parameters_wildcards_and_bounds"></a><span style='font-size:
+14.0pt'>13.4. Type Parameters, Wildcards, and Bounds<o:p></o:p></span></h3>
+
+<p class=doctext><span style='color:black'>The <a name="of_a"></a><a
+name=idx-CHP-13-0723></a>simplest declaration of a generic class is with an
+unbounded type parameter, such as </span><tt><b style='mso-bidi-font-weight:
+normal'><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;
+color:black'>T</span></b></tt><b style='mso-bidi-font-weight:normal'><span
+style='color:black'>.</span></b><a name=idx-CHP-13-0726></a><a
+name=idx-CHP-13-0725></a><a name=idx-CHP-13-0724></a><span style='color:black'><o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> class <span class=SpellE>GenericClass</span> &lt;T&gt; {...}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name=and></a><a name=idx-CHP-13-0727></a><span
+style='color:black'>Bounds (constraints) and <a name="applied_to"></a><a
+name=idx-CHP-13-0728></a>wildcards can be applied to the type parameter(s) as
+shown in <a href="javascript:moveTo('type_parameters_bounds_and_wildcards');">Table
+13-1</a>.<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;mso-cellspacing:0in'>
+ <thead>
+  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+   <td colspan=2 style='border:none;padding:.75pt .75pt .75pt .75pt'>
+   <h5 align=center style='text-align:center'><a
+   name="type_parameters_bounds_and_wildcards"></a><span class=GramE>Table
+   13-1.</span> Type parameters, bounds, and wildcards</h5>
+   </td>
+  </tr>
+  <tr style='mso-yfti-irow:1'>
+   <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+   <p class=MsoNormal><b><span style='font-size:8.5pt;color:black'>Type
+   parameters<o:p></o:p></span></b></p>
+   </td>
+   <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+   <p class=MsoNormal><b><span style='font-size:8.5pt;color:black'>Description<o:p></o:p></span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>&lt;T&gt;</span></tt><a
+  name=idx-CHP-13-0731></a><a name=idx-CHP-13-0730></a><a name=idx-CHP-13-0729></a><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>Unbounded type; same as </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>&lt;T extends Object&gt;</span></tt><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>&lt;T,P&gt;</span></tt><a
+  name=idx-CHP-13-0732></a><span style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>Unbounded types; </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>&lt;T extends Object&gt;</span></tt><span
+  style='color:black'> and </span><tt><span style='mso-ansi-font-size:12.0pt;
+  mso-bidi-font-size:12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>&lt;P
+  extends Object&gt;</span></tt><span style='color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>&lt;T extends P&gt;</span></tt><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>Upper bounded type; a specific
+  type </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>T</span></tt><span
+  style='color:black'> that is a subtype of type </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>P</span></tt><span style='color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>&lt;T extends P &amp;
+  S&gt;</span></tt><span style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>Upper bounded type; a specific
+  type </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>T</span></tt><span
+  style='color:black'> that is a subtype of type </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>P</span></tt><span style='color:black'> and that
+  implements type </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>S</span></tt><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>&lt;T super P &gt;</span></tt><a
+  name=idx-CHP-13-0733></a><span style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>Lower bounded type; a specific
+  type </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>T</span></tt><span
+  style='color:black'> that is a <span class=SpellE>supertype</span> of type </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>P</span></tt><span style='color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>&lt;?&gt;<a
+  name=idx-CHP-13-0734></a><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='color:black'>Unbounded wildcard; any object
+  type, same as </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>&lt;? extends
+  Object&gt;</span></tt><span style='color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>&lt;? extends P&gt;</span></tt><a
+  name=idx-CHP-13-0735></a><span style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><a name="a_________________subtype"></a><span
+  style='color:black'>Bounded wildcard; some unknown type that is a subtype of
+  type </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>P</span></tt><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>&lt;? extends P &amp;
+  S&gt;</span></tt><span style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><a name="is_a"></a><span style='color:black'>Bounded
+  wildcard; some unknown type that is a subtype of type </span><tt><span
+  style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:
+  "MS Mincho";color:black'>P</span></tt><span style='color:black'> and that
+  implements type </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>S</span></tt><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;mso-yfti-lastrow:yes'>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>&lt;? super P&gt;</span></tt><a
+  name=idx-CHP-13-0736></a><span style='color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><a name="that_is"></a><span style='color:black'>Lower
+  bounded wildcard; some unknown type that is a <span class=SpellE>supertype</span>
+  of type </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+  12.0pt;mso-fareast-font-family:"MS Mincho";color:black'>P</span></tt><span
+  style='color:black'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="the_get_and_put_principle"></a><span style='font-size:14.0pt'>13.5.
+The Get and Put Principle<o:p></o:p></span></h3>
+
+<p class=doctext><a name="As_also"></a><span style='color:black'>As also
+specified in <span class=doctexthighlight2>Java</span><span class=docemphasis> </span><span
+class=doctexthighlight2>Generics</span><span class=docemphasis> and Collections</span><a
+name="and_Put"></a>, the Get and Put Principle details the best usage of </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>extends</span></tt><span
+style='color:black'> and </span><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>super</span></tt><span style='color:
+black'> <a name=idx-CHP-13-0737></a>wildcards:<a name=idx-CHP-13-0742></a><a
+name=idx-CHP-13-0741></a><a name=idx-CHP-13-0740></a><a name=idx-CHP-13-0739></a><a
+name=idx-CHP-13-0738></a><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l2 level1 lfo2;
+tab-stops:list .5in'><a name=an></a><![if !supportLists]><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='color:black'>Use <span class=GramE>an
+<tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt'>extends</span></tt></span><a
+name="get_only"></a> wildcard when you get only values out of a structure.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l2 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='color:black'>Use a </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>super</span></tt><a
+name="into_a"></a><span style='color:black'> wildcard when you put only values
+into a structure.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l2 level1 lfo2;
+tab-stops:list .5in'><a name="when_you"></a><![if !supportLists]><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='color:black'>Do not use a wildcard
+when you both get and put values into a structure.<o:p></o:p></span></p>
+
+<p class=doctext><span style='color:black'>The </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>extends</span></tt><a
+name="the_method"></a><span style='color:black'> wildcard has been used in the
+method declaration of the </span><span class=SpellE><span class=GramE><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>addAll</span></tt></span></span><span
+class=GramE><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;
+color:black'>(</span></tt></span><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'> )</span></tt><span style='color:black'>
+method of the </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>List</span></tt><span style='color:black'> <span
+class=doctexthighlight2>collection</span>, as this method <span
+class=docemphasis>gets</span> values from a <span class=doctexthighlight2>collection</span>.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> interface List &lt;E&gt; extends <span
+class=doctexthighlight2>Collection</span>&lt;E&gt;{<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=SpellE><span class=GramE>boolean</span></span> <span class=SpellE>addALL</span>(<span
+class=doctexthighlight2>Collection</span> &lt;? extends E&gt; c)<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span style='color:black'><span
+style='mso-tab-count:1'>        </span>List&lt;Integer&gt; <span class=SpellE>srcList</span> = new <span
+class=SpellE>ArrayList</span>&lt;Integer<span class=GramE>&gt;(</span> );<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE><span class=GramE>srcList.add</span></span><span class=GramE>(</span>0);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE><span class=GramE>srcList.add</span></span><span class=GramE>(</span>1);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE><span class=GramE>srcList.add</span></span><span class=GramE>(</span>2);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>// Using <span
+class=SpellE><span class=GramE>addAll</span></span><span class=GramE>(</span> ) method with extends wildcard<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span></span><span
+lang=NO-BOK style='color:black;mso-ansi-language:NO-BOK'>List&lt;Integer&gt; destList = new ArrayList&lt;Integer&gt;( );<o:p></o:p></span></pre><pre><span
+lang=NO-BOK style='color:black;mso-ansi-language:NO-BOK'><span
+style='mso-tab-count:1'>        </span>destList.addAll(srcList);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span lang=NO-BOK style='font-size:8.5pt;color:black;
+mso-ansi-language:NO-BOK'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='color:black'>The </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>super</span></tt><span
+style='color:black'> wildcard has been used in the method declaration of the </span><span
+class=SpellE><span class=GramE><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>addAll</span></tt></span></span><span
+class=GramE><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;
+color:black'>(</span></tt></span><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>)</span></tt><span style='color:black'>
+method of the class </span><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>Collections</span></tt><span
+style='color:black'>, as the method <span class=docemphasis>puts</span> values
+into a <span class=doctexthighlight2>collection</span>.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> class Collections {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> static &lt;T&gt; <span class=SpellE>boolean</span> <span
+class=SpellE>addAll</span><o:p></o:p></span></pre><pre><span style='color:black'><span
+style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>      </span></span><span
+lang=FR style='color:black;mso-ansi-language:FR'>(<span
+class=doctexthighlight2>Collection</span>&lt;? super T&gt; c, T... </span><span
+class=GramE><span style='color:black'>elements</span></span><span
+style='color:black'>){...}<o:p></o:p></span></pre><pre><span style='color:black'><span
+style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span style='color:black'><span
+style='mso-tab-count:1'>        </span>// Using <span class=SpellE><span
+class=GramE>addAll</span></span><span class=GramE>(</span> ) method with <a
+name=idx-CHP-13-0743></a>super wildcard<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>List&lt;Number&gt; <span
+class=SpellE>sList</span> = new <span class=SpellE>ArrayList</span>&lt;Number<span
+class=GramE>&gt;(</span> );<o:p></o:p></span></pre><pre><span style='color:
+black'><span style='mso-tab-count:1'>        </span><span class=SpellE><span
+class=GramE>sList.add</span></span><span class=GramE>(</span>0);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE><span class=GramE>Collections.addAll</span></span><span
+class=GramE>(</span><span class=SpellE>sList</span>, (byte)1, (short)2);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="generic_specialization"></a><span style='font-size:14.0pt'>13.6.
+Generic Specialization<o:p></o:p></span></h3>
+
+<p class=doctext><a name="A_generic"></a><span style='color:black'>A generic
+type can be extended in a variety of ways.<a name=idx-CHP-13-0744></a><o:p></o:p></span></p>
+
+<p class=doctext><a name="parameterized_abstract"></a><span style='color:black'>Given
+the parameterized abstract class</span><span style='font-size:8.5pt;color:black'>
+</span><span class=SpellE><tt><span style='font-size:10.0pt;color:black'>AbstractSet</span></tt></span><tt><span
+style='font-size:10.0pt;color:black'> &lt;E&gt;</span></tt><span
+style='font-size:8.5pt;color:black'>:<o:p></o:p></span></p>
+
+<p class=MsoNormal><a name=idx-CHP-13-0746></a><a name=idx-CHP-13-0745><span
+style='mso-bookmark:idx-CHP-13-0746'><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></span></a></p>
+
+<p><span style='mso-bookmark:idx-CHP-13-0745'><span style='mso-bookmark:idx-CHP-13-0746'><a
+name="extends_____________AbstractSet"></a><span class=GramE><span
+class=docmonofont><span style='color:black'>class</span></span></span><span
+class=docmonofont><span style='color:black'> <span class=SpellE>SpecialSet</span>&lt;E&gt;
+extends <span class=SpellE>AbstractSet</span>&lt;E&gt; {…}</span></span><span
+style='color:black'><o:p></o:p></span></span></span></p>
+
+<p class=doclist style='margin-left:.5in'><span style='mso-bookmark:idx-CHP-13-0745'><span
+style='mso-bookmark:idx-CHP-13-0746'><span style='color:black'>Class </span></span></span><span
+style='mso-bookmark:idx-CHP-13-0745'><span style='mso-bookmark:idx-CHP-13-0746'><span
+class=SpellE><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>SpecialSet</span></tt></span><span style='color:black'>
+extends class </span></span></span><span style='mso-bookmark:idx-CHP-13-0745'><span
+style='mso-bookmark:idx-CHP-13-0746'><span class=SpellE><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>AbstactSet</span></tt></span><a
+name=type></a><span style='color:black'> with the parameter type </span></span></span><span
+style='mso-bookmark:idx-CHP-13-0745'><span style='mso-bookmark:idx-CHP-13-0746'><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>E</span></tt><a
+name="declare_generalizations"></a><span style='color:black'>. This is the
+typical way to declare generalizations with </span></span></span><span
+style='mso-bookmark:idx-CHP-13-0746'><span style='color:black'>generics.</span></span><span
+style='color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p><span class=GramE><span class=docmonofont><span style='color:black'>class</span></span></span><span
+class=docmonofont><span style='color:black'> <span class=SpellE>SpecialSet</span>
+extends <span class=SpellE>AbstractSet</span>&lt;String&gt; {…}</span></span><span
+style='color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><span style='color:black'>Class </span><span
+class=SpellE><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>SpecialSet</span></tt></span><span style='color:black'>
+extends </span><span class=SpellE><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>AbstactSet</span></tt></span><span
+style='color:black'> with the parameterized type </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>String</span></tt><span
+style='color:black'>.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p><span class=GramE><span class=docmonofont><span style='color:black'>class</span></span></span><span
+class=docmonofont><span style='color:black'> <span class=SpellE>SpecialSet</span>&lt;E,P&gt;
+extends <span class=SpellE>AbstractSet</span>&lt;E&gt; {…}</span></span><span
+style='color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><span style='color:black'>Class </span><span
+class=SpellE><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>SpecialSet</span></tt></span><span style='color:black'>
+extends class </span><span class=SpellE><tt><span style='mso-ansi-font-size:
+12.0pt;mso-bidi-font-size:12.0pt;color:black'>AbstactSet</span></tt></span><span
+style='color:black'> with the parameter type </span><tt><span style='mso-ansi-font-size:
+12.0pt;mso-bidi-font-size:12.0pt;color:black'>E</span></tt><span
+style='color:black'>. Type </span><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>P</span></tt><span style='color:black'>
+is unique to the class </span><span class=SpellE><tt><span style='mso-ansi-font-size:
+12.0pt;mso-bidi-font-size:12.0pt;color:black'>SpecialSet</span></tt></span><span
+style='color:black'>.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p><span class=GramE><span class=docmonofont><span style='color:black'>class</span></span></span><span
+class=docmonofont><span style='color:black'> <span class=SpellE>SpecialSet</span>&lt;E&gt;
+extends <span class=SpellE>AbstractSet</span> {…}</span></span><span
+style='color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><span style='color:black'>Class </span><span
+class=SpellE><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>SpecialSet</span></tt></span><a name="would_parameterize"></a><span
+style='color:black'> is a generic class that would parameterize the generic
+type of the class </span><span class=SpellE><tt><span style='mso-ansi-font-size:
+12.0pt;mso-bidi-font-size:12.0pt;color:black'>AbstactSet</span></tt></span><a
+name="the_class"></a><span style='color:black'>. Because the raw type of the
+class </span><span class=SpellE><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>AbstactSet</span></tt></span><a
+name="warnings_will"></a><span style='color:black'> has been extended (as
+opposed to generic), the parameterization cannot occur. Compiler warnings will
+be generated upon method invocation attempts.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p><span class=GramE><span class=docmonofont><span style='color:black'>class</span></span></span><span
+class=docmonofont><span style='color:black'> <span class=SpellE>SpecialSet</span>
+extends <span class=SpellE>AbstractSet</span> {…}</span></span><span
+style='color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><span style='color:black'>Class </span><span
+class=SpellE><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>SpecialSet</span></tt></span><span style='color:black'>
+extends the raw type of the </span><span class=SpellE><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>AbstactSet</span></tt></span><span
+style='color:black'> class. Because the generic version of the class </span><span
+class=SpellE><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>AbstactSet</span></tt></span><a name="method_invocation"></a><span
+style='color:black'> was expected, compiler warnings will be generated upon
+method invocation attempts.<o:p></o:p></span></p>
+
+<h3><span style='font-size:14.0pt'>13.7. Generic Methods in Raw Types<o:p></o:p></span></h3>
+
+<p class=doctext><a name="Static_methods"></a><span style='color:black'>Static
+methods, non-static methods, and constructors that are part of non-generic or
+raw type classes can be declared as generic. A raw type class is the
+non-generic counterpart class to a generic class.<o:p></o:p></span></p>
+
+<p class=doctext><a name="methods_of"></a><span style='color:black'>For generic
+methods of non-generic classes, the method's return type must be preceded with
+the generic type parameter (i.e., </span><tt><span style='mso-ansi-font-size:
+12.0pt;mso-bidi-font-size:12.0pt;color:black'>&lt;E&gt;</span></tt><a
+name="is_no"></a><span style='color:black'>). However, there is no functional
+relationship between the type parameter and the return type, unless the return
+type is of the generic type.<o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=GramE>public</span> class <span class=SpellE>SpecialQueue</span> {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> static &lt;E&gt; <span class=SpellE>boolean</span> add(E <span
+class=SpellE>e</span>) {...}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>public</span> static &lt;E&gt; E peek( ) {...}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:1'>        </span>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="generic_method"></a><span style='color:black'>When
+calling the generic method, the generic type parameter is placed before the
+method name. Here, </span><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>&lt;String&gt;</span></tt><a
+name="type_argument"></a><span style='color:black'> is used to specify the
+generic type argument:<a name="I_indexterm5_d1e12483"></a><o:p></o:p></span></p>
+
+<pre><span style='color:black'><span style='mso-tab-count:1'>        </span><span
+class=SpellE>SpecialQueue</span><span class=GramE>.&lt;</span>String&gt;add(&quot;White Carnation&quot;);<o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span style='color:black'><o:p>&nbsp;</o:p></span></pre>
+
+<p class=MsoNormal>======================<span class=GramE>The</span> End ====================</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

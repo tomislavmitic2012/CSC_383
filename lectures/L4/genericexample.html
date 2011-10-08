@@ -1,0 +1,677 @@
+<html><head><title>Generic examples</title></head>
+<body>
+<ul>
+<li>Sample 
+<pre>
+public class Sample< T>
+{
+    private T data;
+
+    public void setData(T newData)
+    {
+        data = newData;
+    }
+
+    public T getData( )
+    {
+        return data;
+    }
+}
+
+</pre>
+<p>
+<li>ArrayListDemo2.java
+<pre>
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ArrayListDemo2
+{
+   public static void main(String[] args)
+   { 
+      ArrayList< String> toDoList = new ArrayList< String>(20);
+      System.out.println(
+                    "Enter list entries, when prompted.");
+      boolean done = false;
+      String next = null;
+      String answer;
+      Scanner keyboard = new Scanner(System.in);
+
+      while (! done)
+      {
+          System.out.println("Input an entry:");
+          next = keyboard.nextLine( );
+          toDoList.add(next);
+
+          System.out.print("More items for the list? ");
+          answer = keyboard.nextLine( );
+          if (!(answer.equalsIgnoreCase("yes")))
+                done = true;
+      }
+
+      System.out.println("The list contains:");
+      for (String entry : toDoList)
+           System.out.println(entry);
+   
+
+    ArrayList< Integer> toDoList2 = new ArrayList< Integer>(20);
+      System.out.println(
+                    "Enter list entries, when prompted.");
+       done = false;
+      int nextInt = 0;
+
+     while (! done)
+      {
+          System.out.println("Input an entry:");
+          next = keyboard.nextLine( );
+      
+          toDoList2.add(Integer.parseInt(next));
+
+          System.out.print("More items for the list? ");
+          answer = keyboard.nextLine( );
+          if (!(answer.equalsIgnoreCase("yes")))
+                done = true;
+      }
+
+      
+   
+      System.out.println("The list contains:");
+      for (int entry : toDoList2)
+           System.out.println(entry);
+   }
+}
+
+
+
+</pre>
+<p>
+<li>String Selectionsort 
+<p>
+<ul>
+<li>StringSelectionSort
+<pre>
+import java.util.ArrayList;
+
+/**
+ Class for sorting an ArrayList of Strings lexicographically
+ (approximately alphabetically).
+*/
+ public class StringSelectionSort
+ {
+    /**
+     Sorts the ArrayList a so that a.get(0), a.get(1), . . ., 
+     a.get(a.size( ) - 1) are in lexicographic order.
+    */
+     public static void sort(ArrayList< String> a)
+     {
+        int index, indexOfNextSmallest;
+        for (index = 0; index < a.size( ) - 1; index++)
+        {//Place the correct value in position index:
+            indexOfNextSmallest = 
+                            indexOfSmallest(index, a);
+            interchange(index,indexOfNextSmallest, a);
+            //a.get(0), a.get(1),...,a.get(index)
+            //are sorted. The rest of the
+            //elements are in the remaining positions.
+        }
+     }
+     
+    /**
+      Precondition: i and j are legal indices for the ArrayList a.
+      Postcondition: The values of a.get(i) and
+      a.get(j) have been interchanged.
+     */
+     private static void interchange(
+                                int i, int j, ArrayList<String> a)
+     {
+        String temp;
+        temp = a.get(i);
+        a.set(i, a.get(j));
+        a.set(j, temp);
+     }
+     
+    /**
+     Returns the index of the lexicographically first value among
+     a.get(startIndex), a.get(startIndex+1),...,a.get(a.size( ) - 1)
+    */
+    private static int indexOfSmallest(
+                                 int startIndex, ArrayList< String> a)
+    {
+        String min = a.get(startIndex);
+        int indexOfMin = startIndex;
+        int index;
+        for (index = startIndex + 1; index < a.size( ); index++)
+        if ((a.get(index)).compareTo(min) < 0)
+        {
+            min = a.get(index);
+            indexOfMin = index;
+        }
+        return indexOfMin;
+    }
+}
+
+
+
+</pre>
+<p>
+<li>
+<pre>StringSelectionSortDemo
+import java.util.ArrayList;
+
+public class StringSelectionSortDemo
+{
+    public static void main(String[] args)
+    {
+        ArrayList<String> b = new ArrayList< String>( );
+        b.add("time");
+        b.add("tide");
+        b.add("clouds");
+        b.add("rain"); 
+
+        System.out.println("ArrayList values before sorting:");
+        int i;
+        for (String e : b)
+            System.out.print(e + " ");
+        System.out.println( );
+        StringSelectionSort.sort(b);
+        System.out.println("ArrayList values after sorting:");
+        for (String e : b)
+            System.out.print(e + " ");
+        System.out.println( );
+    }
+}
+
+
+</pre>
+<p>
+</ul>
+<li>Generic Pair 
+<ul>
+<li>Pair.java
+<pre>
+public class Pair< T>
+{
+    private T first;
+    private T second;
+
+    public Pair()
+    {
+        first = null;
+        second = null;
+    }
+
+    public Pair(T firstItem, T secondItem)
+    {
+        first = firstItem;
+        second = secondItem;
+    }
+
+    public void setFirst(T newFirst)
+    {
+        first = newFirst;
+    }
+
+    public void setSecond(T newSecond)
+    {
+        second = newSecond;
+    }
+
+    public T getFirst()
+    {
+        return first;
+    }
+
+    public T getSecond()
+    {
+        return second;
+    }
+
+    public String toString()
+    {
+        return ( "first: " + first.toString() + "\n"
+                + "second: " + second.toString() );
+    }
+
+    public boolean equals(Object otherObject)
+    {
+        if (otherObject == null)
+            return false;
+        else if (getClass( ) != otherObject.getClass( ))
+            return false;
+        else
+        {
+            Pair<T> otherPair = (Pair<T>)otherObject;
+            return (first.equals(otherPair.first)
+               && second.equals(otherPair.second));
+        }
+    }
+}
+
+</pre>
+<p>
+<li>GenericPairDemo
+<pre>
+import java.util.Scanner;
+
+public class GenericPairDemo
+{
+   public static void main(String[] args)
+   {
+        Pair<String> secretPair = 
+             new Pair< String>("Happy", "Day");
+
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Enter two words:");
+        String word1 = keyboard.next();
+        String word2 = keyboard.next();
+        Pair<String> inputPair = 
+            new Pair< String>(word1, word2);
+        if (inputPair.equals(secretPair))
+        {
+            System.out.println("You guessed the secret words");
+            System.out.println("in the correct order!");
+        }
+        else
+        {
+            System.out.println("You guessed incorrectly.");
+            System.out.println("You guessed");
+            System.out.println(inputPair);
+            System.out.println("The secret words are");
+            System.out.println(secretPair);
+        }
+   }
+}
+
+
+
+</pre>
+<p>
+<li>GenericPairDemo2
+<pre>
+import java.util.Scanner;
+
+public class GenericPairDemo2
+{
+   public static void main(String[] args)
+   {
+        Pair< Integer> secretPair = 
+             new Pair< Integer>(42, 24);
+
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Enter two numbers:");
+        int n1 = keyboard.nextInt();
+        int n2 = keyboard.nextInt();
+        Pair< Integer> inputPair = 
+            new Pair< Integer>(n1, n2);
+        if (inputPair.equals(secretPair))
+        {
+            System.out.println("You guessed the secret numbers");
+            System.out.println("in the correct order!");
+        }
+        else
+        {
+            System.out.println("You guessed incorrectly.");
+            System.out.println("You guessed");
+            System.out.println(inputPair);
+            System.out.println("The secret numbers are");
+            System.out.println(secretPair);
+        }
+   }
+}
+
+</pre>
+<p>
+</ul>
+<li>Two Type pair 
+<p>
+<ul>
+<li>TwoTypePair
+<pre>
+ public class TwoTypePair< T1, T2>
+{
+    private T1 first;
+    private T2 second;
+
+    public TwoTypePair()
+    {
+        first = null;
+        second = null;
+    }
+
+    public TwoTypePair(T1 firstItem, T2 secondItem)
+    {
+        first = firstItem;
+        second = secondItem;
+    }
+
+    public void setFirst(T1 newFirst)
+    {
+        first = newFirst;
+    }
+
+    public void setSecond(T2 newSecond)
+    {
+        second = newSecond;
+    }
+
+    public T1 getFirst()
+    {
+        return first;
+    }
+
+    public T2 getSecond()
+    {
+        return second;
+    }
+
+    public String toString()
+    {
+        return ( "first: " + first.toString() + "\n"
+                + "second: " + second.toString() );
+    }
+
+    public boolean equals(Object otherObject)
+    {
+        if (otherObject == null)
+            return false;
+        else if (getClass( ) != otherObject.getClass( ))
+            return false;
+        else
+        {
+            TwoTypePair< T1, T2> otherPair = 
+                        (TwoTypePair< T1, T2>)otherObject;
+            return (first.equals(otherPair.first)
+                && second.equals(otherPair.second));
+        }
+    }
+}
+
+</pre>
+<p>
+<li>TwoTypePairDemo
+<pre>
+import java.util.Scanner;
+
+public class TwoTypePairDemo
+{
+   public static void main(String[] args)
+   {
+        TwoTypePair< String, Integer> rating = 
+             new TwoTypePair< String, Integer>("The Car Guys", 8);
+
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println(
+                    "Our current rating for " + rating.getFirst());
+        System.out.println(" is " + rating.getSecond());
+
+        System.out.println("How would you rate them?");
+        int score = keyboard.nextInt();
+        rating.setSecond(score);
+
+        System.out.println(
+                    "Our new rating for " + rating.getFirst());
+        System.out.println(" is " + rating.getSecond());
+   }
+}
+
+
+</pre>
+<p>
+</ul>
+<li>Unordered Pair 
+<p>
+<ul>
+<li>UnorderedPair
+<pre>
+public class UnorderedPair< T> extends Pair<T>
+{
+    public UnorderedPair()
+    {
+        setFirst(null);
+        setSecond(null);
+    }
+
+    public UnorderedPair(T firstItem, T secondItem)
+    {
+        setFirst(firstItem);
+        setSecond(secondItem);
+    }
+
+    public boolean equals(Object otherObject)
+    {
+        if (otherObject == null)
+            return false;
+        else if (getClass( ) != otherObject.getClass( ))
+            return false;
+        else
+        {
+            UnorderedPair< T> otherPair =
+                            (UnorderedPair< T>)otherObject;
+            return (getFirst( ).equals(otherPair.getFirst( ))
+               && getSecond( ).equals(otherPair.getSecond( )))
+               ||
+                   (getFirst( ).equals(otherPair.getSecond( ))
+               && getSecond( ).equals(otherPair.getFirst( )));
+        }
+    }
+}
+
+
+</pre>
+
+<p>
+<li>UnorderedPairDemo
+<pre>
+public class UnorderedPairDemo
+{
+   public static void main(String[] args)
+   {
+        UnorderedPair< String> p1 = 
+             new UnorderedPair< String>("peanuts", "beer");
+        UnorderedPair< String> p2 = 
+             new UnorderedPair< String>("beer", "peanuts");
+
+        if (p1.equals(p2))
+        {
+            System.out.println(p1.getFirst( ) + " and " +
+                      p1.getSecond( ) + " is the same as");
+            System.out.println(p2.getFirst( ) + " and "
+                                + p2.getSecond( ));
+        }
+   }
+}
+
+</pre>
+<p>
+</ul>
+<li>SelectionSort
+<p>
+<ul>
+<li>SelectionSort
+<pre>
+/**
+ Class for sorting an array of base type int from smallest to largest.
+*/
+public class SelectionSort
+{
+    /**
+     Precondition: Every indexed variable of a has a value.
+     Action: Sorts a so that a[0] <= a[1] <= ... <= a[a.length - 1].
+    */
+    public static void sort(int[] a)
+    {
+        int index, indexOfNextSmallest;
+        for (index = 0; index < a.length - 1; index++)
+        {//Place the correct value in a[index]:
+            indexOfNextSmallest = indexOfSmallest(index, a);
+            interchange(index,indexOfNextSmallest, a);
+            //a[0] <= a[1] <=...<= a[index] and these are the smallest
+            //of the original array elements. The remaining positions
+            //contain the rest of the original array elements.
+        }
+    }
+    
+    /**
+     Returns the index of the smallest value among
+     a[startIndex], a[startIndex+1], ... a[a.length - 1]
+    */
+    private static int indexOfSmallest(int startIndex, int[] a)
+    {
+        int min = a[startIndex];
+        int indexOfMin = startIndex;
+        int index;
+        for (index = startIndex + 1; index < a.length; index++)
+            if (a[index] < min)
+            {
+                min = a[index];
+                indexOfMin = index;
+                //min is smallest of a[startIndex] through a[index]
+            }
+        return indexOfMin;
+    }
+
+    /** 
+     Precondition: i and j are valid indices for the array a.
+     Postcondition: Values of a[i] and a[j] have been interchanged.
+    */
+    private static void interchange(int i, int j, int[] a)
+    {
+        int temp;
+        temp = a[i];
+        a[i] = a[j];
+        a[j] = temp; //original value of a[i]
+    }
+}
+   
+</pre>
+<p>
+<li>SelectionSortDemo
+<pre>
+public class SelectionSortDemo
+{
+    public static void main(String[] args)
+    {
+        int[] b = {7, 5, 11, 2, 16, 4, 18, 14, 12, 30};
+        System.out.println("Array values before sorting:");
+        int i;
+        for (i = 0; i < b.length; i++)
+            System.out.print(b[i] + " ");
+        System.out.println( );
+        SelectionSort.sort(b);
+        System.out.println("Array values after sorting:");
+        for (i = 0; i < b.length; i++)
+            System.out.print(b[i] + " ");
+        System.out.println( );
+    }
+}
+
+</pre>
+
+<p>
+</ul>
+<li>Generic version of SelectionSort<p>
+<ul>
+<li><p>
+<pre>
+/**
+ Class for sorting an array of base type int from smallest to largest.
+*/
+public  class GenericSelectionSort
+{
+    /**
+     Precondition: Every indexed variable of a has a value.
+     Action: Sorts a so that a[0] <= a[1] <= ... <= a[a.length - 1].
+    */
+    public static < E extends Comparable>  void sort(E [] a)
+    {
+        int index, indexOfNextSmallest;
+        for (index = 0; index < a.length - 1; index++)
+        {//Place the correct value in a[index]:
+            indexOfNextSmallest = indexOfSmallest(index, a);
+            interchange(index,indexOfNextSmallest, a);
+            //a[0] <= a[1] <=...<= a[index] and these are the smallest
+            //of the original array elements. The remaining positions
+            //contain the rest of the original array elements.
+        }
+    }
+    
+    /**
+     Returns the index of the smallest value among
+     a[startIndex], a[startIndex+1], ... a[a.length - 1]
+    */
+    private static < E extends Comparable> int indexOfSmallest(int startIndex, E [] a)
+    {
+        E min = a[startIndex];
+        int indexOfMin = startIndex;
+        int index;
+        for (index = startIndex + 1; index < a.length; index++)
+            if (a[index].compareTo( min) < 0)
+            {
+                min = a[index];
+                indexOfMin = index;
+                //min is smallest of a[startIndex] through a[index]
+            }
+        return indexOfMin;
+    }
+
+    /** 
+     Precondition: i and j are valid indices for the array a.
+     Postcondition: Values of a[i] and a[j] have been interchanged.
+    */
+    private static < E> void interchange(int i, int j, E [] a)
+    {
+        E temp;
+        temp = a[i];
+        a[i] = a[j];
+        a[j] = temp; //original value of a[i]
+    }
+}
+   
+   
+</pre>
+
+<p>
+<li>SelectionSortDemo2
+<pre>
+public class SelectionSortDemo2
+{
+    public static void main(String[] args)
+    {
+        Integer [] b = {7, 5, 11, 2, 16, 4, 18, 14, 12, 30};
+        System.out.println("Array values before sorting:");
+        int i;
+        for (i = 0; i < b.length; i++)
+            System.out.print(b[i] + " ");
+        System.out.println( );
+        GenericSelectionSort.sort(b);
+        System.out.println("Array values after sorting:");
+        for (i = 0; i < b.length; i++)
+            System.out.print(b[i] + " ");
+        System.out.println( );
+
+
+        String [] a = {"January", "Febraury","March","April","May","June","July","August",
+                       "September","October","November","December"};
+        System.out.println("Array values before sorting:");
+        
+        for (i = 0; i < a.length; i++)
+            System.out.print(a[i] + " ");
+        System.out.println( );
+        GenericSelectionSort.sort(a);
+        System.out.println("Array values after sorting:");
+        for (i = 0; i < a.length; i++)
+            System.out.print(a[i] + " ");
+        System.out.println( );
+
+        for (String s : a)
+            System.out.print(s + " ");
+        System.out.println( );
+    }
+}
+
+</pre>
+<p>
+</ul>
+</ul>
+</body>
+</html>

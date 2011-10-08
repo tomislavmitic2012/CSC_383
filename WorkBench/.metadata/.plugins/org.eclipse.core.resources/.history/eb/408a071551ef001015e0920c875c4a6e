@@ -1,0 +1,35 @@
+package html;
+
+import java.io.*;
+import java.util.Scanner;
+import net.datastructures.*;
+
+/**
+ * Simplified test of matching tags in an HTML document
+ * 
+ * @author Tomislav S. Mitic
+ *
+ */
+public class HTML {
+	/**
+	 * Strip the first and last characters off a <tag> string.
+	 */
+	public static String stripEnds( String t ) {
+		if ( t.length() <= 2 ) return null;			// this is a degenerate tag
+		return t.substring( 1, t.length() - 1 );
+	}
+	
+	/**
+	 * Test if a stripped tag string is empty or a true opening tag.
+	 */
+	public static boolean isOpeningTag( String tag ) {
+		return ( tag.length() == 0 ) || ( tag.charAt( 0 ) != '/' );
+	}
+	
+	/**
+	 * Test if stripped tag1 matches closing tag2 (first character is '/').
+	 */
+	public static boolean areMatching( String tag1, String tag2 ) {
+		return tag1.equals( tag2.substring( 1 ) );
+	}
+}

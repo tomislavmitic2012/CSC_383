@@ -1,0 +1,238 @@
+<html><head><title>Recursion</title></head>
+<body>
+<center>Recursion</center>
+<ul>
+<li>A method (function) calling itself is called a recursive method. <p>
+<li>Examples <p>
+<ul>
+<li>Factiorial : <ul>
+<li> recurisve version <p>
+<pre>
+     public static long factorial(int n) {
+
+                if ( n == 0 ) return 1 ;
+                return n*factorial(n-1) ;
+    }
+</pre>
+
+<p>
+<li>iterative version <p>
+<pre>
+      public static long fact(int n) {
+
+          long result = 1 ;
+
+          for ( int i = 1 ; i <= n ; i++ )
+                result = result * i;
+          return result ;
+      }
+
+
+</pre>
+</p>
+</ul>
+</ul>
+<li>Classification of recursions <p>
+<ul>
+<li>Linear recursion : At most one recursive call each time it is invoked. <ul>
+<li>Example : Summing the elements of an  integer array <p>
+<ul>
+<li>recursive
+<pre>
+       public static int sum(int [] A, int n ) {
+
+             if (n == 1 ) return A[0] ;
+             return A[n-1] + sum(A,n-1);
+        }
+</pre><p>
+<li>iterative <p>
+<pre>
+        public static int sum(int [] A, int n ) {
+
+             int result = 0 ;
+
+             for (int i = 0 ; i < n ; i++ )
+                         result += A[i] ;
+              return result ;
+       }
+
+</pre>
+</ul>
+<li>Example :  reversing  an array <p><ul>
+<li> Recursive <p>
+<pre>
+
+        public static void reverse(int [] A, int i , int j ) {
+                int temp ;
+
+                  if ( i <  j )  {
+                            temp = A[i] ;
+                               A[i] = A[j] ;
+                               A[j] = temp ;
+                   }
+                   reverse(A, i+1, j-1) ;
+        }
+
+        public static void reverse(int [] A) {
+                reverse(A, 0,A.length-1) ;
+        }
+
+</pre><p>
+<li>iterative <p>
+<pre>
+     public static void reverse(int [] A , int i , int j) {
+
+                int temp ;
+
+                while ( i < j ) {
+                     temp = A[i] ; A[i] = A[j] ; A[j] = temp ;
+
+                     i++ ; j-- ;
+                 }
+      }
+              
+
+
+</pre>
+<p>
+
+</ul>
+<li>Tail Recursion :  An algorithm is taik recursion if (a) it is a linear recursion and (b) it makes a 
+recursive call as its <b><i>very  last </i></b>  operation<P>
+<Ul><li>Examples:<p>
+
+  <ul>
+<li> Euclidean algorithm for GCD ;
+<pre>
+/**
+  * Euclid's greatest common divisor algorithm.
+  * Find the largest number that evenly divides into both n and d.
+  * require: n >= 0, d >= 0.
+  * fastest if n >= d.
+  */
+          public static int gcd(int n, int d){
+
+               if ( d == 0 ) return n;
+      
+              int r = n % d;
+
+             return( r == 0 ) ? d : gcd( d , r );
+       }
+
+
+
+
+</pre>
+
+
+</ul>
+
+</ul>
+
+<li>Binary Recursion : Two recursive calls are made instead of one.<p>
+<ul>
+<li>Example : Fibonacci Sequence <p>
+<ul>
+<li>Binary recursive <p>
+<pre>
+
+             public static long Fibonacci(int n) {
+                      if ( n == 0 || n == 1 ) return n ;
+                      return Fibonacci(n-1) + Fibonacci(n-2) ;
+              }
+</pre>
+<p>
+<li>Linear Recursive (also tail recursive)<p>
+<pre>
+            public static long Fibo(int n , long f1, long f2) {
+
+                  if ( n == 0 ) return f1 ;
+                  if ( n == 1 ) return f2 ;
+
+                  return fibo(n-1,f2, f1+f2) ;
+            }
+
+           public static fibo(int n) {
+                   return fibo(n,0,1) ;
+            }
+
+
+</pre><P>
+<li>iterative <p>
+<pre>
+              public static long Fib(it n) {
+            
+                      long f1 = 0 , f2 = 1, f3 ;
+
+                      if ( n == 0 || n == 1 ) return n ;
+
+                      for ( int i = 2 ; i <= n ; i++ ){
+                            f3 = f2+ f1 ;
+                            f1 = f2 ;
+                            f2 = f3 ;
+                       }
+                       return f3 ;
+               }
+                      
+                        
+
+</pre>
+</ul>
+<li>Binary recursive version of summing the elements from an integer array:<p>
+<ul>
+<li>
+<pre>
+           public static int sum(int [] A, int i , int j ) {
+
+             
+
+             if ( i > j ) return 0 ;
+             else if ( i == j) return A[i] ;
+
+              int mid = (i + j ) / 2 ;
+      
+
+              return sum(A,i,mid) + sum(A, mid+1,j) ;
+           }
+
+            
+             
+
+           public static int sum(int [] A)   {
+
+                   return  sum(A, 0, A.length-1 );
+         }
+        
+</pre>
+</ul>
+
+</ul>
+
+<li>Multiple  Recursion:  A method may make multiple ( more than two)  recursive calls.
+
+<p>
+<li>Indirect recursion :<p>
+<ul>
+<li>Example :
+<p>
+<pre>
+
+          public static boolean odd(int n) {
+
+                    if ( n == 0 ) return false ;
+                    return even(n-1) ;
+          }
+
+          public static boolean even(int n ) {
+                    if ( n == 0 ) return true ;
+                    return odd(n-1) ;
+          }
+
+</pre>
+</ul>
+
+</ul>
+
+</ul>
+</body>
+</htmL>

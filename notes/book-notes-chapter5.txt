@@ -1,0 +1,15 @@
+Stacks:
+
+A stack is a collection of objects that are inserted and removed according to the last-in first out (LIFO) principle
+  - Objects can be inserted into the stack at any time, but only the most recently inserted (the "last") object can
+    be removed at an time
+
+The Stack Abstract Data Type:
+
+push(e): Insert element e, to be the top of thestack
+pop(): remove from the stack and return the top element on the stack, and error occurs if the stack is empty
+size(): Return the number of elements in the stack
+isEmpty(): Return a Boolean indicating if the stack is empty
+top(): return the top element in the stack, without removing it; an erro occurs if the stack is empty
+
+Queue:

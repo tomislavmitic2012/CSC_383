@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;d_list.Dlist&apos; to &apos;DList&apos;&#x0A;- Original project: &apos;DoublyLinkedList&apos;&#x0A;- Original element: &apos;d_list.Dlist&apos;&#x0A;- Renamed element: &apos;d_list.DList&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Dlist&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;d_list{Dlist.java[Dlist" matchStrategy="1" name="DList" qualified="false" references="true" similarDeclarations="false" stamp="1316017584862" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,19 @@
+import array_stack.ArrayStack;
+
+/**
+ * Test our program by performing a series of operations on stacks,
+ * printing the operations performed, the returned elements and the
+ * contents of the stack involved, after each operation.
+ * 
+ * @author Tomislav S. Mitic
+ *
+ */
+public class Test {
+	public static void main( String[] args ) {
+		Object o;
+		ArrayStack< Integer > A = new ArrayStack< Integer >();
+		A.status( "New ArrayStack< Integer > A", null );
+		A.push( 7 );
+		
+	}
+}

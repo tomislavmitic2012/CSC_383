@@ -1,0 +1,241 @@
+Constant Function
+  f(n) = c
+
+  - no matter what the value of n is f(n) will always equal the constant value c
+
+The mst fundamental constant function is:
+
+  g(n) = 1
+
+  - any other constant function, f(n) = c, can be written as a constant c * g(n)
+
+  f(n) = cg(n)
+
+The logarithmic function
+  
+  f(n) = log_b n 
+
+Definition:
+
+  x = log_b n iff b^x = n
+
+  - by definition log_b 1 = 0
+  - b is known as the base of the logarithm
+  - we can easily compute the smalles integer greater than or equal to log_a n, b/c the number if equal to the
+    number of times we can divide n by a until we get a number less than or equal to 1
+
+      log_3 27 = 3 -> 27/3/3/3 = 1
+      log_2 12 = 4 -> 12/2/2/2/2 = 1
+
+  - The later base-two approximation arises frequently in algorithm analysis, b/c a common operaiton in many
+    algorithms is to repeatedly divide and input in half
+
+B/c computers store integers in binary, the most common base for the logarithm function in computer science is 2
+  - log n = log_2 n
+
+Logarithm Rules:
+a > 0, b > 1, c > 0 and d > 1
+
+1. log_b ac = log_b a + log_b c
+2. log_b a/c = log_b a - log_b c
+3. log_b a^c = clog_b a
+4. log_b a = (log_d a) / log_d b
+5. b^log_d a = a^log_d b
+
+As an annotational shorthand we use log^c n to denote the fucntion (log n)^c
+
+In order to compute the base two logarithm on a calculator with base 10 log button:
+
+log_2 n = LOG n / LOG 2
+
+Linear function:
+
+  f(n) = n
+
+  - The function arises in algorithm analysis any time we have to do a single basic operation for each of n elements
+  - for example comparing a number x to each element of an array of size n will require n comparisons
+  - the linear function also represents the best running time we can hope to  achieve for an algorithm that
+    processes a collection of n objects that are no already in the computer's memory, b/c reading in the n objects
+    itself requires n operations
+
+N-Log-N function
+
+  F(n) = n log_2 n
+
+  - this function grows a little faster than the linear function and a lot slower than the quadratic function
+
+The Quadratic function
+
+  f(n) = n^2
+
+  - the main reason why the quadratic function appears in the analysis of algorithms is that there are many 
+    algorithms that have nested loops, where the inner loop performs a linear number of operations and the outer
+    loop is performed a linear number times
+  - the akgorithm performs n * n = n^2 operations
+
+Nested loops and the quadratic function
+  - the quadratic function can also arise in the context of nested loops where the first iteration of a loop uses
+    one operation, the second uses two operations, the third uses three operationss, and so on.
+
+      1 + 2 + 3 + ... + (n - 2) + (n - 1) + n.
+
+  - the above is th total number of operaitons that will be performed by the nested loop if the number of operations
+    performed inside the loop increses by one with each iteraiton of the outer loop
+
+For:
+  1 + 2 + 3 + ... + (n - 2) + (n - 1) + n = (n(n + 1))/2
+
+  - If we perform an algorithm with nested loops such that the operations in the inner loop increase by one each time
+    then the total number of operations is quadratic in the number of times, n, we perform the outer loop
+  - the number of operaitons is n^2/2 + n/2, which is a little more than a constant factor (1/2) times the quadratic
+    function n^2
+
+The Cubic function and other Polynomials
+
+  f(n) = n^3
+
+Polynomials:
+  - The funcitons we have listed so far can be viewed as all being part of a larger class of functions called
+    polynomials
+  - A polynomial function is a function of the form:
+    f(n) = a_0 + a_1n + a_2n^2 + a_3n^3 + ... + a_dn^d
+    where a_0, a_1,..., a_d are constants called the coefficients of the polynomial and a_d != 0
+  - Integer d, which indicates the hisgest power in the polynomial, is called the degree of the polynomial
+
+Summations:
+
+A notation that appears again and again in the analysis of algorithms is summations
+
+ (b)
+ Σ f(i) = f(a) + f(a + 1) + f(a + 2) + ... + f(b)
+(i=a)
+
+  - where a and b are integers and a <= b
+  - summations arise in data structures and algorithm analysis beacuse the running times of loops naturally give
+    rise to summations
+
+ (n)
+  Σ i = (n(n + 1))/2
+(i=1)
+
+A polynomial can be rewritten as follows:
+
+       (n)
+f(n) =  Σ a_in^i
+      (i=1)
+
+  - The summation notation gives us a shorthand way of expressing sums of increasing terms that have a regular
+    structure
+
+The Exponential function
+
+  f(n) = b^n
+
+  - b is a positive constant called the base, and the argument n is the exponent
+  - in algorithm analysis the most common base for the exponential function is b = 2
+  - for example if there is a loop that start by performing one operation and then doubles the number of operations
+    performed with each iteration, then the number of operations performed in the nth iteration is 2^n
+
+Exponential Rules
+
+Given positive integer a, b, and c we have
+
+1. (b^a)^c = b^(ac)
+2. b^ab^c = b^(a+c)
+3. b^a/b^c = b^(a-c)
+
+Also note:
+
+b^(a/c) = (b^a)^(1/c)
+
+Geometric summations:
+
+For any integer n >= 0 and any real number a such that a > 0 and a != 1
+
+ (n)
+  Σ a^i = 1 + a + a^2 + ... + a^n = (a^(n+1) - 1)/(a - 1)
+(i=0)
+
+(remember a^0 = 1, if a > 0)
+
+The largest integer that can be represented in binary notation using n bits is:
+
+1 + 2 + 4 + 8 + ... + 2^n-1 = 2^n - 1
+
+Comparing Growth rates:
+
+1 < log_2 n < n < N-log-N < n^2 < n^3 < a^n
+
+  - we would like data structure operations to run in times proportional to the constant or logarithmic function, and
+    we would like our algorithms to run in linear or n-log-n time
+  - algorithms with quadratic or cubic running times are less practical, but algorithms with exponential running
+    times are infeasible for all but the smallest size inputs
+
+The Ceiling and Floor Functions
+
+The value of a logarithm is typically not an integer, yet the running time of an algorithm is usually expressed
+by means of an integetr quantity, such as the number of operations performed
+  - the analysis of an algorithm may sometimes involve the use of the floor function and ceiling finctions
+
+    floor(x) = the largest integer lessthan or equal to x
+    ceil(x) = tje smallest integer greater than or equal to x
+
+Analysis of Algorithms:
+  - we are interested in characterizing an algorithm's running time as a function of the input size
+
+If we wish to analyze a particular algorithm without performing experiments on its running time, we can perform an
+analysis directly on the high level pseudo-code
+
+We define a set of primitive operations sudh as the following:
+  - assigning a value to a variable
+  - calling a method
+  - performing an arithmetic operation (i.e., adding to numbers)
+  - comparing two numbers
+  - indexing into an array
+  - following an object refernece
+  - returning from a method
+
+Specifically a primitive operation corresponds to a low-level instruciton with an execution time that is constant
+  - instead of trying to determine the specific execution time of each primitive operation, we will count how many
+    primitive operations are executed, and use this number t as a measure of the running time of the alorithm
+  - this operation count will correlate to an actual runnig time in a specific computer, for each primitive operation
+    corresponds to a constant-time instruction, and their are only a fixed number of primitive operations
+  - the assumption being is that the running times of different primitive operations an algorithm performs 
+    will be fairly similar, the number t or primitive operations an algorithm performs will be proportional
+    to the actual running time of that algorithm
+
+We will characterize running times in terms of the worst case, as a function of input size n of the algorithm
+  - this is much easier since it requires only the ability to identify the worst case input, and the approach
+    typically leads to better algorithms
+  - making the standard of success for an algoruthm to perform well in the worst case necessarily requires that it
+    will do well on every input
+
+Big-Oh Notation
+
+Let f(n) and g(n) be functions mapping nonnegative integers to real numbers. We say that f(n) is O(g(n)) if there
+is a real constant c > 0 and an integer constant n_0 >= 1 such that
+
+  f(n) <= cg(n), for n >= n_0
+
+The big_Oh notation allows us to say that a function f(n) is less than or equal to another function g(n) up to a
+constant factor and in the asymptotic sense as n grows toward infinity
+  - big-Oh notation allows us to ignore constant factors and lower order terms and focus on the main components
+    of a function that affects its growth
+  - the highest-degree in a polynomial is the term that determines the asymptotic growth rate of the polynomial
+
+Big-Omega
+
+Let f(n) and g(n) be functions mapping nonnegative integers to real number. We say that f(n) is Ω(g(n)) if g(n) is
+O(f(n), that is there is a real constant c > 0 and an integer constant n_0 >= 1 such that
+
+  f(n) >= cg(n), for n >= n_0
+
+  - this definition allows us to sayt asymptotically that one function is greater than or equal to another, up to a
+    constant factor
+
+Big-Theta
+
+We say that f(n) is Θ(g(n)) if f(n) is O(g(n)) and f(n) is Ω(g(n)), that is there are real constants c` > 0
+and c`` > 0 and an integer constant n_0 >= 1 such that
+
+  c`g(n) < f(n) <= f(n) <= c``g(n), for n >= n_0

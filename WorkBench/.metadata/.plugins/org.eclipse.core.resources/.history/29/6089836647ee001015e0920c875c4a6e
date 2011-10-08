@@ -1,0 +1,9 @@
+package reverse;
+
+import java.util.Stack;
+
+public class ArrayReverse {
+	public static < E > void reverse( E[] a ) {
+		Stack< E > S = new Stack< E >( a.length );
+	}
+}

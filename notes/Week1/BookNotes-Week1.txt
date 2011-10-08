@@ -1,0 +1,604 @@
+Chapter 1:
+
+Scope Variable Modifiers:
+
+The scope of instance variables can be controlled through the use of variable modifiers:
+  - public: anyone can access public instancevariables
+  - protected: Only methods of the same package or of its subclasses can access protected instance variables
+  - private: only methods of the same class (not methods of a subclass) can access private instance variables
+  - if none of the above modifiers is used, the instance variable is considered friendly. Friendly instance variables
+    can be accessed by and class in the same package.
+
+Usage Variable Modifiers:
+
+In addition to the scope variable modifiers, ther are the following usage modifers:
+  - static: the static keyword is used to declare a variables that is associated with the class, not with individual
+    instances of that class. Static variables are used to store "global" information about a class (for example the
+    total number of objects created for that class). Static variables exist even if no instance of their classis
+    created.
+  - final: a final instance variable is one that must be assigned an initial values, and then can never be assigned 
+    a new value after that. If it is a base type, then it is a constant. If an object variable is final, then it will
+    always refer to the same object (even if that object changes its internal state).
+
+Method Modifiers:
+
+Mehtod modifiers can restrict the scope of a method:
+  - public: anyone can call public methods
+  - protected: only methods of the same package or of a subclasss can call a protected method
+  - private: only methods of the same class (not methods of a subclass) can call a private method
+  - in none of the modifiers is used, then the method is friendly, friendly methods can only be called by objects
+    of classes in the same package
+
+Additional method modifiers:
+
+The above modifiers may be followed by additional modifiers:
+  - abstract: a method declared as abstract has no code, the signature of such a method is followed by a semicolon
+    with no method body, abstract methods may only appear withing an abstract class
+  - final: this is a method that cannot be overriden by a sublass
+  - static: this is a method that is associated with the class itself, and not with a particular instance of the
+    class, static methods can be used to change the state of static variables associated with a class (provided
+    that these variables are not declared final)
+
+Casting:
+
+There are two fundamental types of casting that can be done in Java:
+  - we can cast with respect to the base numerical types
+  - we can cast with respect ot objects
+  - when casting from a double to an int we may lose precision, the resulting double will be rounded down
+  - but we can cast an int to a double without this worry
+
+Implicit casting:
+  - there are cases where Java will perform an implicit cast, according to the type of the assignment variable,
+    provided that there is no loss of precision
+  - Java will not perform implicit casts where precision is lost, an explicit cast is therefore required
+
+Autoboxing/Unboxing
+  - Since Java SE 5, there is a new kind of implicit cast, for going between Number objects, like Integer and Float
+    and their related base types
+  - Any time a Number object is expected as a parameter to a method, the corresponding base type can be passed, in
+    this case Java will perform an implicit cast, called autoboxing, which will convert the base type to its 
+    corresponding Number object
+  - Any time a base type is expected in an expression involving a Number reference, that Number object is changed to
+    the corresponding base type, an operation known as unboxing
+
+There are a few caveats regarding autoboxing and unboxing:
+  - if a Number reference is null, then trying to unbox it will generate an error called a NullPointerException
+  - The "==" operator is used both to test the equality of base type values as well as whether two Number references
+    are pointing to the same object
+  - When testing for equality try to avoid the implicit casts done by autoboxing and unboxing
+  - Implicit casts of any kind take time, we should minimize our reliance on them if performance is an issue
+
+There is only one situation in Java when only implicit casting is allowed, which is during string concatenation:
+  - any time a string is concatenated with any object or base type, that oject or base type is automatically
+    converted to a string
+  - Explicit casting of an object or base type to a string is not allowed
+  - To perform a conversion to a string, we must use the appropriate toString method or perform an implicit cast via
+    the concatenation operation
+
+Cloning an Array:
+  - If we wanted to create an exact copy of the array, a, and assign that array to the array variable b, the
+    following should be done:
+      b = a.clone();
+  - The above copies all of the cells of a into a new array and assigns b to point to that new array
+  - The clone method is a built in method of every Java object, which makes an exact copy of that object
+  - It should be stressed that the cells of an array are copied when clone is used
+  - If the cells are a base type, like int, their values are copied
+  - If the cells are object references, then only the references are copied, which means that there are now two
+    ways to reference such an object
+
+java.util.Scanner methods:
+  - the Scanner class reads the input stream and divides it into tokens, which are strings of characters separated
+    by delimiters
+  - a delimiter is a special separating string, and the default delimeter is whitespace
+  - tokens are separated by strings of spaces, tabs, and newlines, by default
+  - tokens can either be read immediately as strings or a Scanner object can convert a token to a base type, if
+    the token is in the right syntaxi
+
+Designing Classes:
+
+There are general rules of thumb to use when determining how to define classes:
+  - Responsibilities: Divide the work into different actors, each with a different responsibility. Try to descirbe
+    responsibilities using action verbs. These actors will form the classes for the program.
+  - Independence: Define the work for each class to be as independent from other classes as possible. Subdivide 
+    responsibilities between classes so that each class has autonomy over some aspect of the program. Give data (as
+    instance variables) to the class that has jurisdiction over the actions that require access to this data.
+  - Behaviors: So that the consequences of each action performed by a class will be well understood by other classes
+    that interact with it, define the behaviors of each class carefully and precisely. These behaviors will define
+    the methods that this class performs. The set of behaviors for a class is sometimes referred to as a protocol,
+    for we expect the behaviors for a class to hold together as a cohesive unit.
+_____________________________________________________________________________________________________________________
+
+Chapter 2:
+
+Design Pattern: describes a solution to a typical software design problem
+  - a pattern provides a general template for a soltion that can be applied in many different situations 
+  - it describes the main elements of a solution in a abstract way that can be specialized for a specific problem at
+    hand
+  - it consists of a name, which identifies tha pattern, a context, which describes the scenarios for which this 
+    pattern can be applied, a template, which describes how the patterns is applied, and a result, which describes 
+    and analyzes what the pattern produces.
+
+Multiple inheritance in interfaces:
+  - since no confusion is involved and there are times when multiple inheritence of interfaces is useful, Java allows
+    for interfaces to use multiple inheritance
+  - The reason this is allowed is because the methods in interfaces are empty
+
+One use for multiple inheritance of interfaces is to approximate a multiple inheritance technique called the mixin
+  - Programmers of Java can approximate this technique with interfaces
+  - We can use multiple inheritance of interfaces as a mechanism for "mixing" the methods from two or more unrelated
+    interfaces to define an interface that combines their functionality, possibly adding more methods of its own
+
+Strong Typing:
+  - In Java an object can be viewd as being of various types
+  - The primary type of an object o is class C specified at the time o was instantiated
+  - in addition o is of type S for each superclass S of C and is of Type I for each interface implemented by C
+
+However a variable cna be declared as being of only one type (either a class or an interface), which determines
+how the variable is used and how certain methods will act on it
+
+By encforcing that all variables by typed and that methods declare the types they expect and return, Java uses the 
+technique of strong typing to help prevent bugs.
+  - but with rigid requirements on types, it is cometimes necessary to change or conver a type into another type
+  - such conversions may have to be specifed by an explicit cast operator
+
+Widening Converisons:
+  - A widening conversion occurs when a type T is converted into a "wider" type U
+  - The commone cases for widening conversion:
+    - T and U are class types and U is a superclass of T
+    - T and U are interface types and U is a superinterface of T
+    - T is a class that implements interface U
+  - Widening conversions are automatically performed to store the result of an expression into a variable without the
+    need for an explicit cast
+  - We can directly assign the result of an expression of type T into a variable v of type U when the conversion from
+    T to U is a widening conversion
+
+Narrowing Converisons:
+  - A narrowing conversion occurs when a type T is converted into a "narrower" type S.
+  - The common cases of narrowing conversions:
+    - T and S are class types and S is a subclass of T
+    - T and S are interface types and S is a subinterface of T
+    - T is an interface implemented by S
+  - A narrowing conversion of reference types requires an explicit cast.
+
+In Java we can cast an object reference of type T into a type S, provided the object o is referring to is actually
+type S. If on the other hand, object o is not also of type S, then attempting to cast o to type S will throw an 
+an exception called ClassCastException
+
+Generics:
+  - starting with Java 5.0 a generics framework is provided for using abstract types in a way that avoids many
+    explicit casts
+  - a generic type is a type that is not defined at compilation time, but becomes fully specifed at runtime
+  - the generics framework allows us to define a class in terms of a set of formal type parameters, which could be
+    used to abstract the types of some internal variables of the class
+  - angle brackets are used to enclose the list of formal type parameters
+  - although any valid identifier can be used for a formal type parameter, single-letter uppercase names are 
+    conventionally used
+  - given a class that has been defined with such parameterized types, we instantiate an object of this class by
+    using actual type parameters to indicate the concrete types to be used
+  - The actual type parameter can be an arbitrary type
+  - to restrict the type of an actual parameter, we can use an extends clause
+  - The generics framework allows us to define generic versions of methods, in this case we can include the
+    the generic definition amont the mehtod modifiers
+
+Caveats:
+  - the elements stored in an array cannot be a type variable or a parameterized type
+  - Java allows for an array to be defined with a parameterized type, but it doesn't allow a parameterized type 
+    to be used to create an array
+  - Fortunately it allows for an array defined with a parameterized type to be initialized with a newly created,
+    nonparametric array
+  - Even so, this causes the Java compiler to issue a wanring, because this is not 100% type safe
+_____________________________________________________________________________________________________________________
+
+Chapter 3
+
+	/**
+	 * Attempt to add a new  score to the collection (if it is high enough)
+	 */
+	public void add( GameEntry e ) {
+		int newScore = e.getScore();
+		
+		// is the entry e really a high score?
+		if ( self.numEntries == Scores.maxEntries ) { // array is full
+			if ( newScore <= self.entries[ self.numEntries -1 ].getScore() ) {
+				return;		// the new entry, e, is not a high score in this case
+			} else {	// the array is not full
+				self.numEntries++;
+				
+				// Locate the place that the new (high score) entry e belongs
+				int i = self.numEntries - 1;
+				for(; ( i >= 1 ) && ( newScore > self.entries[ i - 1 ].getScore() ); i-- ) {
+					self.entries[ i ] = entries[ i - 1 ];	// move entry i one to the right
+				}
+				self.entries[ i ] = e;	// add the new score to entries
+			}
+		}
+	}
+	
+	/**
+	 * Remove and return the high score at index i
+	 */
+	public GameEntry remove( int i ) throws IndexOutOfBoundsException {
+		if( ( i < 0 ) || ( i >= numEntries ) ) {
+			throw new IndexOutOfBoundsException( "Invalid index: " + i );
+		}
+		
+		GameEntry temp = self.entries[ i ];		// temporarily save the object to be removed
+		for( int j = i; j < self.numEntries - 1; j++ ) {	// count up from i (not down)
+			self.entries[ j ] = self.entries[ j + 1 ];		// move one cell to the left
+		}
+		self.entries[ self.numEntries - 1 ] = null;			// null out the old last score
+		self.numEntries--;
+		return temp;
+	}
+
+- The above methods for adding and removing objects in an array of high scores are simple
+- Nevertheless they form the basis of techniques that are used repeatedly to build more sophisticated data structures
+- These other structures are more general than the array structure above, and they will often have a lot more 
+  operations that they can perform than just add and remove
+
+Sorting an Array
+
+Simple Insertion-Sort Algorithm
+  - Start with the first element in the array, one element by itself is already sorted
+  - Then we consider the next element in the array, if it is smaller than the first we swap them
+  - Next we consider the third element in the array, we swap it leftward until it is in its proper order with the
+    first two elements
+  - We consider the fourth element, and swap it leftward until it is in the proper order with the first three
+  - We continue in this manner with the fifth element, the sixth, and so on, until the whole array is sorted
+
+Pseudocode:
+
+  InsertionSort(A)
+    Input: An array A of n comparable elements
+    Output: The array A with elements rearranged in nondecreasing order
+
+    for i <- 1 to n - 1 do
+      { Insert A[ i ] at its proper location in A[ 0 ], A[ 1 ], ..., A[ i - 1 ] }
+      cur <- A[ i ]
+      j <- i - 1
+      while j >= 0 and A[ j ] > cur do 
+	A[ j + 1 ] <- A[ j ]
+	j <- j - 1
+      A[ j + 1 ] <= cur { cur is now in the right place }
+
+Important Points
+  - an interesting thing happens in the insertion sort algorithm if the array is already sorted
+  - in this case the inner loop does only one comparison, determines that there is no swap needed, and returns back
+    to the outer loop
+  - we perform only one iteration of the inner loop for each iteration of the outer loop
+  - Thus in this case we perform a minimum number of comparisons
+  - We might have the do a lot more work than this if the input array is extremely out of order
+  - we will have to do the most work if the input array is in decreasing order
+
+java.util Methods for Arrays and Random Numbers:
+  - Because arrays are so important Java provides several built-in mehtods for performing common tasks on arrays
+  - These methods appear as static methods in the java.util.Arrays class
+  - Description of some of the methods in the java.util.Arrays class:
+    - equals(A,B) (this is shallow equality): returns true if the array A and the array B are equal, two arrays are
+      equal if they have the same number of elements and every corresponding pair of elements in the two are arrays
+      are equal, A and B have the same elements in the same order
+    - fill(A,x): stores element x into every cell of array A, prvided that the type of the array is defined so that
+      it is allowed to store the value x,
+    - copyOf(A,n): Returns an array of size n such that the first k elements of this array are copied from A, where
+      k = min{n,A.length}. If n > A.length then the last n - A.length elements in  this array (the returned array)
+      will be padded will be padded with default values, e.g., 0 for an array of int and null for an array of objects
+    - coptOfRand(A,s,t): Returns an array of size t - s such that the elements of this array (the returned array) are
+      copied in order from A[ S ] to A[ t - 1 ], where s < t, with padding as with copyOf() if t > A.length
+    - sort(A): Sorts the array A based on the natural ordering of its elements, which must be comparable. This
+      method uses the quick sort algorithm dsicussed in Section 11.2.
+    - toString(A): Returns a String representation of the array A, which is a comma-separated list of the elements
+      of A, ordered as they appear in A, beginning with [ and ending with ]. The string representation of an element
+      A[ i ] is obtained using String.valueOf( A[ i ] ), which returns the string null for a null object and 
+      otherwise calls A[ i ].toString()
+
+Character arrays and Strings
+  - to create an object of class String from a character array A:
+      new String( A );
+  - one of the constructors for the String class takes a character array as its argument and returns a string having
+    the same characters in the same order as the array
+  - likewise given a String S, we can create a character array representation of S by using the expression:
+      S.toCharArray()
+  - The String class has a mehtod toCharArray(), which returns an array (of type char[]) with the same characters as
+    String S
+
+Two-Dimensional Arrays
+  - Arrays in Java are one-dimensional, we use a single index to access each cell of an array
+  - There is a way we can define tw-dimensional arrays in Java - you can create a two dimensional array as an array
+    of arrays
+  - You can define a two-dimensional to be an array with each of its cells being another array
+  - two-dimensional arrays are sometimes called matrices
+  - To declare a two dimensional array in Java do the following:
+      int[][] Y = new int[ 8 ][ 10 ];
+  - The above statement ceates a two-dimensional "array of arrays" Y which is 8 X 10, it has 8 rows and 10 columns (Y
+    is an array of length 8 and each element of Y is an array of length 10
+
+The fact that two dimensional arrays in Java are really one-dimensional arrays nested inside a common one-dimensional
+array raises an interesting issue with respect to how we think about compound objects:
+  - it brings up the question of where a compound object, which is an object - like a 2D array - that is made up of
+    other objects, begins and ends
+  - and array reference in Java points to an array object
+  - if you have a 2D array A and another 2D array B that has the same entries as A, you probably want to think that
+    A us equal to B
+  - However the 1D arrays that make up the rows of A and B are stored in different memory locations, even though
+    they have the same internal content
+  - A call to the method java.util.Arrays.equals(A, B) will return false in this case
+  - The reason for this behavior is that java.util.Arrays.equals methods tests for shallow equality, it tests whether
+    the corresponding elements A and B are equal to each other using only a simple notion of equality
+  - The simple (shallow) equality rule states that two base type variables are equal if they have the same value and
+    two object references are equal if they both refer to the same object
+  - If you want deep equality use the java.util.Arrays.deepEquals(A,B) function:
+      - deepEquals(A,B): Returns whether A and B are deeply equal. A and B are deeply equal if they have the same 
+	number of elements and the two elements A[ i ] and B[ i ] in each pair of corresponding elements are
+	themselves equal in the simple sense, are arrays of the same primitive type such that
+	Arrays.equals( A[ i ], B[ i ] ) would return true, or are arrays of object references such that A[ i ] and
+	B[ i ] are deeply equal
+  - In addition to deep equality, there is also the need for converting a 2D array or an array of object references
+    into a string, java.util.Arrays provides this method:
+      - deepToString( A ): Returns a string representing the contents of A. To convert an element A[ i ] to a
+	string, if A[ i ] is an array reference, Arrays.deepToString( A[ i ] ) is called, else the standard method
+	String.valueOf( A[ i ] ) is used.
+
+Singly Linked Lists:
+
+  - A linked list in its simplest form is a collection of nodes that together form a linear ordering
+  - The ordering is determined as in the children's game "Follow the leader", in that each node is an object that
+    stores a reference to an element and a reference, called next, to another node
+  - The next reference inside the node can be viewed as a link or pointer to another node
+  - Moving from one node to another by following a next reference is known as link hopping or pointer hopping
+  - The first and last node of a linked list are known as the head and tail of the list respectively
+  - we can link hop through the list starting at the head and ending at the tail
+  - you can identify the tail as the node having a null next reference, this indicates the end of the list
+  - A linked list defined in this way is known as a singly linked list
+  - Like an array a singly linked list keeps its elements in a certain order, this order is determined by the chain
+    of next links going from each node to its successor in the list
+  - Unlike and array a singly linked list does not have a predefined fixed size, and it uses space proportional to
+    the number of its elements
+  - Likewise we don't keep track of any index numbers for nodes in a linked list
+  - Therefore we cannot tell if a node is the second, fifth, or twentieth node in the list
+
+Doubly Linked Lists
+  - A linked list that allows us to go in both directions - forward and reverse
+  - these types of linked lists allow for a great variety of quick update operations, including insertion and removal
+    at both ends, as well as in the middle
+  - A node is a doubly linked list stores two references, a next link which points to the next node in the list, and
+    a prev link which points to the previous node in the list
+
+Doubly Linked Lists Header and Trailer Sentinels
+  - To simplify programing, it is convenient to add special nodes at both ends of a double linked list: a header node
+    just before the head of the list and a trailer node just after the tail of the list
+  - these dummy or sentinel nodes do not store any elements
+  - the header sentinel has a valid next reference but a null prev reference, the trailer sentinel has a valid prev
+    reference but a null next reference
+  - a linked list object would simply need to store references to these two sentinels and a size counter which keeps
+    track of the number of elements (not counting the sentinels) in the list.
+  - An empt list would have these sentinels pointing at each other.
+
+Algorithm removeLast():
+  if size = 0 then
+    Indicate an error: the list is empty
+  v <- trailer.getPrev()    { last node }
+  u <- v.getPrev()	    { node before the last node }
+  trailer.setPrev( u )
+  u.setNext( trailer )
+  v.setPrev( null )
+  v.setNext( null )
+  size - size - 1
+
+Algorithm addFirst( v ):
+  w <- header.getNext()	  { first node }
+  v.setNext( w )
+  v.setPrev( header )
+  w.setPrev( v )
+  header,setNext( v )
+  size - size + 1
+
+Algorithm addAfter( v, z ):
+  w <- v.getNext()    { node after v }
+  z.setPrev( v )      { link z to its predecessor, v }
+  z.setNext( w )      { link z to its successor, w }
+  w.setPrev( z )      { link w to its new predecessor, z }
+  v.setNext( z )      { link v to its new successor, z }
+  size <= size + 1
+
+Algorithm remove( v ):
+  u <- v.getPrev()    { node before v }
+  w <- v.getNext()    { node after v }
+  w.setPrev( u )      { link out v }
+  u.setNext( w )      { link out v }
+  v.setPrev( null )   { null out the fields of v }
+  v.setNext( null )   { null out the fiekds if v }
+  size <- size - 1
+
+Algorithm InsertionSort( L ):
+  Input: A double linked list L of comparable elements
+  Output: The list L with elements rearranged in nondecreasing order
+  if L.size() <= 1 then
+    return
+  end <- L.getFirst()
+  while end is not the last node in L do
+    pivot <- end.getNext()
+    Remove pivot from L
+    ins <- end
+    while ins is not the header and ins's element is greater than pivot's do
+      ins <- ins.getPrev()
+    Add pivot just after ins in L
+    if ins = end then	{ We just added pivot after end in this case }
+      end <- end.getNext()
+Circular Linked Lists
+  - A circularly linked list has the same nodes as a singly linked list, each node in a circularly linked list has
+    a next pointer and a reference to an element
+  - There is no head or tail in a circularly linked list
+  - instead of having the last node's next pointer be null, in a circularly linked list, it points back at the 
+    first node
+  - There is no first or last node
+  - If we traverse the nodes of a circularly linked list from any node by following next pointers, we will cycle
+    through the nodes
+  - Although a circularly linked list has no begining or end, we nevertheless need some node to be marked as a 
+    special node, which we call the cursor
+  - The cursor node allows us to have a place to start from if we ever need to traverse a circularly linked list
+  - If we remember this starting point, then we can also know when we are done
+  - We are done with a traversal of a circularly linked list when we return to the node that was the cursor node when
+    we started
+ 
+Simple update methods for a circularly linked list:
+  - add( v ): insert a node v immediately after the cursor, if the list is empty, then v becomes the cursor and its
+    next pointer points to itself
+  - remove(): Remove and return the node v immediately after the cursor (not the cursor itself, unless it is the only
+    node); if the list is empty the cursor is set to null
+  - advance(): advance the cursor to the next node in the list
+
+Recurrsion:
+  - Another way to achieve repetition is thorugh recursion, which occurs when a function refers to itself in its own
+    definition
+  - A recursive definition contains one or more bse cases, which are defined nonrecursively in terms of fixed
+    quantities, it also contains one or more recursive case, which are defined by appealing to the definition
+    of the function being defined
+  - There is no curcularity in this definition, b/c each time the function is invoked, its argument is smaller by
+    one
+  - Recursion is the concept of defining a method that makes a call to itself, whenever a method calls itself, we
+    refer to this as a recursive call
+  - We also consider a method M to be recursive if it calls another method that ultimately leads to a call back to M
+  - The main benefit of a recursive approach to algorithm design is that it allows us to take advantage of the 
+    repetitive structure present in many problems
+  - By making our algorithm description expoit this repetive structure in a recursive way, we can avoid complex case
+    analyses and nested loops
+  - This approach can lead to more readable algorithm descriptions while still being quite efficient
+  - In addition recursion is a useful way of defining objects that have a repeated similar structural form.
+
+Linear Recursion
+  - The simplest form of recursion is linear recursion, where a method is defined so that it makes at most one
+    recursive call each time it is invoked
+  - This type of recursion is useful when we view an algorithmic problem in terms of a first or last element plus a
+    remaining set that has the same structure as the original set
+
+Algorithm LinearSum(A, n):
+  Input: A integer array A and an integer n >= 1, such that A has at least n elements
+  Output: The sum of the first n integer in A
+  if n = 1 then
+    return A[ 0 ]
+  else
+    return LinearSum( A, n - 1 ) + A[ n - 1 ]
+
+An important property that a recursive method should always possess is that the method terminates:
+  - we ensure this by writing a non recursive statement within the method, e,g, for the case n = 1
+  - in addition we always perform the recursive call on a smaller value of the parameter (n - 1) than that which
+    we are given (n)
+  - at some point (at the bottom of the recursion) we will perform the nonrecursive part of the computation
+
+In general an algorithm that uses linear recursion has the following form:
+  - Test for base cases: we begin by testing for a set of base cases (there should be at least one). These base
+    cases should be defined so that every possible chain of recursive calls will eventually reach a base case, and
+    the handling of wach base case should not use recursion
+  - recursive cases: After testing for base cases, we then perform a single recursive call. This recursive step may
+    involve a test that decides which of several possible recursive calls to make, but it should ultimately choose
+    to make just one of these calls each time we perform this step. Moreover we should define each possible recursive
+    call so that it makes progress towards a base case
+
+Analyzing Recursive Algorithms using Recursion Traces:
+  - You can analyze a recursize algorithm by using a visual tool known as a recursion trace
+  - How to draw a recursion trace:
+      - create a box for each instance of the method and label it with the parameters of the method
+      - to visualize a recursive call draw and arrow from the box of the calling method to the box of the called
+	method
+      - when the final call finishes it returns it value back to the second to last call, which adds in its value,
+	and returns the new value to the callee above it, this goes on until reach the top of the recursive trace
+	where the first call was made
+
+Algorithm: ReverseArray( A, i, j )
+  Input: An array A and nonnegative integer indices i and j
+  Output: The reveral of the elements in A starting at index i and ending at j
+  if i < j then
+    Swap A[ i ] and A[ j ]
+    ReverseArray( A, i + 1, j - 1 )
+  return
+
+In the above algorithm there are actually two base cases, when i = j and i > j
+  - in either case we simply terminate the algorithm, since a sequence with zero elements or one element is trivially
+    equal to its reversal
+  - in the recursive step we are guaranteed to make progress towards one of these two base cases
+  - if n is odd we will eventually reach the i = j case, and if n is even, we will eventually reach the i > j case
+  - therefore it is guaranteed that the above algorithm will terminat at some point
+
+Defining problems in ways that facilitate recursion
+  - To design a recursive algorithm for a given problem, it is useful to think of the different ways we can
+    subdivide this problem to define problems that have the same general structure as the original problem
+  - It may mean that you need to redefine the original problem to facilitate similar looking subproblems
+  - If you are having difficulty finding the repetitive structure needed to design a recursive algorithm, it is
+    sometimes useful to work out the problem on a few concrete examples to see how the subproblems should be
+    defined
+
+Tail recursion
+  - Using recursion can often be a useful tool for designing algorithms that have elegant, short definitions
+  - But this usefulness comes at a modest cost
+  - when using a recursive algorithm to solve a problem, you have to use some of the memory locations in the
+    computer to keep track of the state of each active recursive call
+  - if computer memory is at a premium, then it may be useful to be able to derive nonrecursive algorithms for
+    recursive ones
+  - You can use the stack data structure to convert a recursive algorithm to a nonrecursive algorithm, however 
+    there are some instances when we can do this conversion more easily and efficiently
+  - Spcifically we can easily convert algorithms that use tail recursion
+  - An algorithm uses tail recursion it it uses linear recursion and the algorithm makes a recursive call as its
+    very last step
+  - It is not enough that the last statement in the method definition includes a recursive call, however
+  - In order for a method to use tail recursion, the recursive call must be absolutely the last thing the method
+    does (unless we are in a base case of course)
+  - When an algorithm uses tail recursion, we can convert the recursive algorithm into a nonrecursive on, by
+    iterating through the recursive calls rather than calling them explicitly
+
+Algorithm: IterativeReverseArray( A, i, j )
+  Input: An array A and nonnegative integer indices i and j
+  Output: The reversal of the elements in A starting at index i and ending at j
+  while i < j do
+    Swap A[ i ] and A[ j ]
+    i <- i + 1
+    j <- j - 1
+  return
+
+Binary Recursion:
+  - When an algorithm makes two recursive calls, it is using binary recursion
+  - These calls can be used to solve two similar halves of some problem
+
+Algorithm BinarySum( A, i, n ):
+  Input: An array A and integers i and n
+  Output: The sum of the n integers in A starting at index i
+  if n = 1 then
+    return A[ i ]
+  return BinarySum( A, i, [ n / 2 ] ) + BinarySum( A, i + [ n / 2 ], [ n / 2 ] )
+
+Algorithm BinaryFib( k ):
+  Input: Nonnegative intege k
+  Output: The kth Fibonacci number F(k)
+  if k <= 1 then
+    return k
+  else
+    return BinaryFib( k - 1) + BinaryFib( k - 2 )i
+
+Algorithm LinearFibonacci( k ):
+  Input: A nonnegative integer k
+  Output: Pair of Fibonacci number ( F( k ), F( k - 1 ) )
+  if k <= 1 then
+    return ( k, 0 )
+  else
+    ( i, j ) <- LinearFibonacci( k - 1 )
+    return ( i + j, i )
+
+Multiple Recusion:
+  - Generalizing from binary recursion, we use multiple recursion when a method may make multiple recursive calls,
+    with that number potentiallybeing more than two
+  - One of the most common applications of this type of recursion is used when is used when we want to enumerate
+    various configuration in order to solve a combinatorial puzzle
+
+Alorithm PuzzleSolve( k, S, U ):
+  Input: An integer k, sequences S, and set U
+  Output: An enumeration of all k-length extensions to S using elements in U without without repetitions
+  for each e in U do
+    Remove e from U   { e is now being used }
+    Add e to the end of S
+    if k = 1 then
+      Test whether S is a configuration that solves the puzzle
+      if S solves the puzzle then
+	return "Solution found: " S
+    else
+      PuzzleSolve( k - 1, S, U )
+    Add e back to U   { e is now unused }
+    Remove e from the end of S

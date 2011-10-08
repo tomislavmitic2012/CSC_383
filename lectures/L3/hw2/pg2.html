@@ -1,0 +1,74 @@
+<html><head><title>programming assignment #2 </title></head>
+<body>
+<center>Programming assingment #2 <br>
+Due: Oct 8, 2011 , 11:59 pm </center>
+<P>
+<ul>
+
+
+<ul>
+<li>
+ Use linked lists to implement a class, called ListPolynomial, that handles polynomial arithmetic for polynomials of arbitrarily high degree.
+You must use java.util.LinkedList to implement Polynomial class. You must also use the <a href="Term.java" >Term class</a>  provided. 
+ For simplicity, assume that the coefficients of the terms in the polynomials are long integers. For example, the polynomial <p>
+
+  p(x) = 5 x^7 - 14 x^5 + 3 x^4 - 5 x^2 + 10x - 9
+<p>
+
+can be represented by a linked list with six nodes, one for each term, where each node stores as data the coefficient and exponent 
+of the corresponding term. For efficient implementation of polynomial arithmetic, the linked lists representing your polynomials 
+must have nodes stored in sorted order by <b><i> decreasing </i></b>exponent, and all operations should maintain this sorted order. 
+ Your Polynomial class should at least provide  the methods/constructor specified in <a href="index.html">here</a> <p>
+The Test driver is also provided <a href="TestPoly.java"> here</a>.
+The sample output is <a href="pg2.out.txt"> here</a>.
+ 
+<p>
+<ul>
+<li>Notes :
+<p>
+<ul>
+<li>Constructor : Polynomial(long[] exp_coef) takes an array of long integers, where exp_coef[0] is the exponent of the highest order term , exp-coef[1]
+is the coefficient  of the corresdonding term. <p> ( exp_coef[2n], exp_coef[2n+1] are the exponent-coefficient pair of the n-th term.) <p>
+e.g.  {3, 2, 2,-1 , 0,1 } represent the exp-coef pairs of the polynomial <i>P(x) = 2x<sup>3</sup> - x<sup>2</sup>  + 1 </i> ).<p>
+ 
+<li>
+<p>
+<li>eval() : evaluate the current polynomial object at a given integer number, e.g. the polynomial p(x) evaluated at 1 is p(1) = -10   Horner's method must be used.<a href="http://www.physics.utah.edu/~detar/lessons/c++/array/node1.html"> reference</a><p>
+<li>derivative() : find the derivative of the given polynomial . <p>
+<ul>
+<li>power rule : <i>a  (x<sup>n</sup>) ' = n a x<sup>n-1</sup> </i>
+<li>sum rule : <i> (a p(x) + b q(x) ) '  = ap'(x) + bq'(x)  </i>
+</ul><P>
+<li>The following are static method :<p> <ul>
+
+<li> Polynomial add(Polynomial a, Polynomial b)
+  
+<li> Polynomial derivative(Polynomial poly)
+            
+<li> Polynomial divide(Polynomial poly1, Polynomial poly2) : returns the quotient when poly1 is divided by poly2.
+            
+<li>  Polynomial mod(Polynomial poly1, Polynomial poly2)  : returns the remainder when poly1 is divided bu poly2
+            
+<li> Polynomial multiply(Polynomial poly1, long c) : multiply poly1 by a scalar c
+            
+<li> Polynomial multiply(Polynomial poly1, Polynomial poly2) 
+            
+<li> Polynomial multiply(Polynomial poly1, Term t) : multiply poly1 by a single term
+
+<li> Polynomial negate(Polynomial poly) : returns  - poly
+           
+<li> Polynomial subtract(Polynomial poly1, Polynomial poly2)
+            
+
+            
+ </ul><P>
+
+
+
+
+
+</ul>
+</ul>
+</ul>
+</body>
+</html>

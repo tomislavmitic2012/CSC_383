@@ -1,0 +1,43 @@
+
+  // recursive heapify
+
+  heapify(int [] A,int pos, int size) {
+
+             if ( pos > size  ) return ;
+             int left = (pos+1)*2   - 1 ;
+             int right =  (pos+1)*2 ;
+
+             int maxidx = pos ;
+
+             if (   right < size ){
+
+                       if ( A[right] > A[left] ) maxidx = right ;  
+                        else maxidx = left ;
+              } else if ( left < size) maxidx = left ;
+
+               // sofar, maxidx pointing at the larger child
+
+              if ( A[pos] < A[maxidx] ) {  // compare the parent with the larger child
+                   int tmp = A[maxidx] ;
+                   A[maxidx] = A[pos] ;
+                   A[pos] = tmp ;
+                   heapify(A, maxidx, size) ;
+               }              
+
+    }
+
+
+
+ void heapSort(int [] A) {
+  
+           int size = A.length ;
+          
+            heapify(A) ;
+
+            for (int i = size-1 ; i > 0 ; i-- ){
+                 int tmp = A[0] ;
+                  A[0] = A[i] ;
+                  A[i] = tmp;
+                 heapify(A, 0, i) ;
+            }
+}

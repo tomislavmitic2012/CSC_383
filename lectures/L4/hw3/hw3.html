@@ -1,0 +1,69 @@
+<html><head><title>programming assignment #3 </title></head>
+<body>
+<center>Programming assingment #3 <br>
+Due: Oct 22, 2011 , 11:59 pm </center>
+<P>
+<ul>
+
+
+<ul>
+<li>
+ Implement the following sort algorithms:<p>
+<ul>
+<li>bubbleSort:public  static < T extends java.lang.Comparable< ? super T>>void bubbleSort(T[] a)
+            
+<li>selectionSort :public static < T extends java.lang.Comparable< ? super T>>void    selectionSort(T[] a)
+ 
+<li>insertionSort : public static < T extends java.lang.Comparable< ? super T>>void    selectionSort(T[] a)
+<li>heapSort: public static < T extends java.lang.Comparable< ? super T>> void heapSort(T[] a)
+<li>mergeSort <p>
+<ul>
+<li>standard recursive mergesort : public static < T extends java.lang.Comparable< ? super T>> void mergeSort(T[] a,T[] tmpArray)
+                                                     
+<li>recursive mergesort switching to insertionSort when size is less than or eqaul to a cutoff size :   <br> 
+public static < T extends java.lang.Comparable< ? super T>> void mergeSort(T[] a,T[] tmpArray, int cutoff)
+</ul>
+<P>
+<li>quicksort <p>
+<ul>
+<li> standard recursive quicksort, using the leftmost element as the pivot element<br>
+public static < T extends java.lang.Comparable< ? super T>> void quicksort(T[] array)
+
+<li>recursive quicksort, using the leftmost element as the pivot element , switch to insertionsort when size is less than or equal to a cutoff size.<br>
+public static < T extends java.lang.Comparable< ? super T>> void quicksort2(T[] a)
+<li>recursive quicksort, using the median of three as the pivot element , switch to insertionsort when size is less than or equal to a cutoff size.<br>
+public static < T extends java.lang.Comparable< ? super T>> void quicksort3(T[] a)
+<li>non-recursive quicksort,using the median of three as the pivot element, switch to insertionsort  when size is less than or equal to a cutoff size.<br>
+public static < T extends java.lang.Comparable< ? super T>> void quicksort4(T[] a)
+</u>
+
+
+</ul><P>
+
+<li>Notes :
+<p>
+<ul>
+<li>You must put all the sorting methods in one class and named the class  Sort and name your file as Sort.java . Do not create package.
+<li>You must name each of the method exactly as it is specified.<a href="Sort.html">specifications</a>
+<li>The <a href= "TestSort.java">TestSort.java</a> is provided. You can use this as the driver to test your code. TestSort.java tests your sorting methods on Integer arrays.
+<li>Java generic must be used, so that any one of those sorting method can be used for any comparable objects, not just Integers.
+<li>The sample output by running : java TestSort  is <a href="out.txt"> here</a> where the  default data set of size 10000 is used.
+<li>You can run this using different size of data set by :  java TestSort 30000
+<li>when the size of data set is greater than 20,000 , insertionSort, bubbleSort and selectionSort will be skipped. (It'll take too long.)
+<li>When the size is too big, mergesort might cause the memroy problem.It'll throw an OutOfMerroyError.  In order to get more virtual memory, use the option -Xmx to request for more momery.<br>
+e.g.    java -Xmx1000M TestSort 10000000     <br>
+ask for extra 500 M of virtual memory. <a href="out2.txt">Here</a> is the sample output when data set size is 10,000,000.
+
+
+            
+ </ul><P>
+
+
+
+
+
+
+</ul>
+</ul>
+</body>
+</html>
