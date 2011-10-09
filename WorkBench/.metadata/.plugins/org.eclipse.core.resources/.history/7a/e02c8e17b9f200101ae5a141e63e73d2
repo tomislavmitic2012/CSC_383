@@ -1,0 +1,9 @@
+package helpers;
+
+public class Helpers {
+	public static int max( int [] A, int n ) {
+		if ( n == 1 ) return A[ 0 ];
+		int large = max( A, n - 1 );
+		return ( large > A[ n - 1 ] ) ? large : A[ n - 1 ];
+	}
+}

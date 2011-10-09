@@ -1,0 +1,85 @@
+1. )R-3.13 p.156
+Describe and implement a recursive algorithm for finding the maximum element in an array A of n elements.
+What is your running time and space usage? Implement your algorithm in Java.
+
+public static int max( int [] A, int n ) {
+  if ( n == 1 ) return A[ 0 ];
+  int large = max( A, n - 1 );
+  return ( large > A[ n - 1 ] ) ? large : A[ n - 1 ] 
+}
+
+Big-Oh: O(n)
+
+Because depends on how many elements are in the array at worst we go through the entire
+array if max last element
+
+2. C-3.8 p.157 Decribe a recursive algorithm for reversing a singly linked list L, 
+so that the ordering of the nodes becomes opposite of what it was before.
+
+see solution in exclipse workbench
+
+3. C-3.12 p.157 Describe in detail an algorithm for reversing a singly linked 
+list L using only a constant amount of additional space and not using 
+any recursion. Implement your algorithm in Java.
+
+see solution in eclipse work bench
+
+4.C-3.14 p.158
+Describe and implement a recursive method for converting a string of digits into the integer
+it represents. For example, "13531" represents the integer 13,531. 
+
+see solution in eclipse work bench
+
+5.C-3.15 p. 158
+Describe a recursive algorithm that counts the number of nodes in singly linked list. What is the time 
+complexity of your algorithm? Implement your algorithm in Java.
+
+see solution in eclipse work bench
+
+The time complexity is O(n) -> it depends on the numebr of elements in the list
+
+6. C-3.17 p.158 
+Write a short recursive Java method that finds the minimum and maximum values in an array of int values 
+without using any loops. What is the time complexity of your algorithm?
+
+see solution in eclipse work bench
+
+Time complexit is O(n) -> worst case scenario array is order from smallest to highest
+
+7.C-3.20 p. 158
+Write a short recursive Java method that takes a character string s and output
+its reverse. So for example, the reverse of "pots&pans" would be "snap&stop". 
+
+see solution in eclipse workbench
+
+8. C-4.12 p.198 Describe a method for finding both the minimum and maximum of n nunbers using 
+fewer than 3n/2 comparisons. (Hints: First construct a group of candidate minimums and a group of 
+candidate maximums.)
+
+see solution in eclipse work bench
+
+9.C-4.16 p.198
+Let p(x) be a polynomial of degree n, that is, p(x) = S_i=0^n a_ix^i.
+
+Describr a simple O(n^2) time method for computing p(x).
+
+double evalPoly(int[] coefs, int[] pows, x) {
+  double val = 0;
+  for ( int i = 0, j = 0, maxCoefs = coefs.length, maxPows = pows.length;
+	i < maxCoefs && j < maxPows; i++, j++ ) {
+    val += coefs[ i ] * Math.pow( x, pows[ j ] );
+  }
+  return val;
+}
+
+Implement Horners Method
+
+public static double polyEval(int[] coefficients, double x) {
+    double accumulator = coefficients[ 0 ];
+    for (int i = 1, max = coefficients.length; i < max; i++) {
+	accumulator = (accumulator * x) + (double) coefficients[ i ];
+    }
+    return accumulator;
+}
+
+

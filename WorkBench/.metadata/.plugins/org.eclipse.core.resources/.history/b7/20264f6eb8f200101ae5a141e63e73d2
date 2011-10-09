@@ -1,0 +1,3 @@
+public class Test {
+	public static PrintStream output = new PrintStream( System.out );
+}

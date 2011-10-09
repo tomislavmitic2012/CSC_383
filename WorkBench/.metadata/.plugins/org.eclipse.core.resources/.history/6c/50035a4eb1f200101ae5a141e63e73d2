@@ -1,0 +1,12 @@
+package node;
+
+public class Node {
+	private Node self = this;
+	
+	public int data;
+	public Node next;
+	
+	public Node( int d ) {
+		self.data = d;
+	}
+}

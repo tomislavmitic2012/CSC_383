@@ -1,0 +1,29 @@
+package helpers;
+
+public class Helpers {
+	public static int max( int [] A, int n ) {
+		if ( n == 1 ) return A[ 0 ];
+		int large = max( A, n - 1 );
+		return ( large > A[ n - 1 ] ) ? large : A[ n - 1 ];
+	}
+	
+	public static int convert( String s ) {
+		int n = s.length();
+		if ( s.length() == 1 ) return ( s.charAt( n - 1 ) - '0' );
+		return 10 * Helpers.convert( s.substring( 0, n - 1 ) ) + ( s.charAt( n - 1 ) - '0' );
+	}
+	
+	public static void maxmin( int[] A, int n, int[] result ) {
+		result[ 0 ] = A[ n - 1 ];
+		result[ 1 ] = A[ n - 1 ];
+		
+		if ( n == 1 ) return;
+		
+		int[] tmp = new int[ 2 ];
+		
+		Helpers.maxmin( A, n - 1, tmp );
+		
+		result[ 1 ] = ( A[ n - 1 ] < tmp[ 1 ] ) ? A[ n - 1 ] : tmp[ 1 ];
+		result[ 0 ] = ( A[ n - 1 ] > tmp[ 0 ] ) ? A[ n - 1 ] : tmp[ 0 ];
+	}
+}
