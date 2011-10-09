@@ -1,0 +1,18 @@
+package favorite_list_mtf;
+
+import interfaces.Position;
+import favorite_list.FavoriteList;
+
+public class FavoriteListMTF< E > extends FavoriteList< E > {
+	private FavoriteListMTF< E > self = this;
+	
+	/**
+	 * Default constructor
+	 */
+	public FavoriteListMTF() {}
+	
+	@Override
+	protected void moveUp( Position< Entry< E > > pos ) {
+		self.flist.addFirst( self.flist.remove( pos ) );
+	}
+}

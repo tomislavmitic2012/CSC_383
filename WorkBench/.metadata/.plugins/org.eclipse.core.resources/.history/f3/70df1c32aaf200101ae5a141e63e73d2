@@ -1,0 +1,14 @@
+import java.io.*;
+import javax.swing.*;
+import java.awt.*;import java.net.*;
+import java.util.Random;
+
+/**
+ * Example program for the FavoriteList and FavoriteListMTF classes
+ * 
+ * @author Tomislav S. Mitic
+ *
+ */
+public class FavoriteTester {
+
+}

@@ -1,0 +1,8 @@
+package favorite_list;
+
+/**
+ * List of favorite elements with their access counts.
+ */
+public class FavoritList< E > {
+	protected PositionList< Entry< E > > flist;
+}

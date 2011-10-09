@@ -1,0 +1,5 @@
+package favorite_list_mtf;
+
+public class FavoriteListMTF<E> {
+
+}

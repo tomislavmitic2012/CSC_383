@@ -1,13 +1,12 @@
 package node_position_list;
 
+import interfaces.Position;
+import interfaces.PositionList;
 import java.util.Iterator;
-
 import element_iterator.ElementIterator;
 import exceptions.BoundaryViolationException;
 import exceptions.InvalidPositionException;
 import exceptions.EmptyListException;
-import interfaces.Position;
-import interfaces.PositionList;
 import node.DNode;
 
 public class NodePositionList< E > implements PositionList< E > {
@@ -200,6 +199,7 @@ public class NodePositionList< E > implements PositionList< E > {
 	
 	/**
 	 * Returns an iterable collection of all the nodes in the list
+	 * 
 	 * @throws EmptyListException 
 	 * @throws BoundaryViolationException 
 	 * @throws InvalidPositionException 
@@ -223,8 +223,9 @@ public class NodePositionList< E > implements PositionList< E > {
 	/**
 	 * Returns a textual representation of a given node list 
 	 */
-	public static < E > String toString( PositionList< E > I ) {
-		Iterator< E > it = I.iterator();
+	@Override
+	public String toString() {
+		Iterator< E > it = self.iterator();
 		String s = "[ ";
 		while( it.hasNext() ) {
 			s += it.next();						// implicit cast of the next element to String

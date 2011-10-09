@@ -1,0 +1,20 @@
+package favorite_list;
+
+import node_position_list.NodePositionList;
+import interfaces.PositionList;
+
+/**
+ * List of favorite elements with their access counts.
+ */
+public class FavoriteList< E > {
+	private FavoriteList< E > self = this;
+	
+	protected PositionList< Entry< E > > flist;
+	
+	/**
+	 * Constructor
+	 */
+	public FavoriteList() {
+		self.flist = new NodePositionList< Entry< E > >();
+	}
+}

@@ -1,0 +1,41 @@
+package favorite_list_mtf;
+
+import node_position_list.NodePositionList;
+import interfaces.Position;
+import interfaces.PositionList;
+import exceptions.InvalidPositionException;
+import favorite_list.FavoriteList;
+
+public class FavoriteListMTF< E > extends FavoriteList< E > {
+	private FavoriteListMTF< E > self = this;
+	
+	/**
+	 * Default constructor
+	 */
+	public FavoriteListMTF() {}
+	
+	@Override
+	protected void moveUp( Position< Entry< E > > pos ) throws InvalidPositionException {
+		self.flist.addFirst( self.flist.remove( pos ) );
+	}
+	
+	/**
+	 * Returns the k most accessed elements, for a given k
+	 */
+	@Override
+	public Iterable< E > top( int k ) {
+		if ( k < 0 || k > self.size() ) {
+			throw new IllegalArgumentException( "FavoriteListMTF Line 26: Invalid argument!");
+		}
+		PositionList< E > T = new NodePositionList< E >();										// top-k list
+		if ( !self.isEmpty() ) {
+			// copy entries into temporary list C
+			PositionList< Entry< E > > C = new NodePositionList< Entry< E > >();
+			for ( Entry< E > e : self.flist ) {
+				
+			}
+		}
+		
+		return T;
+	}
+}

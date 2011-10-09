@@ -1,0 +1,38 @@
+import java.io.*;
+import javax.swing.*;
+
+import favorite_list.FavoriteList;
+import favorite_list_mtf.FavoriteListMTF;
+import java.awt.*;import java.net.*;
+import java.util.Random;
+
+/**
+ * Example program for the FavoriteList and FavoriteListMTF classes
+ * 
+ * @author Tomislav S. Mitic
+ *
+ */
+public class FavoriteTester {
+	public static final PrintStream output = new PrintStream( System.out );
+	
+	public static void main( String[] args ) {
+		String[] urlArray = {
+				"http://wiley.com",
+				"http://datastructures.net",
+				"http://algorithmdesign.net",
+				"http://www.brown.edu",
+				"http://uci.edu"
+		};
+		
+		FavoriteList< String > L1 = new FavoriteList< String >();
+		FavoriteListMTF< String > L2 = new FavoriteListMTF< String >();
+		int n = 20;															// number of access operations
+		// Simulation scenario: access n times a random URL
+		Random rand = new Random();
+		for ( int k = 0; k < n; k++ ) {
+			FavoriteTester.output.println( "--------------------" );
+			int i = rand.nextInt( urlArray.length );						// random index
+			String url
+		}
+	}
+}

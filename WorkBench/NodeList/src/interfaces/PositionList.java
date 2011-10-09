@@ -72,6 +72,7 @@ public interface PositionList< E > extends Iterable< E > {
 
 	/**
 	 * Returns an iterable collection of all the nodes in the list
+	 * 
 	 * @return
 	 * @throws EmptyListException 
 	 * @throws BoundaryViolationException 
