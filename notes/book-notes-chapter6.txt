@@ -80,3 +80,54 @@ The node list ADT is sufficient to define an adapter class for the deque ADT:
     addLast(e)		    addLast(e)
     removeFirst()	    remove(first())
     removeLast()	    removeLast()
+
+Iterators:
+
+A typical computation on an array list or a node list is to march through it elements in order, one at a time
+  - An iterator is a software design pattern that abstracts the processof scanning through a collection of elements one element at a
+    time
+  - an iterator consists of a list S, a current element in S, and a way of stepping to the next element in S and making it the current
+    element
+  - An iterator encapsulates the concepts of place and next in a collectio of objects
+
+Iterator ADT:
+  hasNext(): Test whether there are elements left in the iterator
+  next(): Return the next element in the iterator
+
+The iterator ADT has the cursor notion of the current element in a traversal of a list
+  - the first element in an iterator is returned by the first call to the method next(), assuming that the iterator contains at
+    at least one element
+
+An iterator orivudes a unified scheme to access all the elements of a collection of objects in a way that is independent from the
+specific organization of the collection
+  - An iterator for an array list or node list should return the elements according to their linear ordering
+
+Iterable ADT:
+
+In order to provide a unified mechanism for scanning through a data structure, ADTs storing collections of objects  should support the
+following method:
+  iterator(): Return an iterator if the elements in the collection
+
+The Java For-Each Loop
+
+Looping through the elements returned by an iterator is a common consturct, Java provides a shorthand notation for such loop, called the
+for-each loop
+
+  for( Type name : expression )
+    loop_statement
+
+  - where expression evaluatoes to a collection that implements the java.lang.Iterable interface
+  - Type is the type of object returned by the iteratore for this class
+  - name is the name of a variable that will take on the values of elements from this iterator in the loop_statement
+
+Position Iterator:
+
+For ADTs that support the notion of position, such as with the list ADT, the following method can also be provided
+  positions(): Return an Iterable object (link an array list or node list) containing the position in the collection as elements
+
+  - an iterator returned by this method allows us to loop through the positions of a list
+
+Warnings:
+  - It is risky to use multiple iterators over the same list while modifying its contents
+  - If insertions, deletions, or replacements are required at multiple places in a list it is safer to use positions to specify
+    these locations

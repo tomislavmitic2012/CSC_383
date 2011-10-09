@@ -1,5 +1,8 @@
 package node_position_list;
 
+import java.util.Iterator;
+
+import element_iterator.ElementIterator;
 import exceptions.BoundaryViolationException;
 import exceptions.InvalidPositionException;
 import exceptions.EmptyListException;
@@ -181,5 +184,55 @@ public class NodePositionList< E > implements PositionList< E > {
 		E oldElt = v.element();
 		v.setElement( element );
 		return oldElt;
+	}
+	
+	/**
+	 * Returns an iterator of all elements in the list.
+	 */
+	public Iterator< E > iterator() {
+		try {
+			return new ElementIterator< E >( self );
+		} catch (EmptyListException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	/**
+	 * Returns an iterable collection of all the nodes in the list
+	 * @throws EmptyListException 
+	 * @throws BoundaryViolationException 
+	 * @throws InvalidPositionException 
+	 */
+	public Iterable< Position< E > > positions() 
+		throws EmptyListException, InvalidPositionException, BoundaryViolationException {	// create a list of positions
+		PositionList< Position< E > > P = new NodePositionList< Position< E > >();
+		if ( !self.isEmpty() ) {
+			Position< E > p = self.first();
+			while ( true ) {
+				P.addLast( p );																// add position p as the last element of list P
+				if ( p == self.last() ) {
+					break;
+				}
+				p = self.next( p );
+			}
+		}
+		return P;																			// return P as our Iterable object
+	}
+	
+	/**
+	 * Returns a textual representation of a given node list 
+	 */
+	public static < E > String toString( PositionList< E > I ) {
+		Iterator< E > it = I.iterator();
+		String s = "[ ";
+		while( it.hasNext() ) {
+			s += it.next();						// implicit cast of the next element to String
+			if ( it.hasNext() ) {
+				s += ", ";
+			}
+		}
+		s += " ]";
+		return s;
 	}
 }

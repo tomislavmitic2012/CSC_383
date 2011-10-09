@@ -1,8 +1,9 @@
 package interfaces;
 
+import java.util.Iterator;
 import exceptions.*;
 
-public interface PositionList< E > {
+public interface PositionList< E > extends Iterable< E > {
 	/**
 	 * Returns the number of elements in this list.
 	 */
@@ -62,4 +63,19 @@ public interface PositionList< E > {
 	 * Replaces the element stored at the given node, returning the old element
 	 */
 	public E set( Position< E > p, E e ) throws InvalidPositionException;
+	
+	/**
+	 * Return an iterator of all elements in the list.
+	 */
+	@Override
+	public Iterator< E > iterator();
+
+	/**
+	 * Returns an iterable collection of all the nodes in the list
+	 * @return
+	 * @throws EmptyListException 
+	 * @throws BoundaryViolationException 
+	 * @throws InvalidPositionException 
+	 */
+	public Iterable< Position< E > > positions() throws EmptyListException, InvalidPositionException, BoundaryViolationException;
 }
