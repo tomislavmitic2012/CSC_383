@@ -1,0 +1,22 @@
+package interfaces;
+
+/**
+ * Realization of an indexed list by means of an array, which is doubled
+ * when the size of the indexed list exceeds the capacity of the array.
+ * 
+ * @author Tomislav S. Mitic
+ *
+ * @param <E>
+ */
+public class ArrayINdexList< E > {
+	private A
+	
+	private E[] a;						// array storing the elements of the indexed list
+	private int capacity = 16;			// initial length of array A
+	private int size = 0;				// number of elements stored in the indexed list
+	
+	/**
+	 * Creates the indexed list with initial capacity 16.
+	 */
+	
+}

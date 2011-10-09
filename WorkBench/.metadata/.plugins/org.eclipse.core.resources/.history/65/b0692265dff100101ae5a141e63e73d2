@@ -1,0 +1,5 @@
+package array_queue;
+
+public class ArrayQueue < E > implements Queue< E > {
+	
+}

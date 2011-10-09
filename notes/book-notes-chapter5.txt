@@ -13,3 +13,56 @@ isEmpty(): Return a Boolean indicating if the stack is empty
 top(): return the top element in the stack, without removing it; an erro occurs if the stack is empty
 
 Queue:
+
+  - A close cousin of the stack, it is a collection of objects that are inserted and removed according to the first-in-first out (FIFO)
+    principle
+  - Elements can be inserted at any time, but only the element that has been in the queue the longest can be removed at any time
+  - Elements enter the queue at the rear and are removed from the front
+
+Queue ADT:
+  - Formally the queue abstract data type defines a collection that keeps objects in a sequence, where element access and deletion are
+    restricted to the first element in the sequence, called the front of the queue, element insertion is restricted to the end of the
+    sequence, which is called the rear of the queue.
+  - This restriction enforces the rule tht items are inserted and deleted in a queue according to the FIFO principle
+  - The two most fundamental methods of the ADT"
+      enqueue(e): insert element e at the rear of the queue
+      dequeue(): reomve and return from the queue the object at the front; an error occurs if the queue is empty
+  - The ADT includes the follwoing supporting methods:
+      size(): return the number of objects in the queue
+      isEmpty(): return a boolean value that indicates whether the queue is empty
+      front(): return, but do not remove, the fron object in the queue, an error occurs if the queue is empty
+
+java.util.Queue:
+
+Java provides a type of queue interface, java.util.Queue, which has functionality similar to the traditional queue ADT, given above,
+but the documentation for java.util.Queue does not insist that it support only the FIFO principle
+  - Methods in java.util.Queue that support the FIFO principle that are counterparts the the Queue ADT
+
+      Queue ADT	    Interface java.util.Queue
+      size()	    size()
+      isEmpty()	    isEmpty()
+      enqueue(e)    add(e) or offer(e)
+      dequeue()	    remove() or poll()
+      fron()	    peek() or element()
+
+Concrete classes in Java that implement the java.util.Queue interface to support the FIFO principle include the following:
+  - java.util.concurrent.ArrayBlockingQueue
+  - java.util.concurrent.ConcurrentLinkedQueue
+  - java.util.concurrent.LinkedBlockingQueue
+
+Double-Ended Queues
+
+A queue-like data structure that supports insertion and deletion at both the front and the rear of the queue is a deque
+
+Deque ADT:
+
+The Deque ADT is richer than both the stack and the queue ADTs, the fundamental methods of the deque ADT are as follows:
+  addFirst(e): Insert a new element e at the head of the deque
+  addLast(e): Insert a new element e at the tail of the deque
+  removeFirst(): Remove and return the first element of the deque; an error occurs if the deque is empty
+
+The deque ADT may also include the following support methods:
+  getFirst(): return the first element of the deque, an erro ossurs if the deque is empty
+  getLast(): Return the last element of the deque, an error occurs if the deque is empty
+  size(): Return the number of elements of the deque
+  isEmpty(): Determine if the deque is empty

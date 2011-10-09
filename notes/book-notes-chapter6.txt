@@ -1,0 +1,82 @@
+Array Lists
+
+A sequence that supports access to its elements by their indices is called an array list.
+
+The Array List ADT:
+
+  get(i): return the element of S with index i; an error condition occurs if i < 0 or i > size() - 1
+  set(i, e): Replace with e and return the element at index i; an error condition occurs if i < 0 or i > size() - 1
+  add(i, e): Insert a new element e into s to have index i; an error occurs if i < 0 or i > size()
+  remove(i): Remove from S the element at index i; an error condition occurs if i < 0 or i > size() - 1
+
+The Adapter Pattern
+
+Classes are often written to provide similar functionality to other classes. The adpater pattern applies to any
+context where we want to modify an existing class so that its methods match those of a related, but different class or interface
+  - One general way for applying the adapter pattern is to define the new class in such a way that it contains an instance of the old
+    class as a hidden field, and implement each method of the new class using methods of this hidden instance variable
+  - The result of applying the adapter pattern is that a new class that performs almost the same functions as a previous class, but in
+    a more convenient way has been created
+
+With respect to our discussion of the array list ADT, we can note that this ADT is sufficient to define an adapter classs for the deque
+ADT
+
+      Deque Method	      Realization with Array-List methods
+      size(), isEmpty()	      size(), isEmpty()
+      getFirst()	      get(0)
+      getLast()		      get(size() - 1)
+      addFirst(e)	      add(0,e)
+      addLast(e)	      add(size(),e)
+      removeFirst()	      remove(0)
+      removeLast()	      remove(size() - 1)
+
+Node Lists:
+
+Using an index is not the only means of referring to the place where an element appears in a sequence
+  - if we have a sequence A implemented with a singly or doubly linked list then it could possible be more natural and efficient to
+    use a node instead of an index as a means of identifying where to access and update S.
+
+In our framework we will view a list as a collection of elements that stores each element as a position and that keeps these positions
+arranged in a linear order
+  - a position is itself an abstract data typethat supports the following simple method:
+      element(): Return the element stored at this position
+  - a position is always defined relatively, in terms of its neighbors
+  - in a list a position p will always be after some position q and before some position s (unless p is the first or last position)
+  - A position p, which is associated with some element e in a list S, does not change, even if the index of e changes in S, unless we 
+    explicitly remove e (and hence destroy position p)
+  - the position p does not change even if we replace or swap the element e stored at p with another element
+
+Node List ADT
+  first(): Return the position of the first element of S, an error occurs if S is empty
+  last(): Return the position of the last element of S; an error occurs if S is empty
+  prev(p): Return the position of the element of S preceding the one at position p; an error occurs if p is the first position
+  next(p): Return the position of the element of S follwoing the one at position p; an error occurs if p is the last position
+  set(p, e): Replace the element at position p with e, returning the element formerly at position p
+  addFirst(e): Insert a new element e into S as the fisrt element
+  addLast(e): Insert a new element e into S as the last element
+  addBefore(p, e): Insert a new element e into S before position p
+  addAfter(p, e): Insert a new element into S after position p
+  remove(p): Remove and return the element at position p in S, invalidating this position in S.
+
+The above methods allow us to refer to relative positions in the list, starting at the beginning or end, and to move incrementally up
+or down the list
+  - these positions can intuitively be thought of as nodes in the list, but note that there are no specific references to node objects
+  - If we provide a position as an argument to a list method then that position must represent a valid position in that list
+
+Reasons for aposition p to be invalid:
+  - p = null
+  - p was previously deleted from the list
+  - p is a position of a different list
+  - p is the first position of thelist and we call prev(p)
+  - o us the last position of the list and we call next(p)
+
+The node list ADT is sufficient to define an adapter class for the deque ADT:
+
+    Deque Method	    Realization with Node-List Methods
+    size(), isEmpty()	    size(), isEmpty()
+    getFirst()		    first().element()
+    getLast()		    last().element()
+    addFirst(e)		    addFirst(e)
+    addLast(e)		    addLast(e)
+    removeFirst()	    remove(first())
+    removeLast()	    removeLast()

@@ -1,0 +1,69 @@
+package node;
+
+import interfaces.Position;
+
+/**
+ * Node of a double linked list of strings.
+ * 
+ * @author Tomislav S. Mitic
+ *
+ */
+public class DNode< E > implements Position< E > {
+	private DNode< E > self = this;
+	
+	protected E element;		// Element stored by a node
+	protected DNode< E > next,		// Pointer to next node
+					prev;		// Pointer to previous node
+	
+	/**
+	 * Constructor that create a node with given fields
+	 */
+	public DNode( DNode< E > newPrev, DNode< E > newNext, E e ) {
+		self.setElement( e );
+		self.setPrev( newPrev );
+		self.setNext( newNext );
+	}
+	
+	/**
+	 * Returns the element of this node
+	 */
+	public String getElement() {
+		return self.element;
+	}
+	
+	/**
+	 * Returns the previous node of this node
+	 */
+	public DNode getPrev() {
+		return self.prev;
+	}
+	
+	/**
+	 * Returns the next node of this node
+	 */
+	public DNode getNext() {
+		return self.next;
+	}
+	
+	/**
+	 * Sets the element of this node
+	 * 
+	 * @param newElem
+	 */
+	public void setElement( String newElem ) {
+		self.element = newElem;
+	}
+	
+	/**
+	 * Sets the previous node of this node.
+	 * 
+	 * @param newPrev
+	 */
+	public void setPrev( DNode newPrev ) {
+		self.prev = newPrev;
+	}
+	
+	public void setNext( DNode newNext ) {
+		self.next = newNext;
+	}
+}

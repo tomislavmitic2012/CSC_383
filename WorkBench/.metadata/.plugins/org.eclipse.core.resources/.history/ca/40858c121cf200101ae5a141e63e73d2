@@ -1,0 +1,108 @@
+package node_position_list;
+
+import exceptions.BoundaryViolationException;
+import exceptions.InvalidPositionException;
+import interfaces.Position;
+import interfaces.PositionList;
+import node.DNode;
+
+public class NodePositionList< E > implements PositionList< E > {
+	private NodePositionList< E > self = this;
+	
+	protected int numElts;											// Number of elements in the list
+	protected DNode< E > header, trailer;							// Special sentinels
+	
+	/**
+	 * Constructor that creates an empty list
+	 */
+	public NodePositionList() {
+		self.numElts = 0;
+		self.header = new DNode< E >( null, null, null );			// create header
+		self.trailer = new DNode< E >( header, null, null );		// create trailer
+		self.header.setNext( self.trailer );						// make header and trailer pont to each other
+	}
+
+	/**
+	 * Checks if position is valid for this list and converts it to 
+	 * DNode if it is valid
+	 */
+	protected DNode< E > checkPosition( Position< E > p )
+		throws InvalidPositionException {
+		
+	}
+	
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Position<E> first() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Position<E> last() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Position<E> next(Position<E> p) throws InvalidPositionException,
+			BoundaryViolationException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Position<E> prev(Position<E> p) throws InvalidPositionException,
+			BoundaryViolationException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addFirst(E e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addLast(E e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addAfter(Position<E> p, E e) throws InvalidPositionException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addBefore(Position<E> p, E e) throws InvalidPositionException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public E remove(Position<E> p) throws InvalidPositionException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public E set(Position<E> p, E e) throws InvalidPositionException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

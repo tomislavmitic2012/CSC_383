@@ -25,12 +25,13 @@ public class ArrayStack< E > implements Stack< E > {
 	protected int top = -1;								// index for the top of the stack
 	
 	public ArrayStack() {
-		this(ArrayStack.CAPACITY);						// defaul capacity
+		this(ArrayStack.CAPACITY);						// default capacity
 	}
 	
+	@SuppressWarnings("unchecked")
 	public ArrayStack( int cap ) {
 		self.capacity = cap;
-		S = ( E[] ) new Object[ self.capacity ];		// compiler may give warning but this is okay
+		self.S = ( E[] ) new Object[ self.capacity ];		// compiler may give warning but this is okay
 	}
 	
 	public int size() {

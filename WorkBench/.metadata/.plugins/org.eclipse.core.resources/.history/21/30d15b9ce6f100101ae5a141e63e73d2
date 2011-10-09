@@ -1,0 +1,18 @@
+import java.io.PrintStream;
+import net.datastructures.*;
+
+public class Josephus {
+	public static PrintStream output = new PrintStream( System.out );
+	/**
+	 * Solution of the Josephus problem using a queue
+	 */
+	public static < E > E Josephus( Queue < E > Q, int k ) {
+		if ( Q.isEmpty() ) return null;
+		
+		while ( Q.size() > 1 ) {
+			
+		}
+		
+		return Q.dequeue();
+	}
+}

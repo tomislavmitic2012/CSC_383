@@ -1,0 +1,50 @@
+package interfaces;
+
+import exceptions.*;
+
+public interface PositionList< E > {
+	/**
+	 * Returns the number of elements in this list.
+	 */
+	public int size();
+	
+	/**
+	 * Returns whether the list is empty/
+	 */
+	public boolean isEmpty();
+	
+	/**
+	 * Returns the first node in the list.
+	 */
+	public Position< E > first();
+	
+	/**
+	 * Returns the last node in the list.
+	 */
+	public Position< E > last();
+	
+	/**
+	 * Returns the node after a given node in the list
+	 */
+	public Position< E > next( Position< E > p ) throws InvalidPositionException, BoundaryViolationException;
+
+	/**
+	 * Returns the node before a given node in the list
+	 */
+	public Position< E > prev( Position< E > p ) throws InvalidPositionException, BoundaryViolationException;
+	
+	/**
+	 * Inserts an element at the front of the list
+	 */
+	public void addFirst( E e );
+
+	/**
+	 * Inserts an element at the back of the list
+	 */
+	public void addLast( E e );
+	
+	/**
+	 * Inserts an element after the given node in the list.
+	 */
+	public void addAfter( Position< E > p, E e );
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;Deque/src&apos;&#x0A;- Original project: &apos;DoublyLinkedList&apos;&#x0A;- Destination element: &apos;Deque/src&apos;&#x0A;- Original elements:&#x0A;     DoublyLinkedList/src/d_list&#x0A;     DoublyLinkedList/src/node" description="Copy packages" destination="=Deque/src" element1="/src&lt;d_list" element2="/src&lt;node" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1318106230733" version="1.0"/>
+</session>

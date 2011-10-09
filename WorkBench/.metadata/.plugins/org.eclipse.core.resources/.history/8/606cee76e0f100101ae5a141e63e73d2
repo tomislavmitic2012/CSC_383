@@ -1,0 +1,28 @@
+package array_queue;
+
+import java.io.PrintStream;
+import interfaces.Queue;
+
+public class ArrayQueue < E > implements Queue< E > {
+	private ArrayQueue< E > self = this;
+	
+	public static final PrintStream output = new PrintStream( System.out );
+
+	protected int capacity;								// the actual capacity of the stack array
+	public static final int CAPACITY = 1000;			// default array capacity
+	protected E S[];									// Generic array used to implement the stack
+	protected int front = 0;							// index for the front of the stack
+	protected int rear = 0;								// index for the rear of the stack
+	
+	public ArrayQueue() {
+		this( ArrayQueue.CAPACITY );
+	}
+	
+	public ArrayQueue( int cap ) {
+		self.capacity = cap;
+	}
+	
+	public int size() {
+		return ( self.capacity - self.front + self.rear );
+	}
+}
