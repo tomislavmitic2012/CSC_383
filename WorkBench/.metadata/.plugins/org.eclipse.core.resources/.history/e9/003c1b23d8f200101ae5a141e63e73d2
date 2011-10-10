@@ -76,7 +76,7 @@ public class Helpers {
 		  return val;
 	}
 	
-    public static double evalPoly(int[] coefficients, double x) {
+    public static double polyEval(int[] coefficients, double x) {
         double accumulator = coefficients[ 0 ];
         for (int i = 1, max = coefficients.length; i < max; i++) {
             accumulator = (accumulator * x) + (double) coefficients[ i ];

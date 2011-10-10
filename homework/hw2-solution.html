@@ -82,4 +82,69 @@ public static double polyEval(int[] coefficients, double x) {
     return accumulator;
 }
 
+10. What is the running time complexity of the given function ?
+        
+      long func(long x, int n) {
+	if ( n == 0 ) return 1 ;
+	if ( n == 1 ) return x ;
+	if ( n % 2 == 0 ) return func(x*x , n/2) ;
+        else return x*func(x*x, n/2) ;
+      }
 
+Computer x^n
+
+n = 0 return 1
+n = 1 return x
+n = even return (X^2)^(n/2)
+n = odd return x((x^2)^(n/2))
+
+decreasing by 1/2 is logarithmic
+
+T(n) = {0, n = 0 or 1
+       {2 + T(n/2), n = odd
+       {1 + T(n/2), n = even
+
+T(n) = {2 + T(n/2), n >= 2
+       {0, n <= 1
+
+T(n/2) = T((n/2)/2) + 2 = T(n/4) + 2 = T(n/2^2) + 2
+
+T(n) = T(n/2) + 2 = T(n/2^2) + 2 + 2 = T(n/2^3) + 2 + 2 + 2 = 2 lg n = O(lg n)
+
+2 lg(n) - > each iteration thre in a factor of 2, after
+so many iterations you have 2 lg n
+
+11. What is the running time complexity of the given function?
+           int mystry(int n) {
+                if ( n == 0 || n ==  1)  return 1 ;
+                return mystry(n-1)*mystry(n-2) ;
+           }
+
+T(n) = {0, n = 0 or 1
+       {1 + T(n - 1) + T(n - 2), n >= 2
+
+This is worse than fibonacci
+
+Theta(2^n) this is exponential
+
+12. What is the running time complexity of the given function?
+          int mystry(int n) {
+                if  ( n == 0 ) return 0 ;
+                return 1+ mystry(n/2) ;
+          }
+
+T(n) = {0, n = 0
+       {2 + T(n/2), n > 0
+
+this is logarithmic
+
+O(log n)
+
+13. For each of the following infix expressions, what is corresponding postfix expression?
+  a. a*(b/c+d)
+  b. a-(b/(c-d)*e+f)^g
+  c. (a-b*c)/(d*e^f*g+h)
+  d. ( a + b ) * c ^ (a - b) / (a + b * c)
+  e. a ^ b / c ^ d * (a - b ) ^ c
+  f. ( a * b - c / d + e ) + ( a - b - c - d * d ) / ( a + b * c )
+  g. ( a + b ) * c ^ (a - b) ^ (a + b * c)
