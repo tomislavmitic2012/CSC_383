@@ -27,23 +27,23 @@ public class PostfixToInfix {
 				if ( args[ i ].equals( "+" ) ) {
 					String a = s.pop(),
 						   b = s.pop();
-					s.push( b + "+" + a );
+					s.push( a + "+" + b );
 				} else if ( args[ i ].equals( "-" ) ) {
 					String a = s.pop(),
 					   b = s.pop();
-					s.push( b + "-" + a );
+					s.push( a + "-" + b );
 				} else if ( args[ i ].equals( "*" ) ) {
 					String a = s.pop(),
 					   b = s.pop();
-					s.push( b + "*" + a );					
+					s.push( a + "*" + b );					
 				} else if ( args[ i ].equals( "/" ) ) {
 					String a = s.pop(),
-					   	   b = s.pop();
-					s.push( b + "/" + a );					
+					   b = s.pop();
+					s.push( a + "/" + b );					
 				} else if ( args[ i ].equals( "^" ) ) {
 					String a = s.pop(),
 					   b = s.pop();
-					s.push( b + "^" + a );					
+					s.push( a + "^" + b );					
 				} else {
 					s.push( args[i] );
 				}

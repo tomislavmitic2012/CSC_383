@@ -1,0 +1,209 @@
+1. R-4.13    page 194: order the following functions by asymptotic growth rate
+
+4n log n + 2n, 2^10, (2^logn = n^log2 = n^1 = n)
+3n + 100log n, 4n, 2^n
+n^2 + 10n, n^3, n log n
+
+Θ(1): 2^10
+Θ(n): (2^logn = n^log2 = n^1 = n), 4n, 3n + 100log n
+Θ(n log n): n log n, 4n log n
+Θ(n^2): n^2 + 10n
+Θ(n^3): n^3
+Θ(2^n):	2^n
+
+Θ(1) < Θ(log n) < Θ(n) < Θ(n log n) < Θ(n^2) < Θ(n^3) < Θ(2^n)
+
+2. R-4.16- 20  page 194-5  Give a big-Oh characterization, in terms of n, of the running time of the methods 
+Ex1 to Ex4 , shown in Code Fragment 4.6 of page 195.
+
+1.  R-4.15
+
+Alg Ex1(A):
+     Input: array A storing n > 0 integers.
+     Output : The sum of the elements in A.
+ 
+      s <-- A[0] 
+ 
+      for i <-- 1 to n-1 do
+ 
+         s <-- s + A[i] 
+ 
+      return s
+
+Θ(n - 1) -> Θ(n)
+
+2. R-4.16
+
+    Alg Ex2(A):
+    Input: array A storing n > 0 integers.
+    Output : The sum of the elements at even cells in A.
+ 
+      s <-- A[0] 
+ 
+      for i <-- 2 to n-1  by increments of 2 do
+ 
+         s <-- s + A[i] 
+ 
+      return s
+
+s <-- A[0]
+for(i = 2; i <= n -1; i += 2)
+  s <-- s + A[i]
+
+(n - 1)/2 iterqations --> n/2 iterations
+
+Θ(n/2) = Θ(log n)
+
+3.R-4.17
+
+     Alg Ex3(A) :
+     Input: array A storing n > 0 integers.
+     Output : The sum of the prefix sums in A.
+ 
+      s <-- 0 
+ 
+      for i <-- 0 to n-1 do
+ 
+         s <-- s + A[0] 
+ 
+         for j <-- 1 to i do
+ 
+             s <-- s + A[j]
+ 
+      return s
+
+s <-- 0
+for(i = 0; i <= n - 1; i++)
+  s = s + A[0]
+  for(j = 1; j <= i; j++)
+    s = s + A[j]
+
+iteration	  additions made
+    0		      1 addition
+    1		      2 additions
+    2		      3 additions
+
+ n
+ Σi = (1 + 2 + 3 + ... + n) = (1/2)n(n+1) = (1/2)n^2+n
+i=1
+
+Θ(n^2)
+
+ 4.R-4.18
+
+     AlgEx4(A) :
+     Input: array A storing n > 0 integers.
+     Output : The sum of the prefix sums in A.
+ 
+      s <-- A[0]
+ 
+      t <-- s 
+ 
+      for i <-- 1 to n-1 do
+ 
+         s <-- s + A[i] 
+  
+         t <-- t + s 
+ 
+      return s
+
+s = A[0]
+t = s;
+for(i = 1; i <= n - 1; i++)
+  s = s + A[i];
+  t = t + s;
+return s
+
+iteration	      Additions Made
+    1			  2 additions
+    2			  2 additions
+    3			  2 additions
+  n - 1			  2 additions
+
+
+2(n - 1) = 2n - 2 = 2n -> n
+
+Θ(n)
+
+5.R-4.19
+
+     AlgEx5(A,B) :
+     Input: Arrays A and B each storing n > 0 integers.
+     Output : The number of  elements in B equal to the sum of prefix sums in A.
+ 
+       c <-- 0 
+      
+      for i <-- 0 to n-1 do
+ 
+          s <-- 0 
+ 
+              for j <-- 0  to n-1 do
+     
+                   s <-- s + A[0] 
+ 
+                 for k <-- 1 to j do 
+                    
+                      s <-- s + A[k]
+                 
+               if B[i] = s then
+    
+                    c <-- c + 1 
+           return c
+
+c = 0
+for(i = 0, i <= n - 1; i++) { --> n - 1 times
+  s = 0
+  for(j = 0; j <= n -1; j++) { --> n - 1 times
+    s = s + A[0]
+    for(k = 1; k <= j; k++) { --> j times --> aprox O(1)
+      s = s + A[k]
+    }
+  }
+  if(B[i] == s)
+    c = c + 1
+}
+return c
+
+n-1 n-1  j	n-1 n-1
+ Σ * Σ * Σ 1 =   Σ * Σ j
+i=0 j=0	k=1	i=0 j=0
+
+n-1
+ Σ (0 + 1 + 2 + 3 + ... + n -1) =>
+i=0
+
+n-1
+ Σ (1/2)n(n - 1) =>
+i=0
+
+	      n-1
+(1/2)n(n - 1)  Σ 1 => (1/2)n(n - 1)* n => (1/2)(n^3 - n^2)
+	      i=0
+
+Θ(n^3)
+
+3. R-4.22 page 194: For each function f(n)  and time t in the following table, determine the largest size n 
+of a problem P that can be solved in time t if the algorithm for solving P takes f(n)  microseconds.
+
+	    1 sec	  1 hour	  1 month	    1 century
+
+log n	    10^300000
+n
+n log n
+n^2
+2^n
+
+don't understand the calculation that needs to be made
+
+4.    C-4.9  page 198  Show that   
+
+ n
+ Σ i^2 = O(n^3)
+i=1
+
+
+1^2 + 2^2 + 3^2 + 4^2 + ... + m^2 <= n^2 + n^2 + n^2 + n^2 + ... + n^2 <= n*n^2 <= n^3
+
+ n		    n
+ Σ i^2 = O(n^3) =   Σ n^2 = n*n^2 = n^3 = O(n^3)
+i=1		   i=1
