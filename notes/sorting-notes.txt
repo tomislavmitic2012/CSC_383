@@ -1,0 +1,546 @@
+Sorting Notes:
+
+Bubble Sort :fixed number of passes
+
+public static void bubbleSort1(int[] x) {
+  int n = x.length;
+  for (int pass=1; pass < n; pass++) { // count how many times
+    // This next loop becomes shorter and shorter
+    for (int i=0; i < n-pass; i++) {
+      if (x[i] > x[i+1]) {
+	// exchange elements
+	int temp = x[i];
+	x[i] = x[i+1];
+	x[i+1] = temp;
+      }
+    } 
+  }
+}
+
+Bubble Sort -- stop when no exchanges
+
+public static void bubbleSort2(int[] x) {
+  boolean doMore = true;
+  while (doMore) {
+    doMore = false; // assume this is last pass over array
+    for (int i=0; i < x.length-1; i++) {
+      if (x[i] > x[i+1]) { // exchange elements
+	int temp = x[i];
+	x[i] = x[i+1];
+	x[i+1] = temp;
+	doMore = true; // after an exchange, must look again
+      }
+    }
+  }
+}
+
+Bubble Sort – stop when no exchanges, shorter range each time
+
+public static void bubbleSort3(int[] x) {
+  int n = x.length;
+  boolean doMore = true;
+  while (doMore) {
+    n--;
+    doMore = false;
+    // assume this is our last pass over the array
+    for (int i=0; i<n; i++) {
+      if (x[i] > x[i+1]) { // exchange elements
+	int temp = x[i];
+	x[i] = x[i+1];
+	x[i+1] = temp;
+	doMore = true; // after an exchange, must look again
+      } 
+    }
+  }
+}
+
+Bubble Sort -- Sort only necessary range
+
+public static void bubbleSort4(int[] x) {
+  int newLowest = 0; // index of first comparison
+  int newHighest = x.length-1; // index of last comparison
+  while (newLowest < newHighest) {
+    int highest = newHighest;
+    int lowest = newLowest;
+    newLowest = x.length; // start higher than any legal index
+    for (int i = lowest; i < highest; i++) {
+      if (x[i] > x[i+1]) { // exchange elements
+	int temp = x[i];
+	x[i] = x[i+1];
+	x[i+1] = temp;
+	if (i < newLowest) {
+	  newLowest = i-1;
+	  if (newLowest < 0) { newLowest = 0; }
+	} else if (i > newHighest) { 
+	  newHighest = i+1; 
+	}
+      }
+    }
+  }
+}
+
+Simple selection sort
+
+public static void selectionSort1(int[] x) {
+  for (int i = 0; i < x.length-1; i++) {
+    for (int j= i+1; j < x.length; j++) {
+      if (x[i] > x[j]) { //... Exchange elements
+	int temp = x[i];
+	x[i] = x[j];
+	x[j] = temp;
+      }
+    }
+  }
+}
+
+selection sort – More efficient - Move every value only once
+
+public static void selectionSort2(int[] x) {
+  for (int i = 0; i < x.length-1; i++) {
+    int minIndex = i; // Index of smallest remaining value.
+    for (int j = i+1; j < x.length; j++) {
+      if (x[minIndex] > x[j])
+	minIndex = j; // Remember index of new minimum
+    }
+    if (minIndex != i) {
+      // Exchange current element with smallest remaining.
+      int temp = x[i];
+      x[i] = x[minIndex];
+      x[minIndex] = temp;
+    }
+  }
+}
+
+Searching:
+
+Non-Recursive Binary search
+
+public static int binarySearch(int[] sorted, int key) {
+  int first = 0,
+      upto = Sorted.length ;
+  while (first < upto) {
+    int mid = (first + upto) / 2; // Compute mid point.
+    if (key < sorted[mid])
+      upto = mid; // repeat search in bottom half.
+    else if (key > sorted[mid])
+	first = mid + 1; // Repeat search in top half.
+    else
+      return mid; // Found it! return position
+  }
+  return -1; // Failed to find key, -1 indicates the failure
+}
+
+Non-Recursive Binary Search search for string
+
+public static int binarySearch(String[] sorted, String key) {
+  int first = 0;
+  int upto = sorted.length;
+  while (first < upto) {
+    int mid = (first + upto) / 2; // Compute mid point.
+    if (key.compareTo(sorted[mid]) < 0) {
+      upto = mid; // repeat search in bottom half. 
+    } else if (key.compareTo(sorted[mid]) > 0) {
+      first = mid + 1; // Repeat search in top half.
+    } else { 
+      return mid; // Found it. return position
+    }
+  }
+  return -1; // Failed to find key
+}
+
+Non-Recursive Generic Binary search
+
+public static int binarySearch(Comparable[] sorted, Comparable key) {
+  int first = 0,
+  upto = Sorted.length;
+  while (first < upto) {
+    int mid = (first + upto) / 2; // Compute mid point.
+    if (key.compareTo(sorted[mid])  < 0)
+      upto = mid; // repeat search in bottom half.
+    else if (key .compareTo( sorted[mid])  > 0)
+      first = mid + 1; // Repeat search in top half.
+    else
+      return mid; // Found it! return position
+  }
+  return -1; // Failed to find key , -1 indicates the failure
+}
+
+Recursive Binary Search (Generic version)
+
+public static int binarySearch(Comparable[] sorted, int first, int upto, Comparable key) {
+  if  (first > upto) return -1;  // not found
+  int mid = (first + upto) / 2; // Compute mid point.
+  if (key.compareTo(sorted[mid]) < 0)
+    upto = mid - 1; // repeat search in bottom half
+  else if (key.compareTo(sorted[mid]) > 0)
+    first = mid + 1;  // repeat search in top half
+  } else {
+    return mid; // Found it. return position 
+  }
+  return binarySearch(Sorted, first, upto, key);
+}
+
+Insertion Sort:
+
+1. Assumptions:
+
+  1. Arrays to sort are placed in an array of length N.
+  2. Can be compared
+  3. Sorting can be performed in main memory
+    Simple sorting algorithms: O(n^2)
+    Shellsort: O(n^2)
+    Advanced sorting algorithms: O(n log n)
+    In general: Ω(n log n)
+
+2. Insertion Sort:
+
+  Pre: array of N elements (from 0 to n - 1)
+  Post: array sorted
+
+  1. An arrya of one element only is sorted
+  2. Assume that the first p elements are sorted
+
+    for j = p to N - 1
+    Take the j-th element and find a place for it among the first j sorted elements
+
+    int j, p;
+    comparable tmp;
+ 
+    for ( p = 1; p < N ; p++) {
+      tmp = a[p];
+      for (j = p; j > 0 && tmp < a[j-1]; j--)
+	a[j] = a[j-1];
+    a[j] = tmp;
+    }
+
+3. Analysis of the Insertion sort
+
+  To insert the last element we need at most n - 1 comparisons and n - 1 movements
+  To insert the n - 1st element we need n - 2 comparisons and n - 2 movements
+  ....
+  To inser the 2nd element we need 1 comparison and one movement
+
+  To sum up:
+  2 * (1 + 2 + 3 + ... + n - 1) = 2 * (n - 1) * n/2 = (n - 1) * n = Θ(n^2)
+
+4. A lower bound for simple sorting algorithms
+
+  Simple sorting algorithms swap elements that are not sorted
+  Swapping is done by bubble sort and by insertion sort
+  Thus the complexity depends on the number of swaps
+  To estimate how many swaps are needed on average, we define inversion in the following way
+
+  Definition: An inversion is an ordered pair (A_i, A_j) such that i < j but A_i > A_j.
+
+  Example: 10, 6, 7, 15, 3, 1
+  Inversions ae
+  (10, 6), (10, 7), (10, 3), (10, 1)
+  (6, 3), (6, 1)
+  (7, 3), (7, 1)
+  (15, 3), (15, 1)
+  (3, 1)
+
+  The following is true:
+    Swapping adjacent elements that are out of order removes one inversion
+    A sorted array has no inversions
+    Sorting an array that contains i inversions requires at least i swaps of adjacent elements
+
+  How many inversions are there in an average unsorted array?
+
+  In general this is a tricky question to answer - just what is meant by average?
+  However, we can make a couple of simplifying assumptions:
+
+    1. there are no duplicates in the list
+    2. Sinve the elements are unique (by assumption), all that matters is their realitve rank.
+       Accordingly we identify them with the first n integers {1, 2, 3, ..., n}
+       and assume the elements we have to sort are the first n integers
+
+  Under these circumstances we can say the following:
+
+  Theorem 1 [Average number of inversions]
+    The average number of inversions in an array of n distinct elements is n*(n - 1)/4
+
+  Proof:
+    Given an array A, consider A_r, which is the array in reverse order
+    Now consider a pair (x,y) with x < y
+    This pair is an inversion in exactly on of A, A_r
+    The total number of such pairs is given by n*(n-1)/2
+    and (on average) half of these will be inversions in A.
+
+  Thus A has n*(n - 1)/4 inversions
+
+  Consequently the insertion sort has an average running time of O(n^2)
+  In fact we can generalizre this result to all sorting algorithms
+  That work by exchanging adjacent elements to eliminate inversions
+
+  Theorem 2: Any algorithm that sorts by exchanging adjacent elements requires Ω(n^2) time on average
+
+    The proof follows immediately from the fact that the average number of
+    inversions is n*(n-1)/4: each adjacent swaps removes only one inversion
+    so Ω(n^2 swaps are required
+
+  Theorem 2 above impluies that for a sorting algorithm to run in less than quadratic time
+  it must do something other than swap adjacent elements
+
+Sorting Algoruthm: Mergesort
+
+1. Mergesort
+
+  - recursive algorithm
+  - runs in O(n log n) time
+
+  Basic idea: If we have two sorted arrays, we can merge then in linear time
+  with n comparisons only. Given an array to be sorted, we can consider separately
+  its left and its right half, sort them and the merge them
+
+  Where is the recursion?
+    Each half is an array that can be sorted using the same algorithm - divide into two, sort
+    separately the left and right halves, and the nmerge them
+
+2. Example:
+
+  A. Merging two sorted arrays:
+
+    Array A: 3, 7, 10, 15
+    Array B: 1, 4, 8, 9, 20
+    Array C: (merged)
+      1, 3, 4, 7, 8, 9, 10, 15, 20
+
+  B. Merge sorting an array:
+      6, 9, 1, 10, 34, 12, 15, 8
+  6, 9, 1, 10		34, 12, 15, 8
+6, 9	1, 10		34, 12, 15, 8
+6   9	1, 10		34, 12, 15, 8
+6, 9	1, 10		34, 12, 15, 8
+6, 9	1   10		34, 12, 15, 8
+6, 9	1, 10		34, 12, 15, 8
+  1, 6, 9, 10		34, 12, 15, 8
+  1, 6, 9, 10		34, 12	    15, 8
+  1, 6, 9, 10		34    12    15, 8
+  1, 6, 9, 10		12, 34	    15, 8
+  1, 6, 9, 10		12, 34	    15	  8
+  1, 6, 9, 10		12, 34	    8, 15
+  1, 6, 9, 10		8, 12, 15, 34
+      1, 6, 8, 9, 10, 12, 15, 34
+
+3. Analysis of MergeSort Algorithm
+
+Algorithm:
+
+mergesort(int [] a, int left, int right) {
+  if (right > left) {
+    middle = left + (right - left)/2;
+    mergesort(a, left, middle);
+    mergesort(a, middle+1, right);
+    merge(a, left, middle, right);
+  }
+}
+
+Assumption: n is a power of two
+
+For n - 1: time is a constant denoted by 1
+
+Otherwise: time to mergesort n elements = time to merge sort n/2 elements plus
+time to merge two arrays each n/2 elements
+
+Time to merge two arrays each n/2 elements is linear, i.e. n
+
+Thus we have:
+
+  1. T(1) = 1
+  2. T(n) - 2T(n/2) + n
+
+Next we will solve this recurrence relation. First we divide 2. by n:
+
+  3. T(n) / n = T(n/2) / (n/2) + 1
+
+N is a power of two, so we can write:
+
+  4. T(n/2) / (n/2) = T(n/4) / (n/4) + 1
+  5. T(n/4) / (n/4) = T(n/8) / (n/8) + 1
+  6. T(n/8) / (n/8) = T(n/16) / (n/16) + 1
+  7. ...
+  8. T(2) / 2 = T(1) / 1 + 1
+
+Now we add equations 3 through 8: the sum of their left hand sides will be equal to the sum of their right hand
+sides:
+
+T(n) / N + T(n/2) / (n/2) + T(n/4) / (n/4) + ... + T(2) / 2 =
+T(n/2) / (n / 2) + T(n / 4) / (n / 4) + ... + T(2) / 2 + T(1) / 1 + log n
+(log n is the sum of 1s in the right hand sides)
+
+After crossing tthe equal terms, we get
+
+  9. T(n) / n = T(1)/1 + log n
+
+T(1) is 1, hence we obtain
+
+  10. T(n) = n + n log n = O(n log n)
+
+Hence the complexity of the merge sort algorithm is O(n log n)
+
+Quick Sort
+
+1. Features:
+
+  - Similar to merge sort - divide and conquer recursive algorithm
+  - one of the fastes sorting algorithms
+  - average running time O(n log n)
+  - worst case running time O(n^2)
+
+2. Basic idea:
+
+  1. Pick one element in the array, which will be the pivot
+  2. Make one pass through the  array, called the partition step, re-arranging the entries so that
+    - the pivot is in its proper place
+    - entries smaller than the pivot are to the left of the pivot
+    - entried larger than the pivot are to its right
+  3. recursively apply quick sort to the part fo the array that is to the left of the pivot,
+     and to the right part of the aray
+
+Here we don't have the merge step, at the end all the elements are in the proper order
+
+3. Algorithm
+
+  Step 1. Choosing the pivot
+
+    Choosing the pivot is an essential step.
+    Depending on the pivot the algorithm may run very fast, or in quadratic time
+      1. Some fixed element: e.g. the first, the lastm the one in the middle
+	  This is a bad choice - the pivot may turn out to be the smallest or the largest
+	  element, then on of the partitions will be empty
+      2. Randomly chosen (by random generator) - still a bad choice
+      3. The median of the array (if the array has n numbers, the media is the [n/2] largest number. This is
+	 difficult to compute - increases the complexity
+      4. The median-of-three choice: take the first, the last and the middle element. Choose
+	 the median of these three entries
+
+  Example:
+    8, 3, 25, 6, 10, 17, 1, 2, 18, 5
+
+    The first element is 8, the middle is 10, the last is 5
+    The median of [8, 10, 5] is 8
+
+  Step 2. Partitioning
+
+  Partitioning is illustrated on the above example
+
+  1. the first action is to get the pivot out of the way - swap it with the last element
+
+    5, 3, 25, 6, 10, 17, 1, 2, 18, 8
+
+  2, We want larger elements to go to the right and smaller elements to go to the left
+
+      Two "fingers" are used to scan the elements from left to right and from right to left
+
+      [5, 3, 25, 6, 10, 17, 1, 2, 18, 8]
+       ^			      ^
+       i			      j
+
+	- while i is to the left of j, we move i right, skipping all the elements less than the pivot.
+	  If an element is found greater then the pivot, i stops
+	- while j is to the right of i, we move j left, skipping all elements greater than the pivot.
+	  If an element is found less then the pivot, j stops
+	- when both i and j have stopped, the elements are swapped
+	- when en i and j have crossed, no swap is performed, scanning stops, and the element pointed to by
+	  i is swapped with the pivot
+      In the example the first swapping will be between 25 and 2, the second between 10 and 1
+  3. Restore the pivot
+      After restoring the pivot we obtain the following partitioning into three groups
+
+      [5, 3, 2, 6, 1] [ 8 ] [10, 25, 18, 17]
+
+  Step 3: Recursively quicksort the left and the right parts
+
+4. Code
+
+Below is the code, that implements the partitioning
+left points to the first element in the array currently processed, right points to the last element
+
+if( left + 10 <= right) {
+  int i = left, j = right - 1;
+  for ( ; ; ) {
+    while (a[++i] < pivot ) {} // move the left finger
+    while (pivot  < a[--j] ) {} // move the right finger
+ 
+    if (i < j) swap (a[i],a[j]); // swap    
+    else  break; // break if fingers have crossed
+  }
+  swap (a[i], a[right-1); // restore the pivot
+  quicksort ( a, left, i-1);v// call quicksort for the left part
+  quicksort (a, i+1, right); // call quicksort for the left part
+} else  insertionsort (a, left, right);
+
+If the elements are less than 10, quicksort is not very efficient
+Instead insertion sort is used at the last phase of sorting
+
+5. Implementation Notes:
+
+Compare the two versions:
+
+A.
+
+while (a[++i] < pivot) {}
+while (pivot < a[--j]) {}
+
+if (i < j) swap (a[i], a[j]);
+else break;
+
+B.
+
+while (a[i] < pivot) {i++;}
+while (pivot < a[j] ) {j--;}
+
+if (i < j) swap (a[i], a[j]);
+else break;
+
+If we have an array of equal elements, the second code will never increment i or decrement j,
+and will do infinite swaps. i and j will never cross
+
+6. Complexity of Quicksort
+
+Worst-case: O(n^2)
+
+  This happens when the pivot is the smaller (or the largest) element
+  The one of the partitions is empty, and we repeat recursively the procedure for n - 1 elements
+
+  Best-case O(n log n) The best case is when the pivot is the median of the array,
+  and then the left and the right part will have the same size
+
+    There are log n partitions, and to obtain each partition we do N comparisons
+    (and not more than n/2 swaps). Hence the complexity is O(n log n)
+
+  Average-case O(n log n)
+
+7. Conclusions
+
+  Advantages:
+
+    - One of the fastest algorithms on average
+    - Does not need additional memory (the sorting takes place in the array - this is called in-place
+      processing). Compare with mergesort: mergesort needs additional memory for merging
+
+  Disadvantages: The worst case complexity is O(n^2)
+
+  Applications:
+
+    Commercial applications use quicksort - generally it runs fastm no additional memory,
+    this compensates for the rare occasions when it runs with O(n^2)
+
+    Never use in applications which require guaranteed response time
+
+      - Life-critical (medical monitoring, life support in aircraft and space craft)
+      - Mission critical (monitoring and control in industrial and research plants handling dangerous
+	materials, controls for aircraft, defense, etc)
+
+    unless you assume the worst-case response time
+
+  Comparison with mergesort
+
+    - mergesort guarantees O(n log n) time, however it requires additional memory with size n
+    - quicksort does not require additional memory, however the speed is not guarenteed
+    - usually mergesort is not used for main memory sorting, only for external memory sorting
+
+  So far, our best sorting algorithm has O(n log n) performance: can we do any better?
+
+  In general the answer is no.

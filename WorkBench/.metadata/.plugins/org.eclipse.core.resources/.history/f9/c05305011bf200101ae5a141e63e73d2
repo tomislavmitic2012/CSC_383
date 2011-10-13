@@ -1,7 +1,0 @@
-package node_position_list;
-
-import interfaces.PositionList;;
-
-public class NodePositionList< E > implements PositionList< E > {
-
-}

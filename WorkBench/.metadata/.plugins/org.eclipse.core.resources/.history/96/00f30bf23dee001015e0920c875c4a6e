@@ -1,7 +1,0 @@
-package node_stack;
-
-import interfaces.Stack;
-
-public class NodeStack< E > implements Stack< E > {
-
-}
