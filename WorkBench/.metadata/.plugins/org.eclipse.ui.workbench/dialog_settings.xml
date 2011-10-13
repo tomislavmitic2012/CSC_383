@@ -14,8 +14,6 @@
 		<item value="25" key="DIALOG_Y_ORIGIN"/>
 		<item value="358" key="DIALOG_X_ORIGIN"/>
 	</section>
-	<section name="NewWizardAction">
-	</section>
 	<section name="ZipFileImportWizard">
 		<item value="false" key="WizardZipFileResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<list key="WizardZipFileResourceImportPage1.STORE_SOURCE_NAMES_ID">
@@ -23,6 +21,8 @@
 			<item value="/home/tmitic/Depaul/CSC_383/lectures/MISC/dist/postfix.jar"/>
 			<item value="/home/tmitic/Depaul/CSC_383/JARs/net-datastructures-5-0.jar"/>
 		</list>
+	</section>
+	<section name="NewWizardAction">
 	</section>
 	<section name="ImportExportAction">
 		<item value="org.eclipse.ui.wizards.import.ZipFile" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
