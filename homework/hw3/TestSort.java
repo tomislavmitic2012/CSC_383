@@ -50,21 +50,21 @@ private static final int SIZE = 10000 ;
     	} 
 
       Integer [] b =new Integer[size] ;
-      System.arraycopy(a,0,b,0,size) ;
+      //System.arraycopy(a,0,b,0,size) ;
 
-       String []Type = {"in Random order", " in ascending order", " in descending order ", " al the same "};
+       //String []Type = {"in Random order", " in ascending order", " in descending order ", " al the same "};
 
-       System.out.printf("\n\nFor data set of size =  %d with data %10s \n\n" , size, Type[type]) ; 
+       //System.out.printf("\n\nFor data set of size =  %d with data %10s \n\n" , size, Type[type]) ; 
 
-          start = System.currentTimeMillis();
+          //start = System.currentTimeMillis();
 
-          Sort.heapSort(b) ;
+          //Sort.heapSort(b) ;
 
-         end = System.currentTimeMillis();
+         //end = System.currentTimeMillis();
 
-         sorted(b) ;
+         //sorted(b) ;
        
-        System.out.printf("\t%-15s takes %10d ms \n\n", "heapSort",(end - start) ) ;
+        //System.out.printf("\t%-15s takes %10d ms \n\n", "heapSort",(end - start) ) ;
 
         System.arraycopy(a,0,b,0,size) ;
         start = System.currentTimeMillis();
@@ -166,43 +166,43 @@ private static final int SIZE = 10000 ;
 ////////////////////////////////////  use of Arrays.sort()
 
 
-         System.arraycopy(a,0,b,0,size) ;
+         //System.arraycopy(a,0,b,0,size) ;
 
        
-        start = System.currentTimeMillis();
+        //start = System.currentTimeMillis();
 
 
-         Arrays.sort(b);
+         //Arrays.sort(b);
 
-        end = System.currentTimeMillis();
-
-
+        //end = System.currentTimeMillis();
 
 
-           sorted(b) ;
+
+
+           //sorted(b) ;
       
 
-      System.out.printf("\t%-15s takes %10d ms \n\n", "Arrays.sort",(end - start) ) ;
+      //System.out.printf("\t%-15s takes %10d ms \n\n", "Arrays.sort",(end - start) ) ;
 
 
       
 
- if ( size > 20000 ) return ;  // if the size is too large , skip insertionsort, selectionSort and bubbleSort
+ //if ( size > 20000 ) return ;  // if the size is too large , skip insertionsort, selectionSort and bubbleSort
 
 
 ////////////////////////  insertionSort   ///////////////////
 
-        System.arraycopy(a,0,b,0,size) ;
-        start = System.currentTimeMillis();
+        //System.arraycopy(a,0,b,0,size) ;
+        //start = System.currentTimeMillis();
 
 
-        Sort.insertionSort(b);
+        //Sort.insertionSort(b);
 
-        end = System.currentTimeMillis();
+        //end = System.currentTimeMillis();
 
-           sorted(b) ;
+           //sorted(b) ;
 
-        System.out.printf("\t%-15s takes %10d ms \n\n", "insertionSort",(end - start) ) ;
+        //System.out.printf("\t%-15s takes %10d ms \n\n", "insertionSort",(end - start) ) ;
 
 
        
@@ -210,37 +210,37 @@ private static final int SIZE = 10000 ;
 
  ////////////////////////  selectionSort   ///////////////////
 
-        System.arraycopy(a,0,b,0,size) ;
-        start = System.currentTimeMillis();
+        //System.arraycopy(a,0,b,0,size) ;
+        //start = System.currentTimeMillis();
 
 
-        Sort.selectionSort(b);
-        sorted(b) ;
+        //Sort.selectionSort(b);
+        //sorted(b) ;
 
-        end = System.currentTimeMillis();
+        //end = System.currentTimeMillis();
 
-        System.out.printf("\t%-15s takes %10d ms \n\n", "selectionSort",(end - start) ) ;
+        //System.out.printf("\t%-15s takes %10d ms \n\n", "selectionSort",(end - start) ) ;
 
 
 
 ////////////////////////  bubbleSort   ///////////////////
 
-        System.arraycopy(a,0,b,0,size) ;
-        start = System.currentTimeMillis();
+        //System.arraycopy(a,0,b,0,size) ;
+        //start = System.currentTimeMillis();
 
 
-        Sort.bubbleSort(b);
+        //Sort.bubbleSort(b);
 
-        end = System.currentTimeMillis();
+        //end = System.currentTimeMillis();
 
-           sorted(b) ;
+           //sorted(b) ;
 
-        System.out.printf("\t%-15s takes %10d ms \n\n", "bubbleSort",(end - start) ) ;
-
-
+        //System.out.printf("\t%-15s takes %10d ms \n\n", "bubbleSort",(end - start) ) ;
 
 
-        System.exit(0);
+
+
+        //System.exit(0);
     }
 
 

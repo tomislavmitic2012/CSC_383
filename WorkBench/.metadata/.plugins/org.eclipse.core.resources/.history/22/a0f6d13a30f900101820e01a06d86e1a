@@ -1,0 +1,19 @@
+/**
+ * A class used for sorting elements within an Array.
+ * 
+ * @author Tomislav S. Mitic
+ *
+ */
+public class Sort< T > {
+	private Sort< T > self = this;
+	
+	private static int switchSize;
+	
+	public Sort() {
+		Sort.switchSize = 10;
+	}
+	
+	public static < T extends Comparable<? super T > > void BubbleSort( T[] a) {
+		
+	}
+}
