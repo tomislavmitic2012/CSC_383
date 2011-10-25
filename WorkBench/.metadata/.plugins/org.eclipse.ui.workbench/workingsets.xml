@@ -1,39 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
 <workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1318102611763_1" label="Workbench" name="Workbench">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ArrayCopy" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ArrayListDemo" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ArrayListDemo2" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ArrayListTest" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ArrayStack" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ArrayStackReverse" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Chapter_1_Fragments" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Chapter_2_Fragments" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Chapter_3_Fragments" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/CircularlyLinkedList" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/DoublyLinkedList" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/GenericPair" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/GenericSelectionSort" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/GolfScores" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/HTMLMatch" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Sample" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InfixToPostfix" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/StringSelectionSort" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/GenericSelectionSort" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/PostfixToInfix" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ListPolynomial" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Stack" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/GolfScores" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Queue" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ArrayListTest" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/GenericPair" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Sorting" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Recurrsion" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/SelectionSortArrayInt" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/HTMLMatch" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/TowersOfHanoi" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ArrayStack" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ArrayListDemo" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/QueueExamples" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/SinglyLinkedList" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Josephus" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/LinkedStack" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ListPolynomial" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/PostfixToInfix" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Queue" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/QueueExamples" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Recurrsion" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/RecursiveRuler" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Sample" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/SelectionSortArrayInt" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/SinglyLinkedList" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ArrayListDemo2" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ArrayCopy" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/SinglyLinkedListGeneric" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Sorting" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Stack" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/StringSelectionSort" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/TowersOfHanoi" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/pg1" type="4"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1315618111611_0" label="Window Working Set" name="Aggregate for window 1315618111608"/>
 <mruList name="Workbench"/>

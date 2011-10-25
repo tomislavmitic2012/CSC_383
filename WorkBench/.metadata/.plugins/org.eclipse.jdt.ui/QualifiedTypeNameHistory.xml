@@ -21,7 +21,6 @@
 <fullyQualifiedTypeName name="pair.Pair"/>
 <fullyQualifiedTypeName name="queue.Queue"/>
 <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
-<fullyQualifiedTypeName name="java.util.Stack"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="term.Term"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
@@ -50,4 +49,6 @@
 <fullyQualifiedTypeName name="node.Node"/>
 <fullyQualifiedTypeName name="linked_list.List"/>
 <fullyQualifiedTypeName name="java.io.PrintStream"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+<fullyQualifiedTypeName name="java.util.Stack"/>
 </qualifiedTypeNameHistroy>
