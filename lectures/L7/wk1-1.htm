@@ -1,0 +1,683 @@
+<HTML><HEAD><TITLE>CSC383 Java Notes</TITLE></HEAD>
+<BODY>
+<CENTER>
+<H2>Notes: Java Basics <BR>Source: Goodrich &amp; Tamassia, Chapter 1 
+</H2></CENTER>
+<H3>Classes, Types, Objects </H3>
+<H4>Anatomy of the Hello World  program</H4>
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>public class World  {
+
+    public static void main (String args[]) {
+        System.out.println("Hello World !");
+    }
+}
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<UL>
+  <LI>class -- all Java code belongs to a class 
+  <LI>World  -- the name of the class 
+  <LI>public -- access modifier, makes class and the main() method accessibe to 
+  anyone 
+  <LI>static -- static elements belongs to the class, not its objects 
+  <LI>void -- the method does not return a value 
+  <LI>main -- the name of the method where a Java program starts execution 
+  <LI>String args[] -- command line parameters passed as an array of strings 
+  <LI>System.out.println() -- a method in the out object in the System class 
+  that performs output 
+  <LI>"Hello World " -- a Java string literal passed as a parameter to the 
+  println() method 
+  <LI>Curly braces -- used to open and close the bodies of classes, methods, and 
+  block of code 
+  <LI>Semicolons -- used to mark the end of a statement </LI></UL>
+<H4>Some Technical terms</H4>
+<LI>objects -- Objects are the main components of a Java program. They store 
+data and provide methods for accessing the data. 
+<LI>instance -- Every object is an <B>instance</B> of a class. 
+<LI>class -- The class represents the <B>type</B> of the object. Java is a 
+<B>strongly typed</B> language. 
+<LI>strongly typed -- All values (variables, methods, return values) have a type 
+that must be declared in the definition. 
+<LI>members -- The members of a class are its <B>instance variables</B> (fields) 
+and <B>methods</B>. 
+<LI>instance variables -- this is where the object's data are stored and must be 
+specified in advance 
+<LI>methods -- define the operations that can be performed on objects 
+<H4>Declaring a class </H4>
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>public class Counter {
+    protected int count;   // simple integer instance variable
+
+    /** The default contructor for the Counter object */
+    Counter() { count = 0; }
+
+    /** An accessor method to get the current count */
+    public int getCount() { return count; }
+
+    /** A modifier method for incrementing the count */
+    public void incrementCount() { count++ ;  }
+    
+    /** A modifier method for deccrementing the count */
+    public void incrementCount() { count-- ;  }
+}
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<H4>More Technical Terms</H4>block -- a segment of code demarcated by curly 
+braces 
+<LI>identifier -- the name of a method, class, or variable 
+<LI>reserved words -- e.g., int, double, etc. Java has around 50. These can't be 
+used as identifiers. 
+<LI>class modifiers 
+<UL>
+  <LI>abstract -- an abstract class is one with one or more abstract methods 
+  (methods that lack a body). 
+  <LI>final -- final classes cannot be subclassed 
+  <LI>public -- can be instantiated or extended by any code in the same package 
+  or by any code that imports the class. 
+  <LI>friendly (aka package) -- the default modifier, means that the class can 
+  be instantiated by any code within the same package. (See <A 
+  href="http://www.artima.com/legacy/answers/Jul2000/messages/8.html">nice 
+  overview</A>.) </LI></UL>
+<UL></UL>
+<H4>Base Types or Primitive Types</H4>Base types are not objects. They include: 
+<UL>
+  <LI>boolean -- true, false 
+  <LI>char -- 16-bit Unicode character 
+  <LI>byte -- 8-bit signed <A 
+  href="http://en.wikipedia.org/wiki/Two%27s_complement">2s complement 
+  integer</A> 
+  <LI>short -- 16-bit signed 2s complement integer 
+  <LI>int -- 32 -bit signed 2s complement integer 
+  <LI>long -- 64-bit signed 2s complement integer 
+  <LI>float -- 32-bit floating-point number 
+  <LI>double -- 64-bit floating-point number </LI></UL>
+<H4>Comments</H4>
+<UL>
+  <LI>Single line or inline comments: // 
+  <LI>Block comments can extend over many lines /* ... */ 
+  <LI>Javadoc comments can extend over many lines and are processed by javadoc 
+  /** ... */ 
+ </UL>
+<H4>Object</H4>
+<P>The <B>new</B> operator, followed by a call to the object's constructor, is 
+used to create an object. It creates the object from the class definition and 
+returns a <B>reference</B> (<B>pointer</B>, <B>address</B>) to it. 
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>Counter c = new Counter();
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<P>Here's what <B>new</B> does: 
+<UL>
+  <LI>A new object is dynamically allocated in memory and all its instance 
+  variables are initialized to default values. 
+  <LI>The constructor is called with its parameters. 
+  <LI>When the constructor returns, the <B>new</B> operator returns a reference 
+  to the object. </LI></UL>
+<H4>Number Objects</H4>
+<P><B>Wrapper classes</B> are used to associate primitive number values with 
+Java objects: 
+<P>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TH>Base type</TH>
+    <TH>Class Name</TH>
+    <TH>Creation example</TH>
+    <TH>Access Example</TH></TR>
+  <TR>
+    <TD>byte</TD>
+    <TD>Byte</TD>
+    <TD>n = new Byte((byte)34); </TD>
+    <TD>n.byteValue();</TD></TR>
+  <TR>
+    <TD>short</TD>
+    <TD>Short</TD>
+    <TD>n = new Short((short)100); </TD>
+    <TD>n.shortValue();</TD></TR>
+  <TR>
+    <TD>int</TD>
+    <TD>Integer</TD>
+    <TD>n = new Integer(1045); </TD>
+    <TD>n.intValue();</TD></TR>
+  <TR>
+    <TD>long</TD>
+    <TD>Long</TD>
+    <TD>n = new Long(10849L); </TD>
+    <TD>n.longValue();</TD></TR>
+  <TR>
+    <TD>float</TD>
+    <TD>Float</TD>
+    <TD>n = new Float(3.145F); </TD>
+    <TD>n.floatValue();</TD></TR>
+  <TR>
+    <TD>double</TD>
+    <TD>Double</TD>
+    <TD>n = new Double(3.145); </TD>
+    <TD>n.doubleValue();</TD></TR></TBODY></TABLE>
+<H4>String Objects</H4>
+<P>A <A href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html">string</a> 
+ is a sequence of characters from the <B>Unicode alphabet</B> , each 
+16-bit character of which can be <B>indexed</B> by its position in the string. 
+<P><B>String contatenation: </B>The plus (+) operator is used to concatenate two 
+strings 
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>String s = "kilo" + "meters";
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<H4>Object References</H4>
+<P>Objects are referenced by <B>reference variables</B>, which refer to the 
+<B>memory address</B> of the object. 
+
+<P>Unless an object reference in <B>null</B>, the <B>dot operator (.)</B> is 
+used to access the object's instance variables and methods: 
+<P>In this example, we are calling three different methods that have the same 
+name but different <B>signatures</B>. A method's signature involves its name and 
+its parameters (how many and what type): 
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>oven.cookDinner();
+oven.cookDinner(food);
+oven.cookDinner(food, seasoning);
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<H4>Instance Variables</H4>
+<P><B>Instance variables</B> (<B>fields</B>) are defined in the class 
+definition. They represent the object's data. They must have a <B>type</B>, 
+either a <B>base type</B> (e.g., <B>int</B>) or a <B>reference type</B> (e.g., 
+String, Counter, Double). . 
+<H4>Variable Modifiers</H4>
+<UL>
+  <LI><B>public</B> -- Anyone (methods in any class) can access public instance 
+  variables 
+  <LI><B>protected</B> -- Only methods of the same package or its subclasses can 
+  access. 
+  <LI><B>private</B> -- Only methods of the same class can access private 
+  instance variables. 
+  <LI><B>(friendly)</B> -- The default: accessible by any class in the same 
+  package. 
+  <LI><B>static</B> -- Associated with the class, not its objects, and <B>should 
+  be referenced</B> through the class name. 
+  <LI><B>final</B> -- Must be assigned an initial value and can't be changed. 
+  </LI></UL>
+<H4>Enum Types</H4>
+<P>Enumerated types may be declared inside a class: 
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>public enum Day {MON, TUE, WED, THU, FRI, SAT, SUN};
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<H3>Methods</H3>
+<P>Similar to functions and procedures in other languages. Messages allow a 
+programmer to send a message to an object. 
+<P>Same scope modifiers -- <B>public</B>, <B>protected</B>, and <B>private</B> 
+as instance variables. Same default <B>friendly</B>. 
+<P>Method definition = <B>signature</B> plus <B>body</B>. 
+<P>Methods are called (invoked) on a specific instance of a class -- i.e., on a 
+specific object. 
+<P>Methods can change the <B>state</B> of the object -- i.e., the collective 
+value of all its instance variables. 
+<P>An <B>abstract</B> method has no code, only a signature. It is used in 
+inheritance and polymorphism. 
+<P><B>Return types</B>. A method must specify its return type as either some 
+base type (int) or reference type (String) or <B>void</B>. Void methods are 
+<B>procedures</B>. Non-void methods are <B>functions</B>. 
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>public double avg (double m, double n) {
+    return (m + n) / 2;
+}
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<P><B>Parameters</B> are defined in a comma-separated list as in the previous 
+example. 
+<P>Parameters are <B>passed by value</B> in Java--when a parameter is passed to 
+a method, a <B>copy</B> of that parameter is made for use within the method 
+body. So if you pass an <B>int</B> a copy of the number is passed. If you pass 
+an object reference, the reference is copied as well. 
+<P><B>Constructors</B> are special methods used to initialize new objects. By 
+definition, they don't have a return value (REMEMBER THIS!) 
+<P>Constructors cannot be <B>abstract</B> or <B>final</B> or <B>static</B>. 
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>public Fish (int w, String n) {
+    weight = w;
+    name = n;
+}
+
+Fish fish = new Fish(7, "Nemo");
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<P>The <B>main</B> method is used to turn a <B>class definition</B> into a 
+program. 
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>public static void main(String args[]) {
+    // main method body
+}
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<P>The <B>args</B> parameter is used to process <B>command-line arguments</B>. 
+<P>At least one class in a Java program must contain a main method. This is the 
+class that is named when we run the program: 
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>java Aquarium
+java Aquarium 34 5
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<H4>Statement Blocks and Local Variables</H4>
+<P>A <B>statement block</B> is any code contained within curly braces. They can 
+be nested. 
+<P>A <B>local variable</B> is any variable that is defined within a statement 
+block (other than the block that makes up the class definition). They can only 
+be used within that block and cease to exist when the block is exited. 
+<H3>Expressions</H3>
+<H4>Operators</H4>
+<P><B>Assignment</B>&nbsp;&nbsp; = 
+<P><B>Arithmetic:</B>&nbsp;&nbsp; + - * / % (n % m = r s.t. n = mq + r for 
+integer q and 0 &lt;= r &lt; n) 
+<P><B>Increment/Decrement:</B>&nbsp;&nbsp; ++, -- 
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>int i = 8;          // i = 8
+int j = i++;        // j = 8,  i = 9
+int k = ++i;        // k = 10, i = 10
+int m = i--;        // m = 10, i = 9, 
+int n = 9 + i++;    // n = 18, i = 10
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<P><B>Comparison Operators, give boolean result: </B>&lt;, &lt;=, ==, !=, &gt;= 
+, &gt; 
+<P><B>Boolean operators: </B>~, &amp;&amp;, || 
+<P><B>Operational assignment operators: </B>+= -= *= /= %= (j += 5 is same as j 
+= j + 5) 
+<H4>Casting, Autoboxing and Unboxing</H4>
+<P><B>Casting </B>refers to converting a value from one type into an equivalent 
+value in another type. 
+<P><B>Case Operators: </B>The type name in parens -- e.g., (int) or (double) 
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>
+// Explicit casting
+double d1 = 3.2;
+double d2 = 3.999;
+int i1 = (int)d1;        // i1 has value 3
+int i2 = (int)d2;        // i2 has value 3
+double d3 = (double)i2;  // d3 has value 3.0
+
+// Casting with operators
+int i1 = 3;
+int i2 = 6;
+dresult = (double)i1 / (double)/i2;   // dresult has value 0.5
+dresult = i1/i2;                       // dresult has value 0
+
+// Implicit casting
+int iresult, i = 3;     
+double dresult, d = 3.2;
+dresult = i / d;            // dresult is 0.9375, i was cast to a double
+iresult = i / d;            // loss of precision, compile error
+iresult = (int)(i/d);       // iresult is 0, fractional part is lost
+
+//Autoboxing, an implicit cast between base type to Number type:
+public void f(Double d) {
+   // method body
+}
+
+public void g(double d) {
+   // method body
+}
+
+f(5.0);            // Autoboxing casts 5.0 into a Double
+g(new Double(5));  // Unboxing casts Double(5) into 5.0
+
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<H4>Casting with Strings</H4>
+<P>Implicit casting is performed on any value concatentated with a String 
+object. 
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>String s = "" + 5;     // converts to "5";
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<H3>Control Flow</H3>
+<H4>Conditional Branching Statements</H4>
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>//  If Statement
+<B>if</B> (boolean expresion) 
+   true_statement
+
+// If/else statement
+<B>if</B> (boolean expresion) 
+   true_statement
+<B>else</B>
+   false_statement
+
+// If/else statement
+<B>if</B> (first_boolean-expresion) 
+   true_statement
+<B>else if</B> (second_boolean_expression)
+   second_true_statement
+<B>else</B>
+   false_statement
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<H4>Loops</H4>
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>// Syntax while loop
+<B>while</B> (boolean_expression) 
+    loop_statement
+
+// Example prints 0 1 2 ... 9
+int k = 0;
+while (k &lt; 10) {
+    System.out.println(k);
+    k++;
+}
+
+// Syntax for loop
+<B>for</B> (initializtion; condition;  increment)
+    loop_statement
+
+
+// Example prints 0 1 2... 9
+for (int k = 0; k &lt; 10; k++)
+    System.out.println(k);
+
+
+// Syntax do while loop
+<B>do</B> 
+   loop_statement
+<B>while</B> (boolean_expression)
+
+// Example prints 0 1 ... 9
+int k = 0;
+do {
+   System.out.println(k);
+   ++k;
+} while (k &lt; 10);
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<H4>Method Return</H4>
+<P><B>void</B> methods return to the <B>calling method</B> after it reaches the 
+last line of code or when it encounters a <B>return</B> statement. 
+<P>Non-void methods (<B>functions</B>) must include a <B>reachable</B> return 
+statement. 
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>public boolean checkBDay (int date) {
+    if (date == Birthday.MIKES_BDAY) {
+        return true;
+    }
+    return false;
+}
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<P>Note the difference between a statement being the last line of code 
+<B>executed</B> and the last line of code in the method definition itself. 
+<H4>Break/Continue</B> The <B>break</B> statement is used to break out of loops. 
+The <B>continue</B> statement is used to explicitly control flow in a loop. I 
+use them rarely. 
+<H3>Arrays</H3>
+<P>Arrays allow you to keep track of aggregate data by their relative position. 
+They are like lists. 
+<P>An array is a numbered collection of variables of the same type. Each 
+variable (<B>cell</B>) has an <B>index</B>, which are numbered from 0. 
+<BLOCKQUOTE>
+  <BLOCKQUOTE>
+    <TABLE border=1>
+      <TBODY>
+      <TR>
+        <TD>900 </TD>
+        <TD>820 </TD>
+        <TD>819 </TD>
+        <TD>777 </TD>
+        <TD>655 </TD>
+        <TD>421 </TD>
+        <TD>320 </TD></TR></TBODY></TABLE>
+    <TABLE>
+      <TBODY>
+      <TR>
+        <TD>&nbsp;&nbsp;0 </TD>
+        <TD>&nbsp;&nbsp;&nbsp;&nbsp;1 </TD>
+        <TD>&nbsp;&nbsp;&nbsp;&nbsp; 2 </TD>
+        <TD>&nbsp;&nbsp;&nbsp;&nbsp; 3 </TD>
+        <TD>&nbsp;&nbsp;&nbsp;&nbsp; 4 </TD>
+        <TD>&nbsp;&nbsp;&nbsp;&nbsp; 5 </TD>
+        <TD>&nbsp;&nbsp;&nbsp;&nbsp; 6 
+    </TD></TR></TBODY></TABLE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indices 
+  </BLOCKQUOTE></BLOCKQUOTE>
+<H4>Summing an Array</H4>
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>/** Counts the sum of the elements in the array a */
+public static int sum(int[] a) { // Notice how we declare an array parameter, a
+    int total = 0;
+    for (int k = 0; k &lt; a.length; k++)
+       total += a[k];
+    return total;
+}
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<P>Arrays are objects. Note how we use <B>a.length</B> to refer to the array's 
+length, which shows that the <I>length</I> is public instance variable for the 
+array class. 
+<H4>Java has a for-each loop</H4>
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>/** Counts the number of occurrences of k in a */
+public static int findCount(int[] a, int k) { // Notice how we declare an array parameter, a
+    int count = 0;
+    for (int e: a) {
+       if (e == k)
+           count++;
+    }
+    return count;
+}
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<H4>Array Out of Bounds Errors</H4>
+<P>It is a dangerous mistake to try to index an array element using a number 
+outside the range 0..a.length-1. Hackers use that approach to create a <B>buffer 
+overflow attack</B>. 
+<P>Java guards against this with a <B>ArrayIndexOutOfBoundsException</B>. 
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>// Code to guard against index out of bounds exception
+if ((k &gt;=0) &amp;&amp; (k &lt; a.length) &amp;&amp; a[k] &gt; 2))
+     x = a[k];
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<H4>Declaring Arrays</H4>
+<P><B>Explicit Initialization:</B> 
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>int[] primes = {2, 3, 5, 7, 11, 13, 17, 23, 29};   // Explicit initialization
+double[] a = new double[10];                       // 10 doubles initialized to all 0.0
+int[] m = new int[100];                            // 100 ints initialized to all 0
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<H4>Arrays are Objects</H4>
+<P>Arrays are objects with the special bracket ([]) syntax. Array identifiers 
+are <B>references</B>. We use <B>new</B> to create arrays. Arrays are stored on 
+the heap. 
+<P>Note that when you create an array of objects, you do not at the same time 
+create the objects themselves. Initially the array elements are <B>null</B>. // 
+Declare a variable for an array of Objects Object obj[]; // Create an array to 
+store 3 Objects; each cell is initially <B>null</B> obj = new Object[3]; // 
+Create 3 Objects and store them in the array; each array element now points to 
+an Object obj[0] = new Object(); obj[1] = new Object(); obj[2] = new Object(); 
+<H4>More than One Reference to the same Array</H4>If you assign one array 
+variable to another that does <B>NOT</B> copy the entire array. 
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>int[] a = new int[100];
+int[] b = new int[100;
+a = b;      // Both a and b point to the same array. 
+
+b[3] = 5;    // So now also:  a[3] == 5 
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<H4>Cloning an Array</H4>
+<P>If you want to create a duplicate of an array, use <B><a href="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html">clone()</a></B>: 
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>b = a.clone();  // Copies all cells of a into a new array referenced by b
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<br> or<b> <a href="http://download.oracle.com/javase/6/docs/api/java/lang/System.html#arraycopy(java.lang.Object, int, java.lang.Object, int, int)">
+System.arraycopy</a> </b>
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>System.arraycopy(a,0,b,0,10) ;  // Copies cells (starting at 0 , 10 of them) of a into an array referenced by b
+                          
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<H4>Two Dimensional Arrays</H4>
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>//Declare an array to store rainfall data by month/day
+double rainfall[][]; //declare variable
+
+// Create the array -- each element initialized to 0
+rainfall = new double[12][31];
+
+// Assign today's rainfall to the correct cell (notice the -1)
+rainfall[month-1][day-1] = 1.2;
+
+// An array to store the days per month for Jan, Feb, March...
+int[] daysPerMonth = {31,28,31,30,31,30,31,31,30,31,30,31}
+
+/** computes the average rainfall for  a month
+ * @param r -- an array rainfall by month/day
+ * @param m -- the month, 1 = jan, 2 = feb, ...
+ */
+public double avgForMonth (double r[][], int m) {
+double total = 0;
+for (int k=0; k &lt; r[m-1].length; k++)
+   total += r[m-1][k];
+return total/daysPerMonth[m-1];
+}
+
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+
+<H3>One Dimensional Array of Ints</H3>
+<BLOCKQUOTE><PRE>   int[] scores = {100, 84, 62, 94, 94, 93, 77, 65, 58, 100, 85};
+
+   /** prints a 1-dimensional array of ints on a single line*/
+   public void print(int[] arr) {
+       for (int k = 0; k &lt; arr.length; k++)
+           System.out.print(arr[k] + " ");
+       System.out.println();
+   }
+
+   /** searches for int n in a 1-dimensional array of ints, returns its index or -1 if not found */
+   public int search(int n, int[] arr) {
+       for (int k = 0; k &lt; arr.length; k++)
+          if (arr[k] == n)
+      	         return k;
+       return -1;
+   }
+
+   /** Insertion sorts a 1-dimensional array in non-decreasing order */
+   public void sort(int[] arr) {
+       int temp;
+       for (int	k = 1; k &lt; arr.length; k++) {
+           temp	= arr[k];			      // Remove	element	from array
+           int i;
+           for (i = k-1; i &gt;= 0 &amp;&amp; arr[i] &gt; temp; i--)  // For larger preceding elements
+      	          arr[i+1] = arr[i];                  // Move it to the right
+           arr[i+1] = temp;   			      // Insert the removed element
+       }
+   }
+
+   public static void main(String args[]) {
+       int[] scores = {100, 84, 62, 94, 94, 93, 77, 65, 58, 100, 85};
+       ArrayNotes notes = new ArrayNotes();
+       notes.print(scores);
+       System.out.println("The index  of " + 85 + " is " + notes.search(85, scores));
+       System.out.println("The index  of " + 72 + " is " + notes.search(72, scores));
+       System.out.println("Printing the sorted scores");
+       notes.sort(scores);
+       notes.print(scores);
+   }
+</PRE></BLOCKQUOTE>
+<H3>Two Dimensional Array of Doubles</H3>
+<BLOCKQUOTE><PRE>    /** Computes the average of values in a 2-dimensional array */
+    public double average(double [][] matrix) {
+	double total = 0;
+	int count = 0;
+	for (int row = 0; row &lt; matrix.length; row++) 
+	    for (int col = 0; col &lt; matrix[row].length; col++)  {
+		total += matrix[row][col];
+		count++;
+	    }
+	return total / count;
+    }
+
+    /** Computes the average of values in a 2-dimensional array */
+    public double[] teamAverages(double [][] matrix) {
+	double[] averages = new double[matrix.length];
+	for (int row = 0; row &lt; matrix.length; row++)  {
+	    for (int col = 0; col &lt; matrix[row].length; col++)  
+		averages[row] += matrix[row][col];
+	    averages[row] /= matrix[row].length;
+	}
+	return averages;
+    }
+
+    /** Prints a 2-dimensional matrix */
+    public void print (double [][] matrix) {
+	for (int row = 0; row &lt; matrix.length; row++)  {
+	    for (int col = 0; col &lt; matrix[row].length; col++)  
+		System.out.print(matrix[row][col] + "\t");
+	    System.out.println();
+	}
+    }
+
+   /** prints a 1-dimensional array of ints on a single line*/
+   public void print(double[] arr) {
+       for (int k = 0; k &lt; arr.length; k++)
+           System.out.print(arr[k] + " ");
+       System.out.println();
+   }
+
+   public static void main(String args[]) {
+       double[][] teamscores = {{1.1, 2.3, 3.5, 9.9}, {10.6, 6.5, 3.0, 8.4}, {4.2, 7.9, 8.1, 8.2}};
+       ArrayNotes notes = new ArrayNotes();
+       System.out.println("\nPrinting team scores");
+       notes.print(teamscores);
+       System.out.println("The average of all scores is " + notes.average(teamscores));
+       System.out.println("The averages per team ");
+       notes.print(notes.teamAverages(teamscores));
+   }
+</PRE></BLOCKQUOTE>
+<H3>An Array of Objects</H3>
+<BLOCKQUOTE><PRE>public class Student {
+    private String name;
+    private String year;
+
+    public Student(String n, String y) {
+        name = n;
+        year = y;
+    }
+
+    public String toString() {
+        return name + " " + year;
+    }
+}
+
+   /** prints a 1-dimensional array of Students on a single line*/
+    public static void print(Student[] arr) {
+       for (int k = 0; k &lt; arr.length; k++)
+           System.out.print(arr[k].toString() + ", ");
+       System.out.println();
+    }
+
+   public static void main(String args[]) {
+       Student[] students = new Student[3];
+       
+       students[0] = new Student("Ann", "2012");
+       students[1] = new Student("Ben", "2013");
+       students[2] = new Student("Carla", "2011");
+       notes.print(students);
+   }
+
+</PRE></BLOCKQUOTE><p>
+<H3>Simple Input and Output</H3>
+<P>Java contains a rich set of classes for performing simple I/O as well as for 
+GUIs. 
+<H4>Simple Output Methods</H4>
+<P>Java provides a built-in static object, <B>System.out</B> that performs 
+output to the <B>standard output device</B> for any type of value: 
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>// Printed on the same line:  Java values: 3.1415, 15 (double, char, int).
+System.out.print("Java values: ");
+System.out.print(3.1415);
+System.out.print(',');
+System.out.print(15);
+System.out.print(" (double, char, int).");
+
+//Printed on separate lines
+System.out.println("Java values: ");
+System.out.println(3.1415);
+System.out.println(264);
+</PRE></BLOCKQUOTE></BLOCKQUOTE>
+<H4>Simple Input Using Scanner</H4>
+<P>Check out the documentation for the <B>java.util.Scanner</B> class in the <A 
+href="http://download.oracle.com/javase/6/docs/api/java/util/Scanner.html">Java API</A>. 
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE>import java.io.*;
+import java.util.Scanner;
+
+public class InputExample {
+  public static void main(String args[]) throws IOException {
+    Scanner s = new Scanner(System.in);   // System.in is a built in object
+    System.out.print("Enter your height in centimeters: ");
+    float height = s.nextFloat();         // Get the next float
+    System.out.print("Enter your weight in kilograms: ");
+    float weight = s.nextFloat();         // Get the next float
+    float bmi = weight/(height * height) * 10000;
+    System.out.println("Your body mass index is " + bmi + ".");
+  }
+}
+</PRE></BLOCKQUOTE></BLOCKQUOTE></H4></LI></BODY></HTML>

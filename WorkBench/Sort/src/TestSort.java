@@ -35,14 +35,14 @@ public class TestSort {
 		int size = TestSort.SIZE;
 		long start = 0, end = 0;
 		int type = 0;
-		
+
 		if ( args.length > 0 ) size = Integer.parseInt( args[ 0 ] );
 		if ( args.length > 1 ) type = Integer.parseInt( args[ 1 ] );
 		
 		Integer[] a = new Integer[ size ];
 		Integer[] temp = new Integer[ size ];
 		Random rand = new Random();
-		
+
 		if ( type == 0 ) {			// Random order
 			for ( int i = 0; i < size; i++ ) {
 				a[ i ] = rand.nextInt( 5 * size );
@@ -60,9 +60,9 @@ public class TestSort {
 				a[ i] = 1;
 			}
 		}
-		
+
 		Integer[] b = new Integer[ size ];
-		
+
 		String[] Type = {
 			" in Random order",
 			" in ascending order",
@@ -70,23 +70,56 @@ public class TestSort {
 			" all the same"
 		};
 		TestSort.output.printf("\n\nFor data set of size = %d with data %10s\n\n", size, Type[ type ] );
-		
+
 		////////////////////	Heap Sort		////////////////////
-		System.arraycopy( a, 0, b, 0, size );		
+		System.arraycopy( a, 0, b, 0, size );
 		start = System.currentTimeMillis();
 		Sort.heapSort( b );
 		end = System.currentTimeMillis();
 		TestSort.< Integer >sorted( b );
 		TestSort.output.printf("\t%-15s takes %10d ms\n\n", "Heap Sort", ( end - start ) );
+
+		////////////////////	Quick Sort		////////////////////
+		System.arraycopy( a, 0, b, 0, size );
+		start = System.currentTimeMillis();
+		Sort.quickSort( b );
+		end = System.currentTimeMillis();
+		TestSort.< Integer >sorted( b );
+		TestSort.output.printf("\t%-15s takes %10d ms\n\n", "Quick Sort", ( end - start ) );
 		
-		////////////////////	Use of Arrays.sort()		////////////////////
+		////////////////////	Quick Sort 2	////////////////////
+		System.arraycopy( a, 0, b, 0, size );
+		start = System.currentTimeMillis();
+		Sort.quickSort2( b );
+		end = System.currentTimeMillis();
+		TestSort.< Integer >sorted( b );
+		TestSort.output.printf("\t%-15s takes %10d ms\n\n", "Quick Sort 2", ( end - start ) );
+
+		////////////////////	Use of Merge Sort	////////////////////
+		System.arraycopy( a, 0, b, 0, size );
+		Integer[] c = new Integer[ size ];
+		start = System.currentTimeMillis();
+		Sort.mergeSort( b, c );
+		end = System.currentTimeMillis();
+		TestSort.< Integer >sorted( b );
+		TestSort.output.printf("\t%-15s takes %10d ms\n\n", "Merge Sort", ( end - start ) );
+
+		////////////////////	Use of Merge Sort with Cutoff	////////////////////
+		System.arraycopy( a, 0, b, 0, size );
+		start = System.currentTimeMillis();
+		Sort.mergeSort( b, c, 20 );
+		end = System.currentTimeMillis();
+		TestSort.< Integer >sorted( b );
+		TestSort.output.printf("\t%-15s takes %10d ms\n\n", "Merge Sort 2", ( end - start ) );
+
+		////////////////////	Use of Arrays.sort()	////////////////////
 		System.arraycopy( a, 0, b, 0, size );
 		start = System.currentTimeMillis();
 		Arrays.sort( b );
 		end = System.currentTimeMillis();
 		TestSort.< Integer >sorted( b );
 		TestSort.output.printf("\t%-15s takes %10d ms\n\n", "Arrays.sort", ( end - start ) );
-		
+
 		if ( size > 20000 ) return;		// if the size is too large, skip insertion sort, selection sort, and bubble sort
 
 		////////////////////	Insertion Sort		////////////////////

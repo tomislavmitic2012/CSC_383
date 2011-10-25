@@ -1,0 +1,47 @@
+	/**
+	 * Private static method the implements the recursive standard quick sort
+	 * 
+	 * @param <T>
+	 * @param a
+	 * @param start
+	 * @param end
+	 */
+	private static < T extends Comparable<? super T > > void quickSort( T[] a, int start, int end ) {
+		T pivot = a[ start ];			// left most element is the pivot
+		int leftPointer = start;
+		int rightPointer = end;
+		final int LEFT = 1;
+		final int RIGHT = -1;
+		int pointerSide = RIGHT;		// we start with the right as the pivot is from the left
+		
+		while( leftPointer != rightPointer ) {
+			if ( pointerSide == RIGHT ) {
+				if ( a[ rightPointer ].compareTo( pivot ) < 0 ) {
+					a[ leftPointer ] = a[ rightPointer ];
+					leftPointer++;
+					pointerSide = LEFT;
+				} else {
+					rightPointer--;
+				}
+			} else if ( pointerSide == LEFT ) {
+				if ( a[ leftPointer].compareTo( pivot ) > 0 ) {
+					a[ rightPointer ] = a[ leftPointer ];
+					rightPointer--;
+					pointerSide = RIGHT;
+				} else {
+					leftPointer++;
+				}
+			}
+		}
+		
+		// put the pivot where leftPointer and rightPOinter collide
+		a[ leftPointer ] = pivot;
+		
+		if ( ( leftPointer - start ) > 1 ) {
+			Sort.quickSort( a, start, leftPointer - 1 );
+		}
+		
+		if ( ( end - leftPointer ) > 1 ) {
+			Sort.quickSort( a, leftPointer + 1, end );
+		}
+	}

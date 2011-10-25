@@ -92,74 +92,74 @@ private static final int SIZE = 10000 ;
        
       System.out.printf("\t%-15s takes %10d ms \n\n", "Quicksort3",(end - start) ) ;
 
-        System.arraycopy(a,0,b,0,size) ;
-        start = System.currentTimeMillis();
+        //System.arraycopy(a,0,b,0,size) ;
+        //start = System.currentTimeMillis();
 
 
-        Sort.quicksort4(b);
+        //Sort.quicksort4(b);
 
-        end = System.currentTimeMillis();
+        //end = System.currentTimeMillis();
 
-           sorted(b) ;
+           //sorted(b) ;
         
-       System.out.printf("\t%-15s takes %10d ms \n\n", "Quicksort2",(end - start) ) ;
+       //System.out.printf("\t%-15s takes %10d ms \n\n", "Quicksort2",(end - start) ) ;
 
-        System.arraycopy(a,0,b,0,size) ;
-        start = System.currentTimeMillis();
+        //System.arraycopy(a,0,b,0,size) ;
+        //start = System.currentTimeMillis();
 
 
-        Sort.quicksort(b);
+        //Sort.quicksort(b);
 
-        end = System.currentTimeMillis();
+        //end = System.currentTimeMillis();
 
-           sorted(b) ;
+           //sorted(b) ;
       
 
-       System.out.printf("\t%-15s takes %10d ms \n\n", "Quicksort",(end - start) ) ;
+       //System.out.printf("\t%-15s takes %10d ms \n\n", "Quicksort",(end - start) ) ;
 
 
 
-         Integer [] c = new Integer[size] ;
+//         Integer [] c = new Integer[size] ;
 
-          System.arraycopy(a,0,b,0,size) ;
+//          System.arraycopy(a,0,b,0,size) ;
 
        
-        start = System.currentTimeMillis();
+//        start = System.currentTimeMillis();
 
 
-         Sort.mergeSort(b,c);
+//         Sort.mergeSort(b,c);
 
-        end = System.currentTimeMillis();
-
-
+//        end = System.currentTimeMillis();
 
 
-           sorted(b) ;
 
-       System.out.printf("\t%-15s takes %10d ms \n\n", "mergeSort",(end - start) ) ;
+
+//           sorted(b) ;
+
+//       System.out.printf("\t%-15s takes %10d ms \n\n", "mergeSort",(end - start) ) ;
 
 
        
 
 /////////////////////////////////////// mergesort with switch  
 
-         System.arraycopy(a,0,b,0,size) ;
+         //System.arraycopy(a,0,b,0,size) ;
 
        
-        start = System.currentTimeMillis();
+        //start = System.currentTimeMillis();
 
 
-         Sort.mergeSort(b,c, 20);
+         //Sort.mergeSort(b,c, 20);
 
-        end = System.currentTimeMillis();
-
-
+        //end = System.currentTimeMillis();
 
 
-           sorted(b) ;
+
+
+          // sorted(b) ;
       
 
-      System.out.printf("\t%-15s takes %10d ms \n\n", "mergeSort2",(end - start) ) ;
+      //System.out.printf("\t%-15s takes %10d ms \n\n", "mergeSort2",(end - start) ) ;
 
 
 

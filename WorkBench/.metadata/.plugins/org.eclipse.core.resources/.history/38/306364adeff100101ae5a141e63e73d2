@@ -1,8 +1,0 @@
-package node;
-
-import exceptions.EmptyDequeException;
-import interfaces.Deque;
-
-public class NodeDeque< E > implements Deque< E > {
-	
-}

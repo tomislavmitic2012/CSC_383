@@ -48,6 +48,6 @@
 <fullyQualifiedTypeName name="favorite_list.FavoriteList"/>
 <fullyQualifiedTypeName name="favorite_list_mtf.FavoriteListMTF"/>
 <fullyQualifiedTypeName name="node.Node"/>
-<fullyQualifiedTypeName name="java.io.PrintStream"/>
 <fullyQualifiedTypeName name="linked_list.List"/>
+<fullyQualifiedTypeName name="java.io.PrintStream"/>
 </qualifiedTypeNameHistroy>

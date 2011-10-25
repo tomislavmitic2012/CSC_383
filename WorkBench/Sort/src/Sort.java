@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 /**
  * A class used for sorting elements within an Array.
  * 
@@ -57,9 +59,17 @@ public class Sort< T > {
 	}
 	
 	public static < T extends Comparable<? super T > > void insertionSort( T[] a ) {
-		int n = a.length;
-		
-		for( int i = 1; i < n; i++ ) {		// index from the second character in a
+		Sort.insertionSort( a, 0, a.length - 1 );
+	}
+	
+	/**
+	 * Insertion Sort method
+	 * 
+	 * @param <T>
+	 * @param a
+	 */
+	private static < T extends Comparable<? super T > > void insertionSort( T[] a, int low, int high ) {		
+		for( int i = low; i <= high; i++ ) {		// index from the second character in a
 			T cur = a[ i ];					// the current character to be inserted
 			int j = i - 1;					// start comparing with cell left of i
 			while( ( j >= 0 ) && ( a[ j ].compareTo( cur ) > 0) ) {	// while a[ j ] is out of order with cur
@@ -120,5 +130,257 @@ public class Sort< T > {
 				}
 			}
 		}
+	}
+	
+	/**
+	 * Sorts the elements of an array in nondecreasing order based
+	 * on the compareTo function, using the merge sort algorithm.
+	 * 
+	 * @param <T>
+	 * @param a
+	 */
+	public static < T extends Comparable<? super T > > void mergeSort( T[] a, T[] tmpArray ) {
+		Sort.mergeSort( a, tmpArray, 0, a.length - 1 );
+	}
+	
+	/**
+	 * Sorts the elements of an array in nondecreasing order based
+	 * on the compareTo function, using the merge sort algorithm.
+	 * If the elements in the array are less then or equal to cutOff
+	 * the function switches to insertion sort
+	 * 
+	 * @param <T>
+	 * @param a
+	 * @param tmpArray
+	 * @param cutOff
+	 */
+	public static < T extends Comparable<? super T > > void mergeSort( T[] a, T[] tmpArray, int cutOff ) {
+		if ( a.length <= cutOff ) {
+			Sort.insertionSort( a );
+			return;
+		}
+		Sort.mergeSort( a, tmpArray, 0, a.length - 1, cutOff );
+	}
+	
+	/**
+	 * Private static method that actually does the sorting recursively
+	 * 
+	 * @param <T>
+	 * @param a
+	 * @param tmpArray
+	 * @param left
+	 * @param right
+	 */
+	private static < T extends Comparable<? super T> >void mergeSort( T[] a, T[] tmpArray, int left, int right ) {
+		if ( left < right ) {
+			int center = ( left + right ) / 2;
+			Sort.mergeSort( a, tmpArray, left, center );
+			Sort.mergeSort( a, tmpArray, center + 1, right );
+			Sort.merge( a, tmpArray, left, center + 1, right );
+		}
+	}
+	
+	private static < T extends Comparable<? super T> >void mergeSort( T[] a, T[] tmpArray, int left, int right, int cutoff ) {
+		if ( left < right ) {
+			int center = ( left + right ) / 2;
+			if ( ( center - left ) <= cutoff ) {
+				Sort.insertionSort( a, left, center );
+			} else {
+				Sort.mergeSort( a, tmpArray, left, center );
+			}
+			if ( ( right - ( center + 1 ) ) <= cutoff ) {
+				Sort.insertionSort( a, center + 1, right );
+			} else {
+				Sort.mergeSort( a, tmpArray, center + 1, right );
+			}
+			Sort.merge( a, tmpArray, left, center + 1, right );
+		}
+	}
+	
+	/**
+	 * Merges an array after it has been split in the merge sort.
+	 * 
+	 * @param <T>
+	 * @param in1
+	 * @param in2
+	 * @param a
+	 */
+	private static < T extends Comparable<? super T > > void merge( T[] a, T[] tmpArray, int leftPos, int rightPos, int rightEnd  ) {
+		int leftEnd = rightPos - 1;
+		int tmpPos = leftPos;
+		int numElements = rightEnd - leftPos + 1;
+		
+		// Main loop
+		while ( leftPos <= leftEnd && rightPos <= rightEnd ) {
+			if( a[ leftPos ].compareTo( a[ rightPos ] ) <= 0 ) {
+				tmpArray[ tmpPos++ ] = a[ leftPos++ ];
+			} else {
+				tmpArray[ tmpPos++ ] = a[ rightPos++ ];
+			}
+		}
+		
+		// Copy rest of first half
+		while ( leftPos <= leftEnd ) {
+			tmpArray[ tmpPos++ ] = a[ leftPos++ ];
+		}
+		
+		// Copy rest of right half
+		while ( rightPos <= rightEnd ) {
+			tmpArray[ tmpPos++ ] = a[ rightPos++ ];
+		}
+		
+		// Copy tmpArray back
+		for( int i = 0; i < numElements; i++, rightEnd-- ) {
+			a[ rightEnd ] = tmpArray[ rightEnd ];
+		}
+	}
+	
+	/**
+	 * Standard quick sort
+	 * 
+	 * @param <T>
+	 * @param a
+	 */
+	public static < T extends Comparable<? super T > > void quickSort( T[] a ) {
+		// Before doing quick sort see if the array isn't sorted in ascending or descending
+		// order
+		if ( Sort.isSorted( a, 0 ) ) return;	// ascending
+		if ( Sort.isSorted( a, 1 ) ) return;	// descending
+		Sort.quickSort( a, 0, a.length - 1 );
+	}
+	
+	/**
+	 * Private static method the implements the recursive standard quick sort
+	 * 
+	 * @param <T>
+	 * @param a
+	 * @param start
+	 * @param end
+	 */
+	private static < T extends Comparable<? super T > > void quickSort( T[] a, int low, int high ) {
+		int i = low, k = high;
+		
+		if ( high - low >= 1 ) {				// check to see if there is at least two elements to sort
+			T pivot = a[ low ];
+			
+			while ( k > i ) {
+				while ( a[ i ].compareTo( pivot ) <= 0 && i <= high && k > i ) i++;		// from the left, look for the first element greater than the pivot
+				while ( a[ k ].compareTo( pivot ) > 0 && k >= low && k >= i ) k--;		// from the right, look for the first element not greater than the pivot
+				if ( k > i ) {
+					Sort.swapReferences( a, i, k );
+				}
+			}
+			Sort.swapReferences( a, low, k );											// after the indices have crossed, swap the last element in the left partition with the pivot
+			Sort.quickSort( a, low, k - 1 );											// quick sort left partition
+			Sort.quickSort( a, k + 1, high);											// quick sort right partition
+		} else {
+			return;																		// array sorted, time to exit
+		}
+	}
+	
+	/**
+	 * Quick sort, fall back to insertion sort if at cut off
+	 *  
+	 * @param <T>
+	 * @param a
+	 */
+	public static < T extends Comparable<? super T > > void quickSort2( T[] a ) {
+		// Before doing quick sort see if the array isn't sorted in ascending or descending
+		// order
+		if ( Sort.isSorted( a, 0 ) ) return;	// ascending
+		if ( Sort.isSorted( a, 1 ) ) return;	// descending
+		Sort.quickSort2( a, 0, a.length - 1 );
+	}
+	
+	/**
+	 * Private static method the implements the recursive standard quick sort with fall back to insertion sort
+	 * 
+	 * @param <T>
+	 * @param a
+	 * @param start
+	 * @param end
+	 */
+	private static < T extends Comparable<? super T > > void quickSort2( T[] a, int low, int high ) {
+		int i = low, k = high;
+		
+		if ( ( high - low ) > Sort.switchSize ) {										// check to see if there are at least eleven elements to sort
+			T pivot = a[ low ];
+			
+			while ( k > i ) {
+				while ( a[ i ].compareTo( pivot ) <= 0 && i <= high && k > i ) i++;		// from the left, look for the first element greater than the pivot
+				while ( a[ k ].compareTo( pivot ) > 0 && k >= low && k >= i ) k--;		// from the right, look for the first element not greater than the pivot
+				if ( k > i ) {
+					Sort.swapReferences( a, i, k );
+				}
+			}
+			Sort.swapReferences( a, low, k );											// after the indices have crossed, swap the last element in the left partition with the pivot
+			Sort.quickSort( a, low, k - 1 );											// quick sort left partition
+			Sort.quickSort( a, k + 1, high);											// quick sort right partition
+		} else if ( ( high - low ) <= Sort.switchSize ) { 
+			Sort.insertionSort( a, low, high );
+		}else {
+			return;																		// array sorted, time to exit
+		}
+	}
+
+	/**
+	 * Recursive Quick sort median of three, fall back to insertion sort if at cut off
+	 *  
+	 * @param <T>
+	 * @param a
+	 */
+	public static < T extends Comparable<? super T > > void quickSort3( T[] a ) {
+		// Before doing quick sort see if the array isn't sorted in ascending or descending
+		// order
+		if ( Sort.isSorted( a, 0 ) ) return;	// ascending
+		if ( Sort.isSorted( a, 1 ) ) return;	// descending
+		Sort.quickSort3( a, 0, a.length - 1 );
+	}
+	
+	/**
+	 * Private static method the implements the recursive quick sort median of three
+	 * 
+	 * @param <T>
+	 * @param a
+	 * @param start
+	 * @param end
+	 */
+	private static < T extends Comparable<? super T > > void quickSort3( T[] a, int low, int high ) {
+
+	}
+	
+	/**
+	 * Swap function
+	 * 
+	 * @param <T>
+	 * @param a
+	 * @param index1
+	 * @param index2
+	 */
+	private static < T extends Comparable<? super T > > void swapReferences( T[] a, int index1, int index2 ) {
+		T tmp = a[ index1 ];
+		a[ index1 ] = a[ index2 ];
+		a[ index2 ] = tmp;
+	}
+	
+	/**
+	 * A helper to check to see whether an array has been presorted in ascending or descending order.
+	 * 
+	 * @param <T>
+	 * @param a
+	 * @param flag
+	 * @return
+	 */
+	private static < T extends Comparable<? super T > > boolean isSorted( T[] a, int flag ) {
+		if ( flag == 0 ) {				// ascending
+			for (int i = 1, max = a.length; i < max; i++ ) {
+				if ( a[ i - 1 ].compareTo( a[ i ] ) > 0 ) return false;
+			}
+		} else if ( flag == 1 ) {		// descending
+			for (int i = 1, max = a.length; i < max; i++ ) {
+				if ( a[ i - 1 ].compareTo( a[ i ] ) < 0 ) return false;
+			}
+		}
+		return true;
 	}
 }

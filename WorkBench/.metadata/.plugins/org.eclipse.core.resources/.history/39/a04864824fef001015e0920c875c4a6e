@@ -1,9 +1,0 @@
-package html;
-
-import java.io.*;
-import java.util.Scanner;
-import net.datastructures.*;
-
-public class HTML {
-
-}
