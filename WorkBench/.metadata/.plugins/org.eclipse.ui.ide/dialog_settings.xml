@@ -2,13 +2,13 @@
 <section name="Workbench">
 	<section name="ExternalProjectImportWizard">
 	</section>
-	<section name="NewWizardAction">
-	</section>
 	<section name="CleanDialogSettings">
 		<item value="571" key="DIALOG_WIDTH"/>
 		<item value="345" key="DIALOG_Y_ORIGIN"/>
-		<item value="1885" key="DIALOG_X_ORIGIN"/>
 		<item value="386" key="DIALOG_HEIGHT"/>
+		<item value="1885" key="DIALOG_X_ORIGIN"/>
 		<item value="true" key="TOGGLE_SELECTED"/>
+	</section>
+	<section name="NewWizardAction">
 	</section>
 </section>
