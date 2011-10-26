@@ -314,8 +314,8 @@ public class Sort< T > {
 				}
 			}
 			Sort.swapReferences( a, low, k );											// after the indices have crossed, swap the last element in the left partition with the pivot
-			Sort.quickSort( a, low, k - 1 );											// quick sort left partition
-			Sort.quickSort( a, k + 1, high);											// quick sort right partition
+			Sort.quickSort2( a, low, k - 1 );											// quick sort left partition
+			Sort.quickSort2( a, k + 1, high);											// quick sort right partition
 		} else if ( ( high - low ) <= Sort.switchSize ) { 
 			Sort.insertionSort( a, low, high );
 		}else {
@@ -346,7 +346,94 @@ public class Sort< T > {
 	 * @param end
 	 */
 	private static < T extends Comparable<? super T > > void quickSort3( T[] a, int low, int high ) {
+		int i = low, k = high - 1;
+		
+		if ( ( high - low ) > Sort.switchSize ) {										// check to see if there are at least eleven elements to sort
+			int middle = ( low + high ) / 2;
+			if ( a[ middle ].compareTo( a[ low ] ) < 0 ) Sort.swapReferences( a, low, middle );
+			if ( a[ high ].compareTo( a[ low ] ) < 0 ) Sort.swapReferences( a, low, high );
+			if ( a[ high ].compareTo( a[ middle ] ) < 0 ) Sort.swapReferences( a, middle, high );
+			//Place pivot at position high -1
+			Sort.swapReferences( a, middle, high - 1);
+			T pivot = a[ high - 1 ];
+			
+			while ( true ) {
+				while( a[ ++i ].compareTo( pivot ) < 0 );
+				while( pivot.compareTo( a[ --k ] ) < 0 );
+				if ( i >= k ) break;
+				Sort.swapReferences( a, i, k );
+			}
+			// Restore pivot
+			Sort.swapReferences( a, i, high - 1 );
+			Sort.quickSort3( a, low, i - 1 );			// Sort small elements
+			Sort.quickSort3( a, i + 1, high );
+		} else if ( ( high - low ) <= Sort.switchSize ) { 
+			Sort.insertionSort( a, low, high );
+		}else {
+			return;																		// array sorted, time to exit
+		}
+	}
+	
+	/**
+	 * Non-Recursive Quick sort median of three, fall back to insertion sort if at cut off
+	 *  
+	 * @param <T>
+	 * @param a
+	 */
+	public static < T extends Comparable<? super T > > void quickSort4( T[] a ) {
+		// Before doing quick sort see if the array isn't sorted in ascending or descending
+		// order
+		if ( Sort.isSorted( a, 0 ) ) return;	// ascending
+		if ( Sort.isSorted( a, 1 ) ) return;	// descending
+		Sort.quickSort4( a, 0, a.length - 1 );
+	}
+	
+	/**
+	 * Private static method the implements the non-recursive quick sort median of three
+	 * 
+	 * @param <T>
+	 * @param a
+	 * @param start
+	 * @param end
+	 */
+	private static < T extends Comparable<? super T > > void quickSort4( T[] a, int low, int high ) {
+		Stack< Integer > intStack = new Stack< Integer >();
+		
+		intStack.push( low );
+		intStack.push( high );
+		
+		while (!intStack.empty() ) {
+			int right = intStack.pop(),
+				left = intStack.pop();
 
+			// Partition
+			int i = left, k = right - 1;
+			int middle = ( left + right ) / 2;
+			if ( a[ middle ].compareTo( a[ left ] ) < 0 ) Sort.swapReferences( a, left, middle );
+			if ( a[ right ].compareTo( a[ left ] ) < 0 ) Sort.swapReferences( a, left, right );
+			if ( a[ right ].compareTo( a[ middle ] ) < 0 ) Sort.swapReferences( a, middle, right );
+			//Place pivot at position high -1
+			Sort.swapReferences( a, middle, right - 1);
+			T pivot = a[ right - 1 ];
+				
+			while ( true ) {
+				while( a[ ++i ].compareTo( pivot ) < 0 );
+				while( pivot.compareTo( a[ --k ] ) < 0 );
+				if ( i >= k ) break;
+				Sort.swapReferences( a, i, k );
+			}
+				
+			// put new subarrays onto stack
+			if ( middle  > Sort.switchSize ) {			// left partition
+				intStack.push( left );
+				intStack.push( i - 1 );
+			} else Sort.insertionSort( a, left, i - 1 );
+			
+			if ( ( middle + 1 ) - high  > Sort.switchSize ) {		// right partition
+				intStack.push( i + 1 );
+				intStack.push( right );
+			} else Sort.insertionSort( a, i + 1, right );
+		}
 	}
 	
 	/**

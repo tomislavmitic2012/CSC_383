@@ -66,31 +66,31 @@ private static final int SIZE = 10000 ;
        
         //System.out.printf("\t%-15s takes %10d ms \n\n", "heapSort",(end - start) ) ;
 
-        System.arraycopy(a,0,b,0,size) ;
-        start = System.currentTimeMillis();
+        //System.arraycopy(a,0,b,0,size) ;
+        //start = System.currentTimeMillis();
 
 
-        Sort.quicksort4(b);
+        //Sort.quicksort4(b);
 
-        end = System.currentTimeMillis();
+        //end = System.currentTimeMillis();
 
-           sorted(b) ;
+           //sorted(b) ;
    
    
-       System.out.printf("\t%-15s takes %10d ms \n\n", "Quicksort4",(end - start) ) ;
+       //System.out.printf("\t%-15s takes %10d ms \n\n", "Quicksort4",(end - start) ) ;
 
 
-        System.arraycopy(a,0,b,0,size) ;
-        start = System.currentTimeMillis();
+        //System.arraycopy(a,0,b,0,size) ;
+        //start = System.currentTimeMillis();
 
 
-          Sort.quicksort3(b);
+          //Sort.quicksort3(b);
 
-        end = System.currentTimeMillis();
+        //end = System.currentTimeMillis();
 
-           sorted(b) ;
+          // sorted(b) ;
        
-      System.out.printf("\t%-15s takes %10d ms \n\n", "Quicksort3",(end - start) ) ;
+      //System.out.printf("\t%-15s takes %10d ms \n\n", "Quicksort3",(end - start) ) ;
 
         //System.arraycopy(a,0,b,0,size) ;
         //start = System.currentTimeMillis();

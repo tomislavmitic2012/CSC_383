@@ -40,7 +40,6 @@ public class TestSort {
 		if ( args.length > 1 ) type = Integer.parseInt( args[ 1 ] );
 		
 		Integer[] a = new Integer[ size ];
-		Integer[] temp = new Integer[ size ];
 		Random rand = new Random();
 
 		if ( type == 0 ) {			// Random order
@@ -94,6 +93,22 @@ public class TestSort {
 		end = System.currentTimeMillis();
 		TestSort.< Integer >sorted( b );
 		TestSort.output.printf("\t%-15s takes %10d ms\n\n", "Quick Sort 2", ( end - start ) );
+
+		////////////////////	Quick Sort 3	////////////////////
+		System.arraycopy( a, 0, b, 0, size );
+		start = System.currentTimeMillis();
+		Sort.quickSort3( b );
+		end = System.currentTimeMillis();
+		TestSort.< Integer >sorted( b );
+		TestSort.output.printf("\t%-15s takes %10d ms\n\n", "Quick Sort 3", ( end - start ) );
+		
+		////////////////////	Quick Sort 4	////////////////////
+		System.arraycopy( a, 0, b, 0, size );
+		start = System.currentTimeMillis();
+		Sort.quickSort4( b );
+		end = System.currentTimeMillis();
+		TestSort.< Integer >sorted( b );
+		TestSort.output.printf("\t%-15s takes %10d ms\n\n", "Quick Sort 4", ( end - start ) );
 
 		////////////////////	Use of Merge Sort	////////////////////
 		System.arraycopy( a, 0, b, 0, size );
