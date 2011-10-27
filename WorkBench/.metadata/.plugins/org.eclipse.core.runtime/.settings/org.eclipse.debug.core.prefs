@@ -1,3 +1,4 @@
-#Sun Oct 23 11:22:47 CDT 2011
+#Wed Oct 26 20:09:55 CDT 2011
 prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="thisTerm"/>\n<expression enabled\="true" text\="nextTerm"/>\n<expression enabled\="true" text\="in1"/>\n</watchExpressions>\n
 eclipse.preferences.version=1
+org.eclipse.debug.core.USE_STEP_FILTERS=true
