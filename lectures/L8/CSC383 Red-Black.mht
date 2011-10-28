@@ -1,0 +1,881 @@
+From: <Saved by Windows Internet Explorer 7>
+Subject: CSC383 Red-Black
+Date: Tue, 17 Feb 2009 09:42:46 -0600
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01C990E4.16A14220"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.3350
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01C990E4.16A14220
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://D:\383\383\wk7\CSC383 Red-Black.htm
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>CSC383 Red-Black</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dwindows-1252">
+<META content=3D"MSHTML 6.00.6000.16809" name=3DGENERATOR></HEAD>
+<BODY>
+<H2>
+<CENTER>Red-Black B trees </CENTER></H2>
+<P>
+<CENTER>
+<H2><A name=3DRTFToC1>Balanced Trees </A></H2></CENTER>
+<HR>
+
+<CENTER>
+<H3><A name=3DRTFToC2>Red-Black Trees </A></H3></CENTER><BR>A binary =
+search tree=20
+is a red-black tree if:<BR>
+<DL>
+  <DL>
+    <DT>1. Every node is either red or black=20
+    <DT>
+    <DT>2. Every leaf (nil) is black=20
+    <DT>
+    <DT>3. If a node is red, then both its children are black=20
+    <DT>
+    <DT>4. Every simple path from a node to a descendant leaf contains =
+the same=20
+    number of black nodes</DT></DL></DL><BR>Black-height of a node x, =
+bh(x), is the=20
+number of black nodes on any path from x to a leaf, not counting =
+x<BR><BR><IMG=20
+src=3D"file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack1.gif"><BR=
+><BR>Lemma=20
+
+<DL>
+  <DL>
+    <DT>A red-black tree with n internal nodes has height at most=20
+  2lg(n+1)</DT></DL></DL><BR><BR>proof=20
+<DL>
+  <DL>
+    <DT>Show that subtree starting at x contains at least =
+2<SUP>bh(x)</SUP>-1=20
+    internal nodes. By induction on height of x:=20
+    <DT>
+    <DL>
+      <DT>if x is a leaf then bh(x) =3D 0, 2<SUP>bh(x)</SUP>-1=20
+      <DT>
+      <DT>Assume x has height h, x's children have height h -1=20
+      <DT>
+      <DT>x's children black-height is either bh(x) or bh(x) -1=20
+      <DT>
+      <DT>By induction x's children subtree has 2<SUP>bh(x)-1</SUP>-1 =
+internal=20
+      nodes=20
+      <DT>
+      <DT>So subtree starting at x contains=20
+      <DT>
+      <DL>
+        <DT>2<SUP>bh(x)-1</SUP>-1 + 2<SUP>bh(x)-1</SUP>-1 + 1 =3D=20
+        2<SUP>bh(x)</SUP>-1 internal nodes</DT></DL></DT></DL>
+    <DT>
+    <DT>let h =3D height of the tree rooted at x=20
+    <DT>
+    <DT>bh(x) &gt;=3D h/2=20
+    <DT>
+    <DT>So n &gt;=3D 2<SUP>h/2</SUP>-1 &lt;=3D&gt; n + 1 &gt;=3D =
+2<SUP>h/2</SUP>=20
+    &lt;=3D&gt; lg(n+1) &gt;=3D h/2=20
+    <DT>
+    <DT>h &lt;=3D 2lg(n+1)=20
+    <DT></DT></DL></DL>
+<HR>
+
+<CENTER>
+<H4><A name=3DRTFToC3>Inserting in Red-Black Tree =
+</A></H4></CENTER><BR>Color the=20
+node Red<BR>Insert as in a regular BST<BR>If have parent is red <BR>
+<CENTER><IMG=20
+src=3D"file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack2.gif">=20
+</CENTER><B>
+<CENTER>Case 1 </CENTER></B><BR>x is node of interest, x's uncle is=20
+Red<BR><BR><IMG=20
+src=3D"file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack3.gif"><BR=
+><BR><IMG=20
+src=3D"file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack4.gif">Dec=
+rease x's=20
+black height by one <B>
+<CENTER>Case 2 </CENTER></B><BR>x's uncle is Black, x is a Right=20
+child<BR><BR><IMG=20
+src=3D"file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack5.gif"><BR=
+><BR>Transform=20
+to case 3<BR><BR><B>
+<CENTER>Case 3 </CENTER></B><BR>x's uncle is Black, x is a Left=20
+child<BR><BR><IMG=20
+src=3D"file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack6.gif"><BR=
+>Terminal=20
+case, tree is Red-Black tree<BR><BR><BR>Insertion takes O(lg(n))=20
+time<BR>Requires at most two rotations=20
+<HR>
+
+<CENTER>
+<H4><A name=3DRTFToC4>Deleting in a Red-Black Tree =
+</A></H4></CENTER><BR>Find node=20
+to delete<BR>Delete node as in a regular BST<BR>Node to be deleted will =
+have at=20
+most one child<BR><BR>If we delete a Red node tree still is a Red-Black=20
+tree<BR>Assume we delete a black node<BR><BR>Let x be the child of =
+deleted=20
+node<BR>If x is red, color it black and stop<BR><BR>If x is black mark =
+it double=20
+black and apply the following:<BR>
+<CENTER><IMG=20
+src=3D"file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack7.gif">=20
+</CENTER><B>
+<CENTER>Case 1 </CENTER></B><BR>x's sibling is red<BR><IMG=20
+src=3D"file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack8.gif"><BR=
+><BR>x=20
+stays at same black height<BR>Transforms to case 2b then terminates <B>
+<CENTER>Case 2a </CENTER></B><BR>x's sibling is black<BR>x's parent is=20
+black<BR><BR><IMG=20
+src=3D"file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack9.gif"><BR=
+><BR>Decreases=20
+x black height by one<BR><B>
+<CENTER>Case 2b </CENTER></B><BR>x's sibling is black<BR>x's parent is=20
+red<BR><BR><IMG=20
+src=3D"file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack10.gif"><B=
+R>Terminal=20
+case, tree is Red-Black tree <B>
+<CENTER><IMG=20
+src=3D"file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack11.gif">=20
+</CENTER></B><B>
+<CENTER>Case 3 </CENTER></B><BR>x's sibling is black<BR>x's parent is=20
+either<BR>x's sibling's left child is red<BR>x's sibling's right child =
+is=20
+black<BR><BR><IMG=20
+src=3D"file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack12.gif">x =
+stays at=20
+same black height<BR>Transforms to case 4<BR><B>
+<CENTER>Case 4 </CENTER></B><BR>x's sibling is black<BR>x's parent is=20
+either<BR>x's sibling's left child is either<BR>x's sibling's right =
+child is=20
+red<BR><BR><IMG=20
+src=3D"file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack13.gif"><B=
+R><BR>Terminal=20
+case, tree is Red-Black tree<BR><BR><BR><BR>Delete time is =
+O(lg(n))<BR>At most=20
+three rotations are done=20
+<HR>
+<!--
+<CENTER>
+<H3><A name=3DRTFToC5>B-Trees, (a,b)-Trees </A></H3></CENTER><BR><B>
+<CENTER>(a,b)-Trees </CENTER></B><BR>Let a and b be integers with a =
+&gt;=3D 2 and=20
+2a-1 &lt;=3D b. A tree T is an (a,b)-tree if<BR><BR>a) All leaves of T =
+have the=20
+same depth<BR><BR>b) All internal nodes v of T satisfy c(v) &lt;=3D =
+b<BR><BR>c)=20
+All internal nodes v of T except the root satisfy c(v) &gt;=3D =
+a<BR><BR>d) The=20
+root of T satisfies c(v) &gt;=3D 2<BR><BR>c(v) =3D number of children of =
+node=20
+v<BR><BR><BR><IMG src=3D"CS 660 Red-Black_files/RedBlack14.gif">=20
+<HR>
+<B>
+<CENTER>B-Trees of degree t </CENTER></B><BR>A tree T is a B-Trees of =
+degree t=20
+if<BR><BR>a) All leaves of T have the same depth<BR><BR>b) All nodes of =
+T except=20
+the root have at least t-1 keys<BR><BR>c) All nodes of T except the root =
+have at=20
+most 2t-1 keys<BR><BR>d) The root of T at least one key<BR><BR>e) A node =
+with n=20
+keys has n+1 children<BR><BR>c(v) =3D number of children of node =
+v<BR><BR><IMG=20
+src=3D"CS 660 Red-Black_files/RedBlack15.gif">=20
+<HR>
+<B>
+<CENTER></CENTER></B>Theorem. If n &gt;=3D 1, then for any n-key B-tree =
+T of=20
+height <I>h</I> and degree t &gt;=3D 2 then <IMG=20
+src=3D"CS 660 Red-Black_files/RedBlack16.gif"><BR><BR>proof.=20
+<DL>
+  <DL>
+    <DT><IMG src=3D"CS 660 =
+Red-Black_files/RedBlack17.gif"></DT></DL></DL>so=20
+<DL>
+  <DL>
+    <DT><IMG src=3D"CS 660 =
+Red-Black_files/RedBlack18.gif"></DT></DL></DL><BR>take log=20
+of both sides.<BR><BR>Theorem. The worst case search time on a n-key =
+B-tree T of=20
+degree t is O(lg(n)).<BR>
+<DL>
+  <DL>
+    <DT>A node in T has t-1 &lt;=3D K &lt;=3D 2t-1 keys in sorted order. =
+
+    <DT>
+    <DT>Worst case:=20
+    <DT>
+    <DL>
+      <DT>K =3D t-1 for all nodes</DT></DL>
+    <DT>
+    <DL>
+      <DT>searching for X not in the tree</DT></DL>
+    <DT>
+    <DT>Given a node, W, in T, how much work does it take to find the =
+subtree of=20
+    W that would contain X?=20
+    <DT>
+    <DT>
+    <DT>Using binary search it takes=20
+    <DT><IMG src=3D"CS 660 Red-Black_files/RedBlack19.gif"> =3D <IMG=20
+    src=3D"CS 660 Red-Black_files/RedBlack20.gif">=3D <IMG=20
+    src=3D"CS 660 Red-Black_files/RedBlack21.gif"> comparisons=20
+    <DT>
+    <DT>Since the height of the tree is in worst case <IMG=20
+    src=3D"CS 660 Red-Black_files/RedBlack22.gif"> the total amount of =
+work is:=20
+    <DT>
+    <DT><IMG src=3D"CS 660 =
+Red-Black_files/RedBlack23.gif"></DT></DL></DL>
+<HR>
+
+<CENTER>
+<H4><A name=3DRTFToC6>Insertion in a B-Tree </A></H4></CENTER>
+<CENTER>Inserting X into B-tree T of degree t </CENTER><BR>A full node =
+is one=20
+that contains 2t-1 keys<BR><BR>1. Find the leaf that should contain =
+X<BR><BR>2.=20
+If the path from the root to the leaf contains a full node split the =
+node when=20
+you first search it.=20
+<CENTER></CENTER><B>
+<CENTER>Example t =3D 2, Insert 25 </CENTER></B>
+<CENTER><IMG src=3D"CS 660 Red-Black_files/RedBlack24.gif"> </CENTER>
+<CENTER>Full Node is split, Then insert 25 into subtree b </CENTER>
+<CENTER><IMG src=3D"CS 660 Red-Black_files/RedBlack25.gif"> =
+</CENTER><BR>3. Insert=20
+X into the proper leaf=20
+<HR>
+<B>
+<CENTER>Example t =3D 2, Insert 25 </CENTER></B>
+<CENTER><IMG src=3D"CS 660 Red-Black_files/RedBlack26.gif"> </CENTER>
+<CENTER><IMG src=3D"CS 660 Red-Black_files/RedBlack27.gif"> </CENTER>
+<CENTER><IMG src=3D"CS 660 Red-Black_files/RedBlack28.gif"> </CENTER>
+<CENTER><IMG src=3D"CS 660 Red-Black_files/RedBlack29.gif"> </CENTER>
+<HR>
+
+<CENTER>
+<H4><A name=3DRTFToC7>Deletion in a B-Tree </A></H4></CENTER><B>
+<CENTER>Deleting X from B-tree T of degree t </CENTER></B><BR>A minimal =
+node is=20
+one that contains t-1 keys and is not the root<BR><BR>In the search path =
+from=20
+the root to node containing X, if you come across a minimal node add a =
+key to=20
+it.<BR><BR><BR>Case 3. Searching node W that does not contain X. Let c =
+be the=20
+child of W that would contain X.<BR><BR>Case 3a. if c has t-1 keys and a =
+sibling=20
+has t or more keys, steal a key from the sibling<BR><B>
+<CENTER>Example t =3D 2, Delete 250 </CENTER></B>
+<CENTER><IMG src=3D"CS 660 Red-Black_files/RedBlack30.gif"> </CENTER>
+<CENTER><IMG src=3D"CS 660 Red-Black_files/RedBlack31.gif"> =
+</CENTER><BR>Case 3b.=20
+if c has t-1 keys and all siblings have t-1 keys, merge c with a =
+sibling<BR><B>
+<CENTER>Example 1. t =3D 2, Delete 250 </CENTER></B>
+<CENTER><IMG src=3D"CS 660 Red-Black_files/RedBlack32.gif"> </CENTER>
+<CENTER><IMG src=3D"CS 660 Red-Black_files/RedBlack33.gif"> </CENTER><B>
+<CENTER>Example 2. t =3D 2, Delete 250 </CENTER></B>
+<CENTER><IMG src=3D"CS 660 Red-Black_files/RedBlack34.gif"> </CENTER>
+<CENTER><IMG src=3D"CS 660 Red-Black_files/RedBlack35.gif"> =
+</CENTER>Case 2.=20
+Internal node W contains X. <BR><BR>Case 2a. If the child y of W that =
+precedes X=20
+in W has at least t keys, steal predecessor of W<BR><B>
+<CENTER>Example 1. t =3D 2, Delete 50 </CENTER></B>
+<CENTER><IMG src=3D"CS 660 Red-Black_files/RedBlack36.gif"> </CENTER>
+<CENTER>Now Delete 45w<BR><IMG src=3D"CS 660 =
+Red-Black_files/RedBlack37.gif">=20
+</CENTER>Case 2b. If the child z of W that succeed X in W has at least t =
+keys,=20
+steal the successor of W<BR><B>
+<CENTER>Example 1. t =3D 2, Delete 30 </CENTER></B>
+<CENTER><IMG src=3D"CS 660 Red-Black_files/RedBlack38.gif"> </CENTER>
+<CENTER>Now Delete 40w<BR><IMG src=3D"CS 660 =
+Red-Black_files/RedBlack39.gif">=20
+</CENTER>Case 2c. If both children z and y of W that succeed (follow) X =
+in W=20
+have only t-1 keys, merge z and y<BR><B>
+<CENTER>Example t =3D 2, Delete 30 </CENTER></B>
+<CENTER><IMG src=3D"CS 660 Red-Black_files/RedBlack40.gif"> </CENTER>
+<CENTER>Now Delete 30w one lower level<BR><IMG=20
+src=3D"CS 660 Red-Black_files/RedBlack41.gif"> </CENTER><BR>Case 1. X is =
+in node W=20
+a leaf. By case 3, W has at least t keys. Remove X from W=20
+<HR>
+
+<CENTER>
+<H4><A name=3DRTFToC8>B-Trees and Red-Black Trees =
+</A></H4></CENTER><BR>Theorem. A=20
+Red-Black tree is a B-Tree with degree 2<BR><BR>proof:=20
+<CENTER><IMG src=3D"CS 660 Red-Black_files/RedBlack42.gif"><IMG=20
+src=3D"CS 660 Red-Black_files/RedBlack43.gif"><IMG=20
+src=3D"CS 660 Red-Black_files/RedBlack44.gif"> </CENTER><BR>Must show:=20
+<DL>
+  <DL>
+    <DT>
+    <DT>1. If a node is red, then both its children are black=20
+    <DT></DT></DL></DL>2. Every simple path from a node to a descendant =
+leaf=20
+contains the same number of black nodes=20
+<DL>
+  <DL>
+    <DT></DT></DL></DL>
+
+--><BR></BODY></HTML>
+
+------=_NextPart_000_0000_01C990E4.16A14220
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack1.gif
+
+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
+
+------=_NextPart_000_0000_01C990E4.16A14220
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack2.gif
+
+R0lGODdhvgBDAPAAAP///wAAACwAAAAAvgBDAEAC/4SPqcvtD6OctNqLW8ho8w9Sm5eQXRmCZgqs
+7HutbrvMIzx5M7bjPnQz2GrEH8ro6CFVsYDz6ZQoc8vQtHrC8nBQaMWrDUeewmj5WjMbyS11N8pu
+o8XaOPs+MscPb7r/Dxj4NdcmaHimoKN2mMVCyDhYdDRJE/hIBfkSRMknKSSmtDgmk8nkOZRIcilS
+ukrn6nMJezjLUQt42+Em+rBXutSnq+gLJieXW1IMVmzM/PsMnfTGG10NPYtsndbITS2YXalty/mZ
+SP4aKx7Tad4+CW4Bz67O6s49f4+uSb8enu/PTp4Ue+sEMjKB0BM+g0lyeDOmgR+DK24kUWMI8A9G
+Lv/frETbmAFkP0z0RPYqOdEkMJUqfyCz8zBNy1Z6drnyxSUYnzw788SUOEhVTZ4Q8SDCCHNYMqEz
+M+Fh2gxOUUQQgVq9ijWr1q1cSz7E2TXktKa2ZJGFpOfU2TEf1uJSWA4fLUdhG8b9R2ruvroEM/pN
+2JEj306ozqkKDMMtEsCGi7g1qHhN37/b3goefBFuRsXyIkumPJmxn02mBs8rjNcvFtEhTQdM3ffs
+Dmxyubpgffd1U4qEMtuWVhugKJM3xw7E2ltqqlCfLfNb2xmtOs8vn3mO6LR1tev/Dn5BqdcaGu71
+NErsQX5kHeSu67yc1nOVs2RthwZt38s+1fuLbYpP+NmeUT01AdJTSx0IFn4DVkWGflFRBSCBVUXl
+04IKyrRgUg7Gh5SDxPh3IYYQwkGiUghGGI9NJio1X4jGnVGiMk/5hGKINt6IY446+kEACgA7
+
+------=_NextPart_000_0000_01C990E4.16A14220
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack3.gif
+
+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
+
+------=_NextPart_000_0000_01C990E4.16A14220
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack4.gif
+
+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
+trGPjexkK3vZBiAACgA7
+
+------=_NextPart_000_0000_01C990E4.16A14220
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack5.gif
+
+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
+qmrIK1//CtjAKpUAKAA7
+
+------=_NextPart_000_0000_01C990E4.16A14220
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack6.gif
+
+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
+JQAKADs=
+
+------=_NextPart_000_0000_01C990E4.16A14220
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack7.gif
+
+R0lGODdhvgBDAPAAAP///wAAACwAAAAAvgBDAEAC/4SPqcvtD6OctNqLW8ho8w9Sm5eQXRmCZgqs
+7HutbrvMIzx5M7bjPnQz2GrEH8ro6CFVsYDz6ZQoc8vQtHrC8nBQaMWrDUeewmj5WjMbyS11N8pu
+o8XaOPs+MscPb7r/Dxj4NdcmaHimoKN2mMVCyDhYdDRJE/hIBfkSRMknKSSmtDgmk8nkOZRIcilS
+ukrn6nMJezjLUQt42+Em+rBXutSnq+gLJieXW1IMVmzM/PsMnfTGG10NPYtsndbITS2YXalty/mZ
+SP4aKx7Tad4+CW4Bz67O6s49f4+uSb8enu/PTp4Ue+sEMjKB0BM+g0lyeDOmgR+DK24kUWMI8A9G
+Lv/frETbmAFkP0z0RPYqOdEkMJUqfyCz8zBNy1Z6drnyxSUYnzw788SUOEhVTZ4Q8SDCCHNYMqEz
+M+Fh2gxOUUQQgVq9ijWr1q1cSz7E2TXktKa2ZJGFpOfU2TEf1uJSWA4fLUdhG8b9R2ruvroEM/pN
+2JEj306ozqkKDMMtEsCGi7g1qHhN37/b3goefBFuRsXyIkumPJmxn02mBs8rjNcvFtEhTQdM3ffs
+Dmxyubpgffd1U4qEMtuWVhugKJM3xw7E2ltqqlCfLfNb2xmtOs8vn3mO6LR1tev/Dn5BqdcaGu71
+NErsQX5kHeSu67yc1nOVs2RthwZt38s+1fuLbYpP+NmeUT01AdJTSx0IFn4DVkWGflFRBSCBVUXl
+04IKyrRgUg7Gh5SDxPh3IYYQwkGiUghGGI9NJio1X4jGnVGiMk/5hGKINt6IY446+kEACgA7
+
+------=_NextPart_000_0000_01C990E4.16A14220
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack8.gif
+
+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
+gpYhgzSIgzSGgzvIgz3og61CACgAOw==
+
+------=_NextPart_000_0000_01C990E4.16A14220
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack9.gif
+
+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
+
+------=_NextPart_000_0000_01C990E4.16A14220
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack10.gif
+
+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
+
+------=_NextPart_000_0000_01C990E4.16A14220
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack11.gif
+
+R0lGODdhLQFGAPAAAP///wAAACwAAAAALQFGAEAC/4SPqcvtD6OctNqLs968p9CB3kgioPgtqLGW
+7ia2rGq+lhzautTiPo3bCWcpxc8YHMZGyaESgDoWp87qbCWtUXdNrpXUZQTGZDLvy7yU12dOGE2D
+i+WTd9VOx9P3+7WZ9VcXyEdYeGAWiDgGtQioZ8jUyBgjyTb5UQbpeNiQKKkJGio6quKn+He6mDlJ
+OTj6+QBLyiXbOmuViPl4V7J7ixm3RTT8eyMMFayV9+JbfJLMaXRcHCttfSzr1fkI2/w6F40dRd0m
+nRU+buPN/LsO1g7JTX795S5nrzYf7laZLeavDwMqLAC34QNjqpErRwfheFKlcNOqgPz8HMpk6iLE
+jf8F71QyobCfrYyXKJo8iTJliIQqW7pE6a3hvE9ZOr4ERmwfo1ANZX5TBlSnT57nchIZWgEp0kLp
+sAVbymcJPZ3EoEJQejOoUWRTt6qU6pSe1au9shYpyvWsWU5opYwFpzVp2qxY4tZcO7ctEDR4Fmp0
+8FZImI/XsgXWBhgsUMM6DgOeGRVynxw/eYpyTAFzuc3OCGnO8Hna5X8tbXoInYYXzJW2BKFmGjKK
+aV14Tw4k2GNj7aux//aWeCJkvG6b0M2+/NvVw92xRAIP3tr3ccEW/5ZkVRKixuDMu3unneK29VNI
+Xn8/jz69+vXsrZcyj5xk+3/ynXGD30fxvul0++L/hytQenrFtVtMoPTkXVN2iXYTPv/59F9jXc21
+H3MIRuZChBlSuJVbtUGIYVlr1TXhERqmJuI97IxYIjSAsLjhMjGaxViLDNq2oowo0tihi3nBmKJD
+HIJmIVVD/nDiO0oKaaQxH1blowxJnuZVPkxOWM6UMIgV5RU83kiWZoP55yNFTRC2BXGlJZZUD074
+kpAdWnKW2DPlPYYjDwD51SRlOpKD2pyd/OmnZ9TgJyiB9RQazywnCvookY5aVlmjlUaQqKKLwsNU
+Z2QF9FqmYEooWZmA8pUnLqnOB5qovFFX2josueYqM79d5xqrRMnmX60Z3spnnboe6JyevvZiyXgT
+bTH03IM0RQeemdW96NyyAharSHEDXfKomki4B2pyFi3HHrnbigeStVGhiREb5LnXrnnLKVfseuhy
+qxt0V9y6roL3ivfutnlMFC9u2A3b3UL6XgdwLfwhDHG/Z/W2MLrQRoxxxhpvzHHHHndMAAoAOw==
+
+------=_NextPart_000_0000_01C990E4.16A14220
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack12.gif
+
+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
+Ow==
+
+------=_NextPart_000_0000_01C990E4.16A14220
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/383/383/wk7/CSC383%20Red-Black_files/RedBlack13.gif
+
+R0lGODdh+AGiAPAAAP///wAAACwAAAAA+AGiAEAC/4SPqcvtD6OctNqLs968+w+G4kiWJhMgqbIm
+LfCe8kzXtrnGhg6z9w8MSni5gNG4IAqXzMgR2YweYq1jDwZV8qTc7oaaDKu85LIZWBW71Od219qE
+u+d0r3x5r+uH2/0DyvKihOVXKARo6LSVxYZ4A5fnIMg2tZMIkuajudZ3SZcyuDbmyQGaBGi62ZmR
+JxepEmrZuklaMRko6HhFVLVaOwO286Sj9Wtr6TL81OhGjJWlfIVs7NTgGIroSy2VKeo9ui1p3Q0u
+XF7Wqfx6bqwNHM6Vrr7qvld/ci+Sr7GvX0n7L+CbDv3a2aA371ChgkOYMMTg7Nk0doTiQHB1Ed6U
+hP8/Ij5DEmyiRla6/iwbeeHWN4EiLaKYt+iXyo2UpGHiFZLdQ1jDEkG7ty7OTgtDASoMUTSIR44t
+K46YyRJZUpRUZUytVuNqRkM5atrUGhVT1bEOo4C1efTM2bANO5J9C/fpSYcllaLxszYuvJ7cNiYN
+mrVIXj3uABM0rDex4sUp676ba9LxzcGMK1vehriEusucO3v+DDq0xpK8RJu2l7OS5NMGRUG6ZpS1
+7IPgrEAuPVummNfZvObGB/NySNvmmqb6jXcR6VO5kDvXpzx2EVjP6XKlXN3TajPbhYNkTpNzauNs
+s3/RJbi48H8wyaE9vPljd2nYwh7Xu1wYqDse9fv/xz4WaT/FAiAZS303nlMGUhScJgXa8V4vqaBC
+kXnV4OQXJQ/G85VX/TUTC0sbukSbhRTcF2JxI971CISaGfihfiueGJ4inlE2I1JtbDhjjjmdBIlv
+LL7EVGwo5biLfWEgaeIHDx5IXiBmXUThH60paaQHAiYYIyu18HbifIFBRsN00jnFJArq8VFeHV1J
+GSQtYGFDpkh/xdmkWG1qiU9aJKTpZS6o8FXbU+DVVhegefZlFw5+NnMoJ4kSlNWill7aZ5nH4IGp
+bv7BKKaa8fzEaamKhNrpjb1wh2oymaUq15wZwkprrZEeoqituu7KXJ28/spNkcAOi0s0xM7RZZfH
+/1oKlXG5Hnsflpwsy6yHajy7q3sSSVQfteZF++maInpbYoSD5vceuX619ypm6fKH3krqOmpueoNg
++1m7+GH4ETPzvhOlvOn+m5t7KfaAL6Zi+uordQR3tnC8247zsI07JlzxYSCq26pa+TSYMQ4YQ/Sx
+sN4pxsjB2obMZmKMnFkhsioraBm6DDYFbG9yjuyWpGn8eBCpVFrrIGPJeijofiB1nK/AIfKcqZ3G
+voszSdecK47T/J2CMnmuwBbVMg0jZ7DQ3ca1HEYdCuxluGBmfa+Mci6WGrw266oF1je7LO3NUKMF
+hoRU4yev0uHWOOybs+I5yt/+lDPzwNwRPS1chf9VOauQsDY7eNV78QHuxFlOibizCVLDpOOkNBcw
+2KOZSvrjF8fHNuzFEhpaXqq3NdCjhjLa954kErWeVZfs/mSLuFLeuIuU8q084vcWuLuovw9Z6bvE
+9KeoL7NY81aaoUcuG9O1Rw/w9kcLD7AkU4OP+t00/ynQbeNLTrK+b5gP2vhfX8sh9ymreuIgX8y+
+gKj7FU1L/BNKeiagP7KsLxlqQaCnvEEcgMiqfvAa3FoI6Kp9RJBeomtf5sbwCmypbxwHI8w5lIa5
+5j3OgKVb1AitwqMX2U5PC8HNCVtyllXtTUEg/Bbu6Ge8nkUNLwFjUBCRyLKFKHGJmrIHTVTGubb/
+kTCKkNqhk8qCLChCBH1cdN7wnhe7BVGRd1Msoxs10z0ywu+MbwTGDe24kyMqpYE8bGMd+8dHQ91R
+PoB6mx8blbUSQqeI1BokUmhni9M9wpEuGxsCKfnH/DEykyyEoBAf+T5OirKHhQzkKE+ZL1NqEZWs
+tKEqI6nHVspylrSspS1vWck+YBKX4QjKLmuJqlfy8jqRHCaN+GFMwiEzmXMsBTOrMpVNfotIsRzd
+M7XTq3ZJ8znyeKCVrukuIv3Qeszspria+TBhoq6T47QmMAV4OHQSjF2/ZKI423k+W5oznppbHT3/
+CdCACvSfdGMnP935znsqMp/egmTxcIHPA/IS/yfVlCg4j3e7+Wxzms686EiKslGySXIrIfWouBii
+uIkixJNcMylqTMJSKc2SaSCzmEthpMmKtvSP6tTYTfeIjpLupXo9/SkF3STU4220qB5lapmSKrPR
+eC+F9YyiU5cXGQddNTmWo8L6tkossAbrqE0UKx5DGdHwrexs6TTZQtGmwJVs0nUoNGsYYYZBjqWU
+gzdyTcqg8iSHkpRoUG0bDaXSSObhT629chjkxnTQmkSusJsKntfCalnAGS1sVWKryMyUkcMibLOq
+COXTPklZP9a0fgWFHOOK4aSXfQoxnNuPEws6PcEAVqYZNBG4wOTZ8O1GtmtdpKvSikUudc10gv/K
+K0TnV52ZiK22nvuo9rLxIa0YLnOAiSvCJMa+13G2uTIFYJ4iYkhnLVe0ez0PDN9LWyUJThWk5SDW
+RpqqLc1XJ63t3BAnp5OkLQl6EZrt1habXyCei0DKXJvTLJrGabxMbAgNZ+GigV7MShiSsBXu3KTT
+XnQoVsJog6nflEUr6holteTcKZ0qDMYHw/iCnhRsPzulYtdYjihunXHPwNu4lfUSkbVCrYayeCU5
+Rlh05GUoRmOcYIjyy8duoqMXLWjhJZ9XjF/q3ZXRCCqDjmyFCu2rDlcHYOxdb6xhglQwWUy8NVqx
+i+Xa4pfZaMaUVCZ5UnRhFf+s5mUGEMw7rjP/TwwK6Dnb2YSGbiz+nqXdBtf5zcD50hOJnOjjOrbF
+mL6VZOBM5S/mcVniU3JkvwnlMj/aw51eJSCvEsfs3QqCWtY0gil74FPL7rlvDW+N7ToZHQEvibPG
+c6tt7b34NfGcwt6pRaNpydlFeza6vFoirXxotgmVvWe2dWU7qh2hga5pAky2l2cdky4ve92ETuu1
++aHT2ema1xBrd62//WTX+re6en7JGEHpE9CO2w7A3jS+Ce5qjOZ22RuM1Hbu5OSh4guG6ItYxAFt
+cQhX0GsxDMil7W21go9qzHbtJlovLud1xVuaQOuXfLn8bxyL3KaM/mKqbd7nyv2whc5EKb+d/2Pj
+O69514fEOVfJKrdvfNDg7kM5K4PeR5hnmugu5PbSWXhyjT8960ZPebe93sXDfpzqRgX51xcN9gqG
+OG4IPnizy252tJOd2FW+4pGd/m6pwz3OgX67qUWM9ZXHfe57x4rvul70c/ud77IuvLGPLeibK57w
+qE6843d0pDTLPe9/v/zlc/h4y3s+cTO/MeV9TffRb8y9pXd3oxuv+rtWNbajHvm005762MssYfGm
+Uq7S23nYi2r25dW9fFw0SKg/1ZvBf72qjWt8nkBa+W6fJLNN0/uQg1phrUc0LEMsytvHmfjAXJrH
+th9ddfY4+uyfTGZsgx3yt9+N2b+e/OGN/jD5Y7/70NW//+EoPvn3f5x0f1vxcwOIgI2BJFyXgA2Y
+Pw4IgREogRNIgRVogQhAACgAOw==
+
+------=_NextPart_000_0000_01C990E4.16A14220--

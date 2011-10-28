@@ -1,0 +1,1307 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="Generic_files/filelist.xml">
+<title>Java Generic</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>cti</o:Author>
+  <o:LastAuthor>cti</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>7</o:TotalTime>
+  <o:Created>2009-01-07T14:26:00Z</o:Created>
+  <o:LastSaved>2009-01-07T14:26:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2977</o:Words>
+  <o:Characters>16970</o:Characters>
+  <o:Company>DePaul</o:Company>
+  <o:Lines>141</o:Lines>
+  <o:Paragraphs>39</o:Paragraphs>
+  <o:CharactersWithSpaces>19908</o:CharactersWithSpaces>
+  <o:Version>11.8028</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"\FF2D\FF33 \660E\671D";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 134676480 16 0 131072 0;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 134676480 16 0 131072 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"MS Mincho";}
+h3
+	{margin-top:11.25pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:9.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;
+	mso-fareast-language:EN-US;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+h5
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:13.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	font-style:italic;}
+a:link, span.MsoHyperlink
+	{color:#00217B;
+	mso-text-animation:none;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;}
+tt
+	{font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+span.doctexthighlight2
+	{mso-style-name:doctexthighlight2;}
+p.doctext, li.doctext, div.doctext
+	{mso-style-name:doctext;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;}
+span.docemphasis
+	{mso-style-name:docemphasis;}
+span.docemphstrong
+	{mso-style-name:docemphstrong;}
+p.docnotetitle, li.docnotetitle, div.docnotetitle
+	{mso-style-name:docnotetitle;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;}
+span.docemphitalicalt
+	{mso-style-name:docemphitalicalt;}
+p.doclist, li.doclist, div.doclist
+	{mso-style-name:doclist;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:43677649;
+	mso-list-template-ids:-574042686;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link="#00217B" vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:18.0pt'>Java Generic<o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=doctext><span class=doctexthighlight2><span style='mso-bidi-font-size:
+8.5pt;color:black'>Generics</span></span><a name="constitute_the"></a><span
+style='mso-bidi-font-size:8.5pt;color:black'> constitute the most significant
+change <a name=snippet></a>in the <span class=doctexthighlight2>Java</span><a
+name="since_the"></a> programming language since the 1.0 release. The addition
+of <span class=doctexthighlight2>generics</span> to <span
+class=doctexthighlight2>Java</span><a name="was_the"></a> SE 5.0 was the result
+of one of the first <span class=doctexthighlight2>Java</span><a
+name="was_formulated"></a> Specification Requests, JSR <span class=GramE>14,
+that</span> was formulated in 1999. The expert group spent about five years on
+specifications and test implementations.<o:p></o:p></span></p>
+
+<p class=doctext><span class=doctexthighlight2><span style='mso-bidi-font-size:
+8.5pt;color:black'>Generics</span></span><a name="write_code"></a><span
+style='mso-bidi-font-size:8.5pt;color:black'> are desirable because they let
+you write code that is safer and easier to read than code that is littered with
+</span><tt><span style='font-size:10.0pt;color:black'>Object</span></tt><span
+style='mso-bidi-font-size:8.5pt;color:black'> variables and casts. <span
+class=doctexthighlight2>Generics</span><a name="such_as"></a> are particularly
+useful for collection classes, such as the ubiquitous </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>ArrayList</span></tt></span><span
+style='mso-bidi-font-size:8.5pt;color:black'>.<o:p></o:p></span></p>
+
+<p class=doctext><span class=doctexthighlight2><span style='mso-bidi-font-size:
+8.5pt;color:black'>Generics</span></span><a name="in_C"></a><span
+style='mso-bidi-font-size:8.5pt;color:black'> are—at least on the
+surface—similar to templates in C++. In C++, as in <span
+class=doctexthighlight2>Java</span><a name="strongly_typed"></a>, templates
+were first added to the language to support strongly typed collections.
+However, over the years, other uses were discovered. After reading this
+chapter, perhaps you will find novel uses for <span class=doctexthighlight2>Java</span>
+<span class=doctexthighlight2>generics</span> in your programs.<o:p></o:p></span></p>
+
+<h3><span style='font-size:14.0pt'>Why <span class=doctexthighlight2>Generic</span>
+Programming?<o:p></o:p></span></h3>
+
+<p class=doctext><span class=doctexthighlight2><span style='mso-bidi-font-size:
+8.5pt;color:black'>Generic</span></span><span class=docemphasis><span
+style='mso-bidi-font-size:8.5pt;color:black'> programming</span></span><a
+name="reused_for"></a><span style='mso-bidi-font-size:8.5pt;color:black'> means
+to write code that can be reused for objects of many different types. For
+example, you don't want to program separate classes to collect </span><tt><span
+style='font-size:10.0pt;color:black'>String</span></tt><span style='mso-bidi-font-size:
+8.5pt;color:black'> and </span><tt><span style='font-size:10.0pt;color:black'>File</span></tt><a
+name="have_to"></a><span style='mso-bidi-font-size:8.5pt;color:black'> objects.
+And you don't have to—the single class </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>ArrayList</span></tt></span><a
+name="collects_objects"></a><span style='mso-bidi-font-size:8.5pt;color:black'>
+collects objects of any class. This is one example of <span
+class=doctexthighlight2>generic</span> programming.<o:p></o:p></span></p>
+
+<p class=doctext><span style='mso-bidi-font-size:8.5pt;color:black'>Before <span
+class=doctexthighlight2>Java</span> SE 5.0, <span class=doctexthighlight2>generic</span>
+programming in <span class=doctexthighlight2>Java</span><a name="achieved_with"></a>
+was always achieved with <span class=docemphasis>inheritance</span>. The </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>ArrayList</span></tt></span><a
+name="simply_maintained"></a><span style='mso-bidi-font-size:8.5pt;color:black'>
+class simply maintained an array of </span><tt><span style='font-size:10.0pt;
+color:black'>Object</span></tt><span style='mso-bidi-font-size:8.5pt;
+color:black'> references:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;
+color:black'>public</span></span><span style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt;color:black'> class <span class=SpellE>ArrayList</span> // before <span
+class=doctexthighlight2>Java</span> SE 5.0<o:p></o:p></span></pre><pre><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;color:black'>{<o:p></o:p></span></pre><pre><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE>public</span> Object get(<span class=SpellE>int</span> <span
+class=SpellE>i</span>) { . . . }<o:p></o:p></span></pre><pre><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE>public</span> void add(Object o) { . . . }<o:p></o:p></span></pre><pre><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;color:black'><span style='mso-spacerun:yes'>   </span>. . .<o:p></o:p></span></pre><pre><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE>private</span> Object[] <span class=SpellE>elementData</span>;<o:p></o:p></span></pre><pre><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;color:black'>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=doctext><span style='color:black'>This approach has two problems. A
+cast is necessary whenever you retrieve a value:<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;
+color:black'>ArrayList</span></span><span style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt;color:black'> files = new <span class=SpellE><span class=GramE>ArrayList</span></span><span
+class=GramE>(</span>);<o:p></o:p></span></pre><pre><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt;color:black'>. . .<o:p></o:p></span></pre><pre><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;color:black'>String filename = <span
+class=docemphstrong>(String)</span> <span class=SpellE><span class=GramE>files.get</span></span><span
+class=GramE>(</span>0);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="add_values"></a><span style='mso-bidi-font-size:8.5pt;
+color:black'>Moreover, there is no error checking. You can add values of any class:<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span class=GramE><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt;color:black'>files.add</span></span></span><span
+class=GramE><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;color:black'>(</span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;color:black'>new File(&quot;. . .&quot;));<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="without_error"></a><span style='mso-bidi-font-size:
+8.5pt;color:black'>This call compiles and runs without error. Elsewhere,
+casting the result of </span><tt><span style='font-size:10.0pt;color:black'>get</span></tt><span
+style='mso-bidi-font-size:8.5pt;color:black'> to a </span><tt><span
+style='font-size:10.0pt;color:black'>String</span></tt><span style='mso-bidi-font-size:
+8.5pt;color:black'> will cause an error.<o:p></o:p></span></p>
+
+<p class=doctext><span class=doctexthighlight2><span style='mso-bidi-font-size:
+8.5pt;color:black'>Generics</span></span><span style='mso-bidi-font-size:8.5pt;
+color:black'> offer a better solution: <span class=docemphasis>type parameters</span>.
+The </span><span class=SpellE><tt><span style='font-size:10.0pt;color:black'>ArrayList</span></tt></span><a
+name="parameter_that"></a><span style='mso-bidi-font-size:8.5pt;color:black'>
+class now has a type parameter that indicates the element type:<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;
+color:black'>ArrayList</span></span><span style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt;color:black'>&lt;String&gt; files = new <span class=SpellE>ArrayList</span>&lt;String<span
+class=GramE>&gt;(</span>);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="right_away"></a><span style='mso-bidi-font-size:8.5pt;
+color:black'>This makes your code easier to read. You can tell right away that
+this particular array list contains </span><tt><span style='font-size:10.0pt;
+color:black'>String</span></tt><span style='mso-bidi-font-size:8.5pt;
+color:black'> objects.<o:p></o:p></span></p>
+
+<p class=doctext><a name="this_information"></a><span style='mso-bidi-font-size:
+8.5pt;color:black'>The compiler can make good use of this information too. No
+cast is required for calling </span><tt><span style='font-size:10.0pt;
+color:black'>get</span></tt><a name="knows_that"></a><span style='mso-bidi-font-size:
+8.5pt;color:black'>. The compiler knows that the return type is </span><tt><span
+style='font-size:10.0pt;color:black'>String</span></tt><a name=not></a><span
+style='mso-bidi-font-size:8.5pt;color:black'>, not </span><tt><span
+style='font-size:10.0pt;color:black'>Object</span></tt><span style='mso-bidi-font-size:
+8.5pt;color:black'>:<o:p></o:p></span></p>
+
+<pre><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;color:black'>String filename = <span
+class=SpellE><span class=GramE>files.get</span></span><span class=GramE>(</span>0);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='mso-bidi-font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="also_knows"></a><a name=iddle1766></a><a
+name=iddle1757></a><span style='mso-bidi-font-size:8.5pt;color:black'>The
+compiler also knows that the </span><tt><span style='font-size:10.0pt;
+color:black'>add</span></tt><a name="of_an"></a><span style='mso-bidi-font-size:
+8.5pt;color:black'> method of an </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>ArrayList</span></tt></span><tt><span
+style='font-size:10.0pt;color:black'>&lt;String&gt;</span></tt><a name="of_type"></a><span
+style='mso-bidi-font-size:8.5pt;color:black'> has a parameter of type </span><tt><span
+style='font-size:10.0pt;color:black'>String</span></tt><a name="having_an"></a><span
+style='mso-bidi-font-size:8.5pt;color:black'>. That is a lot safer than having
+an </span><tt><span style='font-size:10.0pt;color:black'>Object</span></tt><a
+name="that_you"></a><span style='mso-bidi-font-size:8.5pt;color:black'>
+parameter. Now the compiler can check that you don't insert objects of the
+wrong type. For example, the statement<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span class=GramE><b style='mso-bidi-font-weight:normal'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;color:black'>files.add</span></b></span></span><span
+class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt;color:black'>(</span></b></span><b style='mso-bidi-font-weight:
+normal'><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;color:black'>new File(&quot;. . .&quot;)); <o:p></o:p></span></b></pre><pre><b
+style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt;color:black'>// can only add String objects to an <span class=SpellE>ArrayList</span>&lt;String&gt;<o:p></o:p></span></b></pre>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=doctext><span class=GramE><span style='mso-bidi-font-size:8.5pt;
+color:black'>will</span></span><span style='mso-bidi-font-size:8.5pt;
+color:black'> not compile. A compiler error is much better than a class cast
+exception at runtime.<o:p></o:p></span></p>
+
+<p class=doctext><a name="programs_easier"></a><span style='mso-bidi-font-size:
+8.5pt;color:black'>This is the appeal of type parameters: they make your
+programs easier to read and safer.<o:p></o:p></span></p>
+
+<h4><a name=ch12lev2sec1></a>Who Wants to Be a <span class=doctexthighlight2>Generic</span>
+Programmer?</h4>
+
+<p class=doctext><span style='mso-bidi-font-size:8.5pt;color:black'>It is easy
+to use a <span class=doctexthighlight2>generic</span> class such as </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>ArrayList</span></tt></span><span
+style='mso-bidi-font-size:8.5pt;color:black'>. Most <span
+class=doctexthighlight2>Java</span> programmers will simply use types such as </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>ArrayList</span></tt></span><tt><span
+style='font-size:10.0pt;color:black'>&lt;String&gt;</span></tt><a
+name="the_language"></a><span style='mso-bidi-font-size:8.5pt;color:black'> as
+if they had been built into the language, just like </span><tt><span
+style='font-size:10.0pt;color:black'>String[]</span></tt><a name="are_better"></a><span
+style='mso-bidi-font-size:8.5pt;color:black'> arrays. (Of course, array lists
+are better than arrays because they can expand automatically.)<o:p></o:p></span></p>
+
+<p class=doctext><a name="it_is"></a><span style='mso-bidi-font-size:8.5pt;
+color:black'>However, it is not so easy to implement a <span
+class=doctexthighlight2>generic</span><a name="who_use"></a> class. The
+programmers who use your code will want to plug in all sorts of classes for
+your type parameters. They expect everything to work without onerous
+restrictions and confusing error messages. Your job as a <span
+class=doctexthighlight2>generic</span><a name="to_anticipate"></a> programmer,
+therefore, is to anticipate all the potential future uses of your class.<o:p></o:p></span></p>
+
+<p class=doctext><span style='mso-bidi-font-size:8.5pt;color:black'>How hard
+can this get? Here is a typical issue that the designers of the standard class
+library had to grapple with. The </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>ArrayList</span></tt></span><span
+style='mso-bidi-font-size:8.5pt;color:black'> class has a method </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>addAll</span></tt></span><a
+name="A_programmer"></a><span style='mso-bidi-font-size:8.5pt;color:black'> to
+add all elements of another collection. A programmer may want to add all
+elements from an </span><span class=SpellE><tt><span style='font-size:10.0pt;
+color:black'>ArrayList</span></tt></span><tt><span style='font-size:10.0pt;
+color:black'>&lt;Manager&gt;</span></tt><span style='mso-bidi-font-size:8.5pt;
+color:black'> to an </span><span class=SpellE><tt><span style='font-size:10.0pt;
+color:black'>ArrayList</span></tt></span><tt><span style='font-size:10.0pt;
+color:black'>&lt;Employee&gt;</span></tt><a name="way_around"></a><span
+style='mso-bidi-font-size:8.5pt;color:black'>. But, of course, doing it the
+other way around should not be legal. How do you allow one call and disallow
+the other? The <span class=doctexthighlight2>Java</span><a name="new_concept"></a>
+language designers invented an ingenious new concept, the <span
+class=docemphasis>wildcard type</span><a name="allow_a"></a>, to solve this
+problem. Wildcard types are rather abstract, but they allow a library builder
+to make methods as flexible as possible.<o:p></o:p></span></p>
+
+<p class=doctext><span class=doctexthighlight2><span style='mso-bidi-font-size:
+8.5pt;color:black'>Generic</span></span><a name="basic_level"></a><span
+style='mso-bidi-font-size:8.5pt;color:black'> programming falls into three
+skill levels. At a basic level, you just use <span class=doctexthighlight2>generic</span><a
+name=as></a> classes—typically, collections such as </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>ArrayList</span></tt></span><a
+name="thinking_how"></a><span style='mso-bidi-font-size:8.5pt;color:black'>—without
+thinking how and why they work. Most application programmers will want to stay
+at that level until something goes wrong. You may encounter a confusing error
+message when mixing different <span class=doctexthighlight2>generic</span><a
+name="interfacing_with"></a> classes, or when interfacing with legacy code that
+knows nothing about type parameters. At that point, you need to learn enough
+about <span class=doctexthighlight2>Java</span> <span class=doctexthighlight2>generics</span><a
+name="solve_problems"></a> to solve problems systematically rather than through
+random tinkering. Finally, of course, you may want to implement your own <span
+class=doctexthighlight2>generic</span> classes and methods.<o:p></o:p></span></p>
+
+<p class=doctext><a name="write_lots"></a><span style='mso-bidi-font-size:8.5pt;
+color:black'>Application programmers probably won't write lots of <span
+class=doctexthighlight2>generic</span><a name="done_the"></a> code. The folks
+at Sun have already done the heavy lifting and supplied type parameters for all
+the collection classes. As a rule of thumb, only code that traditionally
+involved lots of casts from very <span class=doctexthighlight2>general</span>
+types (such as </span><tt><span style='font-size:10.0pt;color:black'>Object</span></tt><span
+style='mso-bidi-font-size:8.5pt;color:black'> or the </span><tt><span
+style='font-size:10.0pt;color:black'>Comparable</span></tt><span
+style='mso-bidi-font-size:8.5pt;color:black'> interface) will benefit from
+using type parameters.<o:p></o:p></span></p>
+
+<h3><span style='font-size:14.0pt'>Definition of a Simple <span
+class=doctexthighlight2>Generic</span> Class<o:p></o:p></span></h3>
+
+<p class=doctext><a name=A></a><a name=iddle2751></a><a name=iddle1765></a><a
+name=iddle1751></a><span style='color:black'>A <span class=doctexthighlight2>generic</span><span
+class=docemphasis> class</span><a name="class_with"></a> is a class with one or
+more type variables. In this chapter, we use a simple </span><tt><span
+style='font-size:10.0pt;color:black'>Pair</span></tt><a name="as_an"></a><span
+style='color:black'> class as an example. This class allows us to focus on
+generics without being distracted by data storage details. Here is the code for
+the <span class=doctexthighlight2>generic</span> </span><tt><span
+style='font-size:10.0pt;color:black'>Pair</span></tt><span style='color:black'>
+class:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>public</span></span><span
+style='color:black'> class Pair&lt;T&gt;<o:p></o:p></span></pre><pre><span
+style='color:black'>{<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE>public</span> Pair() { first = null; second = null; }<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>public</span> Pair(T first, T second) { <span
+class=SpellE>this.first</span> = first; <o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>                                         </span><span
+class=SpellE>this.second</span> = second<span class=GramE>; }</span><o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE>public</span> T <span class=SpellE>getFirst</span>() { return first; }<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>public</span> T <span
+class=SpellE>getSecond</span>() { return second; }<o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE>public</span> void <span class=SpellE>setFirst</span>(T <span
+class=SpellE>newValue</span>) { first = <span class=SpellE>newValue</span>; }<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>public</span> void <span
+class=SpellE>setSecond</span>(T <span class=SpellE>newValue</span>) { second = <span
+class=SpellE>newValue</span>; }<o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span></span><span
+lang=FR style='color:black;mso-ansi-language:FR'>private T first;<o:p></o:p></span></pre><pre><span
+lang=FR style='color:black;mso-ansi-language:FR'><span style='mso-spacerun:yes'>   </span>private T second;<o:p></o:p></span></pre><pre><span
+style='color:black'>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=doctext><span style='color:black'>The </span><tt><span
+style='font-size:10.0pt;color:black'>Pair</span></tt><a name="type_variable"></a><span
+style='color:black'> class introduces a type variable </span><tt><span
+style='font-size:10.0pt;color:black'>T</span></tt><span style='color:black'>,
+enclosed in angle brackets </span><tt><span style='font-size:10.0pt;color:black'>&lt;
+&gt;</span></tt><span style='color:black'>, after the class name. A <span
+class=doctexthighlight2>generic</span> class can have more than one type
+variable. For example, we could have defined the </span><tt><span
+style='font-size:10.0pt;color:black'>Pair</span></tt><span style='color:black'>
+class with separate types for the first and second field:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>public</span></span><span
+style='color:black'> class Pair&lt;T, U&gt; { . . . }<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="throughout_the"></a><span style='color:black'>The
+type variables are used throughout the class definition to specify method
+return types and the types of fields and local variables. For example:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>private</span></span><span
+style='color:black'> <span class=docemphstrong>T</span> first; // uses type variable<o:p></o:p></span></pre>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=docnotetitle><b style='mso-bidi-font-weight:normal'><span
+style='color:black'>Note: </span></b><span style='color:black'>It is common
+practice to use uppercase letters for type variables, and to keep them short.
+The <span class=doctexthighlight2>Java</span> library uses the variable </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>E</span></tt><span
+style='color:black'> for the element type of a collection, </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>K</span></tt><span
+style='color:black'> and </span><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>V</span></tt><a name=and><span
+style='color:black'> for key and value types of a table, and </span></a><span
+style='mso-bookmark:and'><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>T</span></tt><a name=letters></a><span style='color:black'>
+(and the neighboring letters </span></span><span style='mso-bookmark:and'><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>U</span></tt></span><span
+style='color:black'> and </span><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>S</span></tt><a name="type_at"></a><span
+style='color:black'>, if necessary) for &quot;any type at all&quot;.<b
+style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=doctext><span style='color:black'>You <span class=docemphasis>instantiate</span>
+the <span class=doctexthighlight2>generic</span><a name="by_substituting"></a>
+type by substituting types for the type variables, such as<o:p></o:p></span></p>
+
+<pre><span style='color:black'>Pair&lt;String&gt;<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="of_the"></a><span style='color:black'>You can think
+of the result as an ordinary class with constructors<o:p></o:p></span></p>
+
+<pre><span style='color:black'>Pair&lt;String<span class=GramE>&gt;()</span><o:p></o:p></span></pre><pre><span
+style='color:black'>Pair&lt;String<span class=GramE>&gt;(</span>String, String)<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span class=GramE><span style='color:black'>and</span></span><span
+style='color:black'> methods<o:p></o:p></span></p>
+
+<pre><span style='color:black'>String <span class=SpellE><span class=GramE>getFirst</span></span><span
+class=GramE>()</span><o:p></o:p></span></pre><pre><span style='color:black'>String <span
+class=SpellE><span class=GramE>getSecond</span></span><span class=GramE>()</span><o:p></o:p></span></pre><pre><span
+class=GramE><span style='color:black'>void</span></span><span style='color:
+black'> <span class=SpellE>setFirst</span>(String)<o:p></o:p></span></pre><pre><span
+class=GramE><span style='color:black'>void</span></span><span style='color:
+black'> <span class=SpellE>setSecond</span>(String)<o:p></o:p></span></pre>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=doctext><span style='color:black'>In other words, the <span
+class=doctexthighlight2>generic</span><a name="ordinary_classes"></a> class
+acts as a factory for ordinary classes.<o:p></o:p></span></p>
+
+<p class=doctext><span style='color:black'>The program in <a
+href="javascript:moveTo('ch12ex01');">Listing 12–1</a> puts the </span><tt><span
+style='font-size:10.0pt;color:black'>Pair</span></tt><span style='color:black'>
+class to work. The static </span><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>minmax</span></tt></span><a name="simultaneously_computes"></a><span
+style='color:black'> method traverses an array and simultaneously computes the
+minimum and maximum value. It uses a </span><tt><span style='font-size:10.0pt;
+color:black'>Pair</span></tt><a name="that_the"></a><span style='color:black'>
+object to return both results. Recall that the </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>compareTo</span></tt></span><span
+style='color:black'> method compares two <a name=iddle2752></a>strings,
+returning 0 if the strings are identical, a negative integer if the first
+string comes before the second in dictionary order, and a positive integer
+otherwise.<o:p></o:p></span></p>
+
+<p class=doctext><span class=GramE>Listing 12–1.</span> PairTest1.java</p>
+
+<p class=doctext><o:p>&nbsp;</o:p></p>
+
+<pre><span style='color:black'><span style='mso-spacerun:yes'>  </span>1. /**<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>  </span>2.<span style='mso-spacerun:yes'>  </span>* @version 1.00 2004-05-10<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>  </span>3.<span style='mso-spacerun:yes'>  </span>* @author Cay <span
+class=SpellE>Horstmann</span><o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>  </span><span class=GramE>4.<span style='mso-spacerun:yes'>  </span>*</span>/<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>  </span>5. <span
+class=GramE>public</span> class PairTest1<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>  </span>6. {<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>  </span>7.<span style='mso-spacerun:yes'>    </span><span
+class=GramE>public</span> static void main(String[] <span class=SpellE>args</span>)<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>  </span>8.<span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>  </span>9.<span style='mso-spacerun:yes'>       </span><span
+class=GramE>String[</span>] words = { &quot;Mary&quot;, &quot;had&quot;, &quot;a&quot;, &quot;little&quot;, &quot;lamb&quot; };<o:p></o:p></span></pre><pre><span
+style='color:black'> 10.<span style='mso-spacerun:yes'>       </span>Pair&lt;String&gt; mm = <span
+class=SpellE><span class=GramE>ArrayAlg.minmax</span></span><span class=GramE>(</span>words);<o:p></o:p></span></pre><pre><span
+style='color:black'> </span><span lang=NO-BOK style='color:black;mso-ansi-language:
+NO-BOK'>11.<span style='mso-spacerun:yes'>       </span>System.out.println(&quot;min = &quot; + mm.getFirst());<o:p></o:p></span></pre><pre><span
+lang=NO-BOK style='color:black;mso-ansi-language:NO-BOK'> </span><span
+style='color:black'>12.<span style='mso-spacerun:yes'>       </span><span
+class=SpellE><span class=GramE>System.out.println</span></span><span
+class=GramE>(</span>&quot;max = &quot; + <span class=SpellE>mm.getSecond</span>());<o:p></o:p></span></pre><pre><span
+style='color:black'> 13.<span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'> 14<span class=GramE>. }</span><o:p></o:p></span></pre><pre><span
+style='color:black'> 15.<o:p></o:p></span></pre><pre><span style='color:black'> 16. <span
+class=GramE>class</span> <span class=SpellE>ArrayAlg</span><o:p></o:p></span></pre><pre><span
+style='color:black'> 17. {<o:p></o:p></span></pre><pre><span style='color:black'> 18.<span style='mso-spacerun:yes'>    </span>/**<o:p></o:p></span></pre><pre><span
+style='color:black'> 19.<span style='mso-spacerun:yes'>     </span>* Gets the minimum and maximum of an array of strings.<o:p></o:p></span></pre><pre><span
+style='color:black'> 20.<span style='mso-spacerun:yes'>     </span>* @<span
+class=SpellE>param</span> a an array of strings<o:p></o:p></span></pre><pre><span
+style='color:black'> 21.<span style='mso-spacerun:yes'>     </span>* @return </span><span
+style='font-size:8.0pt;color:black'>a pair with the min and max value, or null if a is null or empty<o:p></o:p></span></pre><pre><span
+style='color:black'> 22.<span style='mso-spacerun:yes'>     </span>*/<o:p></o:p></span></pre><pre><span
+style='color:black'> 23.<span style='mso-spacerun:yes'>    </span><span
+class=GramE>public</span> static Pair&lt;String&gt; <span class=SpellE>minmax</span>(String[] a)<o:p></o:p></span></pre><pre><span
+style='color:black'> 24.<span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></pre><pre><span
+style='color:black'> 25.<span style='mso-spacerun:yes'>       </span><span
+class=GramE>if</span> (a == null || <span class=SpellE>a.length</span> == 0) return null;<o:p></o:p></span></pre><pre><span
+style='color:black'> 26.<span style='mso-spacerun:yes'>       </span>String min = <span
+class=GramE>a[</span>0];<o:p></o:p></span></pre><pre><span style='color:black'> 27.<span style='mso-spacerun:yes'>       </span>String max = <span
+class=GramE>a[</span>0];<o:p></o:p></span></pre><pre><span style='color:black'> </span><span
+lang=NO-BOK style='color:black;mso-ansi-language:NO-BOK'>28.<span style='mso-spacerun:yes'>       </span>for (int i = 1; i &lt; a.length; i++)<o:p></o:p></span></pre><pre><span
+lang=NO-BOK style='color:black;mso-ansi-language:NO-BOK'> </span><span lang=IT
+style='color:black;mso-ansi-language:IT'>29.<span style='mso-spacerun:yes'>       </span>{<o:p></o:p></span></pre><pre><span
+lang=IT style='color:black;mso-ansi-language:IT'> 30.<span style='mso-spacerun:yes'>          </span>if (min.compareTo(a[i]) &gt; 0) min = a[i];<o:p></o:p></span></pre><pre><span
+lang=IT style='color:black;mso-ansi-language:IT'> </span><span
+style='color:black'>31.<span style='mso-spacerun:yes'>          </span><span
+class=GramE>if</span> (<span class=SpellE>max.compareTo</span>(a[<span
+class=SpellE>i</span>]) &lt; 0) max = a[<span class=SpellE>i</span>];<o:p></o:p></span></pre><pre><span
+style='color:black'> 32.<span style='mso-spacerun:yes'>       </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'> 33.<span style='mso-spacerun:yes'>      </span><span style='mso-spacerun:yes'> </span><span
+class=GramE>return</span> new Pair&lt;String&gt;(min, max);<o:p></o:p></span></pre><pre><span
+style='color:black'> 34.<span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'> 35<span class=GramE>. }</span><o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre>
+
+<h3><span class=doctexthighlight2><span style='font-size:14.0pt'>Generic</span></span><span
+style='font-size:14.0pt'> Methods<o:p></o:p></span></h3>
+
+<p class=doctext><a name="In_the"></a><a name=iddle1755></a><span
+style='color:black'>In the preceding section, you have seen how to define a <span
+class=doctexthighlight2>generic</span><a name="also_define"></a> class. You can
+also define a single method with type parameters.<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>class</span></span><span
+style='color:black'> <span class=SpellE>ArrayAlg</span><o:p></o:p></span></pre><pre><span
+style='color:black'>{<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE>public</span> static <span class=docemphstrong>&lt;T&gt;</span> T <span
+class=SpellE>getMiddle</span>(T[] a)<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span>{<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>      </span><span
+class=GramE>return</span> a[<span class=SpellE>a.length</span> / 2];<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="method_is"></a><span style='color:black'>This method
+is defined inside an ordinary class, not inside a <span
+class=doctexthighlight2>generic</span> class. However, it is a <span
+class=doctexthighlight2>generic</span><a name="see_from"></a> method, as you
+can see from the angle brackets and the type variable. Note that the type
+variables are inserted after the modifiers (</span><tt><span style='mso-ansi-font-size:
+12.0pt;mso-bidi-font-size:12.0pt;color:black'>public static</span></tt><span
+style='color:black'>, in our case) and before the return type.<o:p></o:p></span></p>
+
+<p class=doctext><span style='color:black'>You can define <span
+class=doctexthighlight2>generic</span><a name=inside></a> methods both inside
+ordinary classes and inside <span class=doctexthighlight2>generic</span>
+classes.<o:p></o:p></span></p>
+
+<p class=doctext><span style='color:black'>When you call a <span
+class=doctexthighlight2>generic</span><a name="enclosed_in"></a> method, you
+can place the actual types, enclosed in angle brackets, before the method name:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>String[</span></span><span
+style='color:black'>] names = { &quot;John&quot;, &quot;Q.&quot;, &quot;Public&quot; };<o:p></o:p></span></pre><pre><span
+style='color:black'>String middle = <span class=SpellE>ArrayAlg</span><span
+class=GramE>.&lt;</span>String&gt;<span class=SpellE>getMiddle</span>(names);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="most_cases"></a><span style='color:black'>In this
+case (and indeed in most cases), you can omit the </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>&lt;String&gt;</span></tt><a
+name="information_to"></a><span style='color:black'> type parameter from the
+method call. The compiler has enough information to infer the method that you
+want. It matches the type of </span><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>names</span></tt><span style='color:
+black'> (that is, </span><span class=GramE><tt><span style='mso-ansi-font-size:
+12.0pt;mso-bidi-font-size:12.0pt;color:black'>String[</span></tt></span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>]</span></tt><span
+style='color:black'>) against the <span class=doctexthighlight2>generic</span>
+type </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;
+color:black'>T[]</span></tt><span style='color:black'> and deduces that </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>T</span></tt><span
+style='color:black'> must be </span><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>String</span></tt><span
+style='color:black'>. That is, you can simply call<o:p></o:p></span></p>
+
+<pre><span style='color:black'>String middle = <span class=SpellE><span
+class=GramE>ArrayAlg.getMiddle</span></span><span class=GramE>(</span>names);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='color:black'>In almost all cases, type inference
+for <span class=doctexthighlight2>generic</span><a name="need_to"></a> methods
+works smoothly. Occasionally, the compiler gets it wrong, and you'll need to
+decipher an error report. Consider this example:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>double</span></span><span
+style='color:black'> middle = <span class=SpellE>ArrayAlg.getMiddle</span>(3.14, 1729, 0);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="message_is"></a><span style='color:black'>The error
+message is: &quot;<b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'>found: </i></b></span><a name="extends_java"></a><span class=SpellE><tt><b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>java.lang.Number&amp;java.lang.Comparable</span></i></b></tt></span><tt><b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>&lt;? <span
+class=GramE>extends</span> <span class=SpellE>java.lang.Number&amp;java.lang.Comparable</span>&lt;?&gt;&gt;</span></i></b></tt><b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+style='color:black'>, required: </span></i></b><tt><b style='mso-bidi-font-weight:
+normal'><i style='mso-bidi-font-style:normal'><span style='mso-ansi-font-size:
+12.0pt;mso-bidi-font-size:12.0pt;color:black'>double</span></i></b></tt><a
+name="learn_later"></a><span style='color:black'>&quot;. You will learn later
+in this chapter how to decipher the &quot;found&quot; type declaration. In a
+nutshell, the compiler <span class=SpellE>autoboxed</span> the parameters into
+a </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;
+color:black'>Double</span></tt><a name=two></a><span style='color:black'> and
+two </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;
+color:black'>Integer</span></tt><a name="tried_to"></a><span style='color:black'>
+objects, and then it tried to find a common <span class=SpellE>supertype</span>
+of these classes. It actually found two: </span><tt><span style='mso-ansi-font-size:
+12.0pt;mso-bidi-font-size:12.0pt;color:black'>Number</span></tt><span
+style='color:black'> and the </span><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>Comparable</span></tt><span
+style='color:black'> interface, which is itself a <span
+class=doctexthighlight2>generic</span><a name="write_all"></a> type. In this
+case, the remedy is to write all parameters as </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>double</span></tt><span
+style='color:black'> values.<o:p></o:p></span></p>
+
+<h3><span style='font-size:14.0pt'>Bounds for Type Variables<o:p></o:p></span></h3>
+
+<p class=doctext><span style='color:black'>Sometimes, a class or a method needs
+to place restrictions on type variables. Here is a typical example. We want to
+compute the smallest element of an array:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>class</span></span><span
+style='color:black'> <span class=SpellE>ArrayAlg</span><o:p></o:p></span></pre><pre><span
+style='color:black'>{<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE>public</span> static &lt;T&gt; T min(T[] a) // almost correct<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span>{<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>      </span><span
+class=GramE>if</span> (a == null || <span class=SpellE>a.length</span> == 0) return null;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>      </span>T smallest = <span
+class=GramE>a[</span>0];<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>      </span><span
+class=GramE>for</span> (<span class=SpellE>int</span> <span class=SpellE>i</span> = 1; <span
+class=SpellE>i</span> &lt; <span class=SpellE>a.length</span>; <span
+class=SpellE>i</span>++)<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>         </span><span
+class=GramE>if</span> (<span class=SpellE>smallest.compareTo</span>(a[<span
+class=SpellE>i</span>]) &gt; 0) smallest = a[<span class=SpellE>i</span>];<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>      </span><span
+class=GramE>return</span> smallest;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="is_a"></a><span style='color:black'>But there is a
+problem. Look inside the code of the </span><tt><span style='font-size:10.0pt;
+color:black'>min</span></tt><a name=variable></a><span style='color:black'>
+method. The variable </span><tt><span style='font-size:10.0pt;color:black'>smallest</span></tt><span
+style='color:black'> has type </span><tt><span style='font-size:10.0pt;
+color:black'>T</span></tt><a name="it_could"></a><span style='color:black'>,
+which means that it could be an object of an arbitrary class. How do we know
+that the class to which </span><tt><span style='font-size:10.0pt;color:black'>T</span></tt><span
+style='color:black'> belongs has a </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>compareTo</span></tt></span><span
+style='color:black'> method?<o:p></o:p></span></p>
+
+<p class=doctext><span style='color:black'>The solution is to restrict </span><tt><span
+style='font-size:10.0pt;color:black'>T</span></tt><span style='color:black'> to
+a class that implements the </span><tt><span style='font-size:10.0pt;
+color:black'>Comparable</span></tt><span style='color:black'> interface—a
+standard interface with a single method, </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>compareTo</span></tt></span><span
+style='color:black'>. You achieve this by giving a <span class=docemphasis>bound</span>
+for the type variable </span><tt><span style='font-size:10.0pt;color:black'>T</span></tt><span
+style='color:black'>:<o:p></o:p></span></p>
+
+<pre><span lang=FR style='color:black;mso-ansi-language:FR'>public static &lt;T <span
+class=docemphstrong>extends Comparable</span>&gt; T min(T[] a) . . .<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span lang=FR style='font-size:8.5pt;color:black;mso-ansi-language:
+FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='color:black'>Actually, the </span><tt><span
+style='font-size:10.0pt;color:black'>Comparable</span></tt><a name="we_will"></a><span
+style='color:black'> interface is itself a generic type. For now, we will
+ignore that complexity and the warnings that the compiler <span
+class=doctexthighlight2>generates</span>. &quot;<a
+href="http://proquestcombo.safaribooksonline.com/9780132354769/ch12lev1sec8#ch12lev1sec8">Wildcard
+Types</a>&quot; on page <a
+href="http://proquestcombo.safaribooksonline.com/9780132354769/ch12lev1sec8#ch12lev1sec8">632</a><a
+name="type_parameters"></a> discusses how to properly use type parameters with
+the </span><tt><span style='font-size:10.0pt;color:black'>Comparable</span></tt><span
+style='color:black'> interface.<o:p></o:p></span></p>
+
+<p class=doctext><span style='color:black'>Now, the generic </span><tt><span
+style='font-size:10.0pt;color:black'>min</span></tt><a name="with_arrays"></a><span
+style='color:black'> method can only be called with arrays of classes that
+implement the </span><tt><span style='font-size:10.0pt;color:black'>Comparable</span></tt><span
+style='color:black'> interface, such as </span><tt><span style='font-size:10.0pt;
+color:black'>String</span></tt><span style='color:black'>, </span><tt><span
+style='font-size:10.0pt;color:black'>Date</span></tt><span style='color:black'>,
+and so on. Calling </span><tt><span style='font-size:10.0pt;color:black'>min</span></tt><span
+style='color:black'> with a </span><tt><span style='font-size:10.0pt;
+color:black'>Rectangle</span></tt><span style='color:black'> array is a
+compile-time error because the </span><tt><span style='font-size:10.0pt;
+color:black'>Rectangle</span></tt><span style='color:black'> class does not
+implement </span><tt><span style='font-size:10.0pt;color:black'>Comparable</span></tt><span
+style='color:black'>.<o:p></o:p></span></p>
+
+<p class=doctext><span style='color:black'>You may wonder why you use <span
+class=GramE>the <tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt'>extends</span></tt></span> keyword rather than the </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>implements</span></tt><span
+style='color:black'> keyword in this situation—after all, </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>Comparable</span></tt><span
+style='color:black'> is an interface. The notation<o:p></o:p></span></p>
+
+<pre><span style='color:black'>&lt;T extends <span class=SpellE><span
+class=docemphitalicalt>BoundingType</span></span>&gt;<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span class=GramE><span style='color:black'>expresses</span></span><span
+style='color:black'> that </span><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>T</span></tt><span style='color:black'>
+should be a <span class=docemphasis>subtype</span> of the bounding type. Both </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>T</span></tt><span
+style='color:black'> and the bounding type can be either a class or an
+interface. <span class=GramE>The <tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt'>extends</span></tt></span><a name="chosen_because"></a>
+keyword was chosen because it is a reasonable approximation of the subtype concept,
+and the Java designers did not want to add a new keyword (such as </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>sub</span></tt><a
+name="to_the"></a><span style='color:black'>) to the language.<o:p></o:p></span></p>
+
+<p class=doctext><a name="variable_or"></a><a name=iddle2753></a><span
+style='color:black'>A type variable or wildcard can have multiple bounds. For
+example:<o:p></o:p></span></p>
+
+<pre><span style='color:black'>T extends Comparable &amp; <span class=SpellE>Serializable</span><o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="bounding_types"></a><span style='color:black'>The
+bounding types are separated by ampersands (</span><tt><span style='mso-ansi-font-size:
+12.0pt;mso-bidi-font-size:12.0pt;color:black'>&amp;</span></tt><a name="used_to"></a><span
+style='color:black'>) because commas are used to separate type variables.<o:p></o:p></span></p>
+
+<p class=doctext><a name="as_many"></a><span style='color:black'>As with Java
+inheritance, you can have as many interface <span class=SpellE>supertypes</span>
+as you like, but at most one of the bounds can be a class. If you have a class
+as a bound, it must be the first one in the bounds list.<o:p></o:p></span></p>
+
+<p class=doctext><span style='color:black'>In the next sample program (<a
+href="javascript:moveTo('ch12ex02');">Listing 12–2</a>), we rewrite the </span><span
+class=SpellE><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>minmax</span></tt></span><a name="computes_the"></a><span
+style='color:black'> method to be generic. The method computes the minimum and
+maximum of a generic array, returning a</span><span style='font-size:8.5pt;
+color:black'> </span><tt><span style='font-size:10.0pt;color:black'>Pair&lt;T&gt;</span></tt><span
+style='font-size:8.5pt;color:black'>.<o:p></o:p></span></p>
+
+<h5><a name=ch12ex02></a><span class=GramE>Listing 12–2.</span> PairTest2.java<span
+style='font-size:8.5pt;color:#1F3247'><o:p></o:p></span></h5>
+
+<pre><span style='color:black'><span style='mso-spacerun:yes'> </span>1. <span
+class=GramE>import</span> <span class=SpellE>java.util</span>.*;<o:p></o:p></span></pre><pre><span
+style='color:black'> 2.<o:p></o:p></span></pre><pre><span style='color:black'> 3. /**<o:p></o:p></span></pre><pre><span
+style='color:black'> 4.<span style='mso-spacerun:yes'>  </span>* @version 1.00 2004-05-10<o:p></o:p></span></pre><pre><span
+style='color:black'> 5.<span style='mso-spacerun:yes'>  </span>* @author Cay <span
+class=SpellE>Horstmann</span><o:p></o:p></span></pre><pre><span
+style='color:black'> 6.<span style='mso-spacerun:yes'>  </span>*/<o:p></o:p></span></pre><pre><span
+style='color:black'> 7. <span class=GramE>public</span> class PairTest2<o:p></o:p></span></pre><pre><span
+style='color:black'> 8. {<o:p></o:p></span></pre><pre><span style='color:black'> 9.<span style='mso-spacerun:yes'>    </span><span
+class=GramE>public</span> static void main(String[] <span class=SpellE>args</span>)<o:p></o:p></span></pre><pre><span
+style='color:black'>10.<span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></pre><pre><span
+style='color:black'>11.<span style='mso-spacerun:yes'>       </span><span
+class=SpellE><span class=GramE>GregorianCalendar</span></span><span
+class=GramE>[</span>] birthdays =<o:p></o:p></span></pre><pre><span
+style='color:black'>12.<span style='mso-spacerun:yes'>          </span>{<o:p></o:p></span></pre><pre><span
+style='color:black'>13.<span style='mso-spacerun:yes'>          </span></span><span
+class=GramE><span style='font-size:8.0pt;color:black'>new</span></span><span
+style='font-size:8.0pt;color:black'> <span class=SpellE>GregorianCalendar</span>(1906, <span
+class=SpellE>Calendar.DECEMBER</span>, 9), // G. Hopper<o:p></o:p></span></pre><pre><span
+style='font-size:8.0pt;color:black'>14.<span style='mso-spacerun:yes'>             </span><span
+class=GramE>new</span> <span class=SpellE>GregorianCalendar</span>(1815, <span
+class=SpellE>Calendar.DECEMBER</span>, 10), // A. Lovelace<o:p></o:p></span></pre><pre><span
+style='font-size:8.0pt;color:black'>15.<span style='mso-spacerun:yes'>             </span><span
+class=GramE>new</span> <span class=SpellE>GregorianCalendar</span>(1903, <span
+class=SpellE>Calendar.DECEMBER</span>, 3), // J. von Neumann<o:p></o:p></span></pre><pre><span
+style='font-size:8.0pt;color:black'>16.<span style='mso-spacerun:yes'>             </span><span
+class=GramE>new</span> <span class=SpellE>GregorianCalendar</span>(1910, <span
+class=SpellE>Calendar.JUNE</span>, 22), // K. <span class=SpellE>Zuse</span><o:p></o:p></span></pre><pre><span
+style='color:black'>17.<span style='mso-spacerun:yes'>          </span>};<o:p></o:p></span></pre><pre><span
+style='color:black'>18.<span style='mso-spacerun:yes'>       </span>Pair&lt;<span
+class=SpellE>GregorianCalendar</span>&gt; mm = <span class=SpellE><span
+class=GramE>ArrayAlg.minmax</span></span><span class=GramE>(</span>birthdays);<o:p></o:p></span></pre><pre><span
+style='color:black'>19.<span style='mso-spacerun:yes'>       </span><span
+class=SpellE><span class=GramE>System.out.println</span></span><span
+class=GramE>(</span>&quot;min = &quot; + <span class=SpellE>mm.getFirst</span>().<span
+class=SpellE>getTime</span>());<o:p></o:p></span></pre><pre><span
+style='color:black'>20.<span style='mso-spacerun:yes'>       </span><span
+class=SpellE><span class=GramE>System.out.println</span></span><span
+class=GramE>(</span>&quot;max = &quot; + <span class=SpellE>mm.getSecond</span>().<span
+class=SpellE>getTime</span>());<o:p></o:p></span></pre><pre><span
+style='color:black'>21.<span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'>22<span class=GramE>. }</span><o:p></o:p></span></pre><pre><span
+style='color:black'>23.<o:p></o:p></span></pre><pre><span style='color:black'>24. <span
+class=GramE>class</span> <span class=SpellE>ArrayAlg</span><o:p></o:p></span></pre><pre><span
+style='color:black'>25. {<o:p></o:p></span></pre><pre><span style='color:black'>26.<span style='mso-spacerun:yes'>    </span>/**<o:p></o:p></span></pre><pre><span
+style='color:black'>27.<span style='mso-spacerun:yes'>       </span>Gets the minimum and maximum of an array of objects of type T.<o:p></o:p></span></pre><pre><span
+style='color:black'>28.<span style='mso-spacerun:yes'>       </span>@<span
+class=SpellE>param</span> a an array of objects of type T<o:p></o:p></span></pre><pre><span
+style='color:black'>29.<span style='mso-spacerun:yes'>       </span>@return a pair with the min and max value, or null if a is<o:p></o:p></span></pre><pre><span
+style='color:black'>30.<span style='mso-spacerun:yes'>    </span><span style='mso-spacerun:yes'>   </span><span
+class=GramE>null</span> or empty<o:p></o:p></span></pre><pre><span
+style='color:black'>31.<span style='mso-spacerun:yes'>    </span>*/<o:p></o:p></span></pre><pre><span
+style='color:black'>32.<span style='mso-spacerun:yes'>    </span><span
+class=GramE>public</span> static &lt;T extends Comparable&gt; Pair&lt;T&gt; <span
+class=SpellE>minmax</span>(T[] a)<o:p></o:p></span></pre><pre><span
+style='color:black'>33.<span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></pre><pre><span
+style='color:black'>34.<span style='mso-spacerun:yes'>       </span><span
+class=GramE>if</span> (a == null || <span class=SpellE>a.length</span> == 0) return null;<o:p></o:p></span></pre><pre><span
+lang=FR style='color:black;mso-ansi-language:FR'>35.<span style='mso-spacerun:yes'>       </span>T min = a[0];<o:p></o:p></span></pre><pre><span
+lang=FR style='color:black;mso-ansi-language:FR'>36.<span style='mso-spacerun:yes'>       </span>T max = a[0];<o:p></o:p></span></pre><pre><span
+lang=NO-BOK style='color:black;mso-ansi-language:NO-BOK'>37.<span style='mso-spacerun:yes'>       </span>for (int i = 1; i &lt; a.length; i++)<o:p></o:p></span></pre><pre><span
+lang=IT style='color:black;mso-ansi-language:IT'>38.<span style='mso-spacerun:yes'>   </span><span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></pre><pre><span
+lang=IT style='color:black;mso-ansi-language:IT'>39.<span style='mso-spacerun:yes'>          </span>if (min.compareTo(a[i]) &gt; 0) min = a[i];<o:p></o:p></span></pre><pre><span
+style='color:black'>40.<span style='mso-spacerun:yes'>          </span><span
+class=GramE>if</span> (<span class=SpellE>max.compareTo</span>(a[<span
+class=SpellE>i</span>]) &lt; 0) max = a[<span class=SpellE>i</span>];<o:p></o:p></span></pre><pre><span
+style='color:black'>41.<span style='mso-spacerun:yes'>       </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'>42.<span style='mso-spacerun:yes'>       </span><span
+class=GramE>return</span> new Pair&lt;T&gt;(min, max);<o:p></o:p></span></pre><pre><span
+style='color:black'>43.<span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'>44<span class=GramE>. }</span><o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre>
+
+<h3><span style='font-size:16.0pt'>Generic Code and the Virtual Machine<o:p></o:p></span></h3>
+
+<p class=doctext><a name=iddle2881></a><a name=iddle1752></a><span
+style='color:black'>The virtual machine does not have objects of generic
+types—all objects belong to ordinary classes. An earlier version of the
+generics implementation was even able to compile a program that uses generics
+into class files that executed <span class=GramE>on 1.0 virtual machines</span>!
+This backward compatibility was only abandoned fairly late in the development
+for <span class=doctexthighlight2>Java</span><a name="use_the"></a> generics.
+If you use the Sun compiler to compile code that uses <span
+class=doctexthighlight2>Java</span><a name="resulting_class"></a> generics, the
+resulting class files will <span class=docemphasis>not</span> execute on
+pre-5.0 virtual machines.<o:p></o:p></span></p>
+
+<p class=MsoNormal><a name=ch12note06></a><b style='mso-bidi-font-weight:normal'><span
+style='color:black'>Note: </span></b><span style='color:black'>If you want to
+have the benefits of generics while retaining <span class=SpellE>bytecode</span>
+compatibility with older virtual machines, check out <a
+href="http://sourceforge.net/projects/retroweaver" target="_blank">http://sourceforge.net/projects/retroweaver</a><a
+name="so_that"></a>. The <span class=SpellE>Retroweaver</span> program rewrites
+class files so that they are compatible with older virtual machines. <o:p></o:p></span></p>
+
+<p class=doctext><a name="a_corresponding"></a><span style='color:black'>Whenever
+you define a generic type, a corresponding <span class=docemphasis>raw</span>
+type is automatically provided. The name of the raw type is simply the name of
+the generic type, with the type parameters removed. The type variables are <span
+class=docemphasis>erased</span> and replaced by their bounding types (or </span><tt><span
+style='font-size:10.0pt;color:black'>Object</span></tt><span style='color:black'>
+for variables without bounds.)<o:p></o:p></span></p>
+
+<p class=doctext><span style='color:black'>For example, the raw type for </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>Pair&lt;T&gt;</span></tt><span
+style='color:black'> looks like this:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>public</span></span><span
+style='color:black'> class Pair<o:p></o:p></span></pre><pre><span
+style='color:black'>{<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE>public</span> Pair(<span class=docemphstrong>Object</span> first, <span
+class=docemphstrong>Object</span> second)<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span>{<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>      </span><span
+class=SpellE>this.first</span> = first;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>      </span><span
+class=SpellE>this.second</span> = second;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE>public</span> <span class=docemphstrong>Object</span> <span
+class=SpellE>getFirst</span>() { return first; }<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>public</span> <span
+class=docemphstrong>Object</span> <span class=SpellE>getSecond</span>() { return second; }<o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE>public</span> void <span class=SpellE>setFirst</span>(<span
+class=docemphstrong>Object</span> <span class=SpellE>newValue</span>) { first = <span
+class=SpellE>newValue</span>; }<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>public</span> void <span
+class=SpellE>setSecond</span>(<span class=docemphstrong>Object</span> <span
+class=SpellE>newValue</span>) { second = <span class=SpellE>newValue</span>; }<o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE>private</span> <span class=docemphstrong>Object</span> first;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>private</span> <span
+class=docemphstrong>Object</span> second;<o:p></o:p></span></pre><pre><span
+style='color:black'>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name=iddle3102></a><a name=iddle1754></a><span
+style='color:black'>Because </span><tt><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>T</span></tt><span style='color:black'>
+is an unbounded type variable, it is simply replaced by </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>Object</span></tt><span
+style='color:black'>.<o:p></o:p></span></p>
+
+<p class=doctext><a name="have_implemented"></a><span style='color:black'>The
+result is an ordinary class, just as you might have implemented it before
+generics were added to the <span class=doctexthighlight2>Java</span>
+programming language.<o:p></o:p></span></p>
+
+<p class=doctext><span style='color:black'>Your programs may contain different
+kinds of </span><tt><span style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;color:black'>Pair</span></tt><span style='color:black'>, such as </span><tt><b
+style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:12.0pt;
+mso-bidi-font-size:12.0pt;color:black'>Pair&lt;String&gt;</span></b></tt><span
+style='color:black'> or </span><tt><b style='mso-bidi-font-weight:normal'><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>Pair&lt;<span
+class=SpellE>GregorianCalendar</span>&gt;</span></b></tt><span
+style='color:black'>, but erasure turns them all into raw </span><tt><span
+style='mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;color:black'>Pair</span></tt><span
+style='color:black'> types.<o:p></o:p></span></p>
+
+<p class=doctext><span style='color:black'>The raw type replaces type variables
+with the first bound, or </span><tt><span style='font-size:10.0pt;color:black'>Object</span></tt><a
+name="bounds_are"></a><span style='color:black'> if no bounds are given. For
+example, the type variable in the class </span><tt><span style='font-size:10.0pt;
+color:black'>Pair&lt;T&gt;</span></tt><a name="no_explicit"></a><span
+style='color:black'> has no explicit <span class=GramE>bounds,</span> hence the
+raw type replaces </span><tt><span style='font-size:10.0pt;color:black'>T</span></tt><span
+style='color:black'> with </span><tt><span style='font-size:10.0pt;color:black'>Object</span></tt><a
+name="a_slightly"></a><span style='color:black'>. Suppose we declare a slightly
+different type:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>public</span></span><span
+style='color:black'> class Interval&lt;T extends Comparable &amp; <span
+class=SpellE>Serializable</span>&gt; implements <span class=SpellE>Serializable</span><o:p></o:p></span></pre><pre><span
+lang=FR style='color:black;mso-ansi-language:FR'>{<o:p></o:p></span></pre><pre><span
+lang=FR style='color:black;mso-ansi-language:FR'><span style='mso-spacerun:yes'>   </span>public Interval(T first, T second)<o:p></o:p></span></pre><pre><span
+lang=FR style='color:black;mso-ansi-language:FR'><span style='mso-spacerun:yes'>  </span><span style='mso-spacerun:yes'> </span></span><span
+style='color:black'>{<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>      </span><span
+class=GramE>if</span> (<span class=SpellE>first.compareTo</span>(second) &lt;= 0) { lower = first; upper = second; }<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>      </span><span
+class=GramE>else</span> { lower = second; upper = first; }<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span></span><span
+lang=NO-BOK style='color:black;mso-ansi-language:NO-BOK'>}<o:p></o:p></span></pre><pre><span
+lang=NO-BOK style='color:black;mso-ansi-language:NO-BOK'><span style='mso-spacerun:yes'>   </span>. . .<o:p></o:p></span></pre><pre><span
+lang=NO-BOK style='color:black;mso-ansi-language:NO-BOK'><span style='mso-spacerun:yes'>   </span>private T lower;<o:p></o:p></span></pre><pre><span
+lang=NO-BOK style='color:black;mso-ansi-language:NO-BOK'><span style='mso-spacerun:yes'>   </span>private T upper;<o:p></o:p></span></pre><pre><span
+style='color:black'>}<o:p></o:p></span></pre><pre><span style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span
+style='color:black'><span style='mso-tab-count:5'>                                      </span><span style='mso-spacerun:yes'>  </span><o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='color:black'>The raw type </span><tt><span
+style='font-size:10.0pt;color:black'>Interval</span></tt><span
+style='color:black'> looks like this:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>public</span></span><span
+style='color:black'> class Interval implements <span class=SpellE>Serializable</span><o:p></o:p></span></pre><pre><span
+style='color:black'>{<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE>public</span> Interval(<span class=docemphstrong>Comparable</span> first, <span
+class=docemphstrong>Comparable</span> second) { . . . }<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span>. . .<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>private</span> <span
+class=docemphstrong>Comparable</span> lower;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>private</span> <span
+class=docemphstrong>Comparable</span> upper;<o:p></o:p></span></pre><pre><span
+style='color:black'>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><a name=ch12note08></a><span style='font-size:8.5pt;
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=docnotetitle><span class=GramE><b style='mso-bidi-font-weight:normal'><span
+style='color:black'>Note :</span></b></span><span style='color:black'> You may
+wonder what happens if you switch the bounds: </span><tt><span
+style='font-size:10.0pt;color:black'>class Interval&lt;<span class=SpellE>Serializable</span>
+&amp; Comparable&gt;</span></tt><span style='color:black'>. In that case, the
+raw type replaces </span><tt><span style='font-size:10.0pt;color:black'>T</span></tt><span
+style='color:black'> with </span><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>Serializable</span></tt></span><span style='color:black'>,
+and the compiler inserts casts to </span><tt><span style='font-size:10.0pt;
+color:black'>Comparable</span></tt><span style='color:black'> when necessary.
+For efficiency, you should therefore put tagging interfaces (that is,
+interfaces without methods) at the end of the bounds list.<b style='mso-bidi-font-weight:
+normal'><o:p></o:p></b></span></p>
+
+<p class=MsoNormal><span style='color:black'><br style='mso-special-character:
+line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><a name=ch12lev2sec2></a><o:p></o:p></span></p>
+
+<h4><span style='font-size:12.0pt'>Translating Generic Expressions<o:p></o:p></span></h4>
+
+<p class=doctext><a name="generic_method"></a><span style='color:black'>When
+you program a call to a generic method, the compiler inserts casts when the
+return type has been erased. For example, consider the sequence of statements<o:p></o:p></span></p>
+
+<pre><span style='color:black'>Pair&lt;Employee&gt; buddies = . . .;<o:p></o:p></span></pre><pre><span
+style='color:black'>Employee buddy = <span class=SpellE><span class=GramE>buddies.getFirst</span></span><span
+class=GramE>(</span>);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name=of></a><span style='color:black'>The erasure of </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>getFirst</span></tt></span><a
+name="has_return"></a><span style='color:black'> has return type </span><tt><span
+style='font-size:10.0pt;color:black'>Object</span></tt><a
+name="automatically_inserts"></a><span style='color:black'>. The compiler
+automatically inserts the cast to </span><tt><span style='font-size:10.0pt;
+color:black'>Employee</span></tt><a name="the_compiler"></a><span
+style='color:black'>. That is, the compiler translates the method call into two
+virtual machine instructions:<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo1;
+tab-stops:list .5in'><a name=iddle1756></a><a name=iddle1504></a><a
+name=iddle1239></a><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='color:black'>A call to the raw
+method </span><span class=SpellE><tt><span style='font-size:10.0pt;color:black'>Pair.getFirst</span></tt></span><span
+style='color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='color:black'>A cast of the returned
+</span><tt><span style='font-size:10.0pt;color:black'>Object</span></tt><span
+style='color:black'> to the </span><tt><span style='font-size:10.0pt;
+color:black'>Employee</span></tt><span style='color:black'> type<o:p></o:p></span></p>
+
+<p class=doctext><a name="access_a"></a><span style='color:black'>Casts are
+also inserted when you access a generic field. Suppose the </span><tt><span
+style='font-size:10.0pt;color:black'>first</span></tt><span style='color:black'>
+and </span><tt><span style='font-size:10.0pt;color:black'>second</span></tt><span
+style='color:black'> fields of the </span><tt><span style='font-size:10.0pt;
+color:black'>Pair</span></tt><a name="but_it"></a><span style='color:black'>
+class were public. (Not a good programming style, perhaps, but it is legal <span
+class=doctexthighlight2>Java</span>.) Then the expression<o:p></o:p></span></p>
+
+<pre><span style='color:black'>Employee buddy = <span class=SpellE>buddies.first</span>;<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span class=GramE><span style='color:black'>also</span></span><span
+style='color:black'> has a cast inserted in the resulting byte codes.<o:p></o:p></span></p>
+
+<h4><a name=ch12lev2sec3></a><span style='font-size:12.0pt'>Translating Generic
+Methods<o:p></o:p></span></h4>
+
+<p class=doctext><a name="of_a"></a><span style='color:black'>Type erasure also
+happens for generic methods. Programmers usually think of a generic method such
+as<o:p></o:p></span></p>
+
+<pre><span lang=FR style='color:black;mso-ansi-language:FR'>public static &lt;T extends Comparable&gt; T min(T[] a)<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span lang=FR style='font-size:8.5pt;color:black;mso-ansi-language:
+FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="only_a"></a><span class=GramE><span style='color:
+black'>as</span></span><span style='color:black'> a whole family of methods,
+but after erasure, only a single method is left:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>public</span></span><span
+style='color:black'> static Comparable min(Comparable[] a)<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="the_type"></a><span style='color:black'>Note that the
+type parameter </span><tt><span style='font-size:10.0pt;color:black'>T</span></tt><a
+name="has_been"></a><span style='color:black'> has been erased, leaving only
+its bounding type </span><tt><span style='font-size:10.0pt;color:black'>Comparable</span></tt><span
+style='color:black'>.<o:p></o:p></span></p>
+
+<p class=doctext><a name="method_brings"></a><span style='color:black'>Erasure
+of method brings up a couple of complexities. Consider this example:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>class</span></span><span
+style='color:black'> <span class=SpellE>DateInterval</span> extends Pair&lt;Date&gt;<o:p></o:p></span></pre><pre><span
+style='color:black'>{<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE>public</span> void <span class=SpellE>setSecond</span>(Date second)<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span>{<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>      </span><span
+class=GramE>if</span> (<span class=SpellE>second.compareTo</span>(<span
+class=SpellE>getFirst</span>()) &gt;= 0)<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>         </span><span
+class=SpellE><span class=GramE>super.setSecond</span></span><span class=GramE>(</span>second);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span>. . .<o:p></o:p></span></pre><pre><span
+style='color:black'>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="date_interval"></a><span style='color:black'>A date
+interval is a pair of </span><tt><span style='font-size:10.0pt;color:black'>Date</span></tt><a
+name="override_the"></a><span style='color:black'> objects, and we'll want to
+override the methods to ensure that the second value is never smaller than the
+first. This class is erased to<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>class</span></span><span
+style='color:black'> <span class=SpellE>DateInterval</span> extends Pair // after erasure<o:p></o:p></span></pre><pre><span
+style='color:black'>{<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE>public</span> void <span class=SpellE>setSecond</span>(Date second) { . . . }<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span>. . .<o:p></o:p></span></pre><pre><span
+style='color:black'>}<o:p></o:p></span></pre>
+
+<p class=doctext><span style='mso-bidi-font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

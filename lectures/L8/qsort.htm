@@ -1,0 +1,2556 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 14">
+<meta name=Originator content="Microsoft Word 14">
+<link rel=File-List href="qsort_files/filelist.xml">
+<link rel=Edit-Time-Data href="qsort_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>IPChu</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>IPChu</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>111</o:TotalTime>
+  <o:Created>2011-09-15T04:59:00Z</o:Created>
+  <o:LastSaved>2011-09-15T04:59:00Z</o:LastSaved>
+  <o:Pages>12</o:Pages>
+  <o:Words>1962</o:Words>
+  <o:Characters>11187</o:Characters>
+  <o:Company>DePaul University</o:Company>
+  <o:Lines>93</o:Lines>
+  <o:Paragraphs>26</o:Paragraphs>
+  <o:CharactersWithSpaces>13123</o:CharactersWithSpaces>
+  <o:Version>14.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=themeData href="qsort_files/themedata.thmx">
+<link rel=colorSchemeMapping href="qsort_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>ZH-CN</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Courier;
+	panose-1:2 7 4 9 2 2 5 2 4 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:\5B8B\4F53;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:\5B8B\4F53;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520092929 1073786111 9 0 415 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520081665 -1073717157 41 0 66047 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1593833729 1073750107 16 0 415 0;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:SimSun;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:darkblue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+pre
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"HTML Preformatted Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-fareast-font-family:SimSun;
+	mso-fareast-theme-font:minor-fareast;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"HTML Preformatted";
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Balloon Text";
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-ascii-font-family:Tahoma;
+	mso-hansi-font-family:Tahoma;
+	mso-bidi-font-family:Tahoma;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:SimSun;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:10.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:194588189;
+	mso-list-template-ids:-1588290544;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l1
+	{mso-list-id:1075010146;
+	mso-list-template-ids:1033160000;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2
+	{mso-list-id:1147015241;
+	mso-list-template-ids:-601319508;}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l3
+	{mso-list-id:1465539814;
+	mso-list-template-ids:2102304092;}
+@list l4
+	{mso-list-id:1585262172;
+	mso-list-template-ids:1440495108;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l4:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l4:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level2 lfo4
+	{mso-level-start-at:0;
+	mso-level-number-format:arabic;
+	mso-level-numbering:continue;
+	mso-level-text:"%2\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l1:level2 lfo5
+	{mso-level-start-at:0;
+	mso-level-number-format:arabic;
+	mso-level-numbering:continue;
+	mso-level-text:"%2\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l1:level3 lfo5
+	{mso-level-start-at:0;
+	mso-level-number-format:arabic;
+	mso-level-numbering:continue;
+	mso-level-text:"%3\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l1:level2 lfo6
+	{mso-level-start-at:0;
+	mso-level-numbering:continue;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level3 lfo6
+	{mso-level-start-at:0;
+	mso-level-number-format:arabic;
+	mso-level-numbering:continue;
+	mso-level-text:"%3\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l2:level2 lfo8
+	{mso-level-start-at:0;
+	mso-level-number-format:alpha-upper;
+	mso-level-numbering:continue;
+	mso-level-text:"%2\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l3:level2 lfo10
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-numbering:continue;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l3:level2 lfo11
+	{mso-level-start-at:0;
+	mso-level-numbering:continue;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin-top:0in;
+	mso-para-margin-right:0in;
+	mso-para-margin-bottom:10.0pt;
+	mso-para-margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=darkblue vlink=purple style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><b><span style='font-size:18.0pt;line-height:115%;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+color:navy'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.5in;line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Times New Roman","serif";mso-fareast-font-family:"Times New Roman";
+color:navy'>Sorting Algorithms<br>
+Insertion Sort<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;text-indent:-.25in;line-height:normal;mso-list:l3 level1 lfo9;
+tab-stops:list .5in'><a name="#assump"><![if !supportLists]><b><span
+style='font-size:13.5pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";color:navy'><span style='mso-list:Ignore'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span></b><![endif]><b><span
+style='font-size:13.5pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";color:navy'>Assumptions <o:p></o:p></span></b></a></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l3 level2 lfo9;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#assump"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'>Elements to sort are placed in
+arrays of length N. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l3 level2 lfo9;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#assump"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'>Can be compared <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l3 level2 lfo9;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#assump"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'>Sorting can be performed in main
+memory <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;line-height:normal'><span style='mso-bookmark:"\#assump"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Simple sorting <span class=GramE>algorithms :</span> O(N<sup>2</sup>)<br>
+<span class=SpellE>Shellsort</span>: o(N<sup>2</sup>)<br>
+Advanced sorting algorithms: O(<span class=SpellE>NlogN</span>)<br>
+In general: &#937;(<span class=SpellE>NlogN</span>)<o:p></o:p></span></span></p>
+
+<span style='mso-bookmark:"\#assump"'></span>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;text-indent:-.25in;line-height:normal;mso-list:l3 level1 lfo9;
+tab-stops:list .5in'><![if !supportLists]><b><span style='font-size:13.5pt;
+font-family:"Times New Roman","serif";mso-fareast-font-family:"Times New Roman";
+color:navy'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></b><![endif]><b><span style='font-size:13.5pt;font-family:
+"Times New Roman","serif";mso-fareast-font-family:"Times New Roman";color:navy'>Insertion
+Sort <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif";mso-fareast-font-family:"Times New Roman"'>PRE: array
+of N elements (from 0 to N-1)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif";mso-fareast-font-family:"Times New Roman"'>POST:
+array sorted<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;text-indent:-.25in;line-height:normal;mso-list:l3 level3 lfo9;
+tab-stops:list 1.5in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif";mso-fareast-font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'>An array of one element only is
+sorted <o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;text-indent:-.25in;line-height:normal;mso-list:l3 level3 lfo9;
+tab-stops:list 1.5in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif";mso-fareast-font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'>Assume that the first p elements are
+sorted.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif";mso-fareast-font-family:"Times New Roman"'>For j = p
+to N-1<br>
+Take the <b>j-<span class=SpellE>th</span></b> element and find a place for it
+among the first <b>j</b> sorted elements <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='font-size:12.0pt;font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+class=SpellE><span class=GramE><span style='font-size:12.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'>int</span></span></span><span
+style='font-size:12.0pt;font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>
+j, p;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+class=GramE><span style='font-size:12.0pt;font-family:"Courier New";mso-fareast-font-family:
+"Times New Roman"'>comparable</span></span><span style='font-size:12.0pt;
+font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'> <span
+class=SpellE>tmp</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='font-size:12.0pt;font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+class=GramE><span style='font-size:12.0pt;font-family:"Courier New";mso-fareast-font-family:
+"Times New Roman"'>for</span></span><span style='font-size:12.0pt;font-family:
+"Courier New";mso-fareast-font-family:"Times New Roman"'> ( p = 1; p &lt; N ;
+p++)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='font-size:12.0pt;font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='font-size:12.0pt;font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'><span
+style='mso-tab-count:1'>    </span><span class=SpellE><span class=GramE>tmp</span></span>
+= a[p];<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='font-size:12.0pt;font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'><span
+style='mso-tab-count:1'>    </span><span class=GramE>for</span> (j = p; j &gt;
+0 &amp;&amp; <span class=SpellE>tmp</span> &lt; a[j-1]; j--)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='font-size:12.0pt;font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'><span
+style='mso-tab-count:1'>    </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='font-size:12.0pt;font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'><span
+style='mso-tab-count:2'>          </span><span class=GramE>a[</span>j] =
+a[j-1];<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='font-size:12.0pt;font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'><span
+style='mso-tab-count:1'>    </span><span class=GramE>a[</span>j] = <span
+class=SpellE>tmp</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='font-size:12.0pt;font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='font-size:12.0pt;font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;text-indent:-.25in;line-height:normal;mso-list:l3 level1 lfo9;
+tab-stops:list .5in'><a name="#complexity"><![if !supportLists]><b><span
+style='font-size:13.5pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";color:navy'><span style='mso-list:Ignore'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span></b><![endif]><b><span
+style='font-size:13.5pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";color:navy'>Analysis of the Insertion Sort <o:p></o:p></span></b></a></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#complexity"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>To insert the last element we need at most N-1 comparisons
+and N-1 movements.<br>
+To insert the N-1<sup>st</sup> element we need N-2 comparisons and N-2
+movements.<br>
+….<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#complexity"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>To insert the 2<sup>nd</sup> element we need 1 comparison
+and one movement.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#complexity"'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>To sum up:<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#complexity"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>2* (1 + 2 + 3 +… N - 1) = 2 * (N - 1)* N / 2 = (N-1)*N =
+&#920; (N<sup>2</sup>)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#complexity"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>If the greater part of the array is sorted, the complexity
+is almost <span class=GramE>O(</span>N)<br>
+The average complexity is proved to be = &#920; (N<sup>2</sup>)<o:p></o:p></span></span></p>
+
+<span style='mso-bookmark:"\#complexity"'></span>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;text-indent:-.25in;line-height:normal;mso-list:l3 level1 lfo9;
+tab-stops:list .5in'><a name="#bound"><![if !supportLists]><b><span
+style='font-size:13.5pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";color:navy'><span style='mso-list:Ignore'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span></b><![endif]><b><span
+style='font-size:13.5pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";color:navy'>A lower bound for simple sorting algorithms <o:p></o:p></span></b></a></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#bound"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Simple sorting algorithms swap elements that are not
+ordered. <br>
+Swapping is done by bubble sort, and by insertion sort. <br>
+Thus the complexity depends on the number of swaps. <br>
+To estimate how many swaps are needed on average, we define <b>inversion </b>in
+the following way:<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#bound"'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Definition:</span></b></span><span style='mso-bookmark:"\#bound"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'> An <b>inversion</b> is an ordered pair </span></span><span
+style='mso-bookmark:"\#bound"'><span style='font-size:12.0pt;font-family:"Tahoma","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>(A<sub>i</sub>, <span class=SpellE>A<sub>j</sub></span>)</span></span><span
+style='mso-bookmark:"\#bound"'><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'> such that i &lt; j but A<sub>i</sub>
+&gt; <span class=SpellE>A<sub>j</sub></span>.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#bound"'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Example:</span></b></span><span style='mso-bookmark:"\#bound"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'> 10, 6, 7, 15, 3, <span class=GramE>1</span><br>
+Inversions are: <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#bound"'><span
+style='font-size:10.0pt;font-family:"Tahoma","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>( 10, 6 ), ( 10, 7 ), ( 10, 3 ), ( 10, 1 )<br>
+( 6, 3 ), ( 6, 1 )<br>
+( 7, 3 ), ( 7, 1 )<br>
+( 15, 3 ), ( 15, 1 )<br>
+( 3, 1 )<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#bound"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>The following is true:<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l3 level2 lfo10;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#bound"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'>Swapping adjacent elements that are
+out of order removes one inversion. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l3 level2 lfo10;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#bound"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'>A sorted array has no inversions. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l3 level2 lfo10;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#bound"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'>Sorting an array that contains <b><i>i</i></b>
+inversions requires at least <b><i>i</i></b> swaps of adjacent elements. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#bound"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>How many inversions are there in an average unsorted array?<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#bound"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>In general this is a tricky question to answer - just what
+is meant by average? <br>
+However, we can make a couple of simplifying assumptions:<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l3 level2 lfo11;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#bound"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'><span style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'>There are no duplicates in the list.
+<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l3 level2 lfo11;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#bound"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'><span style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'>Since the elements are unique (by
+assumption), all that matters is their relative rank. <br>
+Accordingly we identify them with the first N integers {1, 2<span class=GramE>,
+...,</span> N} <br>
+and assume the elements we have to sort are the first N integers. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#bound"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Under these circumstances we can say the following:<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#bound"'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Theorem 1</span></b></span><span style='mso-bookmark:"\#bound"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'> <i>[Average number of inversions] </i><br>
+<span class=GramE>The</span> average number of inversions in an array of N
+distinct elements is <b>N (N - 1) / 4</b><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#bound"'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Proof:</span></b></span><span style='mso-bookmark:"\#bound"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'> <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#bound"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Given an array A, consider <span class=SpellE>A<sub>r</sub></span>,
+which is the array in reverse order. <br>
+Now consider a pair (x, y) with x &lt; y. <br>
+<span class=GramE>This</span> pair is an inversion in exactly one of A, A<sub>r</sub>.
+<br>
+The total number of such pairs is given by N (N - 1)/2, <br>
+and (on average) half of these will be inversions in A. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#bound"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Thus A has N (N - 1) / 4 inversions.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#bound"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Consequently the insertion sort has an average running time
+of <span class=GramE>O(</span>N<sup>2</sup>). <br>
+In fact we can generalize this result to all sorting algorithms <br>
+that work by exchanging adjacent elements to eliminate inversions.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#bound"'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Theorem 2</span></b></span><span style='mso-bookmark:"\#bound"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'> Any algorithm that sorts by exchanging adjacent elements
+requires </span></span><span style='mso-bookmark:"\#bound"'><span
+style='font-size:10.0pt;font-family:"Tahoma","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>&#937;</span></span><span style='mso-bookmark:"\#bound"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'> (N<sup>2</sup>) time on average.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#bound"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>The proof follows immediately from the fact that the average
+number of <br>
+inversions is <span class=GramE>N(</span>N-1)/4: each adjacent swap removes
+only one inversion, <br>
+so </span></span><span style='mso-bookmark:"\#bound"'><span style='font-size:
+10.0pt;font-family:"Tahoma","sans-serif";mso-fareast-font-family:"Times New Roman"'>&#937;</span></span><span
+style='mso-bookmark:"\#bound"'><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'>(N<sup>2</sup>) swaps are required. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#bound"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Theorem 2 above implies that for a sorting algorithm to run
+in less than quadratic time <br>
+it must do something other than swap adjacent elements.<o:p></o:p></span></span></p>
+
+<span style='mso-bookmark:"\#bound"'></span><b><span style='font-size:18.0pt;
+line-height:115%;font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+color:navy;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:
+AR-SA'><br clear=all style='mso-special-character:line-break;page-break-before:
+always'>
+</span></b>
+
+<p class=MsoNormal><b><span style='font-size:18.0pt;line-height:115%;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+color:navy'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:18.0pt;line-height:115%;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+color:navy'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:18.0pt;line-height:115%;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+color:navy'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:18.0pt;line-height:115%;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+color:navy'>Sorting <span class=SpellE>Algorithms<span class=GramE>:Mergesort</span></span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;text-indent:-.25in;line-height:normal;mso-list:l2 level1 lfo7;
+tab-stops:list .5in'><a name="#merge"><![if !supportLists]><b><span
+style='font-size:13.5pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";color:navy'><span style='mso-list:Ignore'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span></b><![endif]></a><span
+class=SpellE><span style='mso-bookmark:"\#merge"'><b><span style='font-size:
+13.5pt;font-family:"Times New Roman","serif";mso-fareast-font-family:"Times New Roman";
+color:navy'>Mergesort</span></b></span></span><span style='mso-bookmark:"\#merge"'><b><span
+style='font-size:13.5pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";color:navy'> <o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l2 level2 lfo7;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#merge"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'>Recursive algorithm. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l2 level2 lfo7;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#merge"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'>Runs in <span class=GramE>O(</span><span
+class=SpellE>NlogN</span>) time. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#merge"'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Basic idea</span></b></span><span style='mso-bookmark:"\#merge"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>: If we have two sorted arrays, we can merge them in linear
+time <br>
+with N comparisons only. Given an array to be sorted, we can consider
+separately <br>
+its left half and <span class=GramE>its right half, sort</span> them and then
+merge them.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#merge"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Where is the recursion?<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#merge"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Each half is an array that can be sorted using the same
+algorithm - <br>
+divide into two, sort separately the left and the right halves, and then merge
+them. <o:p></o:p></span></span></p>
+
+<span style='mso-bookmark:"\#merge"'></span>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;text-indent:-.25in;line-height:normal;mso-list:l2 level1 lfo7;
+tab-stops:list .5in'><a name="#mergeex"><![if !supportLists]><b><span
+style='font-size:13.5pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";color:navy'><span style='mso-list:Ignore'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span></b><![endif]><b><span
+style='font-size:13.5pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";color:navy'>Example <o:p></o:p></span></b></a></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l2 level2 lfo8'><span
+style='mso-bookmark:"\#mergeex"'><![if !supportLists]><span style='font-size:
+10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>A.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'>Merging two sorted arrays: <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#mergeex"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Array A: 3, 7, 10, 15<br>
+Array B: 1, 4, 8, 9, 20<br>
+Array C: (merged) <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;line-height:normal'><span style='mso-bookmark:"\#mergeex"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>1, 3, 4, 7, 8, 9, 10, 15, 20 <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l2 level2 lfo8'><span
+style='mso-bookmark:"\#mergeex"'><![if !supportLists]><span style='font-size:
+10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>B.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><span style='font-size:10.0pt;
+font-family:"Times New Roman","serif";mso-fareast-font-family:"Times New Roman"'>Mergesorting</span></span></span><span
+style='mso-bookmark:"\#mergeex"'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif";mso-fareast-font-family:"Times New Roman"'> an array:<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#mergeex"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>6, 9, 1, 10, 34, 12, 15, 8<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#mergeex"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>The following figure gives the state of the array at each
+step of the <span class=SpellE>mergesort</span> algorithm. <br>
+Each splitting is indicated in blue, each merging - in purple.<br>
+Parts merged at some previous step are in gray. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#mergeex"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Picture_x0020_1" o:spid="_x0000_i1027" type="#_x0000_t75"
+ alt="Description: http://faculty.simpson.edu/lydia.sinapova/www/cmsc250/LN250_Weiss/L15-Fig01.jpg"
+ style='width:438pt;height:630pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="qsort_files/image001.jpg" o:title="L15-Fig01"/>
+</v:shape><![endif]--><![if !vml]><img width=584 height=840
+src="qsort_files/image001.jpg"
+alt="Description: http://faculty.simpson.edu/lydia.sinapova/www/cmsc250/LN250_Weiss/L15-Fig01.jpg"
+v:shapes="Picture_x0020_1"><![endif]></span></span><span style='mso-bookmark:
+"\#mergeex"'></span><a name="#mergean"></a><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;text-indent:-.25in;line-height:normal;mso-list:l2 level1 lfo8;
+tab-stops:list .5in'><span style='mso-bookmark:"\#mergean"'><![if !supportLists]><b><span
+style='font-size:13.5pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";color:navy'><span style='mso-list:Ignore'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span></b><![endif]><b><span
+style='font-size:13.5pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman";color:navy'>Analysis of <span class=SpellE>MergeSort</span>
+Algorithm <o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><b><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Algorithm:<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#mergean"'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#mergean"'><span class=SpellE><span class=GramE><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>mergesort</span></span></span></span><span
+style='mso-bookmark:"\#mergean"'><span class=GramE><span style='font-size:10.0pt;
+font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>(</span></span></span><span
+style='mso-bookmark:"\#mergean"'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"Times New Roman"'> <span class=SpellE>int</span>
+[] a, <span class=SpellE>int</span> left, <span class=SpellE>int</span> right)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#mergean"'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"Times New Roman"'>{<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#mergean"'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"Times New Roman"'><span
+style='mso-tab-count:1'>   </span><span class=GramE>if</span> (right &gt; left)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#mergean"'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"Times New Roman"'><span
+style='mso-tab-count:1'>   </span>{<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#mergean"'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"Times New Roman"'><span
+style='mso-tab-count:2'>           </span><span class=GramE>middle</span> =
+left + (right - left)/2;<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#mergean"'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"Times New Roman"'><span
+style='mso-tab-count:2'>           </span><span class=SpellE><span class=GramE>mergesort</span></span><span
+class=GramE>(</span>a, left, middle);<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#mergean"'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"Times New Roman"'><span
+style='mso-tab-count:2'>           </span><span class=SpellE><span class=GramE>mergesort</span></span><span
+class=GramE>(</span>a, middle+1, right);<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#mergean"'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"Times New Roman"'><span
+style='mso-tab-count:2'>           </span><span class=GramE>merge(</span>a,
+left, middle, right);<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#mergean"'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"Times New Roman"'><span
+style='mso-tab-count:1'>   </span>}<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#mergean"'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"Times New Roman"'>}<span
+style='mso-tab-count:1'>  </span><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Assumption: N is a power of two.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>For N = 1: time is a constant (denoted by 1)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Otherwise: time to <span class=SpellE>mergesort</span> N
+elements = time to <span class=SpellE>mergesort</span> N/2 elements plus<br>
+time to merge two arrays each N/2 elements.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Time to merge two arrays each N/2 elements is linear, i.e. N<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Thus we have:<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:Courier;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:"Times New Roman"'>(1) <span class=GramE>T(</span>1) = 1<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:Courier;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:"Times New Roman"'>(2) <span class=GramE>T(</span>N) =
+2T(N/2) + N<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Next we will solve this recurrence relation. First we divide
+(2) by N:<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:Courier;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:"Times New Roman"'>(3) <span class=GramE>T(</span>N) / N =
+T(N/2) / (N/2) + 1<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>N is a power of two, so we can write<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:Courier;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:"Times New Roman"'>(4) <span class=GramE>T(</span>N/2) /
+(N/2) = T(N/4) / (N/4) +1<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:Courier;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:"Times New Roman"'>(5) <span class=GramE>T(</span>N/4) /
+(N/4) = T(N/8) / (N/8) +1 <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:Courier;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:"Times New Roman"'>(6) <span class=GramE>T(</span>N/8) /
+(N/8) = T(N/16) / (N/16) +1 <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:Courier;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:"Times New Roman"'>(7) ……<br>
+(8) <span class=GramE>T(</span>2) / 2 = T(1) / 1 + 1 <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Now we add equations (3) through (8<span class=GramE>) :</span>
+the sum of their left-hand sides <br>
+will be equal to the sum of their right-hand sides:<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+class=GramE><span style='font-size:10.0pt;font-family:Courier;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman"'>T(</span></span></span><span
+style='mso-bookmark:"\#mergean"'><span style='font-size:10.0pt;font-family:
+Courier;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman"'>N)
+/ N + T(N/2) / (N/2) + T(N/4) / (N/4) + … + T(2)/2 =<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+class=GramE><span style='font-size:10.0pt;font-family:Courier;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman"'>T(</span></span></span><span
+style='mso-bookmark:"\#mergean"'><span style='font-size:10.0pt;font-family:
+Courier;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman"'>N/2)
+/ (N/2) + T(N/4) / (N/4) + ….+ T(2) / 2 + T(1) / 1 + <span class=SpellE>LogN</span><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>(<span class=SpellE>LogN</span> is the sum of 1s in the
+right-hand sides)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>After crossing the equal term, we get<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:Courier;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:"Times New Roman"'>(9) <span class=GramE>T(</span>N)/N =
+T(1)/1 + <span class=SpellE>LogN</span><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+class=GramE><span style='font-size:10.0pt;font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman"'>T(</span></span></span><span
+style='mso-bookmark:"\#mergean"'><span style='font-size:10.0pt;font-family:
+"Times New Roman","serif";mso-fareast-font-family:"Times New Roman"'>1) is 1,
+hence we obtain<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:Courier;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:"Times New Roman"'>(10) <span class=GramE>T(</span>N) = N
++ <span class=SpellE>NlogN</span> = O(<span class=SpellE>NlogN</span>)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>Hence the complexity of the <span class=SpellE>MergeSort</span>
+algorithm is <span class=GramE><b>O(</b></span><span class=SpellE><b>NlogN</b></span><b>).<o:p></o:p></b></span></span></p>
+
+<div class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center;line-height:normal'><span style='mso-bookmark:"\#mergean"'><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif";mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=2 width="100%" noshade style='color:purple' align=center>
+
+</span></span></div>
+
+<span style='mso-bookmark:"\#mergean"'></span><b><span style='font-size:18.0pt;
+line-height:115%;font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+color:navy;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:
+AR-SA'><br clear=all style='mso-special-character:line-break;page-break-before:
+always'>
+</span></b>
+
+<p class=MsoNormal><b><span style='font-size:18.0pt;line-height:115%;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+color:navy'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+color:navy'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";
+color:navy'>Sorting Algorithms: <span class=SpellE>QuickSort</span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l0 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><b><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></b><![endif]><a
+href="http://faculty.simpson.edu/lydia.sinapova/www/cmsc250/LN250_Tremblay/L06-QuickSort.htm#features"><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Features</span></b></a><b><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l0 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><b><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></b><![endif]><a
+href="http://faculty.simpson.edu/lydia.sinapova/www/cmsc250/LN250_Tremblay/L06-QuickSort.htm#basic"><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Basic idea</span></b></a><b><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l0 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><b><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></b><![endif]><a
+href="http://faculty.simpson.edu/lydia.sinapova/www/cmsc250/LN250_Tremblay/L06-QuickSort.htm#alg"><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Algorithm</span></b></a><b><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l0 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><b><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></b><![endif]><a
+href="http://faculty.simpson.edu/lydia.sinapova/www/cmsc250/LN250_Tremblay/L06-QuickSort.htm#code"><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Code</span></b></a><b><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l0 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><b><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></b><![endif]><a
+href="http://faculty.simpson.edu/lydia.sinapova/www/cmsc250/LN250_Tremblay/L06-QuickSort.htm#impl"><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Implementation notes</span></b></a><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'> <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l0 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><b><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></b><![endif]><a
+href="http://faculty.simpson.edu/lydia.sinapova/www/cmsc250/LN250_Tremblay/L06-QuickSort.htm#compl"><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Complexity of Quicksort</span></b></a><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'> <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l0 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><b><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></b><![endif]><a
+href="http://faculty.simpson.edu/lydia.sinapova/www/cmsc250/LN250_Tremblay/L06-QuickSort.htm#concl"><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Conclusions</span></b></a><b><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;text-indent:-.25in;line-height:normal;mso-list:l4 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;
+mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><a
+href="http://faculty.simpson.edu/lydia.sinapova/www/cmsc250/LN250_Tremblay/L06-QuickSort.htm#anim"><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Animations</span></b></a><b><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.0in;line-height:normal'><a
+href="http://faculty.simpson.edu/lydia.sinapova/www/cmsc250/LN250_Tremblay/L06-QuickSort.htm#goals"><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Learning Goals</span></b></a><b><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'><br>
+</span></b><a
+href="http://faculty.simpson.edu/lydia.sinapova/www/cmsc250/LN250_Tremblay/L06-QuickSort.htm#exam"><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Exam-like questions</span></b></a><b><span style='font-size:
+10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></b></p>
+
+<div class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" noshade style='color:purple' align=center>
+
+</span></div>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l1 level1 lfo3;
+tab-stops:list .5in'><a name="#features"><![if !supportLists]><b><span
+style='font-size:13.5pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+Arial;color:navy'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span></b><![endif]><b><span style='font-size:13.5pt;font-family:
+"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";color:navy'>Features
+<o:p></o:p></span></b></a></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level2 lfo3;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#features"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>Similar to <span class=SpellE>mergesort</span>
+- divide-and-conquer recursive algorithm <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level2 lfo3;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#features"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>One of the fastest sorting
+algorithms <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level2 lfo3;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#features"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>Average running time O(<span
+class=SpellE>NlogN</span>) <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level2 lfo3;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#features"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>Worst-case running time O(N<sup>2</sup>)<o:p></o:p></span></span></p>
+
+<span style='mso-bookmark:"\#features"'></span>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l1 level1 lfo3;
+tab-stops:list .5in'><a name="#basic"><![if !supportLists]><b><span
+style='font-size:13.5pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+Arial;color:navy'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span></b><![endif]><b><span style='font-size:13.5pt;font-family:
+"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";color:navy'>Basic
+idea <o:p></o:p></span></b></a></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level2 lfo4'><span
+style='mso-bookmark:"\#basic"'><![if !supportLists]><span style='font-size:
+10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>Pick one element in the array, which
+will be the <i>pivot</i>. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level2 lfo4'><span
+style='mso-bookmark:"\#basic"'><![if !supportLists]><span style='font-size:
+10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>Make one pass through the array,
+called a <i>partition</i> step, re-arranging the entries so that: <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:3.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level4 lfo4;
+tab-stops:list 2.0in'><span style='mso-bookmark:"\#basic"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+class=GramE><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>the</span></span></span><span
+style='mso-bookmark:"\#basic"'><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'> pivot is in its proper place. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:3.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level4 lfo4;
+tab-stops:list 2.0in'><span style='mso-bookmark:"\#basic"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+class=GramE><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>entries</span></span></span><span
+style='mso-bookmark:"\#basic"'><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'> smaller than the pivot are to the
+left of the pivot. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:3.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level4 lfo4;
+tab-stops:list 2.0in'><span style='mso-bookmark:"\#basic"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+class=GramE><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>entries</span></span></span><span
+style='mso-bookmark:"\#basic"'><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'> larger than the pivot are to its
+right. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level2 lfo4'><span
+style='mso-bookmark:"\#basic"'><![if !supportLists]><span style='font-size:
+10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>Recursively apply quicksort to the
+part of the array that is to the left of the pivot, <br>
+and to the right part of the array. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#basic"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Here we don't have the merge step, at the end all the
+elements are in the proper order.<o:p></o:p></span></span></p>
+
+<span style='mso-bookmark:"\#basic"'></span>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l1 level1 lfo4;
+tab-stops:list .5in'><a name="#alg"><![if !supportLists]><b><span
+style='font-size:13.5pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+Arial;color:navy'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span></b><![endif]><b><span style='font-size:13.5pt;font-family:
+"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";color:navy'>Algorithm
+<o:p></o:p></span></b></a></p>
+
+<span style='mso-bookmark:"\#alg"'></span>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;line-height:normal'><a name="#disc"></a><span class=GramE><span
+style='mso-bookmark:"\#disc"'><b><span style='font-size:10.0pt;font-family:
+"Verdana","sans-serif";mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+Arial;color:navy'>STEP 1.</span></b></span></span><span style='mso-bookmark:
+"\#disc"'><b><span style='font-size:10.0pt;font-family:"Verdana","sans-serif";
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:Arial;
+color:navy'> Choosing the pivot<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;line-height:normal'><span style='mso-bookmark:"\#disc"'><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Choosing the pivot is an essential step.</span></b></span><span
+style='mso-bookmark:"\#disc"'><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'> <br>
+Depending on the pivot the algorithm may run very fast, or in quadric <span
+class=GramE>time.<b>:</b></span><b><o:p></o:p></b></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:3.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level3 lfo5'><span
+style='mso-bookmark:"\#disc"'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>Some fixed element: e.g. the first,
+the last, the one in the middle <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:3.0in;line-height:normal'><span style='mso-bookmark:"\#disc"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>This is a bad choice - the pivot may turn to be the smallest
+or the largest element, <br>
+then one of the partitions will be empty.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:3.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level3 lfo5'><span
+style='mso-bookmark:"\#disc"'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>Randomly chosen (by random <span
+class=GramE>generator )</span> - still a bad choice. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:3.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level3 lfo5'><span
+style='mso-bookmark:"\#disc"'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>The median of the array (if the
+array has N numbers, the median is the [N/2] largest number. This is difficult
+to compute - increases the complexity. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:3.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level3 lfo5'><span
+style='mso-bookmark:"\#disc"'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>The median-of-three choice: take the
+first, the last and the middle element. <br>
+Choose the median of these three elements.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;line-height:normal'><span style='mso-bookmark:"\#disc"'><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Example:</span></b></span><span style='mso-bookmark:"\#disc"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.5in;line-height:normal'><span style='mso-bookmark:"\#disc"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>8, 3, 25, 6, 10, 17, 1, 2, 18, 5<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.5in;line-height:normal'><span style='mso-bookmark:"\#disc"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>The first element is 8, the middle - 10, the last - 5.<br>
+The median of [8, 10, <span class=GramE>5</span>] is <b>8<o:p></o:p></b></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;line-height:normal'><span style='mso-bookmark:"\#disc"'><span
+class=GramE><b><span style='font-size:10.0pt;font-family:"Verdana","sans-serif";
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:Arial;
+color:navy'>STEP 2.</span></b></span></span><span style='mso-bookmark:"\#disc"'><b><span
+style='font-size:10.0pt;font-family:"Verdana","sans-serif";mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:Arial;color:navy'> Partitioning<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;line-height:normal'><span style='mso-bookmark:"\#disc"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Partitioning is illustrated on the above example.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;line-height:normal'><span style='mso-bookmark:"\#disc"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>1. The first action is to get the pivot out of the way -
+swap it with the last element <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.5in;line-height:normal'><span style='mso-bookmark:"\#disc"'><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>5</span></b></span><span style='mso-bookmark:"\#disc"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>, 3, 25, 6, 10, 17, 1, 2, 18, <b>8<o:p></o:p></b></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;line-height:normal'><span style='mso-bookmark:"\#disc"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>2. We want larger elements to go to the right and smaller
+elements to go to the left.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.5in;line-height:normal'><span style='mso-bookmark:"\#disc"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Two &quot;fingers&quot; are used to scan the elements from
+left to right and from right to left:<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:2.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#disc"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:2.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#disc"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'>[5, 3, 25, 6, 10, 17, 1, 2, 18, 8]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:2.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#disc"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span
+style='mso-spacerun:yes'> </span>^<span
+style='mso-spacerun:yes'>                              </span>^<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:2.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#disc"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span
+style='mso-spacerun:yes'> </span><span class=GramE>i</span><span
+style='mso-spacerun:yes'>                              </span>j<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:3.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level2 lfo6;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#disc"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>While <b>i</b> <span class=GramE>is</span>
+to the left of <b>j</b>, we move <b>i</b> right, skipping all the elements <br>
+less than the pivot. If an element is found greater <span class=SpellE>then</span>
+the pivot, <b>i</b> stops <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:3.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level2 lfo6;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#disc"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>While <b>j</b> is to the right of <b>i</b>,
+we move <b>j </b>left, skipping all the elements <br>
+greater than the pivot. If an element is found less <span class=SpellE>then</span>
+the pivot, <b>j</b> stops <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:3.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level2 lfo6;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#disc"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>When both <b>i</b> and <b>j</b> have
+stopped, the elements are swapped. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:3.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level2 lfo6;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#disc"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>When <b>i</b> and <b>j</b> have
+crossed, no swap is performed, scanning stops, <br>
+and the element pointed to by <b>i</b> is swapped with the <span class=GramE>pivot
+.</span> <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.5in;line-height:normal'><span style='mso-bookmark:"\#disc"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>In the example the first swapping will be between 25 and 2,
+the second between 10 and 1.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;line-height:normal'><span style='mso-bookmark:"\#disc"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>3. Restore the pivot.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.5in;line-height:normal'><span style='mso-bookmark:"\#disc"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>After restoring the pivot we obtain the following
+partitioning into three groups:<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.5in;line-height:normal'><span style='mso-bookmark:"\#disc"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>[5, 3, 2, 6, 1] <span class=GramE>[ 8</span> ] [10, 25, 18,
+17]<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;line-height:normal'><span style='mso-bookmark:"\#disc"'><span
+class=GramE><b><span style='font-size:10.0pt;font-family:"Verdana","sans-serif";
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:Arial;
+color:navy'>STEP 3.</span></b></span></span><span style='mso-bookmark:"\#disc"'><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'> Recursively quicksort the left and the right parts<o:p></o:p></span></b></span></p>
+
+<span style='mso-bookmark:"\#disc"'></span>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l1 level1 lfo6;
+tab-stops:list .5in'><a name="#code"><![if !supportLists]><b><span
+style='font-size:13.5pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+Arial;color:navy'><span style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span></b><![endif]><b><span style='font-size:13.5pt;font-family:
+"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";color:navy'>Code
+<o:p></o:p></span></b></a></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#code"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Here is the <span class=GramE>code, that</span> implements
+the partitioning.<br>
+<span class=GramE>left</span> points to the first element in the array
+currently processed, right points to the last element. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#code"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#code"'><span class=GramE><b><span style='font-size:10.0pt;
+font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>if</span></b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>(</span></span></span><span
+style='mso-bookmark:"\#code"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'> left + 10 &lt;= right)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#code"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span style='mso-spacerun:yes'>   
+</span>{<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#code"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span style='mso-tab-count:1'>     </span><span
+class=SpellE><span class=GramE><b>int</b></span></span> i = left, j = right -
+1;<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#code"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span style='mso-tab-count:1'>     </span><span
+class=GramE><b>for</b></span> ( ; ; )<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#code"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span style='mso-tab-count:1'>     </span><span
+style='mso-spacerun:yes'>  </span>{<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#code"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span style='mso-tab-count:1'>     </span><span
+style='mso-spacerun:yes'>    </span><span class=GramE><b>while</b></span>
+(a[++i] &lt; pivot<span style='mso-spacerun:yes'>  </span>) {}<span
+style='mso-spacerun:yes'>   </span>// move the left finger<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#code"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span style='mso-tab-count:1'>     </span><span
+style='mso-spacerun:yes'>    </span><span class=GramE><b>while</b></span>
+(pivot<span style='mso-spacerun:yes'>  </span>&lt; a[--j] ) {}<span
+style='mso-tab-count:1'>       </span><span style='mso-spacerun:yes'> 
+</span>// move the right finger<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#code"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#code"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span style='mso-tab-count:1'>     </span><span
+style='mso-spacerun:yes'>    </span><span class=GramE><b>if</b></span> (i &lt;
+j) swap (a[i],a[j]);<span style='mso-spacerun:yes'>  </span>// swap<span
+style='mso-tab-count:1'>     </span><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#code"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span
+style='mso-spacerun:yes'>            </span><span class=GramE><b>else<span
+style='mso-spacerun:yes'>  </span>break</b></span>;<span style='mso-tab-count:
+2'>           </span><span style='mso-spacerun:yes'>  </span>// break if
+fingers have crossed<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#code"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span
+style='mso-spacerun:yes'>          </span>}<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#code"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span
+style='mso-spacerun:yes'>       </span><span class=GramE>swap</span> (a[I],
+a[right-1);<span style='mso-tab-count:2'>             </span><span
+style='mso-spacerun:yes'>  </span>// restore the pivot<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#code"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span
+style='mso-spacerun:yes'>       </span><span class=GramE>quicksort</span> ( a,
+left, i-1);<span style='mso-tab-count:1'>  </span><span
+style='mso-spacerun:yes'>  </span>// call quicksort for the left part<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#code"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span
+style='mso-spacerun:yes'>       </span><span class=GramE>quicksort</span> (a,
+i+1, right);<span style='mso-tab-count:1'>  </span><span
+style='mso-spacerun:yes'>  </span>// call quicksort for the left part<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#code"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span style='mso-spacerun:yes'>    
+</span>}<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#code"'><span class=GramE><b><span style='font-size:10.0pt;
+font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>else</span></b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE>insertionsort</span></span></span></span><span
+style='mso-bookmark:"\#code"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'> (a, left, right);<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#code"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#code"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>If the elements are less than 10, quicksort is not very
+efficient. <br>
+Instead insertion sort is used at the last phase of sorting.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#code"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Click </span></span><b><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'><a
+href="http://faculty.simpson.edu/lydia.sinapova/www/cmsc250/LN250_Tremblay/L06-QuickSortEX.htm">here</a></span></b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'> to see the above example worked out in details<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><a name="#anim"><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Animations</span></b></a><span class=GramE><span
+style='mso-bookmark:"\#anim"'><b><span style='font-size:10.0pt;font-family:
+"Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'>:</span></b></span></span><span
+style='mso-bookmark:"\#anim"'><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'><br>
+</span></span><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'><a
+href="http://math.hws.edu/TMCM/java/xSortLab/">http://math.hws.edu/TMCM/java/xSortLab/</a><br>
+</span><a href="http://students.ceid.upatras.gr/~pirot/java/Quicksort/"><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>http://students.ceid.upatras.gr/~pirot/java/Quicksort/</span></a><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'> <o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l1 level1 lfo6;
+tab-stops:list .5in'><a name="#impl"><![if !supportLists]><b><span
+style='font-size:13.5pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+Arial;color:navy'><span style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span></b><![endif]><b><span style='font-size:13.5pt;font-family:
+"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";color:navy'>Implementation
+notes <o:p></o:p></span></b></a></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#impl"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Compare the two versions:<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#impl"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#impl"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'>A.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#impl"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span style='mso-tab-count:1'>     </span><span
+class=GramE>while</span> (a[++i] &lt; pivot) {}<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#impl"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span style='mso-tab-count:1'>     </span><span
+class=GramE>while</span> (pivot &lt; a[--j]) {}<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#impl"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#impl"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span style='mso-tab-count:1'>     </span><span
+class=GramE>if</span> (i &lt; j) swap (a[i], a[j]);<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#impl"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span style='mso-tab-count:1'>     </span><span
+class=GramE>else</span> break;<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#impl"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#impl"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'>B.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#impl"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#impl"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span style='mso-tab-count:1'>     </span><span
+class=GramE>while</span> (a[i] &lt; pivot) {i++;}<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#impl"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span style='mso-tab-count:1'>     </span><span
+class=GramE>while</span> (pivot &lt; a[j] ) {j--;}<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#impl"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#impl"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span style='mso-tab-count:1'>     </span><span
+class=GramE>if</span> (i &lt; j) swap (a[i], a[j]);<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;margin-bottom:.0001pt;line-height:normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='mso-bookmark:"\#impl"'><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman"'><span style='mso-tab-count:1'>     </span><span
+class=GramE>else</span> break;<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#impl"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>If we have an array of equal elements, the second code will
+never increment <b>i</b> or decrement <b>j</b>, <br>
+and will do infinite swaps. <span class=GramE><b>i</b></span> and <b>j</b> will
+never cross.<o:p></o:p></span></span></p>
+
+<span style='mso-bookmark:"\#impl"'></span>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l1 level1 lfo6;
+tab-stops:list .5in'><a name="#compl"><![if !supportLists]><b><span
+style='font-size:13.5pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+Arial;color:navy'><span style='mso-list:Ignore'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span></b><![endif]><b><span style='font-size:13.5pt;font-family:
+"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";color:navy'>Complexity
+of Quicksort <o:p></o:p></span></b></a></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#compl"'><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Worst-case: <span class=GramE>O(</span>N<sup>2</sup>)</span></b></span><span
+style='mso-bookmark:"\#compl"'><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;line-height:normal'><span style='mso-bookmark:"\#compl"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>This happens when the pivot is the smallest (or the largest)
+element. <br>
+Then one of the partitions is empty, and we repeat recursively the procedure
+for N-1 elements. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#compl"'><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Best-case <span class=GramE>O(</span><span class=SpellE>NlogN</span>)</span></b></span><span
+style='mso-bookmark:"\#compl"'><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'> The best case is when the pivot is
+the median of the array, <br>
+and then the left and the right part will have same size.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;line-height:normal'><span style='mso-bookmark:"\#compl"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>There are <span class=SpellE><b>logN</b></span> partitions,
+and to obtain each <span class=GramE>partitions</span> we do <b>N</b>
+comparisons <br>
+(and not more than <b>N/2</b> swaps). Hence the complexity is <span
+class=GramE><b>O(</b></span><span class=SpellE><b>NlogN</b></span><b>)</b><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#compl"'><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Average-case</span></b></span><span style='mso-bookmark:
+"\#compl"'><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'> - <span class=GramE><b>O(</b></span><span
+class=SpellE><b>NlogN</b></span><b>)</b><o:p></o:p></span></span></p>
+
+<span style='mso-bookmark:"\#compl"'></span>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;text-indent:-.25in;line-height:normal;mso-list:l1 level1 lfo6;
+tab-stops:list .5in'><a name="#concl"><![if !supportLists]><b><span
+style='font-size:13.5pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+Arial;color:navy'><span style='mso-list:Ignore'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span></b><![endif]><b><span style='font-size:13.5pt;font-family:
+"Arial","sans-serif";mso-fareast-font-family:"Times New Roman";color:navy'>Conclusions
+<o:p></o:p></span></b></a></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#concl"'><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Advantages</span></b></span><span style='mso-bookmark:"\#concl"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>: <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level2 lfo6;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#concl"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>One of the fastest algorithms on
+average. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level2 lfo6;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#concl"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>Does not need additional memory (the
+sorting takes place in the array - this is called <b>in-place</b> processing).
+Compare with <span class=SpellE>mergesort</span>: <span class=SpellE>mergesort</span>
+needs additional memory for merging. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#concl"'><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Disadvantages:</span></b></span><span style='mso-bookmark:
+"\#concl"'><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'> The worst-case complexity is <span
+class=GramE>O(</span>N<sup>2</sup>)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#concl"'><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Applications:<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#concl"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Commercial applications use Quicksort - generally it runs
+fast, no additional memory, <br>
+this compensates for the rare occasions when it runs with <span class=GramE>O(</span>N<sup>2</sup>)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#concl"'><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Never </span></b></span><span style='mso-bookmark:"\#concl"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>use in applications which require <b>guaranteed response
+time</b>:<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level2 lfo6;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#concl"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>Life-critical (medical monitoring,
+life support in aircraft and space craft) <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level2 lfo6;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#concl"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>Mission-critical (monitoring and
+control in industrial and research plants <br>
+handling dangerous materials, control for aircraft, defense, <span
+class=SpellE>etc</span>) <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#concl"'><span
+class=GramE><b><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>unless</span></b></span></span><span
+style='mso-bookmark:"\#concl"'><b><span style='font-size:10.0pt;font-family:
+"Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'> you assume the
+worst-case response time</span></b></span><span style='mso-bookmark:"\#concl"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#concl"'><b><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>Comparison with <span class=SpellE>mergesort</span>:</span></b></span><span
+style='mso-bookmark:"\#concl"'><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level2 lfo6;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#concl"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><span class=GramE><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>mergesort</span></span></span></span><span style='mso-bookmark:
+"\#concl"'><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'> guarantees O(<span class=SpellE>NlogN</span>)
+time, however it requires additional memory with size N. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level2 lfo6;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#concl"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'>quicksort does not require
+additional memory, however the speed is not <span class=SpellE>quaranteed</span>
+<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:2.0in;text-indent:-.25in;line-height:normal;mso-list:l1 level2 lfo6;
+tab-stops:list 1.0in'><span style='mso-bookmark:"\#concl"'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=GramE><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'>usually</span></span></span><span
+style='mso-bookmark:"\#concl"'><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+mso-fareast-font-family:"Times New Roman"'> <span class=SpellE>mergesort</span>
+is not used for main memory sorting, only for external memory sorting. <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#concl"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>So far, our best sorting algorithm has <span class=GramE><b>O(</b></span><span
+class=SpellE><b><i>n</i>log</b></span><b> <i>n</i>)</b> performance: can we do
+any better? <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:1.5in;line-height:normal'><span style='mso-bookmark:"\#concl"'><i><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'>In general,</span></i></span><span style='mso-bookmark:"\#concl"'><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman"'> the answer is <b>no.</b> <o:p></o:p></span></span></p>
+
+<span style='mso-bookmark:"\#concl"'></span>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

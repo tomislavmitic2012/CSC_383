@@ -1,0 +1,26 @@
+
+
+For data set of size =  10000 with data in Random order 
+
+	heapSort        takes         11 ms 
+
+	Quicksort4      takes         19 ms 
+
+	Quicksort3      takes          6 ms 
+
+	Quicksort2      takes          6 ms 
+
+	Quicksort       takes          5 ms 
+
+	mergeSort       takes          6 ms 
+
+	mergeSort2      takes          5 ms 
+
+	Arrays.sort     takes         13 ms 
+
+	insertionSort   takes        397 ms 
+
+	selectionSort   takes        609 ms 
+
+	bubbleSort      takes       1024 ms 
+

@@ -1,0 +1,189 @@
+<html><head><title>CSC383 Lecture 8</title></head>
+<body>
+<center>CSC383<br>Lecture Eight Outline <br>10-27-2011</center><P>
+<UL>
+<ul>
+<li> Lecture outline <p>
+<ul>
+<li>Binary Tree <a href="http://condor.depaul.edu/ichu/csc416/notes/notes5/BinaryTree.htm">note</a><P>
+<li>BST <p>
+<Ul>
+<li> <A href="AVL.htm">AVL-tree ( Adelson-Velsky and  Landis) </a><p>
+<LI><A href="CSC383 Red-Black.mht">Red-Black Tree</A>&nbsp;&nbsp;<a href="RedBlack.ppt">ppt</a>  
+    &nbsp;&nbsp; <a href="RedBlack.pdf">pdf</a>  <p>
+<LI><A href="Splay Tree.htm">Splay Tree</A> <p>
+
+<li><A href="http://webdiis.unizar.es/asignaturas/EDA/AVLTree/avltree.html">applet</a>
+
+<p>
+<li>B-tree <A href="B-Trees.htm"> notes</a><P>
+</ul><p>
+<li> Hash Table, Set , Map , Dictionary <p>
+<ul>
+<li>Maps, Hashtables & Dictionaries <a href="MHD.ppt"> ppt</a> or <A href="MHD.pdf"> pdf</a>
+<p>
+
+
+<li>Hash Table <a href="Hashing.htm"> note</a>  
+
+<li>Set <a href="Set.ppt"> ppt</a> or <a href="Set.pdf"> pdf</a>
+
+<li>Map <a href="Maps.htm"> note</a>  
+
+<li>Dictionary<a href="Dictionaries.htm"> note</a>  <A href="Dictionaries.ppt"> ppt </a> or <a href="Dictionaries.pdf"> pdf</a>
+</ul><p>
+<li>Java Collection <a href="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html"> interface api</a><p>
+<ul>
+<li>Hash Table <A href="http://download.oracle.com/javase/6/docs/api/java/util/Hashtable.html"> HashTable class</a><p>
+<li>Map <a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html">  Interface api</a>
+<ul>
+
+
+<li><a href="http://download.oracle.com/javase/6/docs/api/java/util/HashMap.html"> HashMap api</a>
+<li><a href="http://download.oracle.com/javase/6/docs/api/java/util/TreeMap.html">TreeMap api</a>
+
+
+</ul><p>
+<li>Set <a href="http://download.oracle.com/javase/6/docs/api/java/util/Set.html"> interface api</a><P>
+<ul>
+
+<li><a href="http://download.oracle.com/javase/6/docs/api/java/util/BitSet.html">BitSet api</a>
+
+<li><a href="http://download.oracle.com/javase/6/docs/api/java/util/HashSet.html">HashSet api</a>
+<li><a href="http://download.oracle.com/javase/6/docs/api/java/util/TreeSet.html">TreeSet api</a>
+
+</ul><p>
+
+</ul><P>
+
+<hr>
+<p>
+
+
+
+ <li>Master Theorem : <a href="Master.ppt"> ppt notes </a> or <a href="Master.pdf"> pdf</a><p>
+<li><A href="code2"> codes</a><p>
+<li><a href="Analysis.pdf"> Slides from Text</a>
+</ul>
+<p>
+
+</ul>
+<p>
+<hr>
+<P>
+
+<li>Assignments <p>
+<ul>
+
+<li><A href="hw2.html">Written Homework assignment #1</a> <a href="MISC">partial solutions</a><p>
+<li><A href="hw2/pg2.html">Programming assignment #2</a><p>
+<li><A href="hw3/hw3.html">Programming assignment #3</a>  <font color=RED> due date : Oct 29, 2011</font><p>
+<li><A href="hw4/hw4.html">Programming assignment #4</a> Due Nov 13, 2011  , 11:59 pm<p>
+<pre>
+
+// Non-recursive Quicksort
+
+ qsort(int []  array, int left , int right) {
+ 
+
+  int i ;
+
+     stack.push(left, right) ;
+
+  while (!stack.empty()) {   // While there are unprocessed subarrays
+    // Pop Stack
+     (l,r ) <== stack.pop() ;
+
+  
+     i  = partition(array,l,r) ;
+
+    // Put new subarrays onto Stack  
+    if ((l-i) > THRESHOLD) {   // Left partition
+      stack.push( l , i-1);
+    } else insertion(array, l, i-1) ;
+
+    if ((r-l) > THRESHOLD) {   // Right partition
+      stack.push( i+1 , r);
+      
+    }else insertion(array, i+1, r) ;
+  }
+   
+}
+
+
+</pre>
+<li>Written Homework assignment #2<a href="hw2x.htm"> html</a> <a href="hw2_sol.pdf">sol</a><p>
+<ol>
+<li>R-4.13 page 194
+<li>R-16 - R-20 page 194-5
+<li>R-4.22 page 194
+<li>C-4.9 page 198
+</ol>
+</ul>
+<p>
+<hr>
+<li>Previous lectures <p><ul>
+
+<li>More About Analysis of Algorithm <p>
+<ul>
+<li><a href="algo-analysis.ppt">notes</a>  <a href="algo-analysis.pdf"> pdf</a><p>
+<li>Recurrence relations :<ul><p>
+
+<li><a href="recurrence.pdf"> notes</a>
+
+</ul><p>
+ <li>Master Theorem : <a href="Master.ppt"> ppt notes </a> or <a href="Master.pdf"> pdf</a><p>
+<li><A href="code2"> codes</a><p>
+<li><a href="Analysis.pdf"> Slides from Text</a>
+</ul>
+
+
+<p>
+<li>Recursion <p>
+<ul>
+<li><A href="recursion.html">recursive methods</a>
+<p></ul>
+<li>Sorting <p>
+<ul>
+<li><a href="sorting.pdf">sorting </a> bubblesort , selection sort
+<p>
+<li><a href="qsort.htm">more sorting </a>  insertion sort, quicksort  and mergesort<p>
+</ul>
+<li>Timing <a href="Time.html">measuring System Time in Java</a>
+<p>
+
+
+</ul><p>
+<hr><P>
+<li>Useful Links <ul><P>
+<li><a href="csc383/syllabus.htm">course syllabus</a><P>
+<li><a href="https://col.cdm.depaul.edu/Default.aspx">COL</a> use your campusconnect password to logon<p>
+<li><A href="http://facweb.cs.depaul.edu/tutors/tutor_search.asp">Tutor Search</a><p>
+<li><A href="http://oaa.depaul.edu/_content/what/documents/1121calendar.pdf">University academic  Calendar</a><p>
+<li>From Sun <p><Ul>
+
+<li>Downlaod Java SE Development Kit (JDK) 6 Update 27 or Java 7 from
+ <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html"> here</a>
+<li><A href="http://download.oracle.com/javase/6/docs/api/index.html"> Java 6.0 API</a>
+<li><A href="http://download.oracle.com/javase/7/docs/api/">java 7 API</a>
+<p></ul>
+<li>Our Text <p><ul>
+<li><A href="http://bcs.wiley.com/he-bcs/Books?action=index&itemId=0470383267&bcsId=5449">student companion site</a><p>
+<li>older edition <p>
+<ul>
+<li><a href="csc383/supplement2.pdf">supplement</a>
+<li><a href="http://ww0.java4.datastructures.net/">Text Website</a>
+
+<li><a href="http://ww0.java4.datastructures.net/source/">code Fragment from Text</a>
+</ul>
+</ul><P>
+<li>Other useful resource links<p>
+<ul>
+<li><A href="http://geosoft.no/development/javastyle.html">Java Programming Style Guidelines</a>
+
+</ul><P>
+</ul>
+</ul>
+</ul>
+</body>
+</html>
