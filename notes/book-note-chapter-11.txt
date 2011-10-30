@@ -1,0 +1,396 @@
+Merge Sort:
+  - based on an algorithmic design pattern called divide and conquer
+  - pattern consists of the following three steps:
+      1.  Divide: If the input size is smaller than a certain threshold (one or two elements), solve
+	  the problem directly using a straightforward method and return the solution so obtained. Other
+	  wise, divide the input data into two or more disjoint subsets.
+      2.  Recur: Recursively solve the subproblems associated with the subsets
+      3.  Conquer: Take the solutions to the subproblems and "merge" them into a solution to the original
+	  problem
+
+In a sorting problem you are given a sequence of n objects, stored in a liked list or array, together
+with some comparator defining a total order on these objects, and you are asked to produce an ordered
+representation of these objects.
+  - To sort a sequence S with n elements using the divide-and-conquer steps, the merge-sort algorithm
+    procedes as follows:
+    1.	Divide: If S has zero or one element, return S immediately, it is already sorted. Otherwise
+	(S has at least two elements), remove all the elements from S and put them into two sequences,
+	S_1 and S_2, each containing about half of the elements of S, S_1 contains the first 
+	ceil(n/2) elements of S, and S_2 contains the remaining floor(n/2) elements
+    2.	Recursively sort sequences S_1 and S_2
+    3.	Conquer: Put back the elements into S by merging the sorted sequences S_1 and S_2 into a sorted
+	sequence
+
+You can visualize an execution of the merge-sort algorithm by means of a binary tree T, called the
+merge-sort tree.
+  - Each node of T represents a recursive invocation of the merge-sort algorithm
+  - We associate with each node v of T the sequence S that is processed by the invocaiton associated
+    with v
+  - The children of node v are associated with the recursive calls that process the subsequences S_1 and
+    S_2 of S.
+  - The external nodes of T are associated with the inidivdual elements of S, correspond to instances
+    of the algorithm that make no recursive calls
+  - This algorithm visualization in terms of the merge-sort tree helps us analyze the running time
+    of the merge sort algorithm
+  - Since the size of the input sequence roughly halves at each recursive call of merge-sort, the height
+    of the merge sort tree is about log_2 n
+
+Proposition 1: The merge-sort tree associated with an execution of merge-sort on a sequence of size n has
+height ceil(log_2 n).
+  - We will use this proposition to analyze the running time of the merge sort algorithm
+
+The divide and recur steps of the merge sort algorithm are simple, dividing a sequence of size n involves
+separating it at the element with index ceil(n/2), and the recursive calls simply involve passing these
+smaller sequences as parameters
+  - The difficult step is the conquer step, which merges two sorted sequences into a single sorted
+    sequence
+
+Merging Two sorted Arrays:
+
+Algorithm: merge(S_1,S_2,S):
+  Input: Sorted sequences S_1 and S_2 and empty sequence S, all of which are implemented as arrays
+  Output: Sorted sequences S containing the elements S_1 and S_2
+
+  i <- j <- 0
+  while i < S_1.size() and j < S_2.size() do
+    if S_1.get(i) <= S_2.get(j) then
+      S.addLast(S_1.get(i))   { copy ith element of S_1 to end of S }
+      i <- i + 1
+    else
+      S.addLast(S_2.get(j))   { copy jth element of S_2 to end of S }
+      j <- j + 1
+  while i < S_1.size() do     { copy the remaining elements of S_1 to S }
+    S.addLast(S_1.get(i))
+    i <- i + 1
+  while j M S_2.size() do     { copy the remaining elements of S_2 to S }
+    S.addLast(S_2,get(j))
+    j <- j + 1
+
+Merging Two sorted Lists:
+  - The main idea is to iteratively remove the smallest element from the front of one of the two lists
+    and add it to the end of the output sequence S, until on of the two input lists is empty, at which
+    point we copy the remainder of the other list to S.
+
+Algorithm merge(S_1, S_2, S):
+  Input: Sorted dequences S_1 and S_2 and an empty sequence S, implemented as linked lists
+  Output: Sorted sequence S containg the elements from S_1 and S_2
+  while S_1 is not empty and S_2 is not empty do
+    if S_1.first().element() <= S_2.first().element() then
+      { move the first element of S_1 at the end of S }
+      S.addLast(S_1.remove(S_1.first()))
+    else
+      { move the first element of S_2 at the end of S }
+      S.addLast(S_2.remove(S_2.first()))
+    { move the remaining elements of S_1 to S }
+    while S_1 is not empty do
+      S.addLast(S_1.remove(S_1.first()))
+    { move the remianing elements of S_2 to S }
+    while S_2 is not empty do
+      S.addLast(S_2.remove(S_2.first())
+
+Running time for Merging
+
+  - Let n_1 and n_2 be the number of elements of S_1 and S_2, respectively
+  - Merge algorithm has three while loops
+  - Independent of whether it is the array based version or the list-based version, tue operations 
+    performed inside each loop take O(1) time each.
+  - The key observation is that during each iteration of one of the loops, one element is copied or
+    moved from either S_1 or S_2 into S (and the element is considered no further)
+  - Since no insertions are performed into S_1 or S_2, this observation implies that the overall number
+    of iterations of the three loops is n_1 + n_2
+  - The running time of the merge algorithm is O(n_1 + n_2)
+
+Running time of Merge-Sort
+  - Assuming the merge sort is given a sequence of n elements, and refering to the merge sort tree T, we call the time 
+    spent at a node v of T the running time of the recursive call associated with v, excluding the time taken waiting for
+    the recursive calls associated with the children of v to terminate.
+  - In other words the time spent at node v includes the running times of the diovide and conquer steps, but excludes
+    the running time of the recur step
+  - We have already observed that the details of the divide step are straighforward, this step runs in time proportional to
+    the size of the sequence for v
+  - In addition the conquer step which consists of mering two sorted subsequences, also takes linear time, independent of
+    whether dealing with arrays or linked lists
+  - letting i denote the depth of node v, the time spent at node v is O(n/2^i), since the size of the sequence handled by
+    the recursive call associated with v is equal to n/2^i
+  - Looking more globally at the tree T, the running time of merge sort is equal to the sum of the times spent at the
+    nodes of T
+  - T has exactly 2^i nodes at depth i, this simple observation has an important consequence, because it implies that the
+    overall time spent at all the nodes of T at depth i is O(2^i * n/2^i), which is O(n)
+  - By proposition 1 the height of T is ceil(log_2 n)
+  - Since the time spent at each of the cel(log_2 n) + 1 levels of T is O(n) we have the following proposition:
+
+Proposition 2: Algorithm merge sort sorts a sequence S of size n in O(n log_2 n) time, assuming two elements of S 
+can be compared in O(1) time
+
+Merge Sort and Recurrence Equations:
+  - Let the function T9N) deonte the worst case running time of merge sort on an input sequence of size n
+  - Since merge sort is recursive, we can characterize function t(n) by means of an equation where the function
+    t(n) is recursively expressed in terms of itself
+  - In order to simplify our characterization of t(n), let us restrict our attention to the case when n is a power of 2
+  - t(n) for merge sort is
+
+      t(n) =  {b	      if n <= 1
+	      {2t(n/2) + cn   otherwise
+  - An expression such as the one above is called a recurrence equation, since the equation appears on both the left
+    and right hand sides of the equal sign
+  - Although such a characterization of t(n) is correct and accurate, what we really desire is a big-Oh type of
+    characterization of t(n) that does not involve the function t(n) itself, we want a closed-form caracterization of t(n)
+  - We can obtain a closed-form solution by applying the definition of a recurrence equation, asuming n is relatively large,
+    for example after one more application of the equation above, we can write a new recurrence for t(n) as:
+
+      t(n) = 2(2t(n/2^2) + (cn/2)) + cn = 2^2t(n/2^2) + 2(cn/2) + cn = 2^2t(n/2^2) + 2cn
+  - If the equation is applied again, we get t(n) = 2^3t(n/2^3) + 3cn, you should see a pattern emerging, so that after 
+    applying this equation i time we get:
+      t(n) = 2^i(n/2^i) + icn
+  - the issue that remain is to determine when to stop this process
+  - to see when to stop, we switch to the closed for t(n) = b when n <= 1, which will occur when 2^i = n, in other words
+    this will occur when i = log_2 n
+  - making this substitution yields:
+      t(n) = 2^(log_2 n)t(n/2^(log_2 n)) + (log_2 n)cn = nt(1) + cnlog_2 n = nb + cnlog_2 n
+
+Quick Sort
+
+Quick sort is also based on divide and conquer paradigm, but uses the technique in a somewhat opposite manner, as all the
+hard work is done before the recursive calls
+
+High-Level description of Quick Sort
+
+The quick sort algorithm sorts a sequence S using a simple recursive approach, the main idea is to apply the divide and
+conquer technique, whereby we divide S into subsequences, recu to sort each subsequence, and then combine the sorted
+subsequences by a simple concatenation
+  - The quick sort algorithm consists of the following three steps:
+      1.  Divide: If S has at least two elements (nothing needs to be done if S has zeor or one element), select a specific
+	  element x from S, which is called the pivot. As is common practice, choose the pivot x to be the last element in S.
+	  Remove all the elments from S and put them into three sequences:
+	    - L, storing elements in S less than x
+	    - E, storing elements in S equal to x
+	    - G, storing elements in S grater than x
+	  If the elements of S are all distinct, then E holds just one element - the pivot itself
+      2.  Recursively sort sequence L and G
+      3.  Conquer put back the elements into S in order by first inserting them elements of L, then those of E, and
+	  and finally those of G
+
+Like merge sort, the execution fo quick sort can be visualized by means of a binary recursion tree, calledthe quick-sort
+tree
+  - Unlike merge sort, the height of the quick sort tree associated with an execution of quick sort is linear in the
+    worst case
+  - This happens if the sequence consists of n distinct elements and is already sorted
+  - In thise case the standard choice of the pivot as the largest element yields a subsequence L of size n - 1, subsequence
+    E has size 1 and subsequence G has size 0
+  - At each invocation of quick sort on subsequence L, the size decreases by 1, hence the height of the quick-sort tree is
+    n - 1
+
+Performing Quick Sort on Arrays and Lists:
+
+The algorithm below performs quick sort on arrays and linked lists, with the added detail of scanning the input sequence 
+S backwards to divide it into lists L, E, and G of elements that are respectively less than, equal to, and greater than the
+pivot.
+  - the scan is performed backwards since removing the last element in a sequence is a constant time operation independent
+    of whether the sequence is implemented as an array or a linked list
+  - The latter set of copies are performed in the forward direction, since inserting elements at the end of a sequence is a 
+    constant time operation independent of whether the sequence is implemented as an array or a linked list
+
+Algorithm QuickSort(S):
+  Input: A sequence S implemented as an array or linked list
+  Output: The sequence S in sorted order
+  if S.size() <= 1 then
+    return		  { S is already sorted in this case }
+  p <- S.last().element() { the pivot }
+  Let L, E, and G be empty list-based sequences
+  while !S.isEMpty() do	  { scan S backwards, dividing it into L, E, and G }
+    if S.last().element() < p then
+      L.addLast(S.remove(S.getLast()))
+    else if S.last().element() = p then
+      E.addlast(S.remove(S.getLast()))
+    else		  { the last element in S is greater than p }
+      G,addLast(S.remove(S.getLast()))
+  QuickSort(L)		  { Recor on the elements less than p }
+  QuickSort(G)		  { Recur on the elements greater than p }
+  while !L.isEmpty() do	  { copy back to S the sorted elements less than p }
+    S.addLast(L.remove(L.getFirst()))
+  while !E.isEmpty() do	  { copy back to S the elements equal to p }
+    S.addLast(E.remove(E.getFirst()))
+  while !G.isEmpty() do	  { copy back to S the elements equal greater than p }
+    S.addLast(G.remove(G.getFirst()))
+  return		  { S is now in sorted order }
+
+Running time for Quick Sort
+
+The running time for quick sort can be analyzed with the same technique used for merge sort, namely you can identify the time
+spent at each node of the quick sort tree and sum up the running times for all the nodes
+  - examining the algorithm above you can see that the divide step and conquer step of the quick sort can be implemented in
+    linear time
+  - the time spent at a node v of T is porportional to the input size s(v) of v, which is defined as the size of the sequence
+    handled by the invocation of quick sort associated with node v
+  - since subsequence E has at least one element (the pivot), the sum of the input sizes of the children of v as at most 
+    s(v) - 1
+  - Give na quick sort tree T, let s_i denote the sum of the input sizes of then odes at depth i in T
+  - s_0 = n since the root r of T is associated with the entire sequence
+  - s_1 <= n - 1, since the pivot is not propagated to the children of r
+  - s_2 = n - 3 if both children of r have nonzero input size
+  - otherwise one child of the root has zero size, the other has size n - 1, s_ 2 = n - 1
+  - therefore s_2 <= n - 2
+  - continuuing this line of reasoning, you obtain s_i <= n - i
+  - the height of T is n - 1 in the worst case, the worst case running time of quick sort is O(n^2)
+  - the best case for quick sort on a sequence of distinct elements occurs when subsequences L and G happen to have roughly
+    the same size
+      s_0 = 1
+      s_1 = n - 1
+      s_2 = n - (1 + 2) = n - 3
+      ...
+      s_i = n - (1 + 2 + 2^2 + ... + 2^(i-1)) = n - (2^i - 1)
+  - in the best case T has height O(log_2 n) and quick sort runs in O(n log_2 n) time
+
+Given its name we would expect quick sort to run quickly, however the quadratic bound above indicates 
+that quick sort is slow in the worst case
+  - paradoxically this worst case behavior occurs for problem instances when sorting should be easy - if the sequence is
+    already sorted
+
+The informal intuition behind the expected behavior of quick sort is that at each invocation the pivot will probably 
+divide the input sequence about equally
+  - we expect the average running time of quick sort to be similar to the best case running time O(n log_2 n)
+
+Randomized Quick Sort
+
+In general we desire some way of getting close to the best case running time for quick sort, the way to get close to the
+best case running time is for the pivot to divide the input sequence S almost equally
+  - if this outcome were to occur then it would result in a running time that is asymptotically the same as the best case
+    running time
+  - having pivots close to the middle of the set of elements leads to an O(n log_2 n) running time for quick sort
+
+Since the goal of the parition step of quick sort method is to divide the sequence S almost equally, we can introduce
+randomization into the algorithm and pick as the pivot a random element of the input sequence
+  - we pick an element of S at random as the pivot, keeping the rest of the algorithm unchanged
+  - this variation of quick sort is called randomized quick sort
+  - the expected running time of randomized quick sort on a sequence with n elements is O(n log_2 n)
+  - this expectation is taken over all possible random choices the algorithm makes, and is independent of any assumptions
+    about the distribution of the possible input sequences the algorithm is likely to be given
+
+Proposition 3: The expected running time of randomized quick sort on a sequence S of size n is O(n log_2 n)
+
+Justification: We assume two elements of S can be compared in O(1) time. Consider a single recursize call of 
+randomized quick sort, and let n denote the size of the input for this call. Say that this call is "good" if the pivot chosen
+is such that subsequences L and G have size at least n/4 and at most 3n/4 each, otherwise a call is "bad"
+
+Consider the implications of choosing a pivot uniformly at random
+  - there are n/2 possible good choices for the pivot for any given call of size n of the randomized quick sort algorithm
+  - the probability that any call is good is 1/2
+  - note further that a good call will at least parition a list of size n into two lists of size 3n/4 and n/4, and a bad call
+    can be as bad as producing a single call of size n - 1
+
+Consider a recursion trace for randomized quick sort, the trace defines a binary tree T, such that each node in T corresponds
+to a different recursive call on a subproblem of sorting a portion la of the original list
+  - a node v in T is in size group i if the size of v's subproblem is greater than (3/4)^(i+1)n and at most (3/4)^in
+  - by linearity of expectation the expected time for workign on all the subproblems is the sum of the expected times for
+    for each one
+  - some of the nodes correspond to good calls and some to bad calls
+  - since a good call occurs with probability of 1/2, the expected number of consecutive calls we have to make before getting
+    a good call is 2
+  - therefore the expected total size of all the subproblems in size group i is 2n
+  - since the nonrecursive work we perform for any subproblem is proportional to its size, this implies that the total 
+    expected time spent processing subproblems for nodes in size gorup i is O(n)
+  - the numebr of size groups is log_(4/3) n, since repeatedly multiplying by 3/4 is the same as dividing by 4/3
+  - therefore the number of size groups is O(log_2 n)
+  - therefore the total expected running time for randomized quick sort is O(n log_2 n)
+
+Implementation
+
+A sorting algorithm is in-place if it uses only a small amount of memory in addition to that needed for the objects being sorted themselves
+
+Algorithm inPlaceQuickSort(S,a,b):
+  Input: An array S of distinct elements; integers a and b
+  Output: Array S with elements origianlly from indices from a to b, inclusive, sorted in nondecreasing order from indices
+  a to b
+  if a >= b then return	      { at most one element in subrange }
+  p <- S[b]		      { the pivot }
+  l <- a		      { will scan rightward }
+  r <- b - 1		      { will scan leftward }
+  while l <= r do
+    { find an element larger than the pivot }
+    while l <= r and S[l] <= p do
+      l <- l + 1
+    { find an element smaller han the pivot }
+    while r >= l and S[r] >= p do
+      r <- r - 1
+    if l < r then
+      swap the elements at S[l] and S[r]
+    { put the pivot into its final place }
+    swap the elements at S[l] and S[b]
+    { recursize calls }
+    inPlaceQuickSort(S,a,l - 1)
+    inPlaceQuickSort(S,l + 1, b)
+    { we are done at this point, since the sorted subarrays are already consecutive }
+
+In-place quick sort modifies the input sequence using element swapping and does not explicitly create subsequences
+  - a subsequence of the input sequence is implicitly represented by a range of positions specified by a left most index l
+    and a right most index r
+  - the divide step is performed by scanning the array simultaneously from l forward and from r backward, swapping pairs of
+    elements that are in reverse order
+  - when these two indices meet, subarrays L and G are on opposite sides of the meeting point
+  - the algorithm completes by recurring on these two subarrays
+
+In-place quick sort reduces the running time caused by the creation of new sequences and the movement of elements between
+them by a constant factor.
+
+Several optimizations that can be made include the following:
+  - limit the recursive steps to subarrays of A that are reasonably large, for example having at least eight elements
+  - when the subarray to sort is below this threshold, the algorithm simply uses the insertion sort algorithm to sort the 
+    subarray
+  - this optimization is based on the fact that the insertion sort algorithm has a low overhead and is relatively fast for
+    sorting small arrays
+  - another optimization is in how pivots are chosen, it the subarray is moderately sized, then the pivot is chosen as the 
+    median of three values, taken repectively from the front, middle, and tail of the array
+  - the median of three heuristic performs like a random pivot on subarrays of moderate size
+  - when the subarray is relatively large, the algorithm applies the median of three heuristic separately to the front, middle,
+    and tail of the subarray, to select three candidate pivots, and then it selects the median of these three
+
+Studying Sorting through an Algorithmic Lens
+
+Proposition 4: The running time of any comaprison based algorithm for sorting an n-element sequence is Ω(n log_2 n) in the
+worst case
+
+Justification: The running time of a comparison based sorting algorithm must be greater than or equal to the height of the
+decision tree T associated with this algorithm
+  - By this argument, each external node in T must be associated with one permutation of S
+  - each permutation of S must result in a different external node of T
+  - the number of permutations of n objects is n! = n(n-1)(n-2)...2*1
+  - therefore T must have al least n! external nodes
+  - the height of T is at least log_2(n!)
+  - this immediately justifies the proposition, because there are at least n/2 terms that are greater than or equal to n/2
+    in the product n!
+
+      log_2(n!) >= log_2(n/2)^(n/2)=(n/2)log_2(n/2)
+
+The Set ADT
+
+A set is a collection of distinct objects, there are no duplicate elements in a set, and there is no explicit notion of keys
+or even an order
+  - even so, if the elements in a set are comparable, then we can maintain sets to be ordered
+  - the fundamental methods of the set ADT for a set S are the following:
+      add(e): adds trhe element e to S
+      remove(e): removes the element e from S
+      contains(e): returns whether e is in S
+      iterator(): returns an iterator of the elements in S
+  - if we wish to extend the set ADT to an ordered set ADT, then we could also include the following methods
+      pollFirst(): returns and removes the smallest element in S
+      pollLast(): returns and removes the largest element in S
+      ceiling(e): returns the element that is the smallest element greater than or equal to e
+      floor(e): returns the element that is the largest element less than or equal to e
+      lower(e): returns the element that is the greatest element strictly less than e
+      higher(e): returns the element that is the smallest element strictly greater than e
+
+Fundamental methods of the Mergable Set ADT
+
+The fundmental methods of the mergable set ADT, acting on a set A are as follows:
+  union(B): replace A with the union of A and B, execute A <- A U B
+  interset(B): replace A with the intersection of A and B, that is execute A <- A intersect B
+  subtract(B): replace A with the difference of A and B, that is execute A <- A - B
+
+Partitions with Union Find operations:
+
+A partition is a colleciton of disjoint sets, we deifne the methods of the partition ADT using position objects 
+each of which an element of x
+  - the partition ADT supports the following methods:
+      makeSet(x): create a singleton set containing the element x and return the position storing x in this set
+      union(A,B): return the set A union B, destrying the old A and B
+      find(p): return the set containing the element in position p
