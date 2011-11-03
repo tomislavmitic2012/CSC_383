@@ -1,0 +1,1201 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="Collection%20Interfaces_files/filelist.xml">
+<link rel=Edit-Time-Data href="Collection%20Interfaces_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Collection Interfaces</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>DePaul University</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>DePaul University</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>9</o:TotalTime>
+  <o:Created>2009-03-03T17:08:00Z</o:Created>
+  <o:LastSaved>2009-03-03T17:08:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2195</o:Words>
+  <o:Characters>12513</o:Characters>
+  <o:Company>DePaul University</o:Company>
+  <o:Lines>104</o:Lines>
+  <o:Paragraphs>29</o:Paragraphs>
+  <o:CharactersWithSpaces>14679</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:\5B8B\4F53;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:SimSun;}
+h2
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;}
+h3
+	{margin-top:11.25pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:9.0pt;
+	font-family:"Times New Roman";
+	color:black;}
+h4
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:4;
+	font-size:9.0pt;
+	font-family:"Times New Roman";
+	color:white;}
+h5
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:13.0pt;
+	font-family:"Times New Roman";
+	font-style:italic;}
+a:link, span.MsoHyperlink
+	{color:#00217B;
+	mso-text-animation:none;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:SimSun;}
+tt
+	{font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:SimSun;
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+p.doctext, li.doctext, div.doctext
+	{mso-style-name:doctext;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:SimSun;}
+span.doctexthighlight2
+	{mso-style-name:doctexthighlight2;}
+span.docemphasis
+	{mso-style-name:docemphasis;}
+span.docemphstrong
+	{mso-style-name:docemphstrong;}
+span.docemphitalicalt
+	{mso-style-name:docemphitalicalt;}
+p.docnotetitle, li.docnotetitle, div.docnotetitle
+	{mso-style-name:docnotetitle;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:SimSun;}
+p.doclist, li.doclist, div.doclist
+	{mso-style-name:doclist;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:SimSun;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:174348161;
+	mso-list-template-ids:1582197482;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:1688408370;
+	mso-list-template-ids:-799751144;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link="#00217B" vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h3 align=center style='text-align:center'><span style='font-size:14.0pt'>Collection
+Interfaces<o:p></o:p></span></h3>
+
+<p class=doctext><span style='font-size:10.0pt;color:black'>The initial release
+of <span class=doctexthighlight2>Java</span><a name="classes_for"></a> supplied
+only a small set of classes for the most useful data structures: </span><tt><span
+style='font-size:10.0pt;color:black'>Vector</span></tt><span style='font-size:
+10.0pt;color:black'>, </span><tt><span style='font-size:10.0pt;color:black'>Stack</span></tt><span
+style='font-size:10.0pt;color:black'>, </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>Hashtable</span></tt></span><span
+style='font-size:10.0pt;color:black'>, </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>BitSet</span></tt></span><span
+style='font-size:10.0pt;color:black'>, and the </span><tt><span
+style='font-size:10.0pt;color:black'>Enumeration</span></tt><a
+name="mechanism_for"></a><span style='font-size:10.0pt;color:black'> interface
+that provides an abstract mechanism for visiting elements in an arbitrary
+container. That was certainly a wise choice—it takes time and skill to come up
+with a comprehensive collection class library.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:10.0pt;color:black'>With the advent of <span
+class=doctexthighlight2>Java</span><a name="the_time"></a> SE 1.2, the
+designers felt that the time had come to roll out a full-fledged set of data
+structures. They faced a number of conflicting design decisions. They wanted
+the library to be small and easy to learn. They did not want the complexity of
+the &quot;Standard Template Library&quot; (or STL) of C++, but they wanted the
+benefit of &quot;generic algorithms&quot; that STL pioneered. They wanted the
+legacy classes to fit into the new framework. As all designers of collection
+libraries do, they had to make some hard choices, and they came up with a
+number of idiosyncratic design decisions along the way. In this section, we will
+explore the basic design of the <span class=doctexthighlight2>Java</span><a
+name="explain_the"></a> collections framework, show you how to put it to work,
+and explain the reasoning behind some of the more controversial features.<o:p></o:p></span></p>
+
+<h4><a name=ch13lev2sec1></a>Separating Collection Interfaces and
+Implementation</h4>
+
+<p class=MsoNormal><span style='font-size:10.0pt;color:black'>As is common for
+modern data structure libraries, the <span class=doctexthighlight2>Java</span><a
+name=separates></a> collection library separates <span class=docemphasis>interfaces</span><a
+name=and></a> and <span class=docemphasis>implementations</span><a
+name="look_at"></a>.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:11.0pt;color:black'>Let us look at that
+separation with a familiar data structure, the <span class=docemphasis>queue</span>.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:11.0pt;color:black'>A <span
+class=docemphasis>queue interface</span><a name="that_you"></a> specifies that
+you can add elements at the tail end of the queue, remove them at the head, and
+find out how many elements are in the queue. You use a queue when you need to
+collect objects and retrieve them in a &quot;first in, first out&quot; fashion.<o:p></o:p></span></p>
+
+<p class=doctext><a name="of_a"></a><span style='font-size:11.0pt;color:black'>A
+minimal form of a queue interface might look like this:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>interface</span></span><span
+style='color:black'> Queue&lt;E&gt; // a simplified form of the interface in the standard library<o:p></o:p></span></pre><pre><span
+style='color:black'>{<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE>void</span> add(E element);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span>E <span
+class=GramE>remove(</span>);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=SpellE><span class=GramE>int</span></span> size();<o:p></o:p></span></pre><pre><span
+style='color:black'>}<o:p></o:p></span></pre><pre><span style='color:black'><o:p>&nbsp;</o:p></span></pre>
+
+<p class=MsoNormal><span style='color:black'><span style='mso-tab-count:1'>            </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;color:black'>The interface
+tells you nothing about how the queue is implemented. Of the two common
+implementations of a queue, one uses a &quot;circular array&quot; and one uses
+a linked list.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="by_a"></a><span style='font-size:10.0pt;color:black'>Each
+implementation can be expressed by a class that implements the </span><tt><span
+style='font-size:10.0pt;color:black'>Queue</span></tt><span style='font-size:
+10.0pt;color:black'> interface.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>e.g.</span></span><span
+style='font-size:10.0pt'> <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>class</span></span><span
+style='color:black'> <span class=SpellE>CircularArrayQueue</span>&lt;E&gt; <span
+class=docemphstrong>implements Queue&lt;E&gt;</span> <o:p></o:p></span></pre><pre><span
+style='color:black'>{<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=SpellE><span class=GramE>CircularArrayQueue</span></span><span
+class=GramE>(</span><span class=SpellE>int</span> capacity) { . . . }<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>public</span> void add(E element) { . . . }<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>public</span> E remove() { . . . }<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>public</span> <span
+class=SpellE>int</span> size() { . . . }<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>private</span> E[] elements;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>private</span> <span
+class=SpellE>int</span> head;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>private</span> <span
+class=SpellE>int</span> tail;<o:p></o:p></span></pre><pre><span
+style='color:black'>}<o:p></o:p></span></pre><pre><span style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span
+class=GramE><span style='color:black'>class</span></span><span
+style='color:black'> <span class=SpellE>LinkedListQueue</span>&lt;E&gt; <span
+class=docemphstrong>implements Queue&lt;E&gt;</span> <o:p></o:p></span></pre><pre><span
+style='color:black'>{<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=SpellE><span class=GramE>LinkedListQueue</span></span><span class=GramE>(</span>) { . . . }<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>public</span> void add(E element) { . . . }<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>  </span><span style='mso-spacerun:yes'> </span><span
+class=GramE>public</span> E remove() { . . . }<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>public</span> <span
+class=SpellE>int</span> size() { . . . }<o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE>private</span> Link head;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>private</span> Link tail;<o:p></o:p></span></pre><pre><span
+style='color:black'>}<o:p></o:p></span></pre><pre><span style='color:black'><o:p>&nbsp;</o:p></span></pre>
+
+<p class=doctext><span style='font-size:10.0pt'>Note: <span style='color:black'>The
+<span class=doctexthighlight2>Java</span> library doesn't actually have classes
+named </span></span><span class=SpellE><tt><span style='font-size:10.0pt;
+color:black'>CircularArrayQueue</span></tt></span><span style='font-size:10.0pt;
+color:black'> and </span><span class=SpellE><tt><span style='font-size:10.0pt;
+color:black'>LinkedListQueue</span></tt></span><a name="conceptual_distinction"></a><span
+style='font-size:10.0pt;color:black'>. We use these classes as examples to
+explain the conceptual distinction between collection interfaces and
+implementations. If you need a circular array queue, use the </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>ArrayDeque</span></tt></span><span
+style='font-size:10.0pt;color:black'> class that was introduced in <span
+class=doctexthighlight2>Java</span><a name=the></a> SE 6. For a linked list
+queue, simply use the </span><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>LinkedList</span></tt></span><span style='font-size:10.0pt;
+color:black'> class—it implements the </span><tt><span style='font-size:10.0pt;
+color:black'>Queue</span></tt><span style='font-size:10.0pt;color:black'>
+interface.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:10.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="use_a"></a><span style='font-size:8.5pt;color:black'>When
+you use a queue in your program, you don't need to know which implementation is
+actually used once the collection has been constructed. Therefore, it makes
+sense to use the concrete class <span class=docemphasis>only</span><a
+name="when_you"></a> when you construct the collection object. Use the <span
+class=docemphasis>interface type</span><a name="the_collection"></a> to hold
+the collection reference.<o:p></o:p></span></p>
+
+<pre><span class=docemphstrong><span style='color:black'>Queue</span></span><span
+style='color:black'>&lt;Customer&gt; <span class=SpellE>expressLane</span> = new <span
+class=SpellE><span class=docemphstrong>CircularArrayQueue</span></span>&lt;Customer<span
+class=GramE>&gt;(</span>100);<o:p></o:p></span></pre><pre><span class=SpellE><span
+class=GramE><span style='color:black'>expressLane.add</span></span></span><span
+class=GramE><span style='color:black'>(</span></span><span style='color:black'>new Customer(&quot;Harry&quot;));<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="this_approach"></a><span style='font-size:8.5pt;
+color:black'>With this approach if you change your mind, you can easily use a
+different implementation. You only need to change your program in one place—the
+constructor call. If you decide that a </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>LinkedListQueue</span></tt></span><a
+name="choice_after"></a><span style='font-size:8.5pt;color:black'> is a better
+choice after all, your code becomes<o:p></o:p></span></p>
+
+<pre><span class=docemphstrong><span style='color:black'>Queue&lt;Customer&gt;</span></span><span
+style='color:black'> <span class=SpellE>expressLane</span> = new <span
+class=SpellE><span class=docemphstrong>LinkedListQueue</span></span><span
+class=docemphstrong>&lt;Customer<span class=GramE>&gt;(</span>);</span><o:p></o:p></span></pre><pre><span
+class=SpellE><span class=GramE><span style='color:black'>expressLane.add</span></span></span><span
+class=GramE><span style='color:black'>(</span></span><span style='color:black'>new Customer(&quot;Harry&quot;));<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="over_another"></a><span style='font-size:8.5pt;
+color:black'>Why would you choose one implementation over another? The
+interface says nothing about the efficiency of the implementation. A circular
+array is somewhat more efficient than a linked list, so it is generally
+preferable. However, as usual, there is a price to pay.<o:p></o:p></span></p>
+
+<p class=doctext><a name=iddle2683></a><a name=iddle1994></a><a name=iddle1990></a><a
+name=iddle1642></a><a name=iddle1354></a><a name=iddle1351></a><a
+name=iddle1345></a><a name=iddle1236></a><span style='font-size:8.5pt;
+color:black'>The circular array is a <span class=docemphasis>bounded</span><a
+name="have_an"></a> collection—it has a finite capacity. If you don't have an
+upper limit on the number of objects that your program will collect, you may be
+better off with a linked list implementation after all.<o:p></o:p></span></p>
+
+<p class=doctext><a name="you_will"></a><span style='font-size:8.5pt;
+color:black'>When you study the API documentation, you will find another set of
+classes whose name begins with </span><tt><span style='font-size:10.0pt;
+color:black'>Abstract</span></tt><span style='font-size:8.5pt;color:black'>,
+such as </span><span class=SpellE><tt><span style='font-size:10.0pt;color:black'>AbstractQueue</span></tt></span><span
+style='font-size:8.5pt;color:black'>. These classes are intended for library <span
+class=SpellE>implementors</span>. In the (perhaps unlikely) event that you want
+to implement your own queue class, you will find it easier to extend </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>AbstractQueue</span></tt></span><span
+style='font-size:8.5pt;color:black'> than to implement all the methods of the </span><tt><span
+style='font-size:10.0pt;color:black'>Queue</span></tt><span style='font-size:
+8.5pt;color:black'> interface.<o:p></o:p></span></p>
+
+<h4>Collection and <span class=SpellE>Iterator</span> Interfaces in the <span
+class=doctexthighlight2>Java</span> Library</h4>
+
+<p class=doctext><a name="interface_for"></a><span style='font-size:8.5pt;
+color:black'>The fundamental interface for collection classes in the <span
+class=doctexthighlight2>Java</span><a name="library_is"></a> library is the </span><tt><span
+style='font-size:10.0pt;color:black'>Collection</span></tt><a name="has_two"></a><span
+style='font-size:8.5pt;color:black'> interface. The interface has two
+fundamental methods:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>public</span></span><span
+style='color:black'> interface Collection&lt;E&gt;<o:p></o:p></span></pre><pre><span
+style='color:black'>{<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=SpellE><span class=GramE>boolean</span></span> add(E element);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=SpellE>Iterator</span>&lt;E&gt; <span class=SpellE><span class=GramE>iterator</span></span><span
+class=GramE>(</span>);<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span>. . .<o:p></o:p></span></pre><pre><span
+style='color:black'>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="are_several"></a><span style='font-size:8.5pt;
+color:black'>There are several methods in addition to these two; we discuss
+them later.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>The </span><tt><span
+style='font-size:10.0pt;color:black'>add</span></tt><a name="element_to"></a><span
+style='font-size:8.5pt;color:black'> method adds an element to the collection.
+The </span><tt><span style='font-size:10.0pt;color:black'>add</span></tt><span
+style='font-size:8.5pt;color:black'> method returns </span><tt><span
+style='font-size:10.0pt;color:black'>true</span></tt><span style='font-size:
+8.5pt;color:black'> if adding the element actually changes the collection, and </span><tt><span
+style='font-size:10.0pt;color:black'>false</span></tt><a name="if_you"></a><span
+style='font-size:8.5pt;color:black'> if the collection is unchanged. For
+example, if you try to add an object to a set and the object is already
+present, then the </span><tt><span style='font-size:10.0pt;color:black'>add</span></tt><a
+name="sets_reject"></a><span style='font-size:8.5pt;color:black'> request has
+no effect because sets reject duplicates.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>The </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>iterator</span></tt></span><span
+style='font-size:8.5pt;color:black'> method returns an object that implements
+the </span><span class=SpellE><tt><span style='font-size:10.0pt;color:black'>Iterator</span></tt></span><a
+name="elements_in"></a><span style='font-size:8.5pt;color:black'> interface.
+You can use the <span class=SpellE>iterator</span> object to visit the elements
+in the collection one by one.<o:p></o:p></span></p>
+
+<h5><a name=ch13lev3sec1></a><span class=SpellE><span style='font-size:16.0pt'>Iterators</span></span><span
+style='font-size:16.0pt;color:#1F3247'><o:p></o:p></span></h5>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>The </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>Iterator</span></tt></span><span
+style='font-size:8.5pt;color:black'> interface has three methods:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>public</span></span><span
+style='color:black'> interface <span class=SpellE>Iterator</span>&lt;E&gt;<o:p></o:p></span></pre><pre><span
+style='color:black'>{<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span>E <span
+class=GramE>next(</span>);<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=SpellE><span class=GramE>boolean</span></span> <span class=SpellE>hasNext</span>();<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>void</span> remove();<o:p></o:p></span></pre><pre><span
+style='color:black'>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>By repeatedly
+calling the </span><tt><span style='font-size:10.0pt;color:black'>next</span></tt><a
+name="collection_one"></a><span style='font-size:8.5pt;color:black'> method,
+you can visit the elements from the collection one by one. However, if you
+reach the end of the collection, the </span><tt><span style='font-size:10.0pt;
+color:black'>next</span></tt><a name=a></a><span style='font-size:8.5pt;
+color:black'> method throws a </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>NoSuchElementException</span></tt></span><a
+name="you_need"></a><span style='font-size:8.5pt;color:black'>. Therefore, you
+need to call the </span><span class=SpellE><tt><span style='font-size:10.0pt;
+color:black'>hasNext</span></tt></span><a name=calling></a><span
+style='font-size:8.5pt;color:black'> method before calling </span><tt><span
+style='font-size:10.0pt;color:black'>next</span></tt><a name="method_returns"></a><span
+style='font-size:8.5pt;color:black'>. That method returns </span><tt><span
+style='font-size:10.0pt;color:black'>true</span></tt><a name="object_still"></a><span
+style='font-size:8.5pt;color:black'> if the <span class=SpellE>iterator</span>
+object still has more elements to visit. If you want to inspect all elements in
+a collection, you request an <span class=SpellE>iterator</span> and then keep
+calling the </span><tt><span style='font-size:10.0pt;color:black'>next</span></tt><span
+style='font-size:8.5pt;color:black'> method while </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>hasNext</span></tt></span><span
+style='font-size:8.5pt;color:black'> returns true. For example:<o:p></o:p></span></p>
+
+<pre><span style='color:black'>Collection&lt;String&gt; c = . . .;<o:p></o:p></span></pre><pre><span
+class=SpellE><span style='color:black'>Iterator</span></span><span
+style='color:black'>&lt;String&gt; <span class=SpellE>iter</span> = <span
+class=SpellE><span class=GramE>c.iterator</span></span><span class=GramE>(</span>);<o:p></o:p></span></pre><pre><span
+class=GramE><span style='color:black'>while</span></span><span
+style='color:black'> (<span class=SpellE>iter.hasNext</span>())<o:p></o:p></span></pre><pre><span
+style='color:black'>{<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span>String element = <span
+class=SpellE><span class=GramE>iter.next</span></span><span class=GramE>(</span>);<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE><span
+class=docemphitalicalt>do</span></span><span class=docemphitalicalt> something with</span> element<o:p></o:p></span></pre><pre><span
+style='color:black'>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name=iddle2992></a><a name=iddle1992></a><a name=iddle1349></a><span
+style='font-size:8.5pt;color:black'>As of <span class=doctexthighlight2>Java</span><a
+name="for_this"></a> SE 5.0, there is an elegant shortcut for this loop. You
+write the same loop more concisely with the &quot;for each&quot; loop:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>for</span></span><span
+style='color:black'> (String element : c)<o:p></o:p></span></pre><pre><span
+style='color:black'>{<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE><span class=docemphitalicalt>do</span></span><span
+class=docemphitalicalt> something with</span> element<o:p></o:p></span></pre><pre><span
+style='color:black'>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="loop_into"></a><span style='font-size:8.5pt;
+color:black'>The compiler simply translates the &quot;for each&quot; loop into
+a loop with an <span class=SpellE>iterator</span>.<o:p></o:p></span></p>
+
+<p class=doctext><a name="object_that"></a><span style='font-size:8.5pt;
+color:black'>The &quot;for each&quot; loop works with any object that
+implements the </span><span class=SpellE><tt><span style='font-size:10.0pt;
+color:black'>Iterable</span></tt></span><span style='font-size:8.5pt;
+color:black'> interface, an interface with a single method:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>public</span></span><span
+style='color:black'> interface <span class=SpellE>Iterable</span>&lt;E&gt;<o:p></o:p></span></pre><pre><span
+style='color:black'>{<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=SpellE>Iterator</span>&lt;E&gt; <span class=SpellE><span class=GramE>iterator</span></span><span
+class=GramE>(</span>);<o:p></o:p></span></pre><pre><span style='color:black'>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>The </span><tt><span
+style='font-size:10.0pt;color:black'>Collection</span></tt><span
+style='font-size:8.5pt;color:black'> interface extends the </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>Iterable</span></tt></span><a
+name="the_standard"></a><span style='font-size:8.5pt;color:black'> interface.
+Therefore, you can use the &quot;for each&quot; loop with any collection in the
+standard library.<o:p></o:p></span></p>
+
+<p class=doctext><a name="visited_depends"></a><span style='font-size:8.5pt;
+color:black'>The order in which the elements are visited depends on the
+collection type. If you iterate over an </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>ArrayList</span></tt></span><a
+name="starts_at"></a><span style='font-size:8.5pt;color:black'>, the <span
+class=SpellE>iterator</span> starts at index 0 and increments the index in each
+step. However, if you visit the elements in a </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>HashSet</span></tt></span><span
+style='font-size:8.5pt;color:black'>, you will encounter them in essentially
+random order. You can be assured that you will encounter all elements of the
+collection during the course of the iteration, but you cannot make any
+assumptions about their ordering. This is usually not a problem because the
+ordering does not matter for computations such as computing totals or counting
+matches.<o:p></o:p></span></p>
+
+<p class=doctext><a name=ch13note03></a><span class=GramE><span
+style='font-size:8.5pt;color:black'>Note<a name="that_the"></a> :</span></span><span
+style='font-size:8.5pt;color:black'> Old-timers will notice that the </span><tt><span
+style='font-size:10.0pt;color:black'>next</span></tt><span style='font-size:
+8.5pt;color:black'> and </span><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>hasNext</span></tt></span><a name="of_the"></a><span
+style='font-size:8.5pt;color:black'> methods of the </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>Iterator</span></tt></span><a
+name="same_purpose"></a><span style='font-size:8.5pt;color:black'> interface
+serve the same purpose as the </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>nextElement</span></tt></span><span
+style='font-size:8.5pt;color:black'> and </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>hasMoreElements</span></tt></span><span
+style='font-size:8.5pt;color:black'> methods of an </span><tt><span
+style='font-size:10.0pt;color:black'>Enumeration</span></tt><span
+style='font-size:8.5pt;color:black'>. The designers of the <span
+class=doctexthighlight2>Java</span><a name="make_use"></a> collection library
+could have chosen to make use of the </span><tt><span style='font-size:10.0pt;
+color:black'>Enumeration</span></tt><a name="method_names"></a><span
+style='font-size:8.5pt;color:black'> interface. But they disliked the
+cumbersome method names and instead introduced a new interface with shorter
+method names.<o:p></o:p></span></p>
+
+<p class=doctext><a name="difference_between"></a><span style='font-size:8.5pt;
+color:black'>There is an important conceptual difference between <span
+class=SpellE>iterators</span> in the <span class=doctexthighlight2>Java</span><a
+name="libraries_such"></a> collection library and <span class=SpellE>iterators</span>
+in other libraries. In traditional collection libraries such as the Standard
+Template Library of C++, <span class=SpellE>iterators</span> are modeled after
+array indexes. Given such an <span class=SpellE>iterator</span>, you can look
+up the element that is stored at that position, much like you can look up an
+array element </span><tt><span style='font-size:10.0pt;color:black'>a[<span
+class=SpellE>i</span>]</span></tt><span style='font-size:8.5pt;color:black'> if
+you have an array index </span><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>i</span></tt></span><a name="iterator_to"></a><span
+style='font-size:8.5pt;color:black'>. Independently of the lookup, you can
+advance the <span class=SpellE>iterator</span> to the next position. This is
+the same operation as advancing an array index by calling </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>i</span></tt></span><tt><span
+style='font-size:10.0pt;color:black'>++</span></tt><span style='font-size:8.5pt;
+color:black'>, <a name="a_lookup"></a><a name=snippet></a>without performing a
+lookup. However, the <span class=doctexthighlight2>Java</span><a
+name="iterators_do"></a> <span class=SpellE>iterators</span> do not work like
+that. The lookup and position change are tightly coupled. The only way to look
+up an element is to call </span><tt><span style='font-size:10.0pt;color:black'>next</span></tt><a
+name="lookup_advances"></a><span style='font-size:8.5pt;color:black'>, and that
+lookup advances the position.<o:p></o:p></span></p>
+
+<p class=doctext><a name="should_think"></a><span style='font-size:8.5pt;
+color:black'>Instead, you should think of <span class=doctexthighlight2>Java</span>
+<span class=SpellE>iterators</span> as being <span class=docemphasis>between
+elements</span>. When you call </span><tt><span style='font-size:10.0pt;
+color:black'>next</span></tt><span style='font-size:8.5pt;color:black'>, the <span
+class=SpellE>iterator</span> <span class=docemphasis>jumps over</span><a
+name="it_returns"></a> the next element, and it returns a reference to the
+element that it just passed (see <a href="javascript:moveTo('ch13fig03');">Figure
+13–3</a>).<o:p></o:p></span></p>
+
+<h5 align=center style='text-align:center'><a name=ch13fig03></a><span
+class=GramE>Figure 13–3.</span> Advancing an <span class=SpellE>iterator</span><span
+style='font-size:8.5pt;color:#1F3247'><o:p></o:p></span></h5>
+
+<p class=docnotetitle align=center style='text-align:center'><span
+style='font-size:8.5pt;color:black'><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:375pt;
+ height:270.75pt'>
+ <v:imagedata src="Collection%20Interfaces_files/image001.gif" o:title="13-3"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=500 height=361
+src="Collection%20Interfaces_files/image001.gif" v:shapes="_x0000_i1025"><![endif]><o:p></o:p></span></p>
+
+<p class=docnotetitle align=center style='text-align:center'><span
+style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h5>Removing Elements<span style='font-size:8.5pt;color:#1F3247'><o:p></o:p></span></h5>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>The </span><tt><span
+style='font-size:10.0pt;color:black'>remove</span></tt><span style='font-size:
+8.5pt;color:black'> method of the </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>Iterator</span></tt></span><a
+name="last_call"></a><span style='font-size:8.5pt;color:black'> interface
+removes the element that was returned by the last call to </span><tt><span
+style='font-size:10.0pt;color:black'>next</span></tt><a name="the_element"></a><span
+style='font-size:8.5pt;color:black'>. In many situations, that makes sense—you
+need to see the element before you can decide that it is the one that should be
+removed. But if you want to remove an element in a particular position, you
+still need to skip past the element. For example, here is how you remove the
+first element in a collection of strings:<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span style='color:black'>Iterator</span></span><span
+style='color:black'>&lt;String&gt; it = <span class=SpellE><span class=GramE>c.iterator</span></span><span
+class=GramE>(</span>);<o:p></o:p></span></pre><pre><span class=SpellE><span
+class=GramE><span style='color:black'>it.next</span></span></span><span
+class=GramE><span style='color:black'>(</span></span><span style='color:black'>); // skip over the first element<o:p></o:p></span></pre><pre><span
+class=SpellE><span class=GramE><span style='color:black'>it.remove</span></span></span><span
+class=GramE><span style='color:black'>(</span></span><span style='color:black'>); // now remove it<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="is_a"></a><span style='font-size:8.5pt;color:black'>More
+important, there is a dependency between calls to the </span><tt><span
+style='font-size:10.0pt;color:black'>next</span></tt><span style='font-size:
+8.5pt;color:black'> and </span><tt><span style='font-size:10.0pt;color:black'>remove</span></tt><a
+name="illegal_to"></a><span style='font-size:8.5pt;color:black'> methods. It is
+illegal to call </span><tt><span style='font-size:10.0pt;color:black'>remove</span></tt><a
+name="it_wasn"></a><span style='font-size:8.5pt;color:black'> if it wasn't
+preceded by a call to </span><tt><span style='font-size:10.0pt;color:black'>next</span></tt><span
+style='font-size:8.5pt;color:black'>. If you try, an </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>IllegalStateException</span></tt></span><span
+style='font-size:8.5pt;color:black'> is thrown.<o:p></o:p></span></p>
+
+<p class=doctext><a name="to_remove"></a><span style='font-size:8.5pt;
+color:black'>If you want to remove two adjacent elements, you cannot simply
+call<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span class=GramE><span style='color:black'>it.remove</span></span></span><span
+class=GramE><span style='color:black'>(</span></span><span style='color:black'>);<o:p></o:p></span></pre><pre><span
+class=SpellE><span class=GramE><span style='color:black'>it.remove</span></span></span><span
+class=GramE><span style='color:black'>(</span></span><span style='color:black'>); // Error!<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name=iddle1993></a><a name=iddle1350></a><span
+style='font-size:8.5pt;color:black'>Instead, you must first call </span><tt><span
+style='font-size:10.0pt;color:black'>next</span></tt><a name="be_removed"></a><span
+style='font-size:8.5pt;color:black'> to jump over the element to be removed.<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span class=GramE><span style='color:black'>it.remove</span></span></span><span
+class=GramE><span style='color:black'>(</span></span><span style='color:black'>);<o:p></o:p></span></pre><pre><span
+class=SpellE><span class=GramE><span style='color:black'>it.next</span></span></span><span
+class=GramE><span style='color:black'>(</span></span><span style='color:black'>);<o:p></o:p></span></pre><pre><span
+class=SpellE><span class=GramE><span style='color:black'>it.remove</span></span></span><span
+class=GramE><span style='color:black'>(</span></span><span style='color:black'>); // Ok<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><a name=ch13lev3sec3></a><o:p></o:p></span></p>
+
+<h5>Generic Utility Methods<span style='font-size:8.5pt;color:#1F3247'><o:p></o:p></span></h5>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>Because the </span><tt><span
+style='font-size:10.0pt;color:black'>Collection</span></tt><span
+style='font-size:8.5pt;color:black'> and </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>Iterator</span></tt></span><a
+name="utility_methods"></a><span style='font-size:8.5pt;color:black'>
+interfaces are generic, you can write utility methods that operate on any kind
+of collection. For example, here is a generic method that tests whether an
+arbitrary collection contains a given element:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>public</span></span><span
+style='color:black'> static &lt;E&gt; <span class=SpellE>boolean</span> contains(Collection&lt;E&gt; c, Object <span
+class=SpellE>obj</span>)<o:p></o:p></span></pre><pre><span style='color:black'>{<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>for</span> (E element : c)<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>      </span><span
+class=GramE>if</span> (<span class=SpellE>element.equals</span>(<span
+class=SpellE>obj</span>))<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>         </span><span
+class=GramE>return</span> true;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>return</span> false;<o:p></o:p></span></pre><pre><span
+style='color:black'>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>The designers of the
+<span class=doctexthighlight2>Java</span><a name="these_utility"></a> library
+decided that some of these utility methods are so useful that the library
+should make them available. That way, library users don't have to keep
+reinventing the wheel. <span class=GramE>The <tt><span style='font-size:10.0pt'>contains</span></tt></span>
+method is one such method.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>In fact, the </span><tt><span
+style='font-size:10.0pt;color:black'>Collection</span></tt><a
+name="implementing_classes"></a><span style='font-size:8.5pt;color:black'>
+interface declares quite a few useful methods that all implementing classes
+must supply. Among them are<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span class=GramE><span style='color:black'>int</span></span></span><span
+style='color:black'> size()<o:p></o:p></span></pre><pre><span class=SpellE><span
+class=GramE><span style='color:black'>boolean</span></span></span><span
+style='color:black'> <span class=SpellE>isEmpty</span>()<o:p></o:p></span></pre><pre><span
+class=SpellE><span class=GramE><span style='color:black'>boolean</span></span></span><span
+style='color:black'> contains(Object <span class=SpellE>obj</span>)<o:p></o:p></span></pre><pre><span
+class=SpellE><span class=GramE><span style='color:black'>boolean</span></span></span><span
+style='color:black'> <span class=SpellE>containsAll</span>(Collection&lt;?&gt; c)<o:p></o:p></span></pre><pre><span
+class=SpellE><span class=GramE><span style='color:black'>boolean</span></span></span><span
+style='color:black'> equals(Object other)<o:p></o:p></span></pre><pre><span
+class=SpellE><span class=GramE><span style='color:black'>boolean</span></span></span><span
+style='color:black'> <span class=SpellE>addAll</span>(Collection&lt;? extends E&gt; from)<o:p></o:p></span></pre><pre><span
+class=SpellE><span class=GramE><span style='color:black'>boolean</span></span></span><span
+style='color:black'> remove(Object <span class=SpellE>obj</span>)<o:p></o:p></span></pre><pre><span
+class=SpellE><span class=GramE><span style='color:black'>boolean</span></span></span><span
+style='color:black'> <span class=SpellE>removeAll</span>(Collection&lt;?&gt; c)<o:p></o:p></span></pre><pre><span
+class=GramE><span style='color:black'>void</span></span><span style='color:
+black'> clear()<o:p></o:p></span></pre><pre><span class=SpellE><span
+class=GramE><span style='color:black'>boolean</span></span></span><span
+style='color:black'> <span class=SpellE>retainAll</span>(Collection&lt;?&gt; c)<o:p></o:p></span></pre><pre><span
+class=GramE><span style='color:black'>Object[</span></span><span
+style='color:black'>] <span class=SpellE>toArray</span>()<o:p></o:p></span></pre><pre><span
+style='color:black'>&lt;T&gt; <span class=GramE>T[</span>] <span class=SpellE>toArray</span>(T[] <span
+class=SpellE>arrayToFill</span>)<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="find_full"></a><span style='font-size:8.5pt;
+color:black'>Many of these methods are self-explanatory; you will find full
+documentation in the API notes at the end of this section.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>Of course, it is a
+bother if every class that implements the </span><tt><span style='font-size:
+10.0pt;color:black'>Collection</span></tt><a name="interface_has"></a><span
+style='font-size:8.5pt;color:black'> interface has to supply so many routine
+methods. To make life easier for <span class=SpellE>implementors</span>, the
+library supplies a class </span><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>AbstractCollection</span></tt></span><a
+name="the_fundamental"></a><span style='font-size:8.5pt;color:black'> that
+leaves the fundamental methods </span><tt><span style='font-size:10.0pt;
+color:black'>size</span></tt><span style='font-size:8.5pt;color:black'> and </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>iterator</span></tt></span><a
+name="but_implements"></a><span style='font-size:8.5pt;color:black'> abstract
+but implements the routine methods in terms of them. For example:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>public</span></span><span
+style='color:black'> abstract class <span class=SpellE>AbstractCollection</span>&lt;E&gt;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>implements</span> Collection&lt;E&gt;<o:p></o:p></span></pre><pre><span
+style='color:black'>{<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span>. . .<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span><span class=GramE>public</span> abstract <span
+class=SpellE>Iterator</span>&lt;E&gt; <span class=SpellE>iterator</span>();<o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE>public</span> <span class=SpellE>boolean</span> contains(Object <span
+class=SpellE>obj</span>)<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span>{<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>      </span><span
+class=GramE>for</span> (E element : c) // calls <span class=SpellE>iterator</span>()<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>         </span><span
+class=GramE>if</span> (<span class=SpellE>element.equals</span>(<span
+class=SpellE>obj</span>))<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>            </span><span
+class=GramE>return</span> = true;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>      </span><span
+class=GramE>return</span> false;<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span>}<o:p></o:p></span></pre><pre><span
+style='color:black'><span style='mso-spacerun:yes'>   </span>. . .<o:p></o:p></span></pre><pre><span
+style='color:black'>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="class_can"></a><a name=iddle2214></a><span
+style='font-size:8.5pt;color:black'>A concrete collection class can now extend
+the </span><span class=SpellE><tt><span style='font-size:10.0pt;color:black'>AbstractCollection</span></tt></span><a
+name="concrete_collection"></a><span style='font-size:8.5pt;color:black'>
+class. It is now up to the concrete collection class to supply an </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>iterator</span></tt></span><span
+style='font-size:8.5pt;color:black'> method, but <span class=GramE>the <tt><span
+style='font-size:10.0pt'>contains</span></tt></span><a name="of_by"></a> method
+has been taken care of by the </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>AbstractCollection</span></tt></span><a
+name="more_efficient"></a><span style='font-size:8.5pt;color:black'> <span
+class=SpellE>superclass</span>. However, if the subclass has a more efficient
+way of implementing </span><tt><span style='font-size:10.0pt;color:black'>contains</span></tt><span
+style='font-size:8.5pt;color:black'>, it is free to do so.<o:p></o:p></span></p>
+
+<p class=doctext><a name="users_of"></a><span style='font-size:8.5pt;
+color:black'>This is a good design for a class framework. The users of the
+collection classes have a richer set of methods available in the generic
+interface, but the <span class=SpellE>implementors</span> of the actual data
+structures do not have the burden of implementing all the routine methods.<o:p></o:p></span></p>
+
+<h2><span class=SpellE><tt><span style='font-size:10.0pt'>java.util.Collection</span></tt></span><tt><span
+style='font-size:10.0pt'>&lt;E&gt;</span></tt> 1.2<span style='font-size:11.5pt;
+color:#6D7288'><o:p></o:p></span></h2>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>Iterator</span></tt></span><tt><span style='font-size:10.0pt;
+color:black'>&lt;E&gt; <span class=SpellE>iterator</span>()</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><a name="to_visit"></a><span
+class=GramE><span style='font-size:8.5pt;color:black'>returns</span></span><span
+style='font-size:8.5pt;color:black'> an <span class=SpellE>iterator</span> that
+can be used to visit the elements in the collection.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>int</span></tt></span><tt><span style='font-size:10.0pt;
+color:black'> size()</span></tt><span style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><a name="number_of"></a><span
+class=GramE><span style='font-size:8.5pt;color:black'>returns</span></span><span
+style='font-size:8.5pt;color:black'> the number of elements currently stored in
+the collection.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo1;
+tab-stops:list .5in'><a name="boolean_isEmpty"></a><![if !supportLists]><span
+style='font-size:10.0pt;mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>boolean</span></tt></span><tt><span style='font-size:10.0pt;
+color:black'> <span class=SpellE>isEmpty</span>()</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><span class=GramE><span
+style='font-size:8.5pt;color:black'>returns</span></span><span
+style='font-size:8.5pt;color:black'> </span><tt><span style='font-size:10.0pt;
+color:black'>true</span></tt><a name="collection_contains"></a><span
+style='font-size:8.5pt;color:black'> if this collection contains no elements.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>boolean</span></tt></span><tt><span style='font-size:10.0pt;
+color:black'> contains(Object <span class=SpellE>obj</span>)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><span class=GramE><span
+style='font-size:8.5pt;color:black'>returns</span></span><span
+style='font-size:8.5pt;color:black'> </span><tt><span style='font-size:10.0pt;
+color:black'>true</span></tt><a name="this_collection"></a><span
+style='font-size:8.5pt;color:black'> if this collection contains an object
+equal to </span><span class=SpellE><tt><span style='font-size:10.0pt;
+color:black'>obj</span></tt></span><span style='font-size:8.5pt;color:black'>.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>boolean</span></tt></span><tt><span style='font-size:10.0pt;
+color:black'> <span class=SpellE>containsAll</span>(Collection&lt;?&gt; other)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><span class=GramE><span
+style='font-size:8.5pt;color:black'>returns</span></span><span
+style='font-size:8.5pt;color:black'> </span><tt><span style='font-size:10.0pt;
+color:black'>true</span></tt><a name="contains_all"></a><span style='font-size:
+8.5pt;color:black'> if this collection contains all elements in the other
+collection.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>boolean</span></tt></span><tt><span style='font-size:10.0pt;
+color:black'> add(Object element)</span></tt><span style='font-size:8.5pt;
+color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><span class=GramE><span
+style='font-size:8.5pt;color:black'>adds</span></span><span style='font-size:
+8.5pt;color:black'> an element to the collection. Returns </span><tt><span
+style='font-size:10.0pt;color:black'>true</span></tt><a name="result_of"></a><span
+style='font-size:8.5pt;color:black'> if the collection changed as a result of
+this call.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>boolean</span></tt></span><tt><span style='font-size:10.0pt;
+color:black'> <span class=SpellE>addAll</span>(Collection&lt;? extends E&gt;
+other)</span></tt><span style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><a name="other_collection"></a><span
+class=GramE><span style='font-size:8.5pt;color:black'>adds</span></span><span
+style='font-size:8.5pt;color:black'> all elements from the other collection to
+this collection. Returns </span><tt><span style='font-size:10.0pt;color:black'>true</span></tt><a
+name="a_result"></a><span style='font-size:8.5pt;color:black'> if the
+collection changed as a result of this call.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>boolean</span></tt></span><tt><span style='font-size:10.0pt;
+color:black'> remove(Object <span class=SpellE>obj</span>)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><span class=GramE><span
+style='font-size:8.5pt;color:black'>removes</span></span><span
+style='font-size:8.5pt;color:black'> an object equal to </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>obj</span></tt></span><span
+style='font-size:8.5pt;color:black'> from this collection. Returns </span><tt><span
+style='font-size:10.0pt;color:black'>true</span></tt><span style='font-size:
+8.5pt;color:black'> if a matching object was removed.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>boolean</span></tt></span><tt><span style='font-size:10.0pt;
+color:black'> <span class=SpellE>removeAll</span>(Collection&lt;?&gt; other)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><a name=Returns></a><span
+class=GramE><span style='font-size:8.5pt;color:black'>removes</span></span><span
+style='font-size:8.5pt;color:black'> from this collection all elements from the
+other collection. Returns </span><tt><span style='font-size:10.0pt;color:black'>true</span></tt><a
+name="of_this"></a><span style='font-size:8.5pt;color:black'> if the collection
+changed as a result of this call.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>void
+clear()</span></tt><span style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><a name="elements_from"></a><span
+class=GramE><span style='font-size:8.5pt;color:black'>removes</span></span><span
+style='font-size:8.5pt;color:black'> all elements from this collection.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo1;
+tab-stops:list .5in'><a name="boolean_retainAll"></a><![if !supportLists]><span
+style='font-size:10.0pt;mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>boolean</span></tt></span><tt><span style='font-size:10.0pt;
+color:black'> <span class=SpellE>retainAll</span>(Collection&lt;?&gt; other)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><span class=GramE><span
+style='font-size:8.5pt;color:black'>removes</span></span><span
+style='font-size:8.5pt;color:black'> all elements from this collection that do
+not equal one of the elements in the other collection. Returns </span><tt><span
+style='font-size:10.0pt;color:black'>true</span></tt><span style='font-size:
+8.5pt;color:black'> if the collection changed as a result of this call.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>Object[]
+<span class=SpellE>toArray</span>()</span></tt><span style='font-size:8.5pt;
+color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><span class=GramE><span
+style='font-size:8.5pt;color:black'>returns</span></span><span
+style='font-size:8.5pt;color:black'> an array of the objects in the collection.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:8.5pt;color:black'>&lt;T&gt;
+T[] <span class=SpellE>toArray</span>(T[] <span class=SpellE>arrayToFill</span>)<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><a name="in_the"></a><span
+class=GramE><span style='font-size:8.5pt;color:black'>returns</span></span><span
+style='font-size:8.5pt;color:black'> an array of the objects in the collection.
+If </span><span class=SpellE><tt><span style='font-size:10.0pt;color:black'>arrayToFill</span></tt></span><a
+name="with_the"></a><span style='font-size:8.5pt;color:black'> has sufficient
+length, it is filled with the elements of this collection. If there is space, a
+</span><tt><span style='font-size:10.0pt;color:black'>null</span></tt><span
+style='font-size:8.5pt;color:black'> element is appended. Otherwise, a new
+array with the same component type as </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>arrayToFill</span></tt></span><a
+name="collection_is"></a><span style='font-size:8.5pt;color:black'> and the
+same length as the size of this collection is allocated and filled.<o:p></o:p></span></p>
+
+<p class=docnotetitle><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:10.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h2><span class=SpellE><tt><span style='font-size:10.0pt'>java.util.Iterator</span></tt></span><tt><span
+style='font-size:10.0pt'>&lt;E&gt;</span></tt> 1.2<span style='font-size:11.5pt;
+color:#6D7288'><o:p></o:p></span></h2>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><a name=iddle3208></a><a name=iddle2496></a><a
+name=iddle2493></a><a name=iddle2256></a><a name=iddle1878></a><a
+name=iddle1595></a><a name=iddle1427></a><a name=iddle1355></a><a
+name=iddle1141></a><a name=iddle1133></a><![if !supportLists]><span
+style='font-size:10.0pt;mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>boolean</span></tt></span><tt><span style='font-size:10.0pt;
+color:black'> <span class=SpellE>hasNext</span>()</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><span class=GramE><span
+style='font-size:8.5pt;color:black'>returns</span></span><span
+style='font-size:8.5pt;color:black'> </span><tt><span style='font-size:10.0pt;
+color:black'>true</span></tt><span style='font-size:8.5pt;color:black'> if there
+is another element to visit.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>E
+next()</span></tt><span style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><span class=GramE><span
+style='font-size:8.5pt;color:black'>returns</span></span><span
+style='font-size:8.5pt;color:black'> the next object to visit. <span
+class=GramE>Throws a <span class=SpellE><tt><span style='font-size:10.0pt'>NoSuchElementException</span></tt></span><a
+name="been_reached"></a> if the end of the collection has been reached.</span><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>void
+remove()</span></tt><span style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><a name="last_visited"></a><span
+class=GramE><span style='font-size:8.5pt;color:black'>removes</span></span><span
+style='font-size:8.5pt;color:black'> the last visited object. This method must
+immediately follow an element visit. If the collection has been modified since
+the last element visit, then the method throws an </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>IllegalStateException</span></tt></span><span
+style='font-size:8.5pt;color:black'>.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

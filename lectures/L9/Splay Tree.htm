@@ -1,0 +1,61 @@
+<HTML><HEAD><TITLE>Splay Tree</TITLE></HEAD>
+<BODY>
+<H2>
+<CENTER>Splay Tree </CENTER></H2>
+<HR>
+
+<CENTER>
+<H2><A name=RTFToC1>Self-Organizing BST </A></H2></CENTER><B>
+<CENTER>Basic Rotation <IMG src="Splay%20Tree_files/Splay1.gif"> 
+</CENTER></B><BR>Simple Exchange (Transpose)<BR>
+<DL>
+  <DL>
+    <DT>When we access a node, apply a rotation to move the node one level 
+    closer to root 
+    <DT>
+    <DT>If each node is accessed with probability of 1/n the average search time 
+    is: <IMG src="Splay%20Tree_files/Splay2.gif"> 
+    <DT></DT></DL></DL><B>
+<CENTER><IMG src="Splay%20Tree_files/Splay3.gif"> </CENTER></B><BR>
+<P>
+
+
+<CENTER><B>Move-to-root example </B>
+<P><IMG src="Splay%20Tree_files/Splay6.gif"> </CENTER>
+<HR>
+
+<CENTER>
+<H3><A name=RTFToC2>Splay Trees </A></H3></CENTER><B>
+<CENTER>Splaying </CENTER></B><BR>Splay step at x<BR><BR>let p(x) = parent of 
+node x<BR><BR><B>case 1</B> (zig) p(x) = root of the tree<BR><B>
+<CENTER><IMG src="Splay%20Tree_files/Splay7.gif"> 
+</CENTER></B><BR><BR><BR><B>case 2 </B>(zig-zig) p(x) is not the root and x and 
+p(x) are both left (right) children<BR><B>
+<CENTER><IMG src="Splay%20Tree_files/Splay8.gif"> </CENTER></B><B>case 3 
+</B>(zig-zag) p(x) is not the root and x is a left (right) child and p(x) is a 
+right(left ) child<BR><B>
+<CENTER><IMG src="Splay%20Tree_files/Splay9.gif"> </CENTER></B><BR><BR>To Splay 
+a node X, repeat the splay step on X until it is the root<BR><B>
+<CENTER>Splay B <IMG src="Splay%20Tree_files/Splay10.gif"> </CENTER></B>
+<HR>
+<B>
+<CENTER>Splay vs. Move-to-root </CENTER></B><BR><B>Case 1</B> <B>
+<CENTER><IMG src="Splay%20Tree_files/Splay11.gif"> </CENTER></B><BR><B>Case 
+2</B><BR><center><IMG src="Splay%20Tree_files/Splay12.gif"> <B>
+<CENTER>Splay vs. Move-to-root </CENTER></B><BR><B>Case 3</B><BR><BR><IMG 
+src="Splay%20Tree_files/Splay13.gif"> 
+<HR>
+<B>
+<CENTER>Move-to-root A </CENTER></B><B>
+<CENTER></CENTER></B><center><IMG src="Splay%20Tree_files/Splay14.gif"> </center>
+<HR>
+<B>
+<CENTER>Splay A </CENTER></B><B>
+<CENTER></CENTER></B><IMG src="Splay%20Tree_files/Splay15.gif"> 
+<HR>
+
+<CENTER>
+<CENTER>Example Splay at B </CENTER></B><IMG 
+src="Splay%20Tree_files/Splay51.gif"> <B>
+<CENTER>Example Splay at B </CENTER></B><BR><BR><IMG 
+src="Splay%20Tree_files/Splay52.gif"><BR><BR></CENTER></BODY></HTML>

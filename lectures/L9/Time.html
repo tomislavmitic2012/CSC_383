@@ -1,0 +1,84 @@
+<html><head><title>timing</title></head>
+<body>
+<center>Measuring time in Java</center>
+<p>
+<ul>
+
+<ul>
+<li> The System.nanoTime() returns a time value whose granularity is a nanosecond; i.e. 10<sup>-9</sup> seconds.<p>
+<ul>
+This method can only be used to measure elapsed time and is not related to any other notion of system or wall-clock time. 
+The value returned represents nanoseconds since some fixed but arbitrary time (perhaps in the future, so values may be negative). 
+This method provides nanosecond precision, but not necessarily nanosecond accuracy. No guarantees are made about how frequently values 
+change.
+</ul><P>
+<li>If you want a time measure with a larger granularity, use System.currentTimeMillis(), 
+which returns a time value whose granularity is a millisecond; i.e. 10<sup>-3 </sup>seconds<p>
+System.currentTimeMillis()<ul>
+Returns the current time in milliseconds. Note that while the unit of time of the return value is a millisecond, 
+the granularity of the value depends on the underlying operating system and may be larger.
+ For example, many operating systems measure time in units of tens of milliseconds. 
+</ul><P>
+<li>
+nanoTime() method is very useful to measure very short durations. <p>
+<li>
+currentTimeMillis() method seems to be more stable, giving about the same measurement on each run. <p>
+<li>
+nanoTime() method seems to be less stable, giving different measurements on different runs.<p>
+<li> 
+1 millisecond is 1,000,000 nanoseconds. <p>
+
+
+
+
+<li>code example : <p>
+
+<pre>
+
+
+   public static long milliseconds(long max) {
+
+      // Current time in milliseconds
+
+      long time1 = System.currentTimeMillis();
+
+      for (int i=0; i< max; i++){
+
+        double input = 7.0;
+
+        double output = Math.sqrt(input);
+
+      }
+
+      long time2 = System.currentTimeMillis();
+
+      return time2 - time1;
+   }
+
+
+   public static long nanoseconds(long max) {   
+   
+      // Current time in nanoseconds
+
+      long time1 = System.nanoTime();
+
+      for (int i=0; i< max; i++){
+
+        double input = 7.0;
+
+        double output = Math.sqrt(input);
+
+      }
+
+      long time2 = System.nanoTime();
+
+      return time2 - time1;
+
+   }
+
+
+</per>
+</ul>
+</ul>
+</body>
+</html>

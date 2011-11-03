@@ -2105,3 +2105,6 @@ org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://do
 
 !ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2011-10-28 19:01:05.289
 !MESSAGE No repository found at http://download.eclipse.org/soa/jwt/update-site.
+
+!ENTRY org.eclipse.epp.usagedata.recording 1 0 2011-11-03 17:42:52.404
+!MESSAGE Usage data uploaded to http://udc.eclipse.org/upload.php in 418 milliseconds.

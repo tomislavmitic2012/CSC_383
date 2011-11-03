@@ -1,0 +1,466 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>IST238. Text compression. Huffman's code.</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252"><LINK 
+href="Huffman_files/basic.css" type=text/css rel=stylesheet><LINK 
+href="Huffman_files/example.css" type=text/css rel=stylesheet>
+<STYLE media=screen>PRE.function {
+	BORDER-RIGHT: black thin solid; BORDER-TOP: black thin solid; FONT-SIZE: 12pt; OVERFLOW: scroll; BORDER-LEFT: black thin solid; BORDER-BOTTOM: black thin solid; FONT-FAMILY: monospace; HEIGHT: 200px
+}
+</STYLE>
+
+<STYLE media=printer>PRE.function {
+	BORDER-RIGHT: black thin solid; BORDER-TOP: black thin solid; FONT-SIZE: 12pt; BORDER-LEFT: black thin solid; BORDER-BOTTOM: black thin solid; FONT-FAMILY: monospace; HEIGHT: 200px
+}
+</STYLE>
+
+<STYLE media="screen, printer">PRE.function I {
+	FONT-SIZE: 80%; COLOR: darkgreen
+}
+.keyword {
+	COLOR: darkblue
+}
+.binary {
+	FONT-SIZE: 70%; FONT-FAMILY: Arial
+}
+.sentence {
+	FONT-WEIGHT: bold; MARGIN: 10px; COLOR: darkblue; FONT-FAMILY: Arial
+}
+#huffman_step {
+	BORDER-RIGHT: black thick solid; PADDING-RIGHT: 20px; BORDER-TOP: black thick solid; PADDING-LEFT: 20px; PADDING-BOTTOM: 20px; BORDER-LEFT: black thick solid; PADDING-TOP: 20px; BORDER-BOTTOM: black thick solid
+}
+.btn {
+	FONT-SIZE: 110%; COLOR: darkblue; FONT-FAMILY: Arial
+}
+</STYLE>
+
+<SCRIPT>
+ function lpad(str, length, pad)
+ {
+   while( str.length < length )
+     str = pad + str;
+   return str;
+ }
+ </SCRIPT>
+
+<META content="MSHTML 6.00.6001.18203" name=GENERATOR></HEAD>
+<BODY>
+<H2>Text compression. Huffman's code.</H2>
+<H3>Fixed-length encoding.</H3>As we all know, computers can operate only with 
+numbers, or more exactly, with zeros and ones. Because of this, when we need to 
+store a text, we actually store some numbers that correspond to characters. For 
+example, if the only text we will store is english text typed in lower case, 
+then we need only 27 character, which can be enumerated from 0 to 26: 
+<TABLE cellSpacing=0 cellPadding=1 border=1>
+  <TBODY>
+  <TR>
+    <TH align=right>Character:</TD> 
+    <TD align=middle width=20>&nbsp;</TD>
+    <SCRIPT>
+ var a = "a";
+ var z = "z";
+ for(i=a.charCodeAt(0);i<=z.charCodeAt(z);i++)
+    document.write("<td align=center>" + String.fromCharCode(i) + "</td>");
+ </SCRIPT>
+  </TR>
+  <TR>
+    <TH align=right>Code:</TD>
+      <SCRIPT>
+ for(i=0;i<27;i++)
+    document.write("<td align=center>" + i + "</td>");
+ </SCRIPT>
+       </TR>
+  <TR>
+    <TH align=right>Binary:</TD>
+      <SCRIPT>
+ for(i=0;i<27;i++)
+    document.write("<td align=center class=binary>" + lpad(i.toString(2), 5, '0') + "</td>");
+ </SCRIPT>
+       </TR></TR></TR></TBODY></TABLE>Thus, the following sentence 
+<DIV class=sentence>
+<SCRIPT>
+//var str = "a simple string to be encoded using a minimal number of bits";
+var str = "abcdabcdabcda bcdabcddacfebd acbfeasdfbdcadefb cdaffffcbdfacfba cfabccfebacfecaf bcafebafcefa cbefacefabac afebacafaeca";
+document.write(str);
+</SCRIPT>
+</DIV>can be represented as the following sequence of zeros and ones: 
+<DIV class=sentence>
+<SCRIPT>
+var c;
+var encoded = "";
+for(i=0;i<str.length;i++){
+   c = str.charCodeAt(i);
+   if( c == 32 ) c = 0;
+   else c -= a.charCodeAt(0) - 1;
+   document.write(lpad(c.toString(2), 5, '0'));
+   encoded += lpad(c.toString(2), 5, '0');
+   if( i < str.length-1 )document.write(" ");
+}
+</SCRIPT>
+</DIV>(Spaces are used only to separate numbers.) As you can see it requires 
+exactly
+<SCRIPT>document.write(encoded.length);</SCRIPT>
+ bits because the string has
+<SCRIPT>document.write(encoded.length/5);</SCRIPT>
+ characters in it and each character requires exactly 5 bits to store. 
+<H3>Variable length encoding.</H3>To reduce the number of bits required for 
+holding the complete string, we can use <I>variable-length</I> encoding. We will 
+assign shorter codes like (0, 10, 11, etc) to the most commonly used character. 
+We need to assign the codes in such a way that none of the codeword for one 
+character constitutes the beginning of the codeword for another character. For 
+example, if we have codeword <KBD>10</KBD>, then none of codewords for other 
+characters starts with <KBD>10</KBD>. Such codes are called 
+<B><I>prefix-codes</I></B>. 
+<P>To do so we need to know how often each character appears in the string. In 
+other words, we need to compute the frequency table:
+<SCRIPT>
+var count = new Object();
+var frequency = new Array();
+for(i=0;i<str.length;i++)
+  if( count[str.charAt(i)] ) count[str.charAt(i)]++;
+  else count[str.charAt(i)] = 1;
+i = 0;
+for(ch in count){
+  frequency[i] = new Object();
+  frequency[i].symbol = ch;
+  frequency[i].count = count[ch];
+  i++;
+}
+
+function comp_obj(a, b)
+{
+  return (b.count-a.count);
+}
+
+frequency.sort(comp_obj);
+var prefix = "";
+for(i=0;i<frequency.length;i++){
+  if( i == frequency.length-1 )
+    frequency[i].code = prefix;
+  else
+    frequency[i].code = prefix + "0";
+  prefix += "1";
+}
+</SCRIPT>
+ 
+<TABLE cellSpacing=0 cellPadding=1 border=1>
+  <TBODY>
+  <TR>
+    <TH align=right>Character:</TD>
+      <SCRIPT>
+  for(i=0;i<frequency.length;i++)
+     document.write("<td align=center>" + (frequency[i].symbol==" "?"&nbsp;":frequency[i].symbol) + "</td>");
+ </SCRIPT>
+       </TH>
+  <TR>
+    <TH align=right>Count:</TD>
+      <SCRIPT>
+  for(i=0;i<frequency.length;i++)
+     document.write("<td align=center>" + frequency[i].count + "</td>");
+ </SCRIPT>
+       </TH>
+  <TR>
+    <TH align=right>Code:</TD>
+      <SCRIPT>
+  for(i=0;i<frequency.length;i++)
+     document.write("<td align=center class=binary width=40px>" + frequency[i].code + "</td>");
+ </SCRIPT>
+       </TH></TR></TBODY></TABLE>Using the new codes the same sentence can be written 
+as: 
+<DIV class=sentence>
+<SCRIPT>
+var greedy_encoded = "";
+for(i=0;i<str.length;i++){
+   ch = str.charAt(i);
+   for(j=0;j<frequency.length;j++)
+      if( frequency[j].symbol == ch ) break;
+   document.write(frequency[j].code + " ");
+   greedy_encoded += frequency[j].code;
+}
+</SCRIPT>
+</DIV>We can count that this version of the binary representation of the text 
+takes only
+<SCRIPT>document.write(greedy_encoded.length);</SCRIPT>
+ bits. That is we compressed the text by
+<SCRIPT>
+var compression = 100 - greedy_encoded.length/encoded.length*100;
+document.write(compression.toPrecision(2));
+</SCRIPT>
+ %. 
+<P></P>
+<P>Every prefix code can be represented as by a binary tree whose leaves are the 
+characters that are to be encoded. The binary tree corresponding to the codes 
+above are shown on the picture 
+<DIV style="MARGIN: 15px" align=center><IMG src="Huffman_files/prefix_code.jpg"> 
+</DIV>To find out the code of a character we start from the root node and moving 
+along the edges to the leaf with the desired character combining the zeros and 
+ones on the edges together. The advantage of a prefix code is that we need not 
+look ahead when parsing the file. This is readily apparent from the tree 
+representation of the code. To parse, we start at the first bit of the left of 
+the file and at the root of the tree. We sequence through the bits, and go left 
+or right down the tree depending on whether a zero or one is encountered. When 
+we reach a leaf, we obtain the character at that leaf; then we return to the 
+root and repeat the procedure starting with the next bit in sequence. 
+<P></P>
+<H3>Huffman code.</H3>The prefix code we created above is not the most efficient 
+code for these sequence of characters. Huffman developed a greedy algorithm that 
+produces an optimal binary character code by constructing a binary tree 
+corresponding to an optimal code. A code produced by the algorithm is called a 
+<B>Huffman code</B>. 
+<P>The Huffman code uses a <I>priority queue</I>. In a priority queue, the 
+elements with the highest priority is always removed next. In our case, the 
+element with the highest priority is the character with the lowest frequency in 
+the file. A priority queue can be easily implemented as a 
+heap. </P>
+<P>To implement the Huffman code, we first create a special structure type 
+elements of which will serve as nodes of the prefix tree: <A name=node></P><PRE class=function><SPAN class=keyword>class</SPAN> Node {
+  <SPAN class=keyword>char</SPAN>  symbol;     // <I>a distinct character in the file</I>
+  <SPAN class=keyword>int</SPAN>   frequency;  // <I>the frequency of that character in the file</I>
+  Node left;       // <I>pointer to the left subtree</I>
+  Node right;      // <I>pointer to the right subtree</I>
+};
+</PRE>Initially we put all elements of the type in the priority queue. We have 
+as many elements in the queue as many distinct characters appear in the file. 
+Remember that the highest priority have the elements with the <I>lowest</I> 
+frequency. Then the algorithm goes as follows: 
+<UL>
+  <LI>it removes two elements from the top of the queue 
+  <LI>it creates another element of the <KBD>Node</KBD> type with no symbol 
+  stored in it;<BR>the frequency of the new element is equal to the sum of the 
+  frequencies of the retrieved elements;<BR>the <KBD>left</KBD> subtree of the 
+  new element is set to be equal to the first of the elements (the one with the 
+  higher priority);<BR>and the <KBD>right</KBD> subtree is now pointing to the 
+  other element 
+  <LI>then we put the new element in the priority queue 
+  <LI>we will repeat these steps until there is only one element left in the 
+  queue. </LI></UL>The demo shows how this method works being applied to the file 
+under consideration. 
+<P></P>
+<SCRIPT>
+var pq = new Array(); // this is the priority queue
+
+function max_heapify(node)
+{
+   var l, r, max_ind;
+   while( (l=2*node+1) < pq.length ){
+      r = 2*node+2;
+      max_ind =  pq[node].count>pq[l].count ? l : node;
+      if( r<pq.length && pq[max_ind].count>pq[r].count )
+         max_ind = r;
+      if( max_ind != node ){
+         t = pq[node];
+		 pq[node] = pq[max_ind];
+		 pq[max_ind] = t;
+         node = max_ind;
+      }
+      else
+         break;
+   }
+}
+
+function fix_heap()
+{
+   var n = pq.length - 1,       // current node
+       p = Math.floor((n-1)/2); // its parent
+   while( n>0 && pq[p].count>pq[n].count ){
+      t = pq[n];
+	  pq[n] = pq[p];
+	  pq[p] = t;
+      n = p;
+      p = Math.floor((n-1)/2);
+   }
+}
+
+function build_max_heap()
+{
+   for(var node=Math.ceil(pq.length/2-1); node>=0; node--)
+      max_heapify(node);
+}
+
+function insert(item)
+{
+  pq.push(item);
+  fix_heap();
+}
+
+function remove()
+{
+  var item = pq[0];
+  var last = pq.pop();
+  if( pq.length > 0 ){
+     pq[0] = last;
+     max_heapify(0);
+  }
+  return item;
+}
+
+// -------------------------------
+// let's test the priority queue
+
+for(i=0;i<frequency.length;i++)
+  insert(frequency[i]);
+</SCRIPT>
+
+<SCRIPT>
+function depth(item)
+{
+  var ld = 0;
+  var rd = 0;
+  if( item.left ) ld = depth(item.left);
+  if( item.right ) rd = depth(item.right);
+  return 1 + (ld>rd?ld:rd);
+}
+
+function get_item(item)
+{
+  msg = "";
+  var d = depth(item);
+  var colspan = 1;
+  while( d-- > 1 ){
+    colspan *= 2;
+  }
+  msg += "<table cellpaddin=2 cellspacing=4>";
+  msg += "<tr> <td align=center colspan="+(colspan)+">";
+  // print the item itself
+  msg += "<table border=1 cellpaddin=2 cellspacing=0>";
+  msg += "<tr><td align=center width=20px>" + (item.symbol==" "? "&nbsp": item.symbol) + "</td>";
+  msg += "<td align=center  width=20px>" + item.count + "</td></tr>";
+  msg += "</table>";
+  msg += "</td></tr>";
+  if( item.left ){
+    msg += "<tr><td valign=top>";
+	msg += get_item(item.left);
+	msg += "</td>"
+	if( item.right ){
+      msg += "<td valign=top>";
+      msg += get_item(item.right);
+	  msg += "</td>";
+	}
+	msg += "</tr>";
+  }
+  msg += "</table>";
+  return msg;
+}
+
+function get_pq()
+{
+  var msg = "";
+  msg += "<div align=center>";
+  msg += "<table cellpadding=4>";
+  msg += "<tr>";
+  for(i=0;i<pq.length;i++){
+    msg += "<td valign=top>";
+	msg += get_item(pq[i]);
+	msg += "</td>";
+  }
+  msg += "</tr>";
+  msg += "</table>";
+  msg += "</div>";
+  return msg;
+}
+
+function print_pq()
+{
+  var msg = get_pq();
+  document.writeln(msg);
+}
+
+
+function next_huffman_step()
+{
+  if( pq.length > 1 ){
+    var left = remove();
+    var right = remove();
+    var item = new Object();
+    item.symbol = "&para;";
+    item.count = left.count + right.count;
+    item.left = left;
+    item.right = right;
+    insert(item);
+  }
+}
+
+function run_next_step()
+{
+  if( pq.length > 1 ){
+    next_huffman_step();
+    var msg = get_pq();
+	document.getElementById("huffman_step").innerHTML = msg;
+  }
+  else{
+    get_code_table(pq[0], "");
+	document.getElementById("huffman_step").innerHTML = print_code_table();
+	document.getElementById("huffman_encoded_text").innerHTML = huffman_encoding();
+	alert("Huffman encoding takes only " + huffman_encoded.length + " bits");
+  }
+}
+
+
+var code_table = new Object();
+
+function get_code_table(root, prefix)
+{
+  if( !root ) return;
+  if( root.left!=null && root.left.symbol!="&para;" )
+      code_table[root.left.symbol] = prefix + "0";
+  else
+    get_code_table(root.left, prefix+"0");
+  if( root.right!=null && root.right.symbol!="&para;" )
+    code_table[root.right.symbol] = prefix + "1";
+  else
+     get_code_table(root.right, prefix+"1");
+}
+
+function print_code_table()
+{
+  var msg = "";
+  msg += "<table cellpadding=1 cellspacing=0 border=1>";
+  msg += "<tr>\n <th align=right>Character:</td>";
+  for(i=0;i<frequency.length;i++)
+     msg += "<td align=center>" + (frequency[i].symbol==" "?"&nbsp;":frequency[i].symbol) + "</td>";
+  msg += "</th>";
+  msg += "<tr>";
+  msg += " <th align=right>Count:</td>";
+  for(i=0;i<frequency.length;i++)
+    msg += "<td align=center>" + frequency[i].count + "</td>";
+  msg += "</th>";
+  msg += "<tr>";
+  msg += " <th align=right>Code:</td>";
+  for(i=0;i<frequency.length;i++){
+     msg += "<td align=center class=binary width=40px>" + code_table[frequency[i].symbol] + "</td>";
+	 frequency[i].hcode = code_table[frequency[i].symbol];
+  }
+  msg += "</th>";
+  msg += "</table>";
+  return msg;
+}
+</SCRIPT>
+
+<DIV style="MARGIN: 20px" align=center><BUTTON class=btn 
+onclick=run_next_step()>Next step of the Huffman algorithm</BUTTON> </DIV>
+<DIV id=huffman_step>
+<SCRIPT>
+print_pq();
+</SCRIPT>
+</DIV>
+<SCRIPT>
+var huffman_encoded = "";
+function huffman_encoding()
+{
+  var msg = "";
+  for(i=0;i<str.length;i++){
+     ch = str.charAt(i);
+     for(j=0;j<frequency.length;j++)
+        if( frequency[j].symbol == ch ) break;
+     msg += frequency[j].hcode + " ";
+     huffman_encoded += frequency[j].hcode;
+  }
+  return msg;
+}
+</SCRIPT>
+
+<P>
+<DIV class=sentence id=huffman_encoded_text></DIV>
+<P>Huffman method produces the following binary code tree 
+<DIV style="MARGIN: 15px" align=center><IMG 
+src="Huffman_files/huffman_tree.jpg"> </DIV>
+<P></P></A></BODY></HTML>

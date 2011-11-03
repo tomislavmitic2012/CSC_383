@@ -1,0 +1,55 @@
+<HTML><HEAD><TITLE>Balanced Binary Search Trees - AVL Trees</TITLE></HEAD>
+<BODY>
+<H1>Balanced Binary Search Trees</H1>As we have seen, binary search trees have 
+good average case performance for search and insert operations, but poor worst 
+case performance. &nbsp;To avoid the worst case performance, it is necessary to 
+keep the tree in balance. &nbsp;There are two well-known techniques for doing 
+this: &nbsp;AVL trees and Red-Black trees.<BR>
+<H2>AVL trees</H2>AVL trees are also known as <I>height-balanced</I> binary 
+search trees. &nbsp;The idea is this: &nbsp;A tree cannot be too much out of 
+balance if its left and right subtrees are of nearly the same 
+height.<BR><BR><B>definition</B> &nbsp;A binary tree T is a 
+<I>height-balanced(k)</I> tree or <I>HB[k] tree</I>, if each node in the tree 
+has the HB[k] property<BR><BR>A tree has the HB[k] property if <BR>
+<UL>
+  <LI>it is an empty tree, or 
+  <LI>its left and right subtrees differ in height by at most k, and 
+  <LI>every subtree is HB[k] </LI></UL><B>definition</B> &nbsp;A HB[1] binary 
+search tree is called an AVL tree (named for Adel'son-Vel'skii and 
+Landis).<BR><BR><B>examples</B><BR><BR><B>theorem</B> &nbsp;The height of an AVL 
+tree with N nodes is at most 1.44 log<SUB>2</SUB>(N+2).<BR><BR>
+<H3>AVL tree insertion</H3>Define the <SPAN style="FONT-STYLE: italic">balance 
+factor</SPAN> of a node to be the height of its left subtree - the height of its 
+right subtree. &nbsp;The balance factor is stored in each node of an AVL 
+tree.<BR><BR>The insertion algorithm proceeds like a normal binary search tree 
+insertion. &nbsp;As the algorithm proceeds from root to leaf, it keeps track of 
+the last node visited in which the balance factor is +1 or -1. &nbsp;Call that 
+the <I>pivot</I> node. &nbsp;(If all the balance factors along the path are 
+zero, let the root node be the pivot.) &nbsp;There are two cases:<BR><BR>If the 
+new node is added to the left of the pivot, and the balance factor of the pivot 
+is 0 or -1; or if the new node is added to the right of the pivot, and the 
+balance factor of the pivot is 0 or +1, then no rebalancing is necessary. 
+&nbsp;Retrace the path of the insertion, adding 1 to the balance factor of nodes 
+from which the left path was taken, and subtracting 1 from the balance factor of 
+nodes from which the right path was taken.<BR><BR>Otherwise, the new node has 
+caused the tree to become unbalanced at the pivot. &nbsp;Rebalancing is 
+necessary. &nbsp;The rebalancing is done by a <SPAN 
+style="FONT-STYLE: italic">rotation</SPAN> operation. &nbsp;There are four 
+cases:<BR><BR>LL: &nbsp;The new node is added to the left subtree of the left 
+subtree of the pivot. &nbsp;Perform a single rotation:<BR><IMG height=242 alt="" 
+src="AVL_files/LL.png" width=738> <BR><BR>RR: &nbsp;The new node is added to the 
+right subtree of the right subtree of the pivot. &nbsp;Perform a single 
+rotation.<BR><IMG height=241 alt="" src="AVL_files/RR.png" width=748> 
+<BR><BR>LR: &nbsp;The new node is added to the right subtree of the left subtree 
+of the pivot. &nbsp;Perform a double rotation.<BR><IMG height=242 alt="" 
+src="AVL_files/LR.png" width=753> <BR><BR>RL: &nbsp;The new node is added to the 
+left subtree of the right subtree of the pivot. &nbsp;Perform a double 
+rotation.<BR><BR><IMG height=272 alt="" src="AVL_files/RL2.png" width=780> 
+&nbsp; <BR><BR>In each case, the balance factors of the nodes involved in the 
+rotation can be computed easily. &nbsp;It can then be proved that the rotated 
+tree is an AVL tree, having both the binary search tree ordering property and 
+the AVL height-balance property.<BR><BR>The running time of the balance factor 
+adjustments and rotation operations are O(log n), so the overall insertion time 
+is also O(log n). &nbsp;Thus, the insert and search operations for an AVL tree 
+are both O(log n) <I>in the worst case</I>.<BR><BR><BR>
+</BODY></HTML>

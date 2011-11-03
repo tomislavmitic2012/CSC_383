@@ -1,0 +1,2483 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="Hashing_files/filelist.xml">
+<link rel=Edit-Time-Data href="Hashing_files/editdata.mso">
+<link rel=OLE-Object-Data href="Hashing_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Hashing</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>temp</o:Author>
+  <o:LastAuthor>cti</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>39</o:TotalTime>
+  <o:Created>2009-03-04T16:47:00Z</o:Created>
+  <o:LastSaved>2009-03-04T16:47:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1817</o:Words>
+  <o:Characters>10357</o:Characters>
+  <o:Lines>86</o:Lines>
+  <o:Paragraphs>24</o:Paragraphs>
+  <o:CharactersWithSpaces>12150</o:CharactersWithSpaces>
+  <o:Version>11.8028</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:\5B8B\4F53;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:Calibri;
+	mso-font-alt:"Century Gothic";
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1073750139 0 0 159 0;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:Calibri;
+	mso-fareast-font-family:SimSun;
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:ZH-CN;}
+p
+	{mso-style-noshow:yes;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:ZH-CN;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:21053805;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1465009246 1004952794 -1460790224 -529489316 1440651702 1933097668 -1745854340 -838834280 -1078185972 -1020467440;}
+@list l0:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:75328947;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1645011266 1665837844 -973043316 930629320 -1111197306 1810684032 1757946736 -988534214 972179214 1385461570;}
+@list l1:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:82773201;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-747239630 1235527010 1290019326 1995221000 -1399572100 -687426256 1597294232 715397960 -406143832 -6656142;}
+@list l2:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3
+	{mso-list-id:99222831;
+	mso-list-type:hybrid;
+	mso-list-template-ids:161375748 795891584 814152328 -599331104 -1710084900 1370511130 336118794 861720862 -251502844 1984589256;}
+@list l3:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l4
+	{mso-list-id:176123030;
+	mso-list-type:hybrid;
+	mso-list-template-ids:6870388 1185338166 917286622 187974806 -1164534312 -487014078 -1925781426 -2139710114 -2067247230 -970029008;}
+@list l4:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5
+	{mso-list-id:252470809;
+	mso-list-type:hybrid;
+	mso-list-template-ids:645323008 2085882894 -160916874 1013592178 -366967206 -1530381568 -1143184252 -1721046290 1426622806 922145814;}
+@list l5:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l6
+	{mso-list-id:269094576;
+	mso-list-type:hybrid;
+	mso-list-template-ids:810837538 2066673362 -1669306726 -1400500192 -260827374 -2034083044 -587972580 -1016674140 -1253022266 -70636170;}
+@list l6:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l7
+	{mso-list-id:272171889;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1894163138 1750475700 322188524 -1465867568 1965472422 -149753684 -1348542928 2012495824 -1778851542 -1774156392;}
+@list l7:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l8
+	{mso-list-id:315839039;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-70096858 434175776 956458714 252878674 -2088587062 -328726346 1958222176 -332122128 1376666662 -1067404630;}
+@list l8:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l9
+	{mso-list-id:323700954;
+	mso-list-type:hybrid;
+	mso-list-template-ids:829192380 1655197568 1332261818 1465016522 -1642181730 2033373944 722264770 -803056696 -1291026994 -1525000664;}
+@list l9:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l9:level2
+	{mso-level-start-at:1236;
+	mso-level-number-format:bullet;
+	mso-level-text:\F06E;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l10
+	{mso-list-id:359087706;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2033614146 -1377823522 -622136340 1644178004 1388767780 282387928 1244452462 -410600628 -662151006 -1070410310;}
+@list l10:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l11
+	{mso-list-id:412509126;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-449141118 1565449402 1439048450 1439342616 1165818576 -1392237722 1988666530 1541018796 -1856864668 1763493482;}
+@list l11:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l12
+	{mso-list-id:419639806;
+	mso-list-type:hybrid;
+	mso-list-template-ids:978202574 1067082464 -1710864764 -1557076938 -1706682712 -1558682838 -911995060 1215857856 1184940234 -1263117922;}
+@list l12:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l13
+	{mso-list-id:439880665;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1870745672 -1230889736 -868974724 431025910 -556224842 76955778 482611270 -939890660 2121576362 -2052134446;}
+@list l13:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l13:level2
+	{mso-level-start-at:1236;
+	mso-level-number-format:bullet;
+	mso-level-text:\F06E;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l14
+	{mso-list-id:538856783;
+	mso-list-type:hybrid;
+	mso-list-template-ids:143412546 1166983596 -2018597850 -329585566 557218376 -1211336094 1559523276 -2141308352 -128302936 -397746880;}
+@list l14:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l15
+	{mso-list-id:543712168;
+	mso-list-type:hybrid;
+	mso-list-template-ids:7502428 -1658049806 -53154698 -177559630 -136020076 -1130309398 139239190 -1104632370 1455600618 -1959473256;}
+@list l15:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l16
+	{mso-list-id:571083239;
+	mso-list-type:hybrid;
+	mso-list-template-ids:542794022 1971635146 -823648860 -1880217274 -762432492 1496847182 -48592730 -284021578 -1968171180 1586652752;}
+@list l16:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l16:level2
+	{mso-level-start-at:575;
+	mso-level-number-format:bullet;
+	mso-level-text:\F06E;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l16:level3
+	{mso-level-start-at:575;
+	mso-level-number-format:bullet;
+	mso-level-text:\F077;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l17
+	{mso-list-id:574363072;
+	mso-list-type:hybrid;
+	mso-list-template-ids:833026840 1493219496 -1537417804 -808543678 2020360072 -765136484 2055133630 -567481402 -1628677648 -899885474;}
+@list l17:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l17:level2
+	{mso-level-start-at:1122;
+	mso-level-number-format:bullet;
+	mso-level-text:\F06E;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l18
+	{mso-list-id:599291934;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1012368834 875437454 810698480 -787956058 1457392272 -1801058492 859481566 -1521696710 250409870 435727126;}
+@list l18:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l19
+	{mso-list-id:688874399;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1362010396 554052644 -276778934 -1153519458 656968164 -2108492934 1522828790 -1222979142 2045022392 -1975738690;}
+@list l19:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l20
+	{mso-list-id:719592444;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2121215554 155363614 -2065005570 1159603072 968491560 -224891406 2094825740 1359636608 1422010458 1864787090;}
+@list l20:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l21
+	{mso-list-id:777061518;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1119200728 789477128 -523621564 1319541560 1397015294 940111932 -1057309454 696674726 1876731460 755941918;}
+@list l21:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06E;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l21:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06E;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l22
+	{mso-list-id:808399039;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1372916136 1305372498 1003644088 -2139081708 1830570116 1206542032 -1312777016 228651254 -1736538442 1669999802;}
+@list l22:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l23
+	{mso-list-id:846559810;
+	mso-list-type:hybrid;
+	mso-list-template-ids:347626642 -1353409784 300289086 -503179384 117111592 -1297820708 1156588492 -1698917054 -1569792382 -1296818968;}
+@list l23:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l24
+	{mso-list-id:1042827806;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1650347566 -1712792106 -593844652 1393859756 332957608 -1287335194 1798491524 -1257970980 -1938027078 -623453358;}
+@list l24:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l25
+	{mso-list-id:1080831174;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-924401014 -1316852968 -372362426 1549962890 -948824310 1516269562 704778188 1945277022 -1426021110 391015750;}
+@list l25:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l25:level2
+	{mso-level-start-at:536;
+	mso-level-number-format:bullet;
+	mso-level-text:\F06E;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l26
+	{mso-list-id:1135441986;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1391012522 80349776 274074862 1130140976 -826120028 -868343370 -1542961800 1477348426 1571946996 1415071542;}
+@list l26:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l26:level2
+	{mso-level-start-at:536;
+	mso-level-number-format:bullet;
+	mso-level-text:\F06E;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l27
+	{mso-list-id:1158422578;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1556844088 -1942203836 1484428378 -1066004038 1287846906 1906349214 -198291228 -717336432 125445006 1506869096;}
+@list l27:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l28
+	{mso-list-id:1188131518;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1120276798 -1165229640 996710318 1691882842 2141325120 -1552140570 1950375188 832052642 1241930178 -96846474;}
+@list l28:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l29
+	{mso-list-id:1274283694;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-168784832 -392029004 -1374137958 -661380856 2142687962 1919206786 -2047813356 1856153584 939183884 -1960390054;}
+@list l29:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l30
+	{mso-list-id:1282299535;
+	mso-list-type:hybrid;
+	mso-list-template-ids:82893618 -1548042492 -1495247604 761277830 -895186966 -1550278158 1639074230 442896884 910434962 -1472576990;}
+@list l30:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l31
+	{mso-list-id:1304967519;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1964778450 2089594554 -1959087600 -1437721020 -1658426574 -1050746428 -1075794830 313396714 797979172 153896456;}
+@list l31:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l32
+	{mso-list-id:1343047235;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2051035814 660366478 -46130380 88134016 -1185660930 1993756164 2033626908 1969250192 2060223932 -304217858;}
+@list l32:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l33
+	{mso-list-id:1348292321;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1979578562 239912922 2067936104 2145022462 -1524067148 942431520 -379159244 -776554818 504415312 -1202921654;}
+@list l33:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l34
+	{mso-list-id:1356879657;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-239853406 1148631272 1211693448 -1593003628 778997910 1463701370 1868196010 -1577648304 1364633240 -1138465024;}
+@list l34:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l35
+	{mso-list-id:1423795256;
+	mso-list-type:hybrid;
+	mso-list-template-ids:47448238 1985742242 1361185110 -1900348518 -525698752 -80443192 -1060998998 -1630617876 -440904790 599533342;}
+@list l35:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l35:level2
+	{mso-level-start-at:1122;
+	mso-level-number-format:bullet;
+	mso-level-text:\F06E;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l35:level3
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l36
+	{mso-list-id:1553662285;
+	mso-list-type:hybrid;
+	mso-list-template-ids:675078356 -1354711268 949764042 -1923547654 579355320 195599388 -1901800792 716324082 1814600390 202776066;}
+@list l36:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l36:level2
+	{mso-level-start-at:1122;
+	mso-level-number-format:bullet;
+	mso-level-text:\F06E;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l37
+	{mso-list-id:1576430663;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1229119800 -861263902 2134523356 -2135532712 -1124990560 -1616735058 1686503606 -1407668408 -918916380 920002346;}
+@list l37:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l37:level2
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l38
+	{mso-list-id:1632052235;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-50536890 -786640756 558535698 -48588464 -144649622 -608505392 1346383638 -1321327800 130835840 1380063556;}
+@list l38:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l39
+	{mso-list-id:1894580992;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1849010592 547262692 545802856 -773314020 -894650518 159816394 -794130158 -634855872 -975283270 -1940348100;}
+@list l39:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06E;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l39:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06E;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l40
+	{mso-list-id:2000307005;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1772840396 1364868748 189967056 1663205400 2040175476 850840084 99768566 1558452734 -1608867064 -543367510;}
+@list l40:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l40:level2
+	{mso-level-start-at:900;
+	mso-level-number-format:bullet;
+	mso-level-text:\F06E;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l41
+	{mso-list-id:2083402619;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2057533980 -555447930 1644478934 -1573251502 -1793963432 2018966246 -854554616 321010668 1036010640 -830673512;}
+@list l41:level1
+	{mso-level-number-format:image;
+	list-style-image:url("Hashing_files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l41:level2
+	{mso-level-start-at:1236;
+	mso-level-number-format:bullet;
+	mso-level-text:\F06E;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Calibri;
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:18.0pt;line-height:115%'>Hashing<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Hash
+Functions and Hash Tables<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Hash
+Function:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l12 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>A
+hash function <b><i>h</i></b> maps keys of a given type to integers in a fixed
+interval <span style='mso-spacerun:yes'>  </span>[0, <b><i>N </i></b>- 1]<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l6 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Example:<br>
+<span style='mso-tab-count:1'>          </span><b><i>h</i></b>(<b><i>x</i></b>)
+= <b><i>x</i></b> mod <b><i>N<br>
+</i></b>is a hash function for integer keys<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo3;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>The
+integer <b><i>h</i></b>(<b><i>x</i></b>) is called the hash value of key <b><i>x</i></b><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:14.0pt;
+line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Hash <span
+class=GramE>Table :</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l13 level1 lfo4;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>A
+hash table for a given key type consists of<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l13 level2 lfo4;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>Hash function <b><i>h</i></b> <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l13 level2 lfo4;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>Array (called table) of size <b><i>N</i></b><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l20 level1 lfo5;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>When
+implementing a map with a hash table, the goal is to store item (<b><i>k</i></b>,
+<b><i>o</i></b>) at index <span class=SpellE><b><i>i</i></b></span> = <b><i>h</i></b>(<b><i>k</i></b>)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Example<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l28 level1 lfo6;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>We
+design a hash table for a map storing entries as (SSN, Name), where SSN (social
+security number) is a nine-digit positive integer<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l32 level1 lfo7;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Our
+hash table uses an array of size <b><i>N </i></b>= 10,000 and the hash function<br>
+<b><i>h</i></b>(<b><i>x</i></b>) = last four digits of <b><i>x</i></b><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l32 level1 lfo7;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:263.25pt;
+ height:255pt'>
+ <v:imagedata src="Hashing_files/image002.emz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=351 height=340
+src="Hashing_files/image003.gif" v:shapes="_x0000_i1025"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:14.0pt;
+line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:14.0pt;
+line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo3;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>A
+hash function is usually specified as the composition of two functions:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:14.0pt;
+line-height:115%'><span style='mso-tab-count:1'>     </span>Hash code:<br>
+<span style='mso-spacerun:yes'>              </span><span
+style='mso-spacerun:yes'>  </span><b><i>h</i></b><sub>1</sub>: keys </span><span
+style='font-size:14.0pt;line-height:115%;font-family:Symbol;mso-ascii-font-family:
+Calibri;mso-hansi-font-family:Calibri;mso-char-type:symbol;mso-symbol-font-family:
+Symbol'><span style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>®</span></span><span
+style='font-size:14.0pt;line-height:115%'> integers<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:14.0pt;
+line-height:115%'><span style='mso-tab-count:1'>     </span>Compression
+function:<br>
+<span style='mso-spacerun:yes'>  </span><span
+style='mso-spacerun:yes'>                 </span><b><i>h</i></b><sub>2</sub>:
+integers </span><span style='font-size:14.0pt;line-height:115%;font-family:
+Symbol;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;mso-char-type:
+symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;
+mso-symbol-font-family:Symbol'>®</span></span><span style='font-size:14.0pt;
+line-height:115%'> [0, <b><i>N </i></b>- 1]<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l7 level1 lfo8;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>The
+hash code is applied first, and the compression function is applied next on the
+result, i.e., <br>
+<span style='mso-tab-count:1'>          </span><b><i>h</i></b>(<b><i>x</i></b>)
+= <b><i>h</i></b><sub>2</sub>(<b><i>h</i></b><sub>1</sub>(<b><i>x</i></b>))<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l24 level1 lfo9;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>The
+goal of the hash function is to<span style='mso-spacerun:yes'> 
+</span>“disperse” the keys in an apparently random way<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Different
+Hash codes<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l41 level1 lfo10;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Memory
+address:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l41 level2 lfo10;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>We reinterpret the memory address of
+the key object as an integer (default hash code of all Java objects)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l41 level2 lfo10;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>Good in general, except for numeric
+and string keys<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l9 level1 lfo11;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Integer
+cast:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l9 level2 lfo11;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>We reinterpret the bits of the key as
+an integer<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l9 level2 lfo11;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>Suitable for keys of length less than
+or equal to the number of bits of the integer type (e.g., byte, short, <span
+class=SpellE>int</span> and float in Java)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l9 level1 lfo11;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Component
+sum:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l9 level2 lfo11;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>We partition the bits of the key into
+components of fixed length (e.g., 16 or 32 bits) and we sum the components
+(ignoring overflows)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l9 level2 lfo11;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>Suitable for numeric keys of fixed
+length greater than or equal to the number of bits of the integer type (e.g.,
+long and double in Java)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l40 level1 lfo12;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Polynomial
+accumulation:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l40 level2 lfo12;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>We partition the bits of the key into
+a sequence of components of fixed length (e.g., 8, 16 or 32 bits)<br>
+<span style='mso-spacerun:yes'> </span><span style='mso-tab-count:2'>                  </span><b><i>a</i></b><sub>0
+</sub><b><i>a</i></b><sub>1</sub> … <b><i>a<sub>n</sub></i></b><sub>-1</sub> <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l40 level2 lfo12;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>We evaluate the polynomial<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><b><i><span style='font-size:14.0pt;
+line-height:115%'><span style='mso-tab-count:1'>          </span><span
+class=GramE>p<span style='font-weight:normal;font-style:normal'>(</span></span>z</span></i></b><span
+style='font-size:14.0pt;line-height:115%'>)<b><i> </i></b>=<b><i> a</i></b><sub>0</sub>
++ <b><i>a</i></b><sub>1 </sub><b><i>z</i></b><sub> </sub><span
+style='mso-spacerun:yes'> </span>+ <b><i>a</i></b><sub>2 </sub><b><i>z</i></b><sup>2</sup>
++ … + <b><i>a<sub>n</sub></i></b><sub>-1</sub><b><i>z<sup>n</sup></i></b><sup>-1</sup><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:14.0pt;
+line-height:115%'><span style='mso-tab-count:1'>          </span><span
+class=GramE>at</span> a fixed value <b><i>z</i></b>, ignoring overflows<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l21 level2 lfo13;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>Especially suitable for strings
+(e.g., the choice <b><i>z </i></b>= 33 gives at most 6 collisions on a set of
+50,000 English words)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l26 level1 lfo14;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Polynomial
+<b><i>p</i></b>(<b><i>z</i></b>) can be evaluated in <b><i>O</i></b>(<b><i>n</i></b>)
+time using Horner’s rule:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l26 level2 lfo14;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>The following polynomials are
+successively computed, each from the previous one in <b><i>O</i></b>(1) time<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><b><i><span style='font-size:14.0pt;
+line-height:115%'><span style='mso-tab-count:2'>                   </span><span
+class=GramE>p<sub><span style='font-weight:normal;font-style:normal'>0</span></sub><span
+style='font-weight:normal;font-style:normal'>(</span></span>z</span></i></b><span
+style='font-size:14.0pt;line-height:115%'>)<b><i> </i></b>=<b><i> a<sub>n</sub></i></b><sub>-1</sub><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><b><i><span style='font-size:14.0pt;
+line-height:115%'><span style='mso-tab-count:2'>                   </span><span
+class=GramE>p<sub>i</sub></span></span></i></b><sub><span style='font-size:
+14.0pt;line-height:115%'> </span></sub><span style='font-size:14.0pt;
+line-height:115%'>(<b><i>z</i></b>)<b><i> </i></b>=<b><i> a<sub>n</sub></i></b><sub>-<b><i>i</i></b>-1
+</sub>+ <b><i>zp<sub>i</sub></i></b><sub>-1</sub>(<b><i>z</i></b>)<span
+style='mso-spacerun:yes'>   </span><span style='mso-spacerun:yes'> </span><span
+style='mso-tab-count:1'>        </span>(<span class=SpellE><b><i>i</i></b></span><b><i>
+</i></b>=<b><i> </i></b>1, 2, …, <b><i>n </i></b>-1)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l34 level1 lfo15;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>We
+have <b><i>p</i></b>(<b><i>z</i></b>) =<b><i> p<sub>n</sub></i></b><sub>-1</sub>(<b><i>z</i></b>)
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:20.0pt;line-height:115%'>Compression Functions<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l25 level1 lfo16;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Division:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l25 level2 lfo16;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b><i><span
+style='font-size:14.0pt;line-height:115%'>h</span></i></b><sub><span
+style='font-size:14.0pt;line-height:115%'>2 </span></sub><span
+style='font-size:14.0pt;line-height:115%'>(<b><i>y</i></b>) =<b><i> y </i></b>mod<b><i>
+N</i></b> <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l25 level2 lfo16;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>The size <b><i>N</i></b> of the hash
+table is usually chosen to be a prime <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l25 level2 lfo16;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>The reason has to do with number
+theory and is beyond the scope of this course<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l25 level1 lfo16;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Multiply,
+Add and Divide (MAD):<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l25 level2 lfo16;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b><i><span
+style='font-size:14.0pt;line-height:115%'>h</span></i></b><sub><span
+style='font-size:14.0pt;line-height:115%'>2 </span></sub><span
+style='font-size:14.0pt;line-height:115%'>(<b><i>y</i></b>) =<b><i> </i></b>(<b><i>ay
+</i></b>+<b><i> b</i></b>)<b><i> </i></b>mod<b><i> N</i></b><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l25 level2 lfo16;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b><i><span
+style='font-size:14.0pt;line-height:115%'>a</span></i></b><span
+style='font-size:14.0pt;line-height:115%'> and <b><i>b</i></b> are nonnegative
+integers such that<br>
+<span style='mso-tab-count:1'>          </span><span
+style='mso-spacerun:yes'> </span><b><i>a </i></b>mod<b><i> N</i></b><i> </i></span><span
+style='font-size:14.0pt;line-height:115%;font-family:Symbol;mso-ascii-font-family:
+Calibri;mso-hansi-font-family:Calibri;mso-char-type:symbol;mso-symbol-font-family:
+Symbol'><span style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>¹</span></span><span
+style='font-size:14.0pt;line-height:115%'> 0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l25 level2 lfo16;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>Otherwise, every integer would map to
+the same value <b><i>b</i></b> <o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:20.0pt;line-height:115%'>Collision Handling (Collision
+Resolution)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l2 level1 lfo17;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Collisions
+occur when different elements are mapped to the same cell<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo18;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><span style='font-size:14.0pt;line-height:
+115%'>Separate Chaining</span></b><span style='font-size:14.0pt;line-height:
+115%'>: let each cell in the table point to a linked list of entries that map
+there<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo18;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Separate
+chaining is simple, but requires additional memory outside the table<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1026" type="#_x0000_t75" style='width:317.25pt;height:159.75pt'>
+ <v:imagedata src="Hashing_files/image004.emz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=423 height=213
+src="Hashing_files/image005.gif" v:shapes="_x0000_i1026"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Map Methods
+with Separate Chaining used for Collisions<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo19;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Delegate
+operations to a list-based map at each cell:<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Algorithm
+</span></b><span class=GramE><span style='font-size:14.0pt;line-height:115%'>get(</span></span><i><span
+style='font-size:14.0pt;line-height:115%'>k</span></i><span style='font-size:
+14.0pt;line-height:115%'>):<span style='mso-tab-count:2'>                 </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:14.0pt;line-height:115%'>Output:
+</span></i></b><span style='font-size:14.0pt;line-height:115%'>The value
+associated with the key <i>k </i>in the map, or <b>null </b>if there is no<span
+style='mso-tab-count:1'>        </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-tab-count:1'>          </span><span class=GramE>entry</span> with
+key equal to <i>k </i>in the map<span style='mso-tab-count:1'> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><b><span style='font-size:14.0pt;
+line-height:115%'>return</span></b></span><b><span style='font-size:14.0pt;
+line-height:115%'> </span></b><i><span style='font-size:14.0pt;line-height:
+115%'>A</span></i><span style='font-size:14.0pt;line-height:115%'>[<i>h</i>(<i>k</i>)]<i>.</i>get(<i>k</i>)
+<span style='mso-tab-count:1'> </span>{delegate the get to the list-based map
+at <i>A</i>[<i>h</i>(<i>k</i>)]}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-tab-count:1'>          </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Algorithm
+</span></b><span class=GramE><span style='font-size:14.0pt;line-height:115%'>put(</span></span><span
+class=SpellE><i><span style='font-size:14.0pt;line-height:115%'>k,v</span></i></span><span
+style='font-size:14.0pt;line-height:115%'>):<span style='mso-tab-count:2'>              </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:14.0pt;line-height:115%'>Output:
+</span></i></b><span style='font-size:14.0pt;line-height:115%'>If there is an
+existing entry in our map with key equal to <i>k</i>, then we<span
+style='mso-tab-count:1'>         </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-tab-count:1'>          </span><span class=GramE>return</span> its
+value (replacing it with <i>v</i>); otherwise, we return <b>null<span
+style='mso-tab-count:1'>      </span></b><o:p></o:p></span></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:115%'>t </span></i><span
+style='font-size:14.0pt;line-height:115%'>=<i> <span class=GramE>A<span
+style='font-style:normal'>[</span></span>h</i>(<i>k</i>)]<i>.</i>put(<span
+class=SpellE><i>k,v</i></span>) <span style='mso-tab-count:1'>   </span>{delegate
+the put to the list-based map at <i>A</i>[<i>h</i>(<i>k</i>)]}<i> </i><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><b><span style='font-size:14.0pt;
+line-height:115%'>if</span></b></span><b><span style='font-size:14.0pt;
+line-height:115%'> </span></b><i><span style='font-size:14.0pt;line-height:
+115%'>t </span></i><span style='font-size:14.0pt;line-height:115%'>= <b>null
+then <span style='mso-tab-count:2'>             </span></b>{<i>k </i>is a new
+key}<i> </i><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-tab-count:1'>          </span><i>n </i>=<i> n </i>+ 1<span
+style='mso-tab-count:1'>    </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><b><span style='font-size:14.0pt;
+line-height:115%'>return</span></b></span><b><span style='font-size:14.0pt;
+line-height:115%'> </span></b><i><span style='font-size:14.0pt;line-height:
+115%'>t</span></i><span style='font-size:14.0pt;line-height:115%'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-tab-count:1'>          </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Algorithm
+</span></b><span class=GramE><span style='font-size:14.0pt;line-height:115%'>remove(</span></span><i><span
+style='font-size:14.0pt;line-height:115%'>k</span></i><span style='font-size:
+14.0pt;line-height:115%'>):<span style='mso-tab-count:2'>                  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:14.0pt;line-height:115%'>Output:
+</span></i></b><span style='font-size:14.0pt;line-height:115%'>The (removed)
+value associated with key <i>k </i>in the map, or <b>null </b>if there<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-tab-count:1'>          </span><span class=GramE>is</span> no entry
+with key equal to <i>k </i>in the map<span style='mso-tab-count:1'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:115%'>t </span></i><span
+style='font-size:14.0pt;line-height:115%'>=<i> <span class=GramE>A<span
+style='font-style:normal'>[</span></span>h</i>(<i>k</i>)]<i>.</i>remove(<i>k</i>)<span
+style='mso-spacerun:yes'>    </span><span
+style='mso-spacerun:yes'>   </span>{delegate the remove to the list-based map
+at <i>A</i>[<i>h</i>(<i>k</i>)]}<i> </i><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><b><span style='font-size:14.0pt;
+line-height:115%'>if</span></b></span><b><span style='font-size:14.0pt;
+line-height:115%'> </span></b><i><span style='font-size:14.0pt;line-height:
+115%'>t </span></i><span style='font-size:14.0pt;line-height:115%'>&#8800;<i> </i><b>null
+then <span style='mso-tab-count:1'>    </span><span
+style='mso-spacerun:yes'>          </span></b>{<i>k </i>was found}<i> </i><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-tab-count:1'>          </span><i>n </i>=<i> n - </i>1<span
+style='mso-tab-count:1'>     </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><b><span style='font-size:14.0pt;
+line-height:115%'>return</span></b></span><b><span style='font-size:14.0pt;
+line-height:115%'> </span></b><i><span style='font-size:14.0pt;line-height:
+115%'>t</span></i><span style='font-size:14.0pt;line-height:115%'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Linear
+Probing<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l8 level1 lfo20;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Open
+addressing: the colliding item is placed in a different cell of the table<b> </b><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l22 level1 lfo21;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><span style='font-size:14.0pt;line-height:
+115%'>Linear probing</span></b><span style='font-size:14.0pt;line-height:115%'>
+handles collisions by placing the colliding item in the next (circularly)
+available table cell<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l29 level1 lfo22;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Each
+table cell inspected is referred to as a “probe”<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l37 level1 lfo23;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Colliding
+items lump together, causing future collisions to cause a longer sequence of
+probes<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l37 level1 lfo23;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Example:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l37 level2 lfo23;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><i><span style='font-size:14.0pt;line-height:
+115%'>h</span></i></b><span style='font-size:14.0pt;line-height:115%'>(<b><i>x</i></b>)
+=<b><i> x </i></b>mod<b><i> </i></b>13<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l37 level2 lfo23;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Insert
+keys 18, 41, 22, 44, 59, 32, 31, 73, in this order<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>                    </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1027" type="#_x0000_t75" style='width:356.25pt;height:183.75pt'>
+ <v:imagedata src="Hashing_files/image006.emz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=475 height=245
+src="Hashing_files/image007.gif" v:shapes="_x0000_i1027"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Search with
+Linear Pro<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l33 level1 lfo24;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Consider
+a hash table <b><i>A</i></b> that uses linear probing<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l16 level1 lfo25;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>get(<b><i>k</i></b>)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l16 level2 lfo25;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>We start at cell <b><i>h</i></b>(<b><i>k</i></b>)
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l16 level2 lfo25;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>We probe consecutive locations until
+one of the following occurs<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:-.25in;mso-list:l16 level3 lfo25;
+tab-stops:list 1.5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>w<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>An item with key <b><i>k</i></b> is
+found, or<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:-.25in;mso-list:l16 level3 lfo25;
+tab-stops:list 1.5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>w<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>An empty cell is found, or<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:-.25in;mso-list:l16 level3 lfo25;
+tab-stops:list 1.5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>w<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b><i><span
+style='font-size:14.0pt;line-height:115%'>N</span></i></b><span
+style='font-size:14.0pt;line-height:115%'> cells have been unsuccessfully
+probed <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b><span style='font-size:14.0pt;
+line-height:115%'>Algorithm</span></b><span style='font-size:14.0pt;line-height:
+115%'> <span class=GramE><b><i>get</i></b>(</span><b><i>k</i></b>)<span
+style='mso-tab-count:1'>   </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:14.0pt;
+line-height:115%'><span style='mso-tab-count:1'>     </span><span class=SpellE><span
+class=GramE><b><i>i</i></b></span></span> </span><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-ascii-font-family:Calibri;mso-hansi-font-family:
+Calibri;mso-char-type:symbol;mso-symbol-font-family:Symbol'><span
+style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>¬</span></span><b><i><span
+style='font-size:14.0pt;line-height:115%'> h</span></i></b><span
+style='font-size:14.0pt;line-height:115%'>(<b><i>k</i></b>)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:14.0pt;
+line-height:115%'><span style='mso-tab-count:1'>     </span><b><i>p</i></b> </span><span
+style='font-size:14.0pt;line-height:115%;font-family:Symbol;mso-ascii-font-family:
+Calibri;mso-hansi-font-family:Calibri;mso-char-type:symbol;mso-symbol-font-family:
+Symbol'><span style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>¬</span></span><b><i><span
+style='font-size:14.0pt;line-height:115%'> </span></i></b><span
+style='font-size:14.0pt;line-height:115%'>0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:14.0pt;
+line-height:115%'><span style='mso-tab-count:1'>     </span><span class=GramE><b>repeat</b></span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b><span style='font-size:14.0pt;
+line-height:115%'><span style='mso-tab-count:2'>              </span><span
+class=GramE><i>c</i></span></span></b><span style='font-size:14.0pt;line-height:
+115%'> </span><span style='font-size:14.0pt;line-height:115%;font-family:Symbol;
+mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;mso-char-type:symbol;
+mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;mso-symbol-font-family:
+Symbol'>¬</span></span><b><i><span style='font-size:14.0pt;line-height:115%'> A</span></i></b><span
+style='font-size:14.0pt;line-height:115%'>[<span class=SpellE><b><i>i</i></b></span>]<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:14.0pt;
+line-height:115%'><span style='mso-tab-count:2'>              </span><span
+class=GramE><b>if</b></span><b> <i>c</i></b> = </span><span style='font-size:
+14.0pt;line-height:115%;font-family:Symbol;mso-ascii-font-family:Calibri;
+mso-hansi-font-family:Calibri;mso-char-type:symbol;mso-symbol-font-family:Symbol'><span
+style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>Æ</span></span><span
+style='font-size:14.0pt;line-height:115%'> <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:14.0pt;
+line-height:115%'><span style='mso-tab-count:3'>                        </span><span
+class=GramE><b>return</b></span> <b><i>null</i> </b><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b><span style='font-size:14.0pt;
+line-height:115%'><span style='mso-tab-count:2'>              </span><span
+style='mso-spacerun:yes'> </span><span class=GramE>else</span> if <span
+class=SpellE><i>c.key</i></span><i> </i></span></b><span style='font-size:14.0pt;
+line-height:115%'>() = <b><i>k</i></b><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b><i><span style='font-size:14.0pt;
+line-height:115%'><span style='mso-tab-count:3'>                        </span></span></i></b><span
+class=GramE><b><span style='font-size:14.0pt;line-height:115%'>return</span></b></span><span
+style='font-size:14.0pt;line-height:115%'> <span class=SpellE><b><i>c.element</i></b></span>()
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b><span style='font-size:14.0pt;
+line-height:115%'><span style='mso-tab-count:2'>              </span><span
+class=GramE>else</span></span></b><span style='font-size:14.0pt;line-height:
+115%'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b><span style='font-size:14.0pt;
+line-height:115%'><span style='mso-tab-count:3'>                        </span><span
+class=SpellE><span class=GramE><i>i</i></span></span></span></b><span
+style='font-size:14.0pt;line-height:115%'> </span><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-ascii-font-family:Calibri;mso-hansi-font-family:
+Calibri;mso-char-type:symbol;mso-symbol-font-family:Symbol'><span
+style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>¬</span></span><b><i><span
+style='font-size:14.0pt;line-height:115%'> </span></i></b><span
+style='font-size:14.0pt;line-height:115%'>(<span class=SpellE><b><i>i</i></b></span>
++<b><i> </i></b>1)<b><i> </i></b>mod<b><i> N</i></b> <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b><span style='font-size:14.0pt;
+line-height:115%'><span style='mso-tab-count:2'>              </span><span
+class=GramE><i>p</i></span></span></b><span style='font-size:14.0pt;line-height:
+115%'> </span><span style='font-size:14.0pt;line-height:115%;font-family:Symbol;
+mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;mso-char-type:symbol;
+mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;mso-symbol-font-family:
+Symbol'>¬</span></span><b><i><span style='font-size:14.0pt;line-height:115%'> p</span></i></b><span
+style='font-size:14.0pt;line-height:115%'> +<b><i> </i></b>1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span class=GramE><b><span
+style='font-size:14.0pt;line-height:115%'>until</span></b></span><span
+style='font-size:14.0pt;line-height:115%'> <span style='mso-tab-count:1'>      </span><span
+style='mso-spacerun:yes'> </span><b><i>p</i></b> = <b><i>N</i></b><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:14.0pt;
+line-height:115%'><span style='mso-tab-count:1'>     </span><span class=GramE><b>return</b></span>
+<b><i>null<o:p></o:p></i></b></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:14.0pt;
+line-height:115%'>Updates with Linear Probing<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:14.0pt;
+line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l23 level1 lfo26;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>To
+handle insertions and deletions, we introduce a special object, called <b><i>AVAILABLE</i></b>,
+which replaces deleted elements<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l35 level1 lfo27;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>remove(<b><i>k</i></b>)
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l35 level2 lfo27;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>We search for an entry with key <b><i>k</i></b>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l35 level2 lfo27;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>If such an entry (<b><i>k, o</i></b>)
+is found, we replace it with the special item <b><i>AVAILABLE</i></b> and we
+return element <b><i>o</i></b> <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l35 level2 lfo27;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>Else, we return <b><i>null</i></b><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l35 level1 lfo27;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>put(<b><i>k,
+o</i></b>) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l35 level2 lfo27;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>We throw an exception if the table is
+full<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l35 level2 lfo27;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>We start at cell <b><i>h</i></b>(<b><i>k</i></b>)
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l35 level2 lfo27;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>We probe consecutive cells until one
+of the following occurs<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:-.25in;mso-list:l35 level3 lfo27;
+tab-stops:list 1.5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>A
+cell <span class=SpellE><b><i>i</i></b></span> is found that is either empty or
+stores <b><i>AVAILABLE</i></b>, or<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:-.25in;mso-list:l35 level3 lfo27;
+tab-stops:list 1.5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><i><span style='font-size:14.0pt;line-height:
+115%'>N</span></i></b><span style='font-size:14.0pt;line-height:115%'> cells
+have been unsuccessfully probed<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l35 level2 lfo27;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>We store entry (<b><i>k, o</i></b>)
+in cell <span class=SpellE><b><i>i</i></b></span><b><i> </i></b><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:14.0pt;
+line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:20.0pt;line-height:115%'>Double Hashing<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l15 level1 lfo28;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Double
+hashing uses a secondary hash function <b><i>d</i></b>(<b><i>k</i></b>) and
+handles collisions by placing an item in the first available cell of the series<br>
+<span style='mso-tab-count:1'>          </span>(<span class=SpellE><b><i>i</i></b></span><i>
+</i>+ <span class=SpellE><b><i>jd</i></b></span>(<b><i>k</i></b>)) mod <b><i>N<br>
+<span style='mso-spacerun:yes'> </span></i></b>for <b><i>j</i></b><i> </i>=
+0,<span style='mso-spacerun:yes'>  </span>1, … , <b><i>N </i></b>- 1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l19 level1 lfo29;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>The
+secondary hash function <b><i>d</i></b>(<b><i>k</i></b>) cannot have zero
+values<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l11 level1 lfo30;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>The
+table size <b><i>N</i></b> must be a prime to allow probing of all the cells<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo31;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Common
+choice of compression function for the secondary hash function: <span
+style='mso-tab-count:1'>          </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><b><i><span style='font-size:14.0pt;
+line-height:115%'><span style='mso-spacerun:yes'>             </span><span
+class=GramE>d<sub><span style='font-weight:normal;font-style:normal'>2</span></sub><span
+style='font-weight:normal;font-style:normal'>(</span></span>k</span></i></b><span
+style='font-size:14.0pt;line-height:115%'>) = <b><i>q</i></b><i> </i>- <b><i>k</i></b>
+mod <b><i>q</i></b><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:14.0pt;
+line-height:115%'><span style='mso-tab-count:2'>              </span><span
+class=GramE>where</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l39 level2 lfo32;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b><i><span
+style='font-size:14.0pt;line-height:115%'>q</span></i></b><i><span
+style='font-size:14.0pt;line-height:115%'> </span></i><span style='font-size:
+14.0pt;line-height:115%'>&lt; <b><i>N</i></b><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l39 level2 lfo32;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b><i><span
+style='font-size:14.0pt;line-height:115%'>q</span></i></b><span
+style='font-size:14.0pt;line-height:115%'> is a prime<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l30 level1 lfo33;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>The
+possible values for <b><i>d</i></b><sub>2</sub>(<b><i>k</i></b>) are<br>
+<span style='mso-tab-count:1'>          </span><span
+style='mso-spacerun:yes'> </span>1, 2, … , <b><i>q</i></b><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l36 level1 lfo34;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Consider
+a hash table storing integer keys that handles collision with double hashing<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l36 level2 lfo34;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b><i><span
+style='font-size:14.0pt;line-height:115%'>N </span></i></b><span
+style='font-size:14.0pt;line-height:115%'>= 13 <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l36 level2 lfo34;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b><i><span
+style='font-size:14.0pt;line-height:115%'>h</span></i></b><span
+style='font-size:14.0pt;line-height:115%'>(<b><i>k</i></b>) =<b><i> k </i></b>mod<b><i>
+</i></b>13 <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l36 level2 lfo34;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b><i><span
+style='font-size:14.0pt;line-height:115%'>d</span></i></b><span
+style='font-size:14.0pt;line-height:115%'>(<b><i>k</i></b>) =<b><i> </i></b>7 -<b><i>
+k </i></b>mod<b><i> </i></b>7<b><i> </i></b><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l31 level1 lfo35;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Insert
+keys 18, 41, 22, 44, 59, 32, 31, 73, in this order<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><!--[if gte vml 1]><v:shape id="_x0000_s1026"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:109.5pt;margin-top:3.85pt;width:231pt;height:181.5pt;z-index:1'
+ o:bwpure="highContrast" o:bwnormal="blackTextAndLines" filled="t">
+ <v:imagedata src="Hashing_files/image008.emz" o:title=""/>
+</v:shape><![if gte mso 9]><o:OLEObject Type="Embed" ProgID="Excel.Sheet.8"
+ ShapeID="_x0000_s1026" DrawAspect="Content" ObjectID="_1297668808">
+</o:OLEObject>
+<![endif]><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=146 height=5></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=308 height=242 src="Hashing_files/image009.gif" v:shapes="_x0000_s1026"></td>
+ </tr>
+</table>
+
+</span><![endif]><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>                </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1028" type="#_x0000_t75" style='width:374.25pt;height:177.75pt'>
+ <v:imagedata src="Hashing_files/image010.emz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=499 height=237
+src="Hashing_files/image011.gif" v:shapes="_x0000_i1028"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:20.0pt;line-height:115%'>Performance of Hashing<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l18 level1 lfo36;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>In
+the worst case, searches, insertions and removals on a hash table take <b><i>O</i></b>(<b><i>n</i></b>)
+time<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l27 level1 lfo37;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>The
+worst case occurs when all the keys inserted into the map collide<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l4 level1 lfo38;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>The
+load factor <b><i>a</i></b> = <b><i>n</i></b>/<b><i>N </i></b>affects the
+performance of a hash table<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l5 level1 lfo39;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Assuming
+that the hash values are like random numbers, it can be shown that the expected
+number of probes for an insertion with open addressing is<br>
+<span style='mso-tab-count:1'>          </span>1<b><i> </i></b>/ (1 -<b><i> a</i></b>)
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l38 level1 lfo40;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>The
+expected running time of all operations in a hash table is <b><i>O</i></b>(1) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l14 level1 lfo41;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>In
+practice, hashing is very fast provided the load factor is not close to 100%<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l17 level1 lfo42;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=16 height=16
+src="Hashing_files/image001.gif" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:14.0pt;line-height:115%'>Applications
+of hash tables:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l17 level2 lfo42;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>small databases<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l17 level2 lfo42;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>compilers<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l17 level2 lfo42;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:14.0pt;
+line-height:115%;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings'><span style='mso-list:Ignore'>n<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:115%'>browser caches <o:p></o:p></span></p>
+
+<span style='font-size:14.0pt;line-height:115%;font-family:Calibri;mso-fareast-font-family:
+SimSun;mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-US;
+mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'><br clear=all
+style='mso-special-character:line-break;page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:20.0pt;line-height:115%'>Java Example<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>   </span>/** A hash table with linear probing and the
+MAD hash function */<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:14.0pt;line-height:
+115%'>public</span></span><span style='font-size:14.0pt;line-height:115%'>
+class <span class=SpellE>HashTable</span> implements Map {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>protected</span> static
+class <span class=SpellE>HashEntry</span> implements Entry {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span>Object key, value;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE>HashEntry</span> () <span
+class=GramE>{ /</span>* default constructor */ }<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>HashEntry</span></span><span
+class=GramE>(</span>Object k, Object v) { key = k; value = v; }<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>public</span> Object
+key() { return key; }<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>public</span> Object
+value() { return value; }<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>protected</span> Object <span
+class=SpellE>setValue</span>(Object v) {<span style='mso-spacerun:yes'> 
+</span>// set a new value, returning old<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>      </span>Object temp = value;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>value</span> = v;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>return</span>
+temp;<span style='mso-spacerun:yes'>  </span>// return old value<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>/** Nested class for a default equality
+tester */<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>protected</span> static
+class <span class=SpellE>DefaultEqualityTester</span> implements <span
+class=SpellE>EqualityTester</span> {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>DefaultEqualityTester</span></span><span
+class=GramE>(</span>) { /* default constructor */ }<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span>/** Returns whether the two objects are
+equal.<span style='mso-spacerun:yes'>  </span>*/<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>public</span> <span
+class=SpellE>boolean</span> <span class=SpellE>isEqualTo</span>(Object a,
+Object b) { return <span class=SpellE>a.equals</span>(b); }<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>protected</span> static
+Entry AVAILABLE = new <span class=SpellE>HashEntry</span>(null, null); // empty
+marker <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>protected</span> <span
+class=SpellE>int</span> n = 0; <span style='mso-tab-count:1'>          </span>//
+number of entries in the dictionary<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>protected</span> <span
+class=SpellE>int</span> N; <span style='mso-tab-count:2'>                </span>//
+capacity of the bucket array<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>protected</span> Entry[] A;<span
+style='mso-tab-count:2'>                   </span>// bucket array<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>protected</span> <span
+class=SpellE>EqualityTester</span> T;<span style='mso-tab-count:1'>       </span>//
+the equality tester<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>protected</span> <span
+class=SpellE>int</span> scale, shift;<span style='mso-spacerun:yes'>  
+</span>// the shift and scaling factors<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>/** <span class=GramE>Creates</span> a hash
+table with initial capacity 1023. */<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>public</span> <span
+class=SpellE>HashTable</span>() { <span style='mso-tab-count:2'>                   </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span>N = 1023; // default capacity<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span>A = new <span class=GramE>Entry[</span>N];<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span>T = new <span class=SpellE><span
+class=GramE>DefaultEqualityTester</span></span><span class=GramE>(</span>); //
+use the default equality tester<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>java.util.Random</span></span>
+rand = new <span class=SpellE>java.util.Random</span>();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>scale</span> = <span
+class=SpellE>rand.nextInt</span>(N-1) + 1;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>shift</span> = <span
+class=SpellE>rand.nextInt</span>(N);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>/** <span
+class=GramE>Creates</span> a hash table with the given capacity and equality
+tester. */<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>public</span> <span
+class=SpellE>HashTable</span>(<span class=SpellE>int</span> <span class=SpellE>bN</span>,
+<span class=SpellE>EqualityTester</span> tester) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span>N = <span class=SpellE>bN</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span>A = new <span class=GramE>Entry[</span>N];<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span>T = tester;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>java.util.Random</span></span>
+rand = new <span class=SpellE>java.util.Random</span>();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>scale</span> = <span
+class=SpellE>rand.nextInt</span>(N-1) + 1;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>shift</span> = <span
+class=SpellE>rand.nextInt</span>(N);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>/** <span class=GramE>Determines</span>
+whether a key is valid. */<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>protected</span> void <span
+class=SpellE>checkKey</span>(Object k) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>if</span> (k == null)
+throw new <span class=SpellE>InvalidKeyException</span>(&quot;Invalid key:
+null.&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>/** Hash function applying MAD method to
+default hash code. */<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>public</span> <span
+class=SpellE>int</span> <span class=SpellE>hashValue</span>(Object key) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>return</span> Math.abs(<span
+class=SpellE>key.hashCode</span>()*scale + shift) % N;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>/** Returns the number of entries in the hash
+table. */<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>public</span> <span
+class=SpellE>int</span> size() { return n; }<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>/** Returns whether or not the table is
+empty. */<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>public</span> <span
+class=SpellE>boolean</span> <span class=SpellE>isEmpty</span>() { return (n ==
+0); }<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>/** Helper search method - returns index of
+found key or -index-1,<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>   </span>* <span class=GramE>where</span> index is
+the index of an empty or available slot. */<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>protected</span> <span
+class=SpellE>int</span> <span class=SpellE>findEntry</span>(Object key) throws <span
+class=SpellE>InvalidKeyException</span> {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>int</span></span>
+avail = 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>checkKey</span></span><span
+class=GramE>(</span>key);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>int</span></span>
+<span class=SpellE>i</span> = <span class=SpellE>hashValue</span>(key);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>int</span></span>
+j = <span class=SpellE>i</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>do</span> {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>if</span> (A[<span
+class=SpellE>i</span>] == null)<span style='mso-spacerun:yes'>   </span>return
+-<span class=SpellE>i</span> - 1;<span style='mso-spacerun:yes'>  </span>//
+entry is not found<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>if</span> (A[<span
+class=SpellE>i</span>] == AVAILABLE) {<span style='mso-tab-count:1'>          </span>//
+bucket is deactivated<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-tab-count:1'>          </span><span class=GramE>avail</span> = <span
+class=SpellE>i</span>;<span style='mso-tab-count:2'>              </span>//
+remember that this slot is available<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-tab-count:1'>          </span><span class=SpellE>i</span> = (<span
+class=SpellE>i</span> + 1) % N;<span style='mso-tab-count:1'>     </span>//
+keep looking<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>else</span> if (<span
+class=SpellE>T.isEqualTo</span>(<span class=SpellE>key,A</span>[<span
+class=SpellE>i</span>].key()))<span style='mso-spacerun:yes'>  </span>// we
+have found our entry<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-tab-count:1'>          </span><span class=GramE>return</span> <span
+class=SpellE>i</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>else</span> // this
+slot is occupied--we must keep looking<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-tab-count:1'>          </span><span class=SpellE>i</span> = (<span
+class=SpellE>i</span> + 1) % N;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span>} while (<span class=SpellE><span
+class=GramE>i</span></span><span class=GramE> !</span>= j);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>return</span> -avail -
+1;<span style='mso-spacerun:yes'>  </span>// entry is not found<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>/** Returns the value associated with a key.
+*/<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>public</span> Object get
+(Object key) throws <span class=SpellE>InvalidKeyException</span> {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>int</span></span>
+<span class=SpellE>i</span> = <span class=SpellE>findEntry</span>(key);<span
+style='mso-spacerun:yes'>  </span>// helper method for finding a key<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>if</span> (<span
+class=SpellE>i</span> &lt; 0) return null;<span style='mso-spacerun:yes'> 
+</span>// there is no value for this key<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>return</span> A[<span
+class=SpellE>i</span>].value();<span style='mso-spacerun:yes'>     </span>//
+return the found value in this case<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>/** Put a key-value pair in the map,
+replacing previous one if it exists. */<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>public</span> Object put
+(Object key, Object value) throws <span class=SpellE>InvalidKeyException</span>
+{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>if</span> (n &gt;= N/2)
+rehash(); // rehash to keep the load factor &lt;= 0.5<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>int</span></span>
+<span class=SpellE>i</span> = <span class=SpellE>findEntry</span>(key); //find
+the appropriate spot for this entry<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>if</span> (<span
+class=SpellE>i</span> &lt; 0) { <span style='mso-tab-count:1'>         </span>//
+this key does not already have a value<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>A[</span>-i-1] = new <span
+class=SpellE>HashEntry</span>(key, value); // convert to the proper index<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>n</span>++;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>return</span> null; <span
+style='mso-tab-count:1'>   </span>// there was no previous value<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>else</span><span
+style='mso-spacerun:yes'>  </span><span style='mso-tab-count:2'>                </span>//
+this key has a previous value<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>return</span> ((<span
+class=SpellE>HashEntry</span>) A[<span class=SpellE>i</span>]).<span
+class=SpellE>setValue</span>(value); // set new value &amp; return old<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>/** Doubles the size of the hash table and
+rehashes all the entries. */<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>protected</span> void
+rehash() {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span>N = 2*N;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>Entry[</span>] B = A;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span>A = new <span class=GramE>Entry[</span>N];
+// allocate a new version of A twice as big as before<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>java.util.Random</span></span>
+rand = new <span class=SpellE>java.util.Random</span>();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>scale</span> = <span
+class=SpellE>rand.nextInt</span>(N-1) + 1;<span style='mso-spacerun:yes'>   
+</span><span style='mso-tab-count:1'>      </span>// new hash scaling factor<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>shift</span> = <span
+class=SpellE>rand.nextInt</span>(N); <span style='mso-tab-count:2'>            </span>//
+new hash shifting factor<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>for</span> (<span
+class=SpellE>int</span> <span class=SpellE>i</span>=0; <span class=SpellE>i&amp;ltB.length</span>;
+<span class=SpellE>i</span>++)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>if</span> ((B[<span
+class=SpellE>i</span>] != null) &amp;&amp; (B[<span class=SpellE>i</span>] !=
+AVAILABLE)) { // if we have a valid entry<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-tab-count:1'>          </span><span class=SpellE><span class=GramE>int</span></span>
+j = <span class=SpellE>findEntry</span>(B[<span class=SpellE>i</span>].key());<span
+style='mso-spacerun:yes'>  </span>// find the appropriate spot<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-tab-count:1'>          </span><span class=GramE>A[</span>-j-1] = B[<span
+class=SpellE>i</span>];<span style='mso-spacerun:yes'>                
+</span>// copy into the new array<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>/** Removes the key-value pair with a
+specified key. */<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>public</span> Object remove
+(Object key) throws <span class=SpellE>InvalidKeyException</span> {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'> </span><span style='mso-spacerun:yes'>   </span><span
+class=SpellE><span class=GramE>int</span></span> <span class=SpellE>i</span> = <span
+class=SpellE>findEntry</span>(key);<span style='mso-spacerun:yes'>  </span><span
+style='mso-tab-count:1'>     </span>// find this key first<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>if</span> (<span
+class=SpellE>i</span> &lt; 0) return null;<span style='mso-spacerun:yes'> 
+</span><span style='mso-tab-count:1'>         </span>// nothing to remove<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span>Object <span class=SpellE>toReturn</span> =
+A[<span class=SpellE>i</span>].<span class=GramE>value(</span>);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span>A[<span class=SpellE>i</span>] = AVAILABLE;
+<span style='mso-tab-count:2'>          </span>// mark this slot as deactivated<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>n--</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>return</span> <span
+class=SpellE>toReturn</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>/** Returns an <span class=SpellE>iterator</span>
+of keys. */<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>public</span> <span
+class=SpellE>java.util.Iterator</span> keys() {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span>List keys = new <span class=SpellE><span
+class=GramE>NodeList</span></span><span class=GramE>(</span>);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>for</span> (<span
+class=SpellE>int</span> <span class=SpellE>i</span>=0; <span class=SpellE>i&amp;ltN</span>;
+<span class=SpellE>i</span>++) <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>if</span> ((A[<span
+class=SpellE>i</span>] != null) &amp;&amp; (A[<span class=SpellE>i</span>] !=
+AVAILABLE)) <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-tab-count:1'>          </span><span class=SpellE><span class=GramE>keys.insertLast</span></span><span
+class=GramE>(</span>A[<span class=SpellE>i</span>].key());<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>return</span> <span
+class=SpellE>keys.elements</span>();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>} // ... <span
+class=GramE>values(</span>) is similar to keys() and is omitted here ... <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>
