@@ -7,7 +7,6 @@
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="java.math.BigInteger"/>
 <fullyQualifiedTypeName name="game_entry.GameEntry"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="singly_linked_list.SinglyLinkedList"/>
 <fullyQualifiedTypeName name="singly_linked_list_node.SinglyLinkedListNode"/>
 <fullyQualifiedTypeName name="circularly_linked_list.CircleList"/>
@@ -48,7 +47,9 @@
 <fullyQualifiedTypeName name="favorite_list_mtf.FavoriteListMTF"/>
 <fullyQualifiedTypeName name="node.Node"/>
 <fullyQualifiedTypeName name="linked_list.List"/>
-<fullyQualifiedTypeName name="java.io.PrintStream"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 <fullyQualifiedTypeName name="java.util.Stack"/>
+<fullyQualifiedTypeName name="java.util.Queue"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.io.PrintStream"/>
 </qualifiedTypeNameHistroy>
