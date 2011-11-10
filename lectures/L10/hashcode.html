@@ -1,0 +1,106 @@
+
+<html><head><title>Hashcode</title></head>
+<body>
+<center>Java Hashcode() </center>
+<ul>
+
+In the Java programming language, every class must provide a hashCode() method which digests
+the data stored in an instance of the class into a single hash value (a 32-bit signed integer). <br>
+This hash is used by other code when storing or manipulating the instance - 
+the values are intended to be evenly distributed for varied inputs in order to avoid clustering. 
+This property is important to the performance of hash tables and other data structures that store objects 
+in groups ("buckets") based on their computed hash values.
+
+<p>
+<li>hashCode() in general<p>
+<ul>
+All the classes inherit a basic hash scheme from the fundamental base class java.lang.Object, 
+but instead many override this to provide a hash function that better handles their specific data. 
+Classes which provide their own implementation must override the object method public int hashCode().<p>
+
+The general contract for overridden implementations of this method is that they behave in a way consistent 
+with the same object's equals() method: that a given object must consistently report the same hash value 
+(unless it is changed so that the new version is no longer considered "equal" to the old), and that two objects 
+which equals() says are equal must report the same hash value. There's no requirement that hash values be 
+consistent between different Java implementations, or even between different execution runs of the same program, 
+and while two unequal objects having different hashes is very desirable, this is not mandatory (that is, 
+the hash function implemented need not be a perfect hash).
+
+<p>
+For example, the class Employee might implement its hash function by composing the hashes of its members:
+
+<p>
+<pre>
+public class Employee{
+    int        employeeId;
+    String     name;
+    Department dept;
+ 
+    // other methods would be in here 
+ 
+    @Override
+    public int hashCode() {
+        int hash = 1;
+        hash = hash * 17 + employeeId;
+        hash = hash * 31 + name.hashCode();
+        hash = hash * 13 + (dept == null ? 0 : dept.hashCode());
+        return hash;
+    }
+}
+
+
+</pre>
+<p>
+<li>The java.lang.String hash function<p>
+<ul><pre>
+public int hashCode()Returns a hash code for this string. The hash code for a String object is computed as 
+ s[0]*31^(n-1) + s[1]*31^(n-2) + ... + s[n-1]
+ using int arithmetic, where s[i] is the ith character of the string, n is the length of the string, 
+and ^ indicates exponentiation. (The hash value of the empty string is zero.) 
+Note that, because of wraparound associated with modular arithmetic, the hash code could be negative, or even zero.
+Overrides:
+hashCode in class Object
+Returns:
+a hash code value for this object.
+
+</pre>
+
+</ul>
+<li>java Object class hashCode () <p>
+<ul>
+
+
+public int hashCode() <p>
+
+Returns a hash code value for the object. This method is supported for the benefit of 
+hashtables such as those provided by java.util.Hashtable. 
+The general contract of hashCode is: <ul>
+
+<li>Whenever it is invoked on the same object more than once during an execution of a Java application, 
+the hashCode method must consistently return the same integer, provided no information used in equals 
+comparisons on the object is modified. This integer need not remain consistent from one execution of 
+an application to another execution of the same application. 
+<li>If two objects are equal according to the equals(Object) method, then calling the hashCode method on 
+each of the two objects must produce the same integer result. 
+<li>It is not required that if two objects are unequal according to the equals(java.lang.Object) method, 
+then calling the hashCode method on each of the two objects must produce distinct integer results. 
+However, the programmer should be aware that producing distinct integer results for unequal objects 
+may improve the performance of hashtables. 
+</ul><P>
+As much as is reasonably practical, the hashCode method defined by class Object does return distinct 
+integers for distinct objects. (This is typically implemented by converting the internal address of
+ the object into an integer, but this implementation technique is not required by the JavaTM programming language.) 
+
+
+
+
+
+
+</ul>
+<p>
+<li>Always override hashCode when you override equals.
+<P>
+</ul>
+
+</body>
+</html>

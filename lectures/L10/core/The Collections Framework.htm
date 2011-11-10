@@ -1,0 +1,1787 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="The%20Collections%20Framework_files/filelist.xml">
+<link rel=Edit-Time-Data href="The%20Collections%20Framework_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>The Collections Framework</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>DePaul University</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>DePaul University</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>25</o:TotalTime>
+  <o:Created>2009-03-03T17:10:00Z</o:Created>
+  <o:LastSaved>2009-03-03T17:10:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>3202</o:Words>
+  <o:Characters>18257</o:Characters>
+  <o:Company>DePaul University</o:Company>
+  <o:Lines>152</o:Lines>
+  <o:Paragraphs>42</o:Paragraphs>
+  <o:CharactersWithSpaces>21417</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:\5B8B\4F53;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:SimSun;}
+h2
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;}
+h3
+	{margin-top:11.25pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:9.0pt;
+	font-family:"Times New Roman";
+	color:black;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+h5
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:13.0pt;
+	font-family:"Times New Roman";
+	font-style:italic;}
+a:link, span.MsoHyperlink
+	{color:#00217B;
+	mso-text-animation:none;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:SimSun;}
+tt
+	{font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:SimSun;
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+p.doctext, li.doctext, div.doctext
+	{mso-style-name:doctext;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:SimSun;}
+span.docemphasis
+	{mso-style-name:docemphasis;}
+span.doctexthighlight2
+	{mso-style-name:doctexthighlight2;}
+span.docemphitalicalt
+	{mso-style-name:docemphitalicalt;}
+p.doclist, li.doclist, div.doclist
+	{mso-style-name:doclist;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:SimSun;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:359205559;
+	mso-list-template-ids:2030310982;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:363410114;
+	mso-list-template-ids:172929940;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:724988256;
+	mso-list-template-ids:-1811089916;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l3
+	{mso-list-id:1310861132;
+	mso-list-template-ids:-1364426624;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l4
+	{mso-list-id:1614903514;
+	mso-list-template-ids:1285321050;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l5
+	{mso-list-id:1806312527;
+	mso-list-template-ids:892789366;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l6
+	{mso-list-id:1953128008;
+	mso-list-template-ids:1706065726;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link="#00217B" vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3 align=center style='text-align:center'><span style='font-size:18.0pt'>The
+Collections Framework<o:p></o:p></span></h3>
+
+<p class=doctext><a name=A></a><span style='color:black'>A <span
+class=docemphasis>framework</span><a name="set_of"></a> is a set of classes
+that form the basis for building advanced functionality. A framework contains <span
+class=SpellE>superclasses</span> with useful functionality, policies, and
+mechanisms. The user of a framework forms subclasses to extend the
+functionality without having to reinvent the basic mechanisms. For example,
+Swing is a framework for user interfaces.<o:p></o:p></span></p>
+
+<p class=doctext><span style='color:black'>The <span class=doctexthighlight2>Java</span><a
+name="library_forms"></a> collections library forms a framework for collection
+classes. It defines a number of interfaces and abstract classes for <span
+class=SpellE>implementors</span> of collections (see <a
+href="javascript:moveTo('ch13fig10');">Figure 13–10</a><a
+name="certain_mechanisms"></a>), and it prescribes certain mechanisms, such as
+the iteration protocol. You can use the collection classes without having to
+know much about the framework—we did just that in the preceding sections.
+However, if you want to implement generic algorithms that work for multiple
+collection types or if you want to add a new collection type, it is helpful to
+understand the framework.<o:p></o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:6in;
+ height:347.25pt'>
+ <v:imagedata src="The%20Collections%20Framework_files/image001.png" o:title="13-10"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=576 height=463
+src="The%20Collections%20Framework_files/image002.jpg" v:shapes="_x0000_i1025"><![endif]></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=doctext><span style='font-size:10.0pt;color:black'>There are two
+fundamental interfaces for collections: </span><tt><span style='font-size:10.0pt;
+color:black'>Collection</span></tt><span style='font-size:10.0pt;color:black'>
+and </span><tt><span style='font-size:10.0pt;color:black'>Map</span></tt><a
+name="with_a"></a><span style='font-size:10.0pt;color:black'>. You insert
+elements into a collection with a method:<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span class=GramE><span style='color:black'>boolean</span></span></span><span
+style='color:black'> add(E element)<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:10.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name=the></a><a name=iddle2734></a><a name=iddle2499></a><a
+name=iddle1363></a><span style='font-size:10.0pt;color:black'>However, maps
+hold key/value pairs, and you use the </span><tt><span style='font-size:10.0pt;
+color:black'>put</span></tt><span style='font-size:10.0pt;color:black'> method
+to insert them.<o:p></o:p></span></p>
+
+<pre><span style='color:black'>V <span class=GramE>put(</span>K key, V value)<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:10.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="you_visit"></a><span style='font-size:10.0pt;
+color:black'>To read elements from a collection, you visit them with an <span
+class=SpellE>iterator</span>. However, you can read values from a map with the </span><tt><span
+style='font-size:10.0pt;color:black'>get</span></tt><span style='font-size:
+10.0pt;color:black'> method:<o:p></o:p></span></p>
+
+<pre><span style='color:black'>V <span class=GramE>get(</span>K key)<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:10.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:10.0pt;color:black'>A </span><tt><span
+style='font-size:10.0pt;color:black'>List</span></tt><span style='font-size:
+10.0pt;color:black'> is an <span class=docemphasis>ordered collection</span><a
+name="An_object"></a>. Elements are added into a particular position in the
+container. An object can be placed into its position in two ways: by an integer
+index and by a list <span class=SpellE>iterator</span>. The </span><tt><span
+style='font-size:10.0pt;color:black'>List</span></tt><span style='font-size:
+10.0pt;color:black'> interface defines methods for random access:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>void</span></span><span
+style='color:black'> add(<span class=SpellE>int</span> index, E element)<o:p></o:p></span></pre><pre><span
+style='color:black'>E <span class=GramE>get(</span><span class=SpellE>int</span> index)<o:p></o:p></span></pre><pre><span
+class=GramE><span style='color:black'>void</span></span><span style='color:
+black'> remove(<span class=SpellE>int</span> index)<o:p></o:p></span></pre>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>The </span><tt><span
+style='font-size:10.0pt;color:black'>List</span></tt><a name="or_not"></a><span
+style='font-size:8.5pt;color:black'> interface provides these random access
+methods whether or not they are efficient for a particular implementation. To
+avoid carrying out costly <a name=iddle3234></a><a name=iddle3206></a><a
+name=iddle3204></a><a name=iddle2972></a><a name=iddle2970></a><a
+name=iddle2907></a><a name=iddle2834></a><a name=iddle2663></a><a
+name=iddle2661></a><a name=iddle2507></a><a name=iddle1868></a><a
+name=iddle1599></a><a name=iddle1140></a><a name=iddle1047></a><a
+name=iddle1005></a>random access operations, <span class=doctexthighlight2>Java</span><a
+name="a_tagging"></a> SE 1.4 introduced a tagging interface, </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>RandomAccess</span></tt></span><a
+name="That_interface"></a><span style='font-size:8.5pt;color:black'>. That
+interface has no methods, but you can use it to test whether a particular
+collection supports efficient random access:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>if</span></span><span
+style='color:black'> (c <span class=SpellE>instanceof</span> <span
+class=SpellE>RandomAccess</span>)<o:p></o:p></span></pre><pre><span
+style='color:black'>{<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE><span class=docemphitalicalt>use</span></span><span
+class=docemphitalicalt> random access algorithm</span><o:p></o:p></span></pre><pre><span
+style='color:black'>}<o:p></o:p></span></pre><pre><span class=GramE><span
+style='color:black'>else</span></span><span style='color:black'><o:p></o:p></span></pre><pre><span
+style='color:black'>{<o:p></o:p></span></pre><pre><span style='color:black'><span style='mso-spacerun:yes'>   </span><span
+class=GramE><span class=docemphitalicalt>use</span></span><span
+class=docemphitalicalt> sequential access algorithm</span><o:p></o:p></span></pre><pre><span
+style='color:black'>}<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>The </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>ArrayList</span></tt></span><span
+style='font-size:8.5pt;color:black'> and </span><tt><span style='font-size:
+10.0pt;color:black'>Vector</span></tt><span style='font-size:8.5pt;color:black'>
+classes implement the </span><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>RandomAccess</span></tt></span><span style='font-size:8.5pt;
+color:black'> interface.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE>Note :</span></p>
+
+<p class=doctext><a name="a_theoretical"></a><span style='font-size:8.5pt;
+color:black'>From a theoretical point of view, it would have made sense to have
+a separate </span><tt><span style='font-size:10.0pt;color:black'>Array</span></tt><span
+style='font-size:8.5pt;color:black'> interface that extends the </span><tt><span
+style='font-size:10.0pt;color:black'>List</span></tt><a name="If_there"></a><span
+style='font-size:8.5pt;color:black'> interface and declares the random access
+methods. If there were a separate </span><tt><span style='font-size:10.0pt;
+color:black'>Array</span></tt><a name="random_access"></a><span
+style='font-size:8.5pt;color:black'> interface, then those algorithms that
+require random access would use </span><tt><span style='font-size:10.0pt;
+color:black'>Array</span></tt><a name="accidentally_apply"></a><span
+style='font-size:8.5pt;color:black'> parameters and you could not accidentally
+apply them to collections with slow random access. However, the designers of
+the collections framework chose not to define a separate interface, because
+they wanted to keep the number of interfaces in the library small. Also, they
+did not want to take a paternalistic attitude toward programmers. You are free
+to pass a linked list to algorithms that use random access—you just need to be
+aware of the performance costs.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>The </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>ListIterator</span></tt></span><a
+name="the_iterator"></a><span style='font-size:8.5pt;color:black'> interface
+defines a method for adding an element before the <span class=SpellE>iterator</span>
+position:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>void</span></span><span
+style='color:black'> add(E element)<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="particular_position"></a><span style='font-size:8.5pt;
+color:black'>To get and remove elements at a particular position, you simply
+use the </span><tt><span style='font-size:10.0pt;color:black'>next</span></tt><span
+style='font-size:8.5pt;color:black'> and </span><tt><span style='font-size:
+10.0pt;color:black'>remove</span></tt><span style='font-size:8.5pt;color:black'>
+methods of the </span><span class=SpellE><tt><span style='font-size:10.0pt;
+color:black'>Iterator</span></tt></span><span style='font-size:8.5pt;
+color:black'> interface.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>The </span><tt><span
+style='font-size:10.0pt;color:black'>Set</span></tt><a name="identical_to"></a><span
+style='font-size:8.5pt;color:black'> interface is identical to the </span><tt><span
+style='font-size:10.0pt;color:black'>Collection</span></tt><a
+name="the_behavior"></a><span style='font-size:8.5pt;color:black'> interface,
+but the behavior of the methods is more tightly defined. The </span><tt><span
+style='font-size:10.0pt;color:black'>add</span></tt><a name="set_should"></a><span
+style='font-size:8.5pt;color:black'> method of a set should reject duplicates.
+The </span><span class=GramE><tt><span style='font-size:10.0pt;color:black'>equals</span></tt></span><a
+name="defined_so"></a><span style='font-size:8.5pt;color:black'> method of a
+set should be defined so that two sets are identical if they have the same
+elements, but not necessarily in the same order. The </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>hashCode</span></tt></span><a
+name="that_two"></a><span style='font-size:8.5pt;color:black'> method should be
+defined such that two sets with the same elements yield the same hash code.<o:p></o:p></span></p>
+
+<p class=doctext><a name="if_the"></a><span style='font-size:8.5pt;color:black'>Why
+make a separate interface if the method signatures are the same? Conceptually,
+not all collections are sets. Making a </span><tt><span style='font-size:10.0pt;
+color:black'>Set</span></tt><span style='font-size:8.5pt;color:black'>
+interface enables programmers to write methods that accept only sets.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>The </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>SortedSet</span></tt></span><span
+style='font-size:8.5pt;color:black'> and </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>SortedMap</span></tt></span><a
+name="define_methods"></a><span style='font-size:8.5pt;color:black'> interfaces
+expose the comparator object used for sorting, and they define methods to
+obtain views of subsets of the collections. We discuss these views in the next
+section.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>Finally, <span
+class=doctexthighlight2>Java</span> SE 6 introduced interfaces </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>NavigableSet</span></tt></span><span
+style='font-size:8.5pt;color:black'> and </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>NavigableMap</span></tt></span><a
+name="traversal_in"></a><span style='font-size:8.5pt;color:black'> that contain
+additional methods for searching and traversal in sorted sets and maps.
+(Ideally, these methods should have simply been included in the </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>SortedSet</span></tt></span><span
+style='font-size:8.5pt;color:black'> and </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>SortedMap</span></tt></span><span
+style='font-size:8.5pt;color:black'> interface.) The </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>TreeSet</span></tt></span><span
+style='font-size:8.5pt;color:black'> and </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>TreeMap</span></tt></span><a
+name="these_interfaces"></a><span style='font-size:8.5pt;color:black'> classes
+implement these interfaces.<o:p></o:p></span></p>
+
+<p class=doctext><a name="let_us"></a><span style='font-size:8.5pt;color:black'>Now,
+let us turn from the interfaces to the classes that implement them. We already
+discussed that the collection interfaces have quite a few methods that can be
+trivially implemented from more fundamental methods. Abstract classes supply
+many of these routine implementations:<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span style='color:black'>AbstractCollection</span></span><span
+style='color:black'><o:p></o:p></span></pre><pre><span class=SpellE><span
+style='color:black'>AbstractList</span></span><span style='color:black'><o:p></o:p></span></pre><pre><span
+class=SpellE><span style='color:black'>AbstractSequentialList</span></span><span
+style='color:black'><o:p></o:p></span></pre><pre><span class=SpellE><span
+style='color:black'>AbstractSet</span></span><span style='color:black'><o:p></o:p></span></pre><pre><span
+class=SpellE><span style='color:black'>AbstractQueue</span></span><span
+style='color:black'><o:p></o:p></span></pre><pre><span class=SpellE><span
+style='color:black'>AbstractMap</span></span><span style='color:black'><o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="implement_your"></a><a name=iddle1426></a><a
+name=iddle1372></a><span style='font-size:8.5pt;color:black'>If you implement
+your own collection class, then you probably want to extend one of these
+classes so that you can pick up the implementations of <a
+name="routine_operations"></a><a name=snippet></a>the routine operations.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>The <span
+class=doctexthighlight2>Java</span> library supplies concrete classes:<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span style='color:black'>LinkedList</span></span><span
+style='color:black'><o:p></o:p></span></pre><pre><span class=SpellE><span
+style='color:black'>ArrayList</span></span><span style='color:black'><o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span class=SpellE><span
+style='color:black'>ArrayDeque</span></span><span style='color:black'><o:p></o:p></span></pre><pre><span
+class=SpellE><span style='color:black'>HashSet</span></span><span
+style='color:black'><o:p></o:p></span></pre><pre><span class=SpellE><span
+style='color:black'>TreeSet</span></span><span style='color:black'><o:p></o:p></span></pre><pre><span
+class=SpellE><span style='color:black'>PriorityQueue</span></span><span
+style='color:black'><o:p></o:p></span></pre><pre><span class=SpellE><span
+style='color:black'>HashMap</span></span><span style='color:black'><o:p></o:p></span></pre><pre><span
+class=SpellE><span style='color:black'>TreeMap</span></span><span
+style='color:black'><o:p></o:p></span></pre>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>Figure 13–11<a
+name="between_these"></a> shows the relationships between these classes.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h5 align=center style='text-align:center'><a name=ch13fig11></a><span
+class=GramE>Figure 13–11.</span> Classes in the collections framework<span
+style='font-size:8.5pt;color:#1F3247'><o:p></o:p></span></h5>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1026" type="#_x0000_t75"
+ style='width:462.75pt;height:312pt'>
+ <v:imagedata src="The%20Collections%20Framework_files/image003.png" o:title="13-11"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=617 height=416
+src="The%20Collections%20Framework_files/image004.jpg" v:shapes="_x0000_i1026"><![endif]></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=doctext><span style='color:black'>A number of &quot;legacy&quot;
+container classes have been present since the first release of <span
+class=doctexthighlight2>Java</span>, before there was a collections framework:<o:p></o:p></span></p>
+
+<pre><span style='color:black'>Vector<o:p></o:p></span></pre><pre><span
+style='color:black'>Stack<o:p></o:p></span></pre><pre><span class=SpellE><span
+style='color:black'>Hashtable</span></span><span style='color:black'><o:p></o:p></span></pre><pre><span
+style='color:black'>Properties<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="the_collections"></a><span style='font-size:10.0pt;
+color:black'>They have been integrated into the collections framework—see <a
+href="javascript:moveTo('ch13fig12');">Figure 13–12</a></span><a name="in_this"></a><span
+style='font-size:8.5pt;color:black'>.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h5 align=center style='text-align:center'><a name=ch13fig12></a><span
+class=GramE>Figure 13–12.</span> Legacy classes in the collections framework<span
+style='font-size:8.5pt;color:#1F3247'><o:p></o:p></span></h5>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1027" type="#_x0000_t75" style='width:435pt;height:411.75pt'>
+ <v:imagedata src="The%20Collections%20Framework_files/image005.png" o:title="13-12"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=580 height=549
+src="The%20Collections%20Framework_files/image006.jpg" v:shapes="_x0000_i1027"><![endif]></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<h5>Lightweight Collection Wrappers<span style='font-size:8.5pt;color:#1F3247'><o:p></o:p></span></h5>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>The static </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>asList</span></tt></span><span
+style='font-size:8.5pt;color:black'> method of the </span><tt><span
+style='font-size:10.0pt;color:black'>Arrays</span></tt><span style='font-size:
+8.5pt;color:black'> class returns a </span><tt><span style='font-size:10.0pt;
+color:black'>List</span></tt><span style='font-size:8.5pt;color:black'> wrapper
+around a plain <span class=doctexthighlight2>Java</span><a name="array_to"></a>
+array. This method lets you pass the array to a method that expects a list or
+collection argument. For example:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>Card[</span></span><span
+style='color:black'>] <span class=SpellE>cardDeck</span> = new Card[52];<o:p></o:p></span></pre><pre><span
+style='color:black'>. . .<o:p></o:p></span></pre><pre><span style='color:black'>List&lt;Card&gt; <span
+class=SpellE>cardList</span> = <span class=SpellE><span class=GramE>Arrays.asList</span></span><span
+class=GramE>(</span><span class=SpellE>cardDeck</span>);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>The returned object
+is <span class=docemphasis>not</span> an </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>ArrayList</span></tt></span><a name=with></a><span
+style='font-size:8.5pt;color:black'>. It is a view object with </span><tt><span
+style='font-size:10.0pt;color:black'>get</span></tt><span style='font-size:
+8.5pt;color:black'> and </span><tt><span style='font-size:10.0pt;color:black'>set</span></tt><a
+name="All_methods"></a><span style='font-size:8.5pt;color:black'> methods that
+access the underlying array. All methods that would change the size of the
+array (such as </span><tt><span style='font-size:10.0pt;color:black'>add</span></tt><span
+style='font-size:8.5pt;color:black'> and the </span><tt><span style='font-size:
+10.0pt;color:black'>remove</span></tt><span style='font-size:8.5pt;color:black'>
+method of the associated <span class=SpellE>iterator</span>) throw an </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>UnsupportedOperationException</span></tt></span><span
+style='font-size:8.5pt;color:black'>.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>As of <span
+class=doctexthighlight2>Java</span> SE 5.0, the </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>asList</span></tt></span><a
+name="Instead_of"></a><span style='font-size:8.5pt;color:black'> method is
+declared to have a variable number of arguments. Instead of passing an array,
+you can also pass individual elements. For example:<o:p></o:p></span></p>
+
+<pre><span style='color:black'>List&lt;String&gt; names = <span class=SpellE><span
+class=GramE>Arrays.asList</span></span><span class=GramE>(</span>&quot;Amy&quot;, &quot;Bob&quot;, &quot;Carl&quot;);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>The method call<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span class=GramE><span style='color:black'>Collections.nCopies</span></span></span><span
+class=GramE><span style='color:black'>(</span></span><span style='color:black'>n, <span
+class=SpellE>anObject</span>)<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span class=GramE><span style='font-size:8.5pt;color:black'>returns</span></span><span
+style='font-size:8.5pt;color:black'> an immutable object that implements the </span><tt><span
+style='font-size:10.0pt;color:black'>List</span></tt><span style='font-size:
+8.5pt;color:black'> interface and gives the illusion of having </span><tt><span
+style='font-size:10.0pt;color:black'>n</span></tt><span style='font-size:8.5pt;
+color:black'> elements, each of which appears as </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>anObject</span></tt></span><span
+style='font-size:8.5pt;color:black'>.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>For example, the
+following call creates a </span><tt><span style='font-size:10.0pt;color:black'>List</span></tt><span
+style='font-size:8.5pt;color:black'> containing 100 strings, all set to </span><tt><span
+style='font-size:10.0pt;color:black'>&quot;DEFAULT&quot;</span></tt><span
+style='font-size:8.5pt;color:black'>:<o:p></o:p></span></p>
+
+<pre><span style='color:black'>List&lt;String&gt; settings = <span
+class=SpellE><span class=GramE>Collections.nCopies</span></span><span
+class=GramE>(</span>100, &quot;DEFAULT&quot;);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="stored_only"></a><span style='font-size:8.5pt;
+color:black'>There is very little storage cost—the object is stored only once.
+This is a cute application of the view technique.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><o:p>&nbsp;</o:p></p>
+
+<p class=doctext><a name="The_method"></a><span style='font-size:8.5pt;
+color:black'>The method call<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span class=GramE><span style='color:black'>Collections.singleton</span></span></span><span
+class=GramE><span style='color:black'>(</span></span><span class=SpellE><span
+style='color:black'>anObject</span></span><span style='color:black'>)<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="view_object"></a><span class=GramE><span
+style='font-size:8.5pt;color:black'>returns</span></span><span
+style='font-size:8.5pt;color:black'> a view object that implements the </span><tt><span
+style='font-size:10.0pt;color:black'>Set</span></tt><span style='font-size:
+8.5pt;color:black'> interface (unlike </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>ncopies</span></tt></span><a
+name="produces_a"></a><span style='font-size:8.5pt;color:black'>, which
+produces a </span><tt><span style='font-size:10.0pt;color:black'>List</span></tt><a
+name="implements_an"></a><span style='font-size:8.5pt;color:black'>). The
+returned object implements an immutable single-element set without the overhead
+of data structure. The methods </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>singletonList</span></tt></span><span
+style='font-size:8.5pt;color:black'> and </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>singletonMap</span></tt></span><span
+style='font-size:8.5pt;color:black'> behave similarly.<o:p></o:p></span></p>
+
+<h5><a name=ch13lev3sec9></a><span class=SpellE>Subranges</span><span
+style='font-size:8.5pt;color:#1F3247'><o:p></o:p></span></h5>
+
+<p class=doctext><a name="a_number"></a><span style='font-size:8.5pt;
+color:black'>You can form <span class=SpellE>subrange</span> views for a number
+of collections. For example, suppose you have a list </span><tt><span
+style='font-size:10.0pt;color:black'>staff</span></tt><a name="to_"></a><span
+style='font-size:8.5pt;color:black'> and want to extract elements 10 to 19. You
+use the </span><span class=SpellE><tt><span style='font-size:10.0pt;color:black'>subList</span></tt></span><a
+name="into_the"></a><span style='font-size:8.5pt;color:black'> method to obtain
+a view into the <span class=SpellE>subrange</span> of the list.<o:p></o:p></span></p>
+
+<pre><span style='color:black'>List group2 = <span class=SpellE><span
+class=GramE>staff.subList</span></span><span class=GramE>(</span>10, 20);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="for_the"></a><span style='font-size:8.5pt;color:black'>The
+first index is inclusive, the second exclusive—just like the parameters for the
+</span><tt><span style='font-size:10.0pt;color:black'>substring</span></tt><span
+style='font-size:8.5pt;color:black'> operation of the </span><tt><span
+style='font-size:10.0pt;color:black'>String</span></tt><span style='font-size:
+8.5pt;color:black'> class.<o:p></o:p></span></p>
+
+<p class=doctext><a name="and_they"></a><a name=iddle3243></a><a
+name=iddle3227></a><a name=iddle2973></a><a name=iddle2664></a><span
+style='font-size:8.5pt;color:black'>You can apply any operations to the <span
+class=SpellE>subrange</span>, and they automatically reflect the entire list.
+For example, you can erase the entire <span class=SpellE>subrange</span>:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>group2.clear(</span></span><span
+style='color:black'>); // staff reduction<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="are_now"></a><span style='font-size:8.5pt;color:black'>The
+elements are now automatically cleared from the </span><tt><span
+style='font-size:10.0pt;color:black'>staff</span></tt><a name=and></a><span
+style='font-size:8.5pt;color:black'> list, and </span><tt><span
+style='font-size:10.0pt;color:black'>group2</span></tt><span style='font-size:
+8.5pt;color:black'> is empty.<o:p></o:p></span></p>
+
+<p class=doctext><a name="sets_and"></a><span style='font-size:8.5pt;
+color:black'>For sorted sets and maps, you use the sort order, not the element
+position, to form <span class=SpellE>subranges</span>. The </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>SortedSet</span></tt></span><a
+name="declares_three"></a><span style='font-size:8.5pt;color:black'> interface
+declares three methods:<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span style='color:black'>SortedSet</span></span><span
+style='color:black'>&lt;E&gt; <span class=SpellE><span class=GramE>subSet</span></span><span
+class=GramE>(</span>E from, E to)<o:p></o:p></span></pre><pre><span
+class=SpellE><span style='color:black'>SortedSet</span></span><span
+style='color:black'>&lt;E&gt; <span class=SpellE><span class=GramE>headSet</span></span><span
+class=GramE>(</span>E to)<o:p></o:p></span></pre><pre><span class=SpellE><span
+style='color:black'>SortedSet</span></span><span style='color:black'>&lt;E&gt; <span
+class=SpellE><span class=GramE>tailSet</span></span><span class=GramE>(</span>E from)<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="subsets_of"></a><span style='font-size:8.5pt;
+color:black'>These return the subsets of all elements that are larger than or
+equal to </span><tt><span style='font-size:10.0pt;color:black'>from</span></tt><span
+style='font-size:8.5pt;color:black'> and strictly smaller than </span><tt><span
+style='font-size:10.0pt;color:black'>to</span></tt><span style='font-size:8.5pt;
+color:black'>. For sorted maps, the similar methods<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span style='color:black'>SortedMap</span></span><span
+style='color:black'>&lt;K, V&gt; <span class=SpellE><span class=GramE>subMap</span></span><span
+class=GramE>(</span>K from, K to)<o:p></o:p></span></pre><pre><span
+class=SpellE><span style='color:black'>SortedMap</span></span><span
+style='color:black'>&lt;K, V&gt; <span class=SpellE><span class=GramE>headMap</span></span><span
+class=GramE>(</span>K to)<o:p></o:p></span></pre><pre><span class=SpellE><span
+style='color:black'>SortedMap</span></span><span style='color:black'>&lt;K, V&gt; <span
+class=SpellE><span class=GramE>tailMap</span></span><span class=GramE>(</span>K from)<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="of_all"></a><span class=GramE><span style='font-size:
+8.5pt;color:black'>return</span></span><span style='font-size:8.5pt;color:black'>
+views into the maps consisting of all entries in which the <span
+class=docemphasis>keys</span> fall into the specified ranges.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>The </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>NavigableSet</span></tt></span><span
+style='font-size:8.5pt;color:black'> interface that was introduced in <span
+class=doctexthighlight2>Java</span><a name="these_subrange"></a> SE 6 gives
+more control over these <span class=SpellE>subrange</span> operations. You can
+specify whether the bounds are included:<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span style='color:black'>NavigableSet</span></span><span
+style='color:black'>&lt;E&gt; <span class=SpellE><span class=GramE>subSet</span></span><span
+class=GramE>(</span>E from, <span class=SpellE>boolean</span> <span
+class=SpellE>fromInclusive</span>, E to, <span class=SpellE>boolean</span> <span
+class=SpellE>toInclusive</span>)<o:p></o:p></span></pre><pre><span
+class=SpellE><span style='color:black'>NavigableSet</span></span><span
+style='color:black'>&lt;E&gt; <span class=SpellE><span class=GramE>headSet</span></span><span
+class=GramE>(</span>E to, <span class=SpellE>boolean</span> <span class=SpellE>toInclusive</span>)<o:p></o:p></span></pre><pre><span
+class=SpellE><span style='color:black'>NavigableSet</span></span><span
+style='color:black'>&lt;E&gt; <span class=SpellE><span class=GramE>tailSet</span></span><span
+class=GramE>(</span>E from, <span class=SpellE>boolean</span> <span
+class=SpellE>fromInclusive</span>)<o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span style='color:black'><span
+style='mso-tab-count:5'>                                      </span><span style='mso-spacerun:yes'>  </span><o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><a name=ch13lev3sec10></a><o:p></o:p></span></p>
+
+<h5><span class=SpellE>Unmodifiable</span> Views<span style='font-size:8.5pt;
+color:#1F3247'><o:p></o:p></span></h5>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>The </span><tt><span
+style='font-size:10.0pt;color:black'>Collections</span></tt><span
+style='font-size:8.5pt;color:black'> class has methods that produce <span
+class=SpellE><span class=docemphasis>unmodifiable</span></span><span
+class=docemphasis> views</span><a name="runtime_check"></a> of collections.
+These views add a runtime check to an existing collection. If an attempt to
+modify the collection is detected, then an exception is thrown and the
+collection remains untouched.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>You obtain <span
+class=SpellE>unmodifiable</span> views by six methods:<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span style='color:black'>Collections.unmodifiableCollection</span></span><span
+style='color:black'><o:p></o:p></span></pre><pre><span class=SpellE><span
+style='color:black'>Collections.unmodifiableList</span></span><span
+style='color:black'><o:p></o:p></span></pre><pre><span class=SpellE><span
+style='color:black'>Collections.unmodifiableSet</span></span><span
+style='color:black'><o:p></o:p></span></pre><pre><span class=SpellE><span
+style='color:black'>Collections.unmodifiableSortedSet</span></span><span
+style='color:black'><o:p></o:p></span></pre><pre><span class=SpellE><span
+style='color:black'>Collections.unmodifiableMap</span></span><span
+style='color:black'><o:p></o:p></span></pre><pre><span class=SpellE><span
+style='color:black'>Collections.unmodifiableSortedMap</span></span><span
+style='color:black'><o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:10.0pt;color:black'>Each method is
+defined to work on an interface. For example, </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>Collections.unmodifiableList</span></tt></span><span
+style='font-size:10.0pt;color:black'> works with an </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>ArrayList</span></tt></span><span
+style='font-size:10.0pt;color:black'>, a </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>LinkedList</span></tt></span><span
+style='font-size:10.0pt;color:black'>, or any other class that implements the </span><tt><span
+style='font-size:10.0pt;color:black'>List</span></tt><span style='font-size:
+10.0pt;color:black'> interface.<o:p></o:p></span></p>
+
+<p class=doctext><a name="your_code"></a><span style='font-size:10.0pt;
+color:black'>For example, suppose you want to let some part of your code look
+at, but not touch, the contents of a collection. Here is what you could do:<o:p></o:p></span></p>
+
+<pre><span style='color:black'>List&lt;String&gt; staff = new <span
+class=SpellE>LinkedList</span>&lt;String<span class=GramE>&gt;(</span>);<o:p></o:p></span></pre><pre><span
+style='color:black'>. . .<o:p></o:p></span></pre><pre><span class=SpellE><span
+class=GramE><span style='color:black'>lookAt</span></span></span><span
+class=GramE><span style='color:black'>(</span></span><span style='color:black'>new <span
+class=SpellE>Collections.unmodifiableList</span>(staff));<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:10.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:10.0pt;color:black'>The </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>Collections.unmodifiableList</span></tt></span><a
+name="implementing_the"></a><span style='font-size:10.0pt;color:black'> method
+returns an object of a class implementing the </span><tt><span
+style='font-size:10.0pt;color:black'>List</span></tt><a name="methods_retrieve"></a><span
+style='font-size:10.0pt;color:black'> interface. Its <span class=SpellE>accessor</span>
+methods retrieve values from the </span><tt><span style='font-size:10.0pt;
+color:black'>staff</span></tt><a name="Of_course"></a><span style='font-size:
+10.0pt;color:black'> collection. Of course, the </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>lookAt</span></tt></span><a name="call_all"></a><span
+style='font-size:10.0pt;color:black'> method can call all methods of the </span><tt><span
+style='font-size:10.0pt;color:black'>List</span></tt><a name="just_the"></a><span
+style='font-size:10.0pt;color:black'> interface, not just the <span
+class=SpellE>accessors</span>. But all <span class=SpellE>mutator</span>
+methods (such as </span><tt><span style='font-size:10.0pt;color:black'>add</span></tt><a
+name="to_throw"></a><span style='font-size:10.0pt;color:black'>) have been
+redefined to throw an </span><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>UnsupportedOperationException</span></tt></span><a
+name="the_underlying"></a><span style='font-size:10.0pt;color:black'> instead
+of forwarding the call to the underlying collection.<o:p></o:p></span></p>
+
+<p class=doctext><a name="make_the"></a><a name=iddle3242></a><a
+name=iddle3239></a><a name=iddle3079></a><a name=iddle3078></a><a
+name=iddle1368></a><a name=iddle1274></a><span style='font-size:10.0pt;
+color:black'>The <span class=SpellE>unmodifiable</span> view does not make the
+collection itself immutable. You can still modify the collection through its
+original reference (</span><tt><span style='font-size:10.0pt;color:black'>staff</span></tt><a
+name="still_call"></a><span style='font-size:10.0pt;color:black'>, in our
+case). And you can still call <span class=SpellE>mutator</span> methods on the
+elements of the collection.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:10.0pt;color:black'>Because the views
+wrap the <span class=docemphasis>interface</span><a name="to_those"></a> and
+not the actual collection object, you only have access to those methods that
+are defined in the interface. For example, the </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>LinkedList</span></tt></span><span
+style='font-size:10.0pt;color:black'> class has convenience methods, </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>addFirst</span></tt></span><span
+style='font-size:10.0pt;color:black'> and </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>addLast</span></tt></span><span
+style='font-size:10.0pt;color:black'>, that are not part of the </span><tt><span
+style='font-size:10.0pt;color:black'>List</span></tt><a name="unmodifiable_view"></a><span
+style='font-size:10.0pt;color:black'> interface. These methods are not
+accessible through the <span class=SpellE>unmodifiable</span> view.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'>Caution:</p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><o:p>&nbsp;</o:p></p>
+
+<p class=doctext style='text-align:justify;text-justify:inter-ideograph'><span
+style='font-size:10.0pt;color:black'>The </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>unmodifiableCollection</span></tt></span><a
+name="as_the"></a><span style='font-size:10.0pt;color:black'> method (as well
+as the </span><span class=SpellE><tt><span style='font-size:10.0pt;color:black'>synchronizedCollection</span></tt></span><span
+style='font-size:10.0pt;color:black'> and </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>checkedCollection</span></tt></span><a
+name="later_in"></a><span style='font-size:10.0pt;color:black'> methods
+discussed later in this section) returns a collection whose </span><span
+class=GramE><tt><span style='font-size:10.0pt;color:black'>equals</span></tt></span><a
+name=does></a><span style='font-size:10.0pt;color:black'> method does <span
+class=docemphasis>not</span> invoke the </span><tt><span style='font-size:10.0pt;
+color:black'>equals</span></tt><a name="underlying_collection"></a><span
+style='font-size:10.0pt;color:black'> method of the underlying collection.
+Instead, it inherits the </span><span class=GramE><tt><span style='font-size:
+10.0pt;color:black'>equals</span></tt></span><span style='font-size:10.0pt;
+color:black'> method of the </span><tt><span style='font-size:10.0pt;
+color:black'>Object</span></tt><a name="are_identical"></a><span
+style='font-size:10.0pt;color:black'> class, which just tests whether the
+objects are identical. If you turn a set or list into just a collection, you
+can no longer test for equal contents. The view acts in this way because
+equality testing is not well defined at this level of the hierarchy. The views
+treat the </span><span class=SpellE><tt><span style='font-size:10.0pt;
+color:black'>hashCode</span></tt></span><span style='font-size:10.0pt;
+color:black'> method in the same way.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;color:black'>However, the </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>unmodifiableSet</span></tt></span><span
+style='font-size:10.0pt;color:black'> and </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>unmodifiableList</span></tt></span><span
+style='font-size:10.0pt;color:black'> class use the </span><tt><span
+style='font-size:10.0pt;color:black'>equals</span></tt><span style='font-size:
+10.0pt;color:black'> and </span><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>hashCode</span></tt></span><span style='font-size:10.0pt;
+color:black'> methods of the underlying collections.<br style='mso-special-character:
+line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<h5>Synchronized Views<span style='font-size:8.5pt;color:#1F3247'><o:p></o:p></span></h5>
+
+<p class=doctext><a name="from_multiple"></a><span style='font-size:8.5pt;
+color:black'>If you access a collection from multiple threads, you need to
+ensure that the collection is not accidentally damaged. For example, it would be
+disastrous if one thread tried to add to a hash table while another thread was
+rehashing the elements.<o:p></o:p></span></p>
+
+<p class=doctext><a name="library_designers"></a><span style='font-size:8.5pt;
+color:black'>Instead of implementing thread-safe collection classes, the
+library designers used the view mechanism to make regular collections thread
+safe. For example, the static </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>synchronizedMap</span></tt></span><span
+style='font-size:8.5pt;color:black'> method in the </span><tt><span
+style='font-size:10.0pt;color:black'>Collections</span></tt><span
+style='font-size:8.5pt;color:black'> class can turn any map into a </span><tt><span
+style='font-size:10.0pt;color:black'>Map</span></tt><span style='font-size:
+8.5pt;color:black'> with synchronized access methods:<o:p></o:p></span></p>
+
+<pre><span style='color:black'>Map&lt;String, Employee&gt; map = <span
+class=SpellE><span class=GramE>Collections.synchronizedMap</span></span><span
+class=GramE>(</span>new <span class=SpellE>HashMap</span>&lt;String, Employee&gt;());<o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span style='color:black'><span
+style='mso-tab-count:5'>                                      </span><span style='mso-spacerun:yes'>  </span><o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>You can now access
+the </span><tt><span style='font-size:10.0pt;color:black'>map</span></tt><span
+style='font-size:8.5pt;color:black'> object from multiple threads. The methods
+such as </span><tt><span style='font-size:10.0pt;color:black'>get</span></tt><span
+style='font-size:8.5pt;color:black'> and </span><tt><span style='font-size:
+10.0pt;color:black'>put</span></tt><a name="thread_can"></a><span
+style='font-size:8.5pt;color:black'> are serialized—each method call must be
+finished completely before another thread can call another method. We discuss
+the issue of synchronized access to data structures in greater detail in <a
+href="http://proquestcombo.safaribooksonline.com/9780132354769/ch14#ch14">Chapter
+14</a>.<o:p></o:p></span></p>
+
+<h5><a name=ch13lev3sec12></a>Checked Views<span style='font-size:8.5pt;
+color:#1F3247'><o:p></o:p></span></h5>
+
+<p class=doctext><span class=doctexthighlight2><span style='font-size:8.5pt;
+color:black'>Java</span></span><a name="are_intended"></a><span
+style='font-size:8.5pt;color:black'> SE 5.0 added a set of &quot;checked&quot;
+views that are intended as debugging support for a problem that can occur with
+generic types. As explained in <a
+href="http://proquestcombo.safaribooksonline.com/9780132354769/ch12#ch12">Chapter
+12</a><a name="actually_possible"></a>, it is actually possible to smuggle
+elements of the wrong type into a generic collection. For example:<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span style='color:black'>ArrayList</span></span><span
+style='color:black'>&lt;String&gt; strings = new <span class=SpellE>ArrayList</span>&lt;String<span
+class=GramE>&gt;(</span>);<o:p></o:p></span></pre><pre><span class=SpellE><span
+style='color:black'>ArrayList</span></span><span style='color:black'> <span
+class=SpellE>rawList</span> = strings; // get warning only, not an error, for compatibility with legacy code<o:p></o:p></span></pre><pre><span
+class=SpellE><span class=GramE><span style='color:black'>rawList.add</span></span></span><span
+class=GramE><span style='color:black'>(</span></span><span style='color:black'>new Date()); // now strings contains a Date object!<o:p></o:p></span></pre><pre><span
+style='color:black'><o:p>&nbsp;</o:p></span></pre><pre><span style='color:black'><span
+style='mso-tab-count:5'>                                      </span><span style='mso-spacerun:yes'>  </span><o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="The_erroneous"></a><span style='font-size:8.5pt;
+color:black'>The erroneous </span><tt><span style='font-size:10.0pt;color:black'>add</span></tt><a
+name="not_detected"></a><span style='font-size:8.5pt;color:black'> command is
+not detected at runtime. Instead, a class cast exception will happen later when
+another part of the code calls </span><tt><span style='font-size:10.0pt;
+color:black'>get</span></tt><a name="casts_the"></a><span style='font-size:
+8.5pt;color:black'> and casts the result to a </span><tt><span
+style='font-size:10.0pt;color:black'>String</span></tt><span style='font-size:
+8.5pt;color:black'>.<o:p></o:p></span></p>
+
+<p class=doctext><a name="can_detect"></a><span style='font-size:8.5pt;
+color:black'>A checked view can detect this problem. Define a safe list as
+follows:<o:p></o:p></span></p>
+
+<pre><span style='color:black'>List&lt;String&gt; <span class=SpellE>safeStrings</span> = <span
+class=SpellE><span class=GramE>Collections.checkedList</span></span><span
+class=GramE>(</span>strings, <span class=SpellE>String.class</span>);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name=iddle3229></a><a name=iddle2732></a><a name=iddle2215></a><a
+name=iddle1654></a><a name=iddle1632></a><a name=iddle1374></a><a
+name=iddle1365></a><a name=iddle1304></a><span style='font-size:8.5pt;
+color:black'>The <span class=GramE>view's</span> </span><tt><span
+style='font-size:10.0pt;color:black'>add</span></tt><a name="belongs_to"></a><span
+style='font-size:8.5pt;color:black'> method checks that the inserted object
+belongs to the given class and immediately throws a </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>ClassCastException</span></tt></span><a
+name="is_that"></a><span style='font-size:8.5pt;color:black'> if it does not.
+The advantage is that the error is reported at the correct location:<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span style='color:black'>ArrayList</span></span><span
+style='color:black'> <span class=SpellE>rawList</span> = <span class=SpellE>safeStrings</span>;<o:p></o:p></span></pre><pre><span
+class=SpellE><span class=GramE><span style='color:black'>rawList.add</span></span></span><span
+class=GramE><span style='color:black'>(</span></span><span style='color:black'>new Date()); // Checked list throws a <span
+class=SpellE>ClassCastException</span><o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Caution:<o:p></o:p></span></p>
+
+<p class=doctext><a name="by_the"></a><span style='font-size:8.5pt;color:black'>The
+checked views are limited by the runtime checks that the virtual machine can
+carry out. For example, if you have an </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>ArrayList</span></tt></span><tt><span
+style='font-size:10.0pt;color:black'>&lt;Pair&lt;String&gt;&gt;</span></tt><span
+style='font-size:8.5pt;color:black'>, you cannot protect it from inserting a </span><tt><span
+style='font-size:10.0pt;color:black'>Pair&lt;Date&gt;</span></tt><span
+style='font-size:8.5pt;color:black'> since the virtual machine has a single
+&quot;raw&quot; </span><tt><span style='font-size:10.0pt;color:black'>Pair</span></tt><span
+style='font-size:8.5pt;color:black'> class.<o:p></o:p></span></p>
+
+<h5>A Note on Optional Operations<span style='font-size:8.5pt;color:#1F3247'><o:p></o:p></span></h5>
+
+<p class=doctext><a name="not_be"></a><span style='font-size:8.5pt;color:black'>A
+view usually has some restriction—it may be read-only, it may not be able to
+change the size, or it may support removal, but not insertion, as is the case
+for the key view of a map. A restricted view throws an </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>UnsupportedOperationException</span></tt></span><span
+style='font-size:8.5pt;color:black'> if you attempt an inappropriate operation.<o:p></o:p></span></p>
+
+<p class=doctext><a name="and_iterator"></a><span style='font-size:8.5pt;
+color:black'>In the API documentation for the collection and <span
+class=SpellE>iterator</span> interfaces, many methods are described as
+&quot;optional operations.&quot; This seems to be in conflict with the notion
+of an interface. After all, isn't the purpose of an interface to lay out the
+methods that a class <span class=docemphasis>must</span><a
+name="is_unsatisfactory"></a> implement? Indeed, this arrangement is
+unsatisfactory from a theoretical perspective. A better solution might have
+been to design separate interfaces for read-only views and views that can't
+change the size of a collection. However, that would have tripled the number of
+interfaces, which the designers of the library found unacceptable.<o:p></o:p></span></p>
+
+<p class=doctext><a name="Should_you"></a><span style='font-size:8.5pt;
+color:black'>Should you extend the technique of &quot;optional&quot; methods to
+your own designs? We think not. Even though collections are used frequently,
+the coding style for implementing them is not typical for other problem
+domains. The designers of a collection class library have to resolve a
+particularly brutal set of conflicting requirements. Users want the library to
+be easy to learn, convenient to use, completely generic, idiot proof, and at
+the same time as efficient as hand-coded algorithms. It is plainly impossible
+to achieve all these goals simultaneously, or even to come close. But in your
+own programming problems, you will rarely encounter such an extreme set of
+constraints. You should be able to find solutions that do not rely on the
+extreme measure of &quot;optional&quot; interface operations.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h2><span class=SpellE><tt><span style='font-size:10.0pt'>java.util.Collections</span></tt></span>
+1.2<span style='font-size:11.5pt;color:#6D7288'><o:p></o:p></span></h2>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;E&gt; Collection <span class=SpellE>unmodifiableCollection</span>(Collection&lt;E&gt;
+c)</span></tt><span style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;E&gt; List <span class=SpellE>unmodifiableList</span>(List&lt;E&gt; c)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;E&gt; Set <span class=SpellE>unmodifiableSet</span>(Set&lt;E&gt; c)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;E&gt; <span class=SpellE>SortedSet</span> <span class=SpellE>unmodifiableSortedSet</span>(<span
+class=SpellE>SortedSet</span>&lt;E&gt; c)</span></tt><span style='font-size:
+8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;K, V&gt; Map <span class=SpellE>unmodifiableMap</span>(Map&lt;K, V&gt; c)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;K, V&gt; <span class=SpellE>SortedMap</span> <span class=SpellE>unmodifiableSortedMap</span>(<span
+class=SpellE>SortedMap</span>&lt;K, V&gt; c)</span></tt><span style='font-size:
+8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><span class=GramE><span
+style='font-size:8.5pt;color:black'>constructs</span></span><span
+style='font-size:8.5pt;color:black'> views of the collection whose <span
+class=SpellE>mutator</span> methods throw an </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>UnsupportedOperationException</span></tt></span><span
+style='font-size:8.5pt;color:black'>.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;E&gt; Collection&lt;E&gt; <span class=SpellE>synchronizedCollection</span>(Collection&lt;E&gt;
+c)</span></tt><span style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;E&gt; List <span class=SpellE>synchronizedList</span>(List&lt;E&gt; c)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;E&gt; Set <span class=SpellE>synchronizedSet</span>(Set&lt;E&gt; c)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;E&gt; <span class=SpellE>SortedSet</span> <span class=SpellE>synchronizedSortedSet</span>(<span
+class=SpellE>SortedSet</span>&lt;E&gt; c)</span></tt><span style='font-size:
+8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;K, V&gt; Map&lt;K, V&gt; <span class=SpellE>synchronizedMap</span>(Map&lt;K,
+V&gt; c)</span></tt><span style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;K, V&gt; <span class=SpellE>SortedMap</span>&lt;K, V&gt; <span
+class=SpellE>synchronizedSortedMap</span>(<span class=SpellE>SortedMap</span>&lt;K,
+V&gt; c)</span></tt><span style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><span class=GramE><span
+style='font-size:8.5pt;color:black'>constructs</span></span><span
+style='font-size:8.5pt;color:black'> views of the collection whose methods are
+synchronized.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;E&gt; Collection <span class=SpellE>checkedCollection</span>(Collection&lt;E&gt;
+c, Class&lt;E&gt; <span class=SpellE>elementType</span>)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;E&gt; List <span class=SpellE>checkedList</span>(List&lt;E&gt; c,
+Class&lt;E&gt; <span class=SpellE>elementType</span>)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;E&gt; Set <span class=SpellE>checkedSet</span>(Set&lt;E&gt; c,
+Class&lt;E&gt; <span class=SpellE>elementType</span>)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;E&gt; <span class=SpellE>SortedSet</span> <span class=SpellE>checkedSortedSet</span>(<span
+class=SpellE>SortedSet</span>&lt;E&gt; c, Class&lt;E&gt; <span class=SpellE>elementType</span>)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;K, V&gt; Map <span class=SpellE>checkedMap</span>(Map&lt;K, V&gt; c,
+Class&lt;K&gt; <span class=SpellE>keyType</span>, Class&lt;V&gt; <span
+class=SpellE>valueType</span>)</span></tt><span style='font-size:8.5pt;
+color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;K, V&gt; <span class=SpellE>SortedMap</span> <span class=SpellE>checkedSortedMap</span>(<span
+class=SpellE>SortedMap</span>&lt;K, V&gt; c, Class&lt;K&gt; <span class=SpellE>keyType</span>,
+Class&lt;V&gt; <span class=SpellE>valueType</span>)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in'><span class=GramE><span
+style='font-size:8.5pt;color:black'>constructs</span></span><span
+style='font-size:8.5pt;color:black'> views of the collection whose methods
+throw a </span><span class=SpellE><tt><span style='font-size:10.0pt;color:black'>ClassCastException</span></tt></span><span
+style='font-size:8.5pt;color:black'> if an element of the wrong type is
+inserted.<o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;E&gt; List&lt;E&gt; <span class=SpellE>nCopies</span>(<span class=SpellE>int</span>
+n, E value)</span></tt><span style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;E&gt; Set&lt;E&gt; singleton(E value)</span></tt><span style='font-size:
+8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doctext><span class=GramE><span style='font-size:8.5pt;color:black'>constructs</span></span><span
+style='font-size:8.5pt;color:black'> a view of the object as either an <span
+class=SpellE>unmodifiable</span> list with </span><tt><span style='font-size:
+10.0pt;color:black'>n</span></tt><span style='font-size:8.5pt;color:black'> identical
+elements, or a set with a single element.<o:p></o:p></span></p>
+
+<span style='font-size:8.5pt;font-family:"Times New Roman";mso-fareast-font-family:
+SimSun;color:black;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;
+mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h2><span class=SpellE><tt><span style='font-size:10.0pt'>java.util.Arrays</span></tt></span>
+1.2<span style='font-size:11.5pt;color:#6D7288'><o:p></o:p></span></h2>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>static
+&lt;E&gt; List&lt;E&gt; <span class=SpellE>asList</span>(E... array)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doctext><span class=GramE><span style='font-size:8.5pt;color:black'>returns</span></span><span
+style='font-size:8.5pt;color:black'> a list view of the elements in an array
+that is modifiable but not resizable.<o:p></o:p></span></p>
+
+<h2><span class=SpellE><tt><span style='font-size:10.0pt'>java.util.List</span></tt></span><tt><span
+style='font-size:10.0pt'>&lt;E&gt;</span></tt> 1.2<span style='font-size:11.5pt;
+color:#6D7288'><o:p></o:p></span></h2>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l6 level1 lfo3;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><tt><span style='font-size:10.0pt;color:black'>List&lt;E&gt;
+<span class=SpellE>subList</span>(<span class=SpellE>int</span> <span
+class=SpellE>firstIncluded</span>, <span class=SpellE>int</span> <span
+class=SpellE>firstExcluded</span>)</span></tt><span style='font-size:8.5pt;
+color:black'><o:p></o:p></span></p>
+
+<p class=doctext><span class=GramE><span style='font-size:8.5pt;color:black'>returns</span></span><span
+style='font-size:8.5pt;color:black'> a list view of the elements within a range
+of positions.<o:p></o:p></span></p>
+
+<h2><span class=SpellE><tt><span style='font-size:10.0pt'>java.util.SortedSet</span></tt></span><tt><span
+style='font-size:10.0pt'>&lt;E&gt;</span></tt> 1.2<span style='font-size:11.5pt;
+color:#6D7288'><o:p></o:p></span></h2>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l5 level1 lfo4;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>SortedSet</span></tt></span><tt><span style='font-size:
+10.0pt;color:black'>&lt;E&gt; <span class=SpellE>subSet</span>(E <span
+class=SpellE>firstIncluded</span>, E <span class=SpellE>firstExcluded</span>)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l5 level1 lfo4;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>SortedSet</span></tt></span><tt><span style='font-size:
+10.0pt;color:black'>&lt;E&gt; <span class=SpellE>headSet</span>(E <span
+class=SpellE>firstExcluded</span>)</span></tt><span style='font-size:8.5pt;
+color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l5 level1 lfo4;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>SortedSet</span></tt></span><tt><span style='font-size:
+10.0pt;color:black'>&lt;E&gt; <span class=SpellE>tailSet</span>(E <span
+class=SpellE>firstIncluded</span>)</span></tt><span style='font-size:8.5pt;
+color:black'><o:p></o:p></span></p>
+
+<p class=doctext><span class=GramE><span style='font-size:8.5pt;color:black'>returns</span></span><span
+style='font-size:8.5pt;color:black'> a view of the elements within a range.<o:p></o:p></span></p>
+
+<h2><span class=SpellE><tt><span style='font-size:10.0pt'>java.util.NavigableSet</span></tt></span><tt><span
+style='font-size:10.0pt'>&lt;E&gt;</span></tt> 6<span style='font-size:11.5pt;
+color:#6D7288'><o:p></o:p></span></h2>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l2 level1 lfo5;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>NavigableSet</span></tt></span><tt><span style='font-size:
+10.0pt;color:black'>&lt;E&gt; <span class=SpellE>subSet</span>(E from, <span
+class=SpellE>boolean</span> <span class=SpellE>fromIncluded</span>, E to, <span
+class=SpellE>boolean</span> <span class=SpellE>toIncluded</span>)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l2 level1 lfo5;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>NavigableSet</span></tt></span><tt><span style='font-size:
+10.0pt;color:black'>&lt;E&gt; <span class=SpellE>headSet</span>(E to, <span
+class=SpellE>boolean</span> <span class=SpellE>toIncluded</span>)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l2 level1 lfo5;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>NavigableSet</span></tt></span><tt><span style='font-size:
+10.0pt;color:black'>&lt;E&gt; <span class=SpellE>tailSet</span>(E from, <span
+class=SpellE>boolean</span> <span class=SpellE>fromIncluded</span>)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doctext><span class=GramE><span style='font-size:8.5pt;color:black'>returns</span></span><span
+style='font-size:8.5pt;color:black'> a view of the elements within a range. The
+</span><span class=SpellE><span class=GramE><tt><span style='font-size:10.0pt;
+color:black'>boolean</span></tt></span></span><span style='font-size:8.5pt;
+color:black'> flags determine whether the bound is included in the view.<o:p></o:p></span></p>
+
+<h2><span class=SpellE><tt><span style='font-size:10.0pt'>java.util.SortedMap</span></tt></span><tt><span
+style='font-size:10.0pt'>&lt;K, V&gt;</span></tt> 1.2<span style='font-size:
+11.5pt;color:#6D7288'><o:p></o:p></span></h2>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l4 level1 lfo6;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>SortedMap</span></tt></span><tt><span style='font-size:
+10.0pt;color:black'>&lt;K, V&gt; <span class=SpellE>subMap</span>(K <span
+class=SpellE>firstIncluded</span>, K <span class=SpellE>firstExcluded</span>)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l4 level1 lfo6;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>SortedMap</span></tt></span><tt><span style='font-size:
+10.0pt;color:black'>&lt;K, V&gt; <span class=SpellE>headMap</span>(K <span
+class=SpellE>firstExcluded</span>)</span></tt><span style='font-size:8.5pt;
+color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l4 level1 lfo6;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>SortedMap</span></tt></span><tt><span style='font-size:
+10.0pt;color:black'>&lt;K, V&gt; <span class=SpellE>tailMap</span>(K <span
+class=SpellE>firstIncluded</span>)</span></tt><span style='font-size:8.5pt;
+color:black'><o:p></o:p></span></p>
+
+<p class=doctext><span class=GramE><span style='font-size:8.5pt;color:black'>returns</span></span><span
+style='font-size:8.5pt;color:black'> a map view of the entries whose keys are
+within a range.<o:p></o:p></span></p>
+
+<h2><span class=SpellE><tt><span style='font-size:10.0pt'>java.util.NavigableMap</span></tt></span><tt><span
+style='font-size:10.0pt'>&lt;K, V&gt;</span></tt> 6<span style='font-size:11.5pt;
+color:#6D7288'><o:p></o:p></span></h2>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo7;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>NavigableMap</span></tt></span><tt><span style='font-size:
+10.0pt;color:black'>&lt;K, V&gt; <span class=SpellE>subMap</span>(K from, <span
+class=SpellE>boolean</span> <span class=SpellE>fromIncluded</span>, K to, <span
+class=SpellE>boolean</span> <span class=SpellE>toIncluded</span>)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo7;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>NavigableMap</span></tt></span><tt><span style='font-size:
+10.0pt;color:black'>&lt;K, V&gt; <span class=SpellE>headMap</span>(K from, <span
+class=SpellE>boolean</span> <span class=SpellE>fromIncluded</span>)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doclist style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo7;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:8.5pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><tt><span style='font-size:
+10.0pt;color:black'>NavigableMap</span></tt></span><tt><span style='font-size:
+10.0pt;color:black'>&lt;K, V&gt; <span class=SpellE>tailMap</span>(K to, <span
+class=SpellE>boolean</span> <span class=SpellE>toIncluded</span>)</span></tt><span
+style='font-size:8.5pt;color:black'><o:p></o:p></span></p>
+
+<p class=doctext><span class=GramE><span style='font-size:8.5pt;color:black'>returns</span></span><span
+style='font-size:8.5pt;color:black'> a map view of the entries whose keys are
+within a range. The </span><span class=SpellE><span class=GramE><tt><span
+style='font-size:10.0pt;color:black'>boolean</span></tt></span></span><span
+style='font-size:8.5pt;color:black'> flags determine whether the bound is
+included in the view<o:p></o:p></span></p>
+
+<p class=MsoNormal><a name=ch13sb34></a><a name=ch13sb36></a><span
+style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h4>Bulk Operations<span style='font-size:9.0pt;color:white'><o:p></o:p></span></h4>
+
+<p class=doctext><a name="used_an"></a><span style='font-size:8.5pt;color:black'>So
+far, most of our examples used an <span class=SpellE>iterator</span> to
+traverse a collection, one element at a time. However, you can often avoid
+iteration by using one of the <span class=docemphasis>bulk operations</span> in
+the library.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>Suppose you want to
+find the <span class=docemphasis>intersection</span><a name="make_a"></a> of
+two sets, the elements that two sets have in common. First, make a new set to
+hold the result.<o:p></o:p></span></p>
+
+<pre><span style='color:black'>Set&lt;String&gt; result = new <span
+class=SpellE>HashSet</span>&lt;String<span class=GramE>&gt;(</span>a);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="has_a"></a><span style='font-size:8.5pt;color:black'>Here,
+you use the fact that every collection has a constructor whose parameter is
+another collection that holds the initialization values.<o:p></o:p></span></p>
+
+<p class=doctext><span style='font-size:8.5pt;color:black'>Now, use the </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>retainAll</span></tt></span><span
+style='font-size:8.5pt;color:black'> method:<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span class=GramE><span style='color:black'>result.retainAll</span></span></span><span
+class=GramE><span style='color:black'>(</span></span><span style='color:black'>b);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="all_elements"></a><span style='font-size:8.5pt;
+color:black'>It retains all elements that also happen to be in </span><tt><span
+style='font-size:10.0pt;color:black'>b</span></tt><a name="You_have"></a><span
+style='font-size:8.5pt;color:black'>. You have formed the intersection without
+programming a loop.<o:p></o:p></span></p>
+
+<p class=doctext><a name="carry_this"></a><span style='font-size:8.5pt;
+color:black'>You can carry this idea further and apply a bulk operation to a <span
+class=docemphasis>view</span><a name="suppose_you"></a>. For example, suppose
+you have a map that maps employee IDs to employee objects and you have a set of
+the IDs of all employees that are to be terminated.<o:p></o:p></span></p>
+
+<pre><span style='color:black'>Map&lt;String, Employee&gt; <span class=SpellE>staffMap</span> = . . .;<o:p></o:p></span></pre><pre><span
+style='color:black'>Set&lt;String&gt; <span class=SpellE>terminatedIDs</span> = . . .;<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="key_set"></a><span style='font-size:8.5pt;color:black'>Simply
+form the key set and remove all IDs of terminated employees.<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span class=GramE><span style='color:black'>staffMap.keySet</span></span></span><span
+class=GramE><span style='color:black'>(</span></span><span style='color:black'>).<span
+class=SpellE>removeAll</span>(<span class=SpellE>terminatedIDs</span>);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="view_into"></a><span style='font-size:8.5pt;
+color:black'>Because the key set is a view into the map, the keys and
+associated employee names are automatically removed from the map.<o:p></o:p></span></p>
+
+<p class=doctext><a name="can_restrict"></a><span style='font-size:8.5pt;
+color:black'>By using a <span class=SpellE>subrange</span> view, you can
+restrict bulk operations to <span class=SpellE>sublists</span> and subsets. For
+example, suppose you want to add the first 10 elements of a list to another
+container. Form a <span class=SpellE>sublist</span> to pick out the first 10:<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span class=GramE><span style='color:black'>relocated.addAll</span></span></span><span
+class=GramE><span style='color:black'>(</span></span><span class=SpellE><span
+style='color:black'>staff.subList</span></span><span style='color:black'>(0, 10));<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="a_target"></a><span style='font-size:8.5pt;
+color:black'>The <span class=SpellE>subrange</span> can also be a target of a
+mutating operation.<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span class=GramE><span style='color:black'>staff.subList</span></span></span><span
+class=GramE><span style='color:black'>(</span></span><span style='color:black'>0, 10).clear();<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:8.5pt;color:black'><br
+style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><a name=ch13lev2sec14></a><o:p></o:p></span></p>
+
+<h4>Converting between Collections and Arrays<span style='font-size:9.0pt;
+color:white'><o:p></o:p></span></h4>
+
+<p class=doctext><a name=iddle1753></a><a name=iddle1373></a><a name=iddle1353></a><a
+name=iddle1062></a><a name=iddle1060></a><span style='font-size:10.0pt;
+color:black'>Because large portions of the <span class=doctexthighlight2>Java</span><a
+name="you_occasionally"></a> platform API were designed before the collections
+framework was created, you occasionally need to translate between traditional
+arrays and the more modern collections.<o:p></o:p></span></p>
+
+<p class=doctext><a name="turn_it"></a><span style='font-size:10.0pt;
+color:black'>If you have an array, you need to turn it into a collection. The </span><span
+class=SpellE><tt><span style='font-size:10.0pt;color:black'>Arrays.asList</span></tt></span><a
+name="this_purpose"></a><span style='font-size:10.0pt;color:black'> wrapper
+serves this purpose. For example:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>String[</span></span><span
+style='color:black'>] values = . . .;<o:p></o:p></span></pre><pre><span
+class=SpellE><span style='color:black'>HashSet</span></span><span
+style='color:black'>&lt;String&gt; staff = new <span class=SpellE>HashSet</span>&lt;String<span
+class=GramE>&gt;(</span><span class=SpellE>Arrays.asList</span>(values));<o:p></o:p></span></pre>
+
+<p class=MsoNormal style='tab-stops:45.8pt'><span style='font-size:10.0pt;
+color:black'><span style='mso-tab-count:1'>                    </span><o:p></o:p></span></p>
+
+<p class=doctext><a name="Obtaining_an"></a><span style='font-size:10.0pt;
+color:black'>Obtaining an array from a collection is a bit trickier. Of course,
+you can use the </span><span class=SpellE><tt><span style='font-size:10.0pt;
+color:black'>toArray</span></tt></span><span style='font-size:10.0pt;
+color:black'> method:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>Object[</span></span><span
+style='color:black'>] values = <span class=SpellE>staff.toArray</span>();<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:10.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="result_is"></a><span style='font-size:10.0pt;
+color:black'>But the result is an array of <span class=docemphasis>objects</span><a
+name="if_you"></a>. Even if you know that your collection contained objects of
+a specific type, you cannot use a cast:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>String[</span></span><span
+style='color:black'>] values = (String[]) <span class=SpellE>staff.toArray</span>(); // Error!<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:10.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:10.0pt;color:black'>The array returned
+by the </span><span class=SpellE><tt><span style='font-size:10.0pt;color:black'>toArray</span></tt></span><span
+style='font-size:10.0pt;color:black'> method was created as an </span><span
+class=GramE><tt><span style='font-size:10.0pt;color:black'>Object[</span></tt></span><tt><span
+style='font-size:10.0pt;color:black'>]</span></tt><a name="use_a"></a><span
+style='font-size:10.0pt;color:black'> array, and you cannot change its type.
+Instead, you use a variant of the </span><span class=SpellE><tt><span
+style='font-size:10.0pt;color:black'>toArray</span></tt></span><a name="length_"></a><span
+style='font-size:10.0pt;color:black'> method. Give it an array of length 0 of
+the type that you'd like. The returned array is then created <span
+class=docemphasis>as the same array type</span>:<o:p></o:p></span></p>
+
+<pre><span class=GramE><span style='color:black'>String[</span></span><span
+style='color:black'>] values = <span class=SpellE>staff.toArray</span>(new String[0]);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:10.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><a name="the_array"></a><span style='font-size:10.0pt;
+color:black'>If you like, you can construct the array to have the correct size:<o:p></o:p></span></p>
+
+<pre><span class=SpellE><span class=GramE><span style='color:black'>staff.toArray</span></span></span><span
+class=GramE><span style='color:black'>(</span></span><span style='color:black'>new String[<span
+class=SpellE>staff.size</span>()]);<o:p></o:p></span></pre>
+
+<p class=MsoNormal><span style='font-size:10.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=doctext><span style='font-size:10.0pt;color:black'>In this case, no
+new array is created.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>
