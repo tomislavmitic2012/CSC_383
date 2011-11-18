@@ -161,5 +161,11 @@ public class TestSort {
 		end = System.currentTimeMillis();
 		TestSort.< Integer >sorted( b, "Bubble Sort", Type[ type ] );
 		TestSort.output.printf("\t%-15s takes %10d ms\n\n", "bubbleSort", ( end - start ) );
+		
+		////////////////////	Find max 3 elements in the array		////////////////////
+		System.arraycopy( a, 0, b, 0, size );
+		Integer[] max3 = new Integer[ 3 ];
+		Sort.findMax3( b, max3 );
+		TestSort.print( max3 );
 	}
 }

@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.Stack;
 
 /**
@@ -56,6 +57,20 @@ public class Sort< T > {
 			a[ i ] = tmp;
 			Sort.heapify( a, 0, i );
 		}
+	}
+	
+	/**
+	 * Uses heap sort to sort the array and then returns the max 3 elements in the array
+	 * 
+	 * @param <T>
+	 * @param a
+	 * @param b
+	 */
+	public static < T extends  Comparable<? super T > > void findMax3( T[] a, T[] b ) {
+		Sort.heapSort( a );
+		b[ 0 ] = a[ a.length - 1 ];
+		b[ 1 ] = a[ a.length - 2 ];
+		b[ 2 ] = a[ a.length - 3 ];
 	}
 	
 	public static < T extends Comparable<? super T > > void insertionSort( T[] a ) {

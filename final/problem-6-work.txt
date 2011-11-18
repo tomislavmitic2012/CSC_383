@@ -1,0 +1,66 @@
+Suppose the following hashtable of size N = 13  is given, with hash function   
+   h(x) = (x+1)2 + 1 mod N. 
+ a) Assume the open-address linear probe method is used for collision resolution.  
+ b) Assume double hashing with d(k) = 7 - k mod 7 is used for collision resolution.
+What the table would look like after the following insertion sequence of records with key 
+
+
+1997, 2011, 1698, 2270, 2012, 1776 , 1997,  16910, 2613 , 17069 , 2017.
+
+c) Repeat b) if last entry is 2016 instead of 2017.  What will happen? Please explain why.
+-----------------
+a)
+
+0:  16910
+1:  2017
+2:  
+3:  2613
+4:  17069
+5:  
+6:  1997
+7:  1698
+8:  2011
+9:  2270
+10: 2012
+11: 1776
+12: 1997
+
+b)
+
+h(x) = (x+1)2 + 1 mod N
+d(k) = 7 - k mod 7
+(i + jd(k)) mod N
+
+0:  2017
+1:  1997
+2:  16910
+3:  2613
+4:  
+5:  
+6:  17069
+7:  1997
+8:  2011
+9:  1698
+10: 2012
+11: 2270
+12: 1776
+
+c)
+
+h(x) = (x+1)2 + 1 mod N
+d(k) = 7 - k mod 7
+(i + jd(k)) mod N
+
+0:  
+1:  1997
+2:  16910
+3:  2613
+4:  
+5:  2016
+6:  17069
+7:  1997
+8:  2011
+9:  1698
+10: 2012
+11: 2270
+12: 1776

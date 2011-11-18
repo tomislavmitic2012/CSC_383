@@ -54,15 +54,30 @@ public class Test {
 		Test.process( tree );
 		Test.output.println("---------------------------------------------------");
 		
+		Test.output.println( "Test Copy Constructor and mirror for first tree: ");
+		Test.process( ( new BinaryTree< String >( tree ) ).mirror() );
+		
+		Test.output.println("---------------------------------------------------");
+		
 		String[] pre = { "Jun", "Mar", "Jan", "Feb", "Apr", "May", "Sep", "Jul",
 				"Aug", "Nov", "Oct", "Dec" };
 		BinaryTree< String > tree2 = new BinaryTree< String >( pre, nodes );
 		Test.process( tree2 );
 		Test.output.println("---------------------------------------------------");
 		
+		Test.output.println( "Test Copy Constructor and mirror for second tree: ");
+		Test.process( ( new BinaryTree< String >( tree2 ) ).mirror() );
+		
+		Test.output.println("---------------------------------------------------");
+		
 		Integer[] num = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 };
 		BinaryTree< Integer > tree3 = new BinaryTree< Integer >( num );
 		Test.process( tree3 );
+		Test.output.println("---------------------------------------------------");
+		
+		Test.output.println( "Test Copy Constructor and mirror for third tree: ");
+		Test.process( ( new BinaryTree< Integer >( tree3 ) ).mirror() );
+		
 		Test.output.println("---------------------------------------------------");
 	}
 }

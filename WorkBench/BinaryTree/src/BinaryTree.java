@@ -430,4 +430,42 @@ public class BinaryTree< T extends Comparable<? super T> > {
 			}
 		}
 	}
+	
+	/**
+	 * Changes the tree into its mirror image.
+	 *
+ 	 *		So the tree... 
+     * 			4 
+     *		   / \ 
+     *	  	  2   5 
+     *		 / \ 
+     *		1   3
+	 *
+ 	 *		is changed to... 
+     *		  4 
+     *		 / \ 
+     *		5   2 
+     *		   / \ 
+     *		  3   1
+	 *
+ 	 *	Uses a recursive helper that recurs over the tree, 
+ 	 *	swapping the left/right pointers. 
+	 */
+	public BinaryTree< T > mirror() {
+		self.mirror( self.get_root() );
+		return self;
+	}
+	
+	private void mirror( TreeNode< T > node ) {
+		if ( node != null ) {
+			// do the sub trees
+			self.mirror( node.get_left() );
+			self.mirror( node.get_right() );
+			
+			// swap the left/right pointers
+			TreeNode< T > temp = node.get_left();
+			node.set_Left( node.get_right() );
+			node.set_right( temp );
+		}
+	}
 }
